@@ -8,12 +8,22 @@ The User Guides are now in this separate repository because of software license 
 
 These files are still covered under the same software license (GPL 2), as the original OpenGD77 repository used. 
 
-For the English version see https://github.com/LibreDMR/OpenGD77_UserGuide/blob/master/OpenGD77_User_Guide.md
-English PDF version https://github.com/LibreDMR/OpenGD77_UserGuide/raw/master/OpenGD77_User_Guide.pdf
+
+### English versions
+
+View online:  https://github.com/LibreDMR/OpenGD77_UserGuide/blob/master/OpenGD77_User_Guide.md
+
+PDF version: https://github.com/LibreDMR/OpenGD77_UserGuide/raw/master/OpenGD77_User_Guide.pdf
 
 
-For the Chinese version see https://github.com/LibreDMR/OpenGD77_UserGuide/blob/master/OpenGD77_User_Guide_CN.md
-Chinese PDF version https://github.com/LibreDMR/OpenGD77_UserGuide/raw/master/OpenGD77_User_Guide_CN.pdf
+### Chinese versions
+
+View online:  https://github.com/LibreDMR/OpenGD77_UserGuide/blob/master/OpenGD77_User_Guide_CN.md
+
+PDF version: https://github.com/LibreDMR/OpenGD77_UserGuide/raw/master/OpenGD77_User_Guide_CN.pdf
 
 
-Please note only the English version is maintained. The Chinese version is now considerably out of date
+
+
+### Please note
+Only the English version is maintained. The Chinese version is now considerably out of date
