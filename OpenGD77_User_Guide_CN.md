@@ -193,6 +193,9 @@
 **OpenGD77论坛:**
 <https://www.opengd77.com/>
 
+**OpenGD77论坛下载地址:**
+<https://www.opengd77.com/downloads>
+
 ## 安装
 
 本固件可以被安装在以下几部电台
