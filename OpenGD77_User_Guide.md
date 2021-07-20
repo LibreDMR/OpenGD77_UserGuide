@@ -185,7 +185,7 @@ This firmware is specifically designed for **Amateur Radio** use, and has featur
 **Firmware binaries:**
 
 - **Latest version:**
-<https://github.com/rogerclarkmelbourne/OpenGD77/releases>
+<https://www.opengd77.com/download/firmware/releases>
 
 - **OpenGD77 CPS with support of new features like 80 channel zones:**
 <https://github.com/rogerclarkmelbourne/OpenGD77CPS/releases>
