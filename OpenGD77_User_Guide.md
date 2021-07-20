@@ -188,7 +188,7 @@ This firmware is specifically designed for **Amateur Radio** use, and has featur
 <https://www.opengd77.com/downloads/releases>
 
 - **OpenGD77 CPS with support of new features like 80 channel zones:**
-<https://www.opengd77.com/downloads/cps>
+<https://www.opengd77.com/downloads/CPS>
 
 - **OpenGD77Forum:**
 <https://www.opengd77.com/>
@@ -205,7 +205,7 @@ The firmware can be installed onto the following radios
 - Baofeng DM-1801 (also known as Baofeng DM-860)
 - Baofeng RD-5R (also known as Baofeng DM-5R Tier 2)
 
-Firmware can be installed using the *FirmwareLoader.exe* in the firmware release web page, using the *Firmware loader* included in the [CPS software](#cps-software), or by using the firmware update tool provided by Radioddity or Baofeng, with their official firmware update packages. This can be downloaded from Radioddity’s website [radioddity.com](https://radioddity.com/) (*see Radioddity’s documentation on how to use their firmware update tool)*
+Firmware can be installed using the using the 'Extras/Firmware Loader' menu in the OpenGD77 CPS.
 
 Installation of the firmware is undertaken at the owners own risk, but the official firmware can usually be reloaded onto the radio if the user has problems with the firmware, **as long as the operator takes a full backup of their radio using the OpenGD77 CPS immediately after the firmware has been installed** (see [*backup section*](#backup-before-you-do-anything-else))
 
