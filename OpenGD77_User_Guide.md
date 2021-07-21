@@ -234,7 +234,7 @@ There are two mechanisms that can be used when connecting your computer to the r
 ![](media/Firmware_loader-01.png)
 
        * Choose Your radio model.                        
-![](media/Firmware_loader-02.png)
+![](media/Firmware_loader-03.png)
 
        * If you choose **Download and Update** then you can select from the Stable or Unstable branches.         
 ![](media/Firmware_loader-03.png)<!-- { width=350 } -->
