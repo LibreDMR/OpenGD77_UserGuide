@@ -236,8 +236,15 @@ There are two mechanisms that can be used when connecting your computer to the r
        * Choose Your radio model.                        
 ![](media/Firmware_loader-02.png)
 
-       * If you choose **Download and Update** then you can select from the Stable or Unstable branches.         
-![](media/Firmware_loader-03.png)<!-- { width=350 } -->
+       * For Software licencing reasons the first time that you use the firmware loader you must click 'Firmware Installation Instructions' and follow the procedure described.
+       It is only necessary to do this once. If you do not do this then it is only possible to use the radio in FM mode.  
+       Note!  Do not attempt to download the Manufacturer's firmware to the radio, it is only needed by the CPS for patching purposes.
+       Once you have successfully completed this procedure the Title bar of the Firmware Loader will display [+DMR] 
+       
+       * Click 'Select a file & Update' 
+       
+       * Select a previously downloaded .bin firmware file. (The most recent file can be found at the download location given in [section 1.1](#download-links-and-other-resources)) 
+
 
 
 2. Updating the codeplug using [OpenGD77 CPS](#cps-software).
