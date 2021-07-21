@@ -238,7 +238,7 @@ There are two mechanisms that can be used when connecting your computer to the r
        * For Software licencing reasons the first time that you use the firmware loader you must click 'Firmware Installation Instructions' and follow the procedure described.
        It is only necessary to do this once. If you do not do this then it is only possible to use the radio in FM mode. 
        
-       **Note!  Do not attempt to download the Manufacturer's firmware v4.3.6 to the radio, it is only needed by the CPS for patching purposes.***
+       **Note!  Do not attempt to download the Manufacturer's firmware v4.3.6 to the radio, it is only needed by the CPS for patching purposes.**
        
        Once you have successfully completed this procedure the Title bar of the Firmware Loader will display [+DMR] 
        
