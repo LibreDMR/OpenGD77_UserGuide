@@ -174,10 +174,9 @@ This firmware is specifically designed for **Amateur Radio** use, and has featur
 
 - **The firmware is still under development and there are some key areas of functionality which are supported in the official firmware but not in this firmware**
 - SMS message Tx and Rx **are not currently supported**, but may possibly be supported in the future.
-- Dual Watch is not supported, and **may never be supported**, because this functionality can almost be replicated using the Channel or Zone scan feature
 - Scan Lists **are not supported** because Channel or Zone scan feature provides almost identical functionality.
 - Privacy and Encryption **will not** be supported, as its illegal for Amateur Radio use, developers in some countries (*e.g.* Australia) are now legally required to put a back door access into any encryption systems at the request of the government, hence effectively making it illegal or impossible to develop systems that contain encryption.
-- Battery saving features have **not been developed**, hence this firmware causes much higher battery usage in Rx when there is no signal. Some battery saving features may be developed in the future, however some advanced features like the S meter will not be possible if battery saving is implemented.
+
 
 
 ### Download links and other resources
