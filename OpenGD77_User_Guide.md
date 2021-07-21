@@ -1593,8 +1593,8 @@ See details of available power step levels in the normal firmware.
 - You **cannot** use the standard Radioddity CPS, or Baofeng CPS, to write to a radio flashed with the firmware.
 If you wish to use the Radioddity CPS the radio will **need to run the official Radioddity firmware**. Once the codeplug has been written to the radio with your ID and callsign, you can then flash the firmware to the radio and it will then read and operate with the code plug written to it with the standard firmware and CPS software.
 
-Please download the latest OpenGD77 CPS from here:
-<https://github.com/rogerclarkmelbourne/OpenGD77CPS/releases>
+Please download the latest OpenGD77 CPS from the location given in [section 1.1](#download-links-and-other-resources))
+
 
 Please see the next section for information specific to the OpenGD77 CPS. The information in the rest of this section is applicable to both the standard Radioddity CPS and the OpenGD77 CPS.
 
@@ -1628,8 +1628,8 @@ Finally save your codeplug to your computer before writing the code plug to the 
 
 #### New Driver Installation<!-- linebreak -->
 
-The CPS installer now also installs the comm port driver, however the comm port driver can be installed manually by downloading the files from
-<https://github.com/rogerclarkmelbourne/OpenGD77/tree/master/OpenGD77CommDriver>
+The CPS installer now also installs the comm port driver, however the comm port driver can be installed manually by downloading the files from the location given in [section 1.1](#download-links-and-other-resources))
+
 
 To install the driver, download and unzip the zip file, and run the .bat file
 
