@@ -220,8 +220,6 @@ There are two mechanisms that can be used when connecting your computer to the r
 1. Firmware upgrade.
  - Get the radio into dfu mode by:
    * Holding down the two buttons indicated below (**S1**,**Fn**) and turning the radio on.
-   * The LCD screen will be blank.
-   * Connection will use the HID codes and a driver is not required to be installed.
      - Radioddity GD-77 or GD-77s or the TYT MD-760 or MD-730:
        * Hold down the **two small buttons** next to the PTT button.
      - Baofeng DM-1801 or DM-860:
@@ -230,7 +228,9 @@ There are two mechanisms that can be used when connecting your computer to the r
        * The Orange **S1** (Call) and Black Fn (**Moni** or **S2**) buttons (either side of the PTT).  
 ![](media/PTT-layout.png)<!-- { width=410 } -->
 
-       * The Firmware is easily installed from the Extras menu in the [CPS](#cps-software).
+   * The LCD screen will be blank.
+   * Connection will use the HID codes and a driver is not required to be installed.
+   * The Firmware is easily installed from the Extras menu in the [CPS](#cps-software).
 ![](media/Firmware_loader-01.png)
 
        * Choose Your radio model.                        
