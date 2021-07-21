@@ -239,16 +239,15 @@ There are two mechanisms that can be used when connecting your computer to the r
        * For Software licencing reasons the first time that you use the firmware loader you must click 'Firmware Installation Instructions' and follow the procedure described.
        It is only necessary to do this once. If you do not do this then it is only possible to use the radio in FM mode. 
        
-       **Note!  Do not attempt to download the Manufacturer's firmware to the radio, it is only needed by the CPS for patching purposes.***
+       **Note!  Do not attempt to download the Manufacturer's firmware v4.3.6 to the radio, it is only needed by the CPS for patching purposes.***
        
        Once you have successfully completed this procedure the Title bar of the Firmware Loader will display [+DMR] 
        
        * Click 'Select a file & Update'
-       ![](media/Firmware_loader-03.png)
        
        * Select a previously downloaded .bin firmware file. (The most recent file can be found at the download location given in [section 1.1](#download-links-and-other-resources))
        
-       The Selected Firmware file will be patched with datat from the official firmware and then downloaded to the radio. 
+       The Selected Firmware file will be patched with data from the official firmware and then downloaded to the radio. 
        
        * When the download is complete cycle the radio Off and On to reset it. 
 
