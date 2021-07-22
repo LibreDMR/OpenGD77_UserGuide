@@ -174,10 +174,9 @@ This firmware is specifically designed for **Amateur Radio** use, and has featur
 
 - **The firmware is still under development and there are some key areas of functionality which are supported in the official firmware but not in this firmware**
 - SMS message Tx and Rx **are not currently supported**, but may possibly be supported in the future.
-- Dual Watch is not supported, and **may never be supported**, because this functionality can almost be replicated using the Channel or Zone scan feature
 - Scan Lists **are not supported** because Channel or Zone scan feature provides almost identical functionality.
 - Privacy and Encryption **will not** be supported, as its illegal for Amateur Radio use, developers in some countries (*e.g.* Australia) are now legally required to put a back door access into any encryption systems at the request of the government, hence effectively making it illegal or impossible to develop systems that contain encryption.
-- Battery saving features have **not been developed**, hence this firmware causes much higher battery usage in Rx when there is no signal. Some battery saving features may be developed in the future, however some advanced features like the S meter will not be possible if battery saving is implemented.
+
 
 
 ### Download links and other resources
@@ -185,10 +184,10 @@ This firmware is specifically designed for **Amateur Radio** use, and has featur
 **Firmware binaries:**
 
 - **Latest version:**
-<https://github.com/rogerclarkmelbourne/OpenGD77/releases>
+<https://www.opengd77.com/downloads/releases>
 
-- **OpenGD77 CPS with support of new features like 80 channel zones:**
-<https://github.com/rogerclarkmelbourne/OpenGD77CPS/releases>
+- **OpenGD77 CPS**
+<https://www.opengd77.com/downloads/CPS>
 
 - **OpenGD77Forum:**
 <https://www.opengd77.com/>
@@ -205,13 +204,13 @@ The firmware can be installed onto the following radios
 - Baofeng DM-1801 (also known as Baofeng DM-860)
 - Baofeng RD-5R (also known as Baofeng DM-5R Tier 2)
 
-Firmware can be installed using the *FirmwareLoader.exe* in the firmware release web page, using the *Firmware loader* included in the [CPS software](#cps-software), or by using the firmware update tool provided by Radioddity or Baofeng, with their official firmware update packages. This can be downloaded from Radioddity’s website [radioddity.com](https://radioddity.com/) (*see Radioddity’s documentation on how to use their firmware update tool)*
+The firmware must be installed using the using the 'Extras/Firmware Loader' menu in the OpenGD77 CPS. The original Manufacturers firware loader cannot be used to load the OpenGD77 firmware. 
 
 Installation of the firmware is undertaken at the owners own risk, but the official firmware can usually be reloaded onto the radio if the user has problems with the firmware, **as long as the operator takes a full backup of their radio using the OpenGD77 CPS immediately after the firmware has been installed** (see [*backup section*](#backup-before-you-do-anything-else))
 
 *Note:*
 
-- The official Radioddity CPS PC software is not compatible with the firmware, and the **OpenGD77 CPS** should be used instead. This can be downloaded from the link show in [section 1.1](#download-links-and-other-resources) of this guide. This CPS must also be used for the Baofeng DM-1801
+- The official Radioddity CPS PC software is not compatible with the firmware, and the **OpenGD77 CPS** must be used instead. This can be downloaded from the link show in [section 1.1](#download-links-and-other-resources) of this guide. This CPS must also be used for the Baofeng DM-1801
 
 ### Transferring data to Radio
 
@@ -220,8 +219,6 @@ There are two mechanisms that can be used when connecting your computer to the r
 1. Firmware upgrade.
  - Get the radio into dfu mode by:
    * Holding down the two buttons indicated below (**S1**,**Fn**) and turning the radio on.
-   * The LCD screen will be blank.
-   * Connection will use the HID codes and a driver is not required to be installed.
      - Radioddity GD-77 or GD-77s or the TYT MD-760 or MD-730:
        * Hold down the **two small buttons** next to the PTT button.
      - Baofeng DM-1801 or DM-860:
@@ -230,14 +227,29 @@ There are two mechanisms that can be used when connecting your computer to the r
        * The Orange **S1** (Call) and Black Fn (**Moni** or **S2**) buttons (either side of the PTT).  
 ![](media/PTT-layout.png)<!-- { width=410 } -->
 
-       * The Firmware is easily installed from the Extras menu in the [CPS](#cps-software).
+   * The LCD screen will be blank.
+   * Connection will use the HID codes and a driver is not required to be installed.
+   * The Firmware is easily installed from the Extras menu in the [CPS](#cps-software).
 ![](media/Firmware_loader-01.png)
 
        * Choose Your radio model.                        
 ![](media/Firmware_loader-02.png)
 
-       * If you choose **Download and Update** then you can select from the Stable or Unstable branches.         
-![](media/Firmware_loader-03.png)<!-- { width=350 } -->
+       * For Software licencing reasons the first time that you use the firmware loader you must click 'Firmware Installation Instructions' and follow the procedure described.
+       It is only necessary to do this once. If you do not do this then it is only possible to use the radio in FM mode. 
+       
+       **Note!  Do not attempt to download the Manufacturer's firmware v4.3.6 to the radio, it is only needed by the CPS for patching purposes.**
+       
+       Once you have successfully completed this procedure the Title bar of the Firmware Loader will display [+DMR] 
+       
+       * Click 'Select a file & Update'
+       
+       * Select a previously downloaded .bin firmware file. (The most recent file can be found at the download location given in [section 1.1](#download-links-and-other-resources))
+       
+       The Selected Firmware file will be patched with data from the official firmware and then downloaded to the radio. 
+       
+       * When the download is complete cycle the radio Off and On to reset it. 
+
 
 
 2. Updating the codeplug using [OpenGD77 CPS](#cps-software).
@@ -1580,8 +1592,8 @@ See details of available power step levels in the normal firmware.
 - You **cannot** use the standard Radioddity CPS, or Baofeng CPS, to write to a radio flashed with the firmware.
 If you wish to use the Radioddity CPS the radio will **need to run the official Radioddity firmware**. Once the codeplug has been written to the radio with your ID and callsign, you can then flash the firmware to the radio and it will then read and operate with the code plug written to it with the standard firmware and CPS software.
 
-Please download the latest OpenGD77 CPS from here:
-<https://github.com/rogerclarkmelbourne/OpenGD77CPS/releases>
+Please download the latest OpenGD77 CPS from the location given in [section 1.1](#download-links-and-other-resources))
+
 
 Please see the next section for information specific to the OpenGD77 CPS. The information in the rest of this section is applicable to both the standard Radioddity CPS and the OpenGD77 CPS.
 
@@ -1615,8 +1627,8 @@ Finally save your codeplug to your computer before writing the code plug to the 
 
 #### New Driver Installation<!-- linebreak -->
 
-The CPS installer now also installs the comm port driver, however the comm port driver can be installed manually by downloading the files from
-<https://github.com/rogerclarkmelbourne/OpenGD77/tree/master/OpenGD77CommDriver>
+The CPS installer now also installs the comm port driver, however the comm port driver can be installed manually by downloading the files from the location given in [section 1.1](#download-links-and-other-resources))
+
 
 To install the driver, download and unzip the zip file, and run the .bat file
 
