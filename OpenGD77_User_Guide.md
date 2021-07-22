@@ -77,7 +77,6 @@ For the latest information and discussions, please refer to the development and 
     * [Last Heard](#last-heard)
     * [Firmware Info](#firmware-info)
     * [Options](#options)
-      * [Fact Reset](#fact-reset)
       * [Band Limits](#band-limits)
       * [Key long](#key-long)
       * [Key rpt](#key-rpt)
@@ -970,12 +969,6 @@ To view details on Github, append the code to <https://github.com/rogerclarkmelb
 This menu controls various settings specific to the firmware
 
 ![options menu](media/options-screen.png)
-
-#### Fact Reset<!-- linebreak -->
-
-Resets the radio to **default settings**, and reads the CPS VFO A values from the codeplug into the VFO screen. Power cycle the radio to apply.
-
-**The radio can also be set to the default settings by holding the Blue (Function) key while turning on the radio.**
 
 #### Band Limits<!-- linebreak -->
 
