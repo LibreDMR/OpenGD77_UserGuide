@@ -1,13 +1,13 @@
 ![](media/OpenGD77-logo.png)
 
-# OpenGD77 / OpenGD77S / OpenDM1801 / OpenRD5R User Guide
+# OpenGD77 / OpenGD77S / OpenDM1801 / OpenDM1801A / OpenRD5R User Guide
 
 For the latest information and discussions, please refer to the development and community forum at <https://opengd77.com>
 
 <!-- TOC titleSize:2 tabSpaces:2 depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 skip:0 title:1 charForUnorderedList:* -->
 
 ## Table of Contents
-* [OpenGD77 / OpenGD77S / OpenDM1801 / OpenRD5R User Guide](#opengd77--opengd77s--opendm1801--openrd5r-user-guide)
+* [OpenGD77 / OpenGD77S / OpenDM1801 / OpenDM1801A / OpenRD5R User Guide](#opengd77--opengd77s--opendm1801--opendm1801a--openrd5r-user-guide)
   * [Introduction](#introduction)
     * [Download links and other resources](#download-links-and-other-resources)
   * [Installation](#installation)
@@ -17,6 +17,7 @@ For the latest information and discussions, please refer to the development and 
   * [Main screens (VFO and Channel screens)](#main-screens-vfo-and-channel-screens)
     * [Changing between VFO and Channel](#changing-between-vfo-and-channel)
     * [Changing Timeslot in DMR mode](#changing-timeslot-in-dmr-mode)
+    * [Changing bandwidth in FM mode](#changing-bandwidth-in-fm-mode)	
     * [Controlling Tx power](#controlling-tx-power)
     * [Signal strength bar graph](#signal-strength-bar-graph)
     * [Channel screen specific functionality](#channel-screen-specific-functionality)
@@ -73,7 +74,15 @@ For the latest information and discussions, please refer to the development and 
   * [Main Menu](#main-menu)
     * [Zone](#zone)
     * [RSSI](#rssi)
-    * [Battery](#battery)
+    * [Radio info](#radio-info)
+      * [Battery voltage and percentage](#battery-voltage-and-percentage)
+      * [CPU Temperature](#cpu-temperature)
+      * [Battery voltage history](#battery-voltage-history)
+      * [Time clock](#time-clock)
+    * [Contacts](#contacts)
+      * [DMR Contacts](#dmr-contacts)
+      * [FM DTMF Contacts](#fm-dtmf-contacts)
+      * [New Contact](#new-contact)
     * [Last Heard](#last-heard)
     * [Firmware Info](#firmware-info)
     * [Options](#options)
@@ -82,7 +91,9 @@ For the latest information and discussions, please refer to the development and 
       * [Key rpt](#key-rpt)
       * [Filter time](#filter-time)
       * [Scan delay](#scan-delay)
-      * [Scan mode](#scan-mode)
+      * [Scan dwell](#scan-dwell)
+      * [Scan mode](#scan-mode)	  
+      * [Scan on Boot](#scan-on-boot)
       * [Squelch UHF](#squelch-uhf)
       * [Squelch 220](#squelch-220)
       * [Squelch VHF](#squelch-vhf)
@@ -90,6 +101,11 @@ For the latest information and discussions, please refer to the development and 
       * [Hotspot](#hotspot)
       * [TA Tx](#ta-tx)
       * [Allow PC](#allow-pc)
+      * [User Power](#user-power)
+      * [Temp Cal](#temp-cal)  
+      * [Batt Cal](#batt-cal)  	  
+      * [Time Cal](#time-cal)	 
+      * [Eco Level](#eco-level)	  
     * [Display Options](#display-options)
       * [Brightness](#brightness)
       * [Min Bright](#min-bright)
@@ -100,6 +116,8 @@ For the latest information and discussions, please refer to the development and 
       * [Order](#order)
       * [Contact](#contact)
 	  * [Battery units](#battery-units)
+	  * [Info](#info)
+	  * [LEDs](#leds)	  
     * [Sound Options](#sound-options)
       * [Timeout beep](#timeout-beep)
       * [Beep volume](#beep-volume)
@@ -110,22 +128,27 @@ For the latest information and discussions, please refer to the development and 
       * [VOX Tail](#vox-tail)
       * [Prompt](#Prompt)
     * [Channel Details](#channel-details)
+      * [Channel name](#channel-name) ---------------------	
+      * [RX](#rx)
+      * [TX](#tx)	  
       * [Mode](#mode)
+      * [DMR ID](#dmr-id) ------------------------------	  
       * [Color Code](#color-code)
       * [Timeslot](#timeslot)
       * [Tx/RX Grp](#txrx-grp)
       * [Tx CTCSS or DCS](#tx-ctcss-or-dcs)
       * [Rx CTCSS or DCS](#rx-ctcss-or-dcs)
       * [Bandwidth](#bandwidth)
-      * [RX](#rx)
-      * [TX](#tx)
       * [Step](#step)
       * [TOT](#tot)
+      * [Rx Only](#rx-only)	  
       * [Zone Skip](#zone-skip)
       * [All Skip](#all-skip)
       * [VOX](#vox)
-	  * [Channel Power](#ch-power)
+	  * [Channel Power](#ch-power) ---------------
+	  * [Channel squelch](#channel-squelch)	----------------  
       * [Accepting and saving the changes to the channel](#accepting-and-saving-the-changes-to-the-channel)
+    * [Language Screen](#language-screen)	--------------------------------------------------------------------------  
     * [Credits Screen](#credits-screen)
   * [Making and receiving DMR Private Calls](#making-and-receiving-dmr-private-calls)
     * [To make a Private Call](#to-make-a-private-call)
@@ -160,13 +183,13 @@ For the latest information and discussions, please refer to the development and 
 
 ## Introduction
 
-This user guide is a work in progress as is the OpenGD77, OpenGD77S, OpenDM1801 and OpenRD5R firmware.
+This user guide is a work in progress as is the OpenGD77, OpenGD77S, OpenDM1801, OpenDM1801A and OpenRD5R firmware.
 
 Due to the rapid pace of development some photos of screens are now out of date and not completely accurate.
 
 The photos will be updated when the firmware in a particular area stabilises.
 
-The intention of the project is to create a fully featured non-commercial firmware that entirely replaces the Radioddity GD-77, and Baofeng DM-1801 factory firmware.
+The intention of the project is to create a fully featured non-commercial firmware that entirely replaces the factory firmware.
 This firmware is specifically designed for **Amateur Radio** use, and has features not available in the official firmware.
 
 *Note:*
@@ -201,6 +224,7 @@ The firmware can be installed onto the following radios
 - Radioddity GD-77 (also known as TYT MD-760)
 - Radioddity GD-77S
 - Baofeng DM-1801 (also known as Baofeng DM-860)
+- Baofeng DM-1801A
 - Baofeng RD-5R (also known as Baofeng DM-5R Tier 2)
 
 The firmware must be installed using the using the 'Extras/Firmware Loader' menu in the OpenGD77 CPS. The original Manufacturers firware loader cannot be used to load the OpenGD77 firmware. 
@@ -209,7 +233,7 @@ Installation of the firmware is undertaken at the owners own risk, but the offic
 
 *Note:*
 
-- The official Radioddity CPS PC software is not compatible with the firmware, and the **OpenGD77 CPS** must be used instead. This can be downloaded from the link show in [section 1.1](#download-links-and-other-resources) of this guide. This CPS must also be used for the Baofeng DM-1801
+- The official Radioddity CPS PC software is not compatible with the firmware, and the **OpenGD77 CPS** must be used instead. This can be downloaded from the link show in [section 1.1](#download-links-and-other-resources) of this guide. This CPS must also be used for the Baofeng DM-1801 and all other supported radios
 
 ### Transferring data to Radio
 
@@ -220,7 +244,7 @@ There are two mechanisms that can be used when connecting your computer to the r
    * Holding down the two buttons indicated below (**S1**,**Fn**) and turning the radio on.
      - Radioddity GD-77 or GD-77s or the TYT MD-760 or MD-730:
        * Hold down the **two small buttons** next to the PTT button.
-     - Baofeng DM-1801 or DM-860:
+     - Baofeng DM-1801 or DM-1801A or DM-860:
        * Hold down the **two small buttons** under the PTT button.
      - Baofeng RD-5R or DM-5R Tier2:
        * The Orange **S1** (Call) and Black Fn (**Moni** or **S2**) buttons (either side of the PTT).  
@@ -336,6 +360,10 @@ On both the VFO and Channel screens:
 
 - In DMR mode, pressing the **Star** key toggles between *TimeSlot 1* and *TimeSlot 2*.
 
+### Changing bandwidth in FM mode
+
+- In FM mode, pressing the **Star** key toggles between 25kHz and 12.5kHz bandwidth.
+
 ### Controlling Tx power
 
 The firmware has two main ways to control the output power:
@@ -358,10 +386,16 @@ Changing the power on **either** VFO also changes the **Master** power setting.
 - Press **Function** + **Right** to increase the power.
 - Press **Function** + **Left** to decrease the power.
 
-Power can be set to **50mW**, **250mW**, **500mW**, **750mW**, **1W**, **2W**, **3W**, **4W**, **5W** and **5W++**.
+Power can be set to **50mW**, **250mW**, **500mW**, **750mW**, **1W**, **2W**, **3W**, **4W**, **5W** and **-W+**.
 
-The **5W++** power setting configures the PA drive to its **maximum value**.
-**This power setting is designed for emergency use only, and results in around 5.5W being produced on 70cm and 7W on 2m.**
+The **-W+** power setting configures the PA drive to the value specifed by the User Power value in the Options menu. 
+By default this is set to the maximum value which will result in the radio producing more than 5W.
+**Power settings resulting in the radio producing more than 5W are designed for emergency use only, and results in around 5.5W being produced on 70cm and 7W on 2m.**
+
+If the User power setting is configured to a lower value, it can also be used for very low power output, for example less than 50mW.
+See the User power setting menu for more information.
+
+
 To access this power setting, select the **5W** power setting, then press and hold **Function** + **Right**
 
 *Notes:*
@@ -931,15 +965,49 @@ DMR signals by their nature, because they are pulse transmissions, **will not** 
 
 *The number in the top right of the display is for debugging purposes and is the number reported by the receiver hardware.*
 
-### Battery
+### Radio info
 
-Displays the current battery voltage and percentage.
+Displays various information about the status of the radio.
+
+#### Battery voltage and percentage
 
 ![battery status screen](media/battery.png)
 
 - Press the **Down** key to display the battery usage chart. This shows the history of battery voltage on an hourly basis.
 
+#### CPU temperature
+
+- Press the **Down** key to display the battery usage chart. This shows the history of battery voltage on an hourly basis.
+
+#### Battery voltage history
+
 ![battery history graph](media/battery-graph.png)
+
+- Press the **Down** key to display the battery usage chart. This shows the history of battery voltage on an hourly basis.
+
+#### Time clock
+
+To set the clock enter the full time in 24 hour time including all hours minutes and seconds, and press the **Green** menu key.
+
+Notes. 
+The clock only keeps time when the radio is turned on.
+The time accuracy varies from radio to radio, but can be accurate to approximately 1 second per day.
+
+### Contacts
+
+#### DMR Contacts
+
+Allows selection, Editing or Deletion of DMR Contcats
+
+#### FM DMTF Contacts
+
+Allows selection, Editing or Deletion of FM DTMF Contcats
+
+#### New Contact
+
+Allows a new DMR Contact to be created
+
+
 
 ### Last Heard
 
@@ -1022,6 +1090,14 @@ During scan mode, this controls the duration that the radio tunes in to a channe
 
 This works when **Pause** is selected as the scan mode.
 
+#### Scan dwell<!-- linebreak -->
+
+During scan mode, this controls the duration that the receiver listens ( dwells ) on each frequency and listens for a signal.
+The default is 30 milliseonds. 
+On DMR if the value is less than 60 millisconds, the value of 60 millisconds is used, because this is the minimum time for one complete DMR frame of 2 timeslots.
+
+Longer values can help when scanning for weak signals or signals which fade in and out, but will reduce the number of frequencies or channels scanned per second
+
 #### Scan mode<!-- linebreak -->
 
 This setting controls how the receiver stops when there is a signal during scan mode.
@@ -1029,6 +1105,11 @@ This setting controls how the receiver stops when there is a signal during scan 
 - **Hold**: continuously tunes in to a channel when a signal is received.
 - **Pause**: tunes in to that signal for a specified duration (*Scan Delay*) and then resumes scan.
 - **Stop**: the scan mode will exits on the first valid received signal.
+
+#### Scan on Boot<!-- linebreak -->
+
+This setting controls whether the radio automatically starts scanning when its turned on (booted up).
+The default for this setting is Off.
 
 #### Squelch UHF<!-- linebreak -->
 
@@ -1083,6 +1164,77 @@ The text of **Line1** and **Line2** from the "**Boot Item**" CPS screen is used 
 #### Allow PC<!-- linebreak -->
 
 Allows **Private Calls** to be received.
+
+
+#### User Power<!-- linebreak -->
+
+This setting controls the PA power level when the power setting of +W- is enabled.
+The value of this setting is the internal numerical value sent to the digital to analogue converter connected to the PA drive circuit.
+The default value is 4100 which is the maximum possible value. Hence by default the +W- power setting will result in the radio transmitting the maximum power it can.
+The power output is normally greater than 5W, which is the official maximum power output.
+
+On UHF (70 cm band), using a GD-77, with a fully charged battery, the power output is usually around 5.5W to 6W.
+On VHF (2m band), using a GD-77, with a fully charged battery, the power output is usually somewhere between 7W and 8W.
+
+The purpose of this setting is to give the operator the ability to not only transmit more power than the official maximum power, for example for emergency operation.
+But it also allows the radio to transmit very low power levels, if low values of PA drive are used.
+A value of 0 would result in no drive to the PA at all, but there will still be RF generated by the main RF / transcriver chip in the radio.
+Some of the signal from the RF chip is likely to leak into the antenna output of the radio and it definitely leaks through the plastic case of the radio.
+So a value of 0 does not stop the radio completely from generating RF.
+
+This setting can also be used to configure the radio to produce low levels of power e.g. below 50mW which can be useful when only transmitting to a local hotspot.
+
+The power level for a given user setting value, varies considerably from radio to radio and will vary depending on battery voltage and transmit frequency.
+The power level will also vary depending on model of radio e.g. GD-77, DM-1801 or RD-5R etc. With the RD-5R power levels being considerably different from the GD-77 and DMR-1801 because the RF and PA hardware is completely different.
+
+A power meter is the only way to know what power output each individual radio will produce on a specific frequency, for a specific user power setting, at a specific battery voltage.
+
+#### Temp Cal<!-- linebreak -->
+
+This setting allows the internal CPU temperature sensor to be calibrated by the operator.
+The range is +/- 10 deg C in 0.5 deg C steps.
+
+Note. 
+The temperature value is the value measured by the CPU its self. It's not the temperature of the PA or the radio as a whole.
+
+#### Batt Cal<!-- linebreak -->
+
+This setting allows value of the voltage display to be calibrated. 
+The range is +/- 0.5V.
+
+Note.
+The battery voltage measurement is taken by the CPU from the internal battery volatage rail, and can differ from the value measured on the external charging terminals of the battery, especially when the radio is transmitting.
+Changing this calibration will affect both the voltage and percentage display.
+
+#### Time Cal<!-- linebreak -->
+
+This setting allows some calibration of the time clock which is maintained while the radio is turned on.
+The range is +/- 7, the units are x / 10000, so a value of 1 results in a change of 1 second in 10,000 seconds.
+
+The clock is currently an experimental feature and is not guaranteed to be accurate.
+
+#### Eco Level<!-- linebreak -->
+
+This setting controls the Economy or Rx Power Saving, operation of the radio.
+The range is 0 to 5.
+Rx power saving is acheived by controling by turning the Rx and other parts of the internal electronics of the radio Off for small amount of time, to reduce current consumption and hence increase battery life.
+The minimum setting is 0, which disables the Rx power saving and results in the Rx and all other electronics in the radio being powered on continously. 
+The default setting is 1, which uses a 1:1 duty cycle. With an overall duty period of 240 milliseconds. 120 milliseconds On, 120 millisconds off.
+A setting of 2 results in a 1:3 duty cycle, with overal period 330 millisconds
+A setting of 3 results in a 1:5 duty cycle, with overal period 500 millisconds
+A setting of 4 results in a 1:9 duty cycle, with overal period 810 millisconds
+A setting of 5 results in a 1:17 duty cycle, with overal period 1630 millisconds
+
+Higher values of Eco level reduce the current consumption and increase the battery life, when the radio is idle and not receiving.
+As soon as the radio receives a signal it immeditly turns on all necessary hardware, and is no longer effectively in power saving mode.
+
+Higher values may cause the radio to not hear signals that are shorer than the overall duty cycle, so the operator needs to balance their individual need to extend the battery life with the ability to detect the siganl the want to receive.
+
+The amount of current consumption does not decrease linearly with the Eco Level value, because the radio has come core components like the CPU and voltage regulators, which always consume the same amount of current, regardless of the Eco Level.
+Hence values above level 3 or 4, do not greatly reduce the current consumption of the radio.
+
+Although the default value is 1, which results in considerably reduction in consumpion, with minimal loss ability to detect a signal, values of 2 , 3 and 4 work well for most people, with no noticable loss in radio functionality.
+Level 5 may result in some degredation in the ability to detect a signal.
 
 
 <div style="page-break-after: always; break-after: page;"></div>
@@ -1167,6 +1319,20 @@ Options are
 - **%**:  Shows the battery percentage *e.g.* **0%** to **100%**.
 - **V**:  Shows the battery voltage *e.g.* **8.1V**.
 
+#### Info<!-- linebreak -->
+
+This setting controls whether the radio displays addional information on the VFO of Channel screen, by making the DMR Timeslot, or the Power level text bold, or both bold.
+
+If TS or Both setting is selected, the TS value will be shown in bold if an override is applied to the TS, from a Contact TS override.
+If Pwr or Both setting is selected the power value will be shown in bold if a channel specific power override is being applied to the normal power setting.
+
+The default setting is Off, and no overrides will be shown.
+
+#### LEDs<!-- linebreak -->
+
+This setting controls whether the green / red LED on the top of the radio illuminates.
+The default setting is On, so that both the LED on the top of the radio will illuminate green on Rx and red on Tx
+If this setting is set to off, the LED will not illuminate either on Rx or Tx.
 
 <div style="page-break-after: always; break-after: page;"></div>
 
@@ -1482,7 +1648,7 @@ Power | Pi-Star RFLevel
 2W  | 40
 4W  | 80
 5W  | 99
-5W++ | N/A
+-W+ | N/A
 
 The receive frequency specified by Pi-Star will be displayed at the bottom of the screen.
 
