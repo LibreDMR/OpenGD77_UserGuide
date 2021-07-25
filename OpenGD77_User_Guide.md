@@ -128,11 +128,11 @@ For the latest information and discussions, please refer to the development and 
       * [VOX Tail](#vox-tail)
       * [Prompt](#Prompt)
     * [Channel Details](#channel-details)
-      * [Channel name](#channel-name) ---------------------	
+      * [Channel name](#channel-name)	
       * [RX](#rx)
       * [TX](#tx)	  
       * [Mode](#mode)
-      * [DMR ID](#dmr-id) ------------------------------	  
+      * [DMR ID](#dmr-id)	  
       * [Color Code](#color-code)
       * [Timeslot](#timeslot)
       * [Tx/RX Grp](#txrx-grp)
@@ -145,10 +145,10 @@ For the latest information and discussions, please refer to the development and 
       * [Zone Skip](#zone-skip)
       * [All Skip](#all-skip)
       * [VOX](#vox)
-	  * [Channel Power](#ch-power) ---------------
-	  * [Channel squelch](#channel-squelch)	----------------  
+	  * [Channel Power](#ch-power)
+	  * [Channel squelch](#channel-squelch)  
       * [Accepting and saving the changes to the channel](#accepting-and-saving-the-changes-to-the-channel)
-    * [Language Screen](#language-screen)	--------------------------------------------------------------------------  
+    * [Language Screen](#language-screen)
     * [Credits Screen](#credits-screen)
   * [Making and receiving DMR Private Calls](#making-and-receiving-dmr-private-calls)
     * [To make a Private Call](#to-make-a-private-call)
@@ -1437,9 +1437,32 @@ This setting controls the **audible feedback** to button and key presses etc and
 
 ![channel details screen](media/channel-details.png)
 
+#### Channel name<!-- linebreak -->
+
+Displays the channel name, and also allows the name to be changed. 
+A flashing underline is shown at the current text insertion position, which will initially be after the last text character of the name.
+Pressing the appropriate button on the numerical keypad, enters numbers and letters. e.g. The "2" button, initially enters 2, but immediatly pressing "2" again enters the letter "A"
+Pressing SK2 + Left, deletes a character.
+
+#### RX<!-- linebreak -->
+
+Rx frequency.
+
+Enter the frequency via the keypad.
+
+#### TX<!-- linebreak -->
+
+Tx frequency.
+
+Enter the frequency via the keypad.
+
 #### Mode<!-- linebreak -->
 
 *FM* or *DMR*.
+
+#### DMR ID<!-- linebreak -->
+
+If the channel mode is DMR, a channel specific DMR ID number can be entered via the keypad.
 
 #### Color Code<!-- linebreak -->
 
@@ -1469,18 +1492,6 @@ For both Tx and Rx CTCSS / DCS.
 
 Sets the *Rx and Tx bandwidth* in **FM** mode to either **25Khz** or *12.5Khz**.
 
-#### RX<!-- linebreak -->
-
-Rx frequency.
-
-Enter the frequency via the keypad.
-
-#### TX<!-- linebreak -->
-
-Tx frequency.
-
-Enter the frequency via the keypad.
-
 #### Step<!-- linebreak -->
 
 Selects the VFO / Channel frequency step size.
@@ -1488,6 +1499,11 @@ Selects the VFO / Channel frequency step size.
 #### TOT<!-- linebreak -->
 
 Sets the time out timer to **OFF** or **ON**.
+
+#### Rx Only<!-- linebreak -->
+
+Set the channel to receive only is this value is **ON**.
+When the channel is set to receive only, pressing the PTT results in the "ERROR  Rx Only" message and the radio will not transmit.
 
 #### Zone Skip<!-- linebreak -->
 
@@ -1509,12 +1525,33 @@ See also the section in about controlling power.
 
 **By default**, all channels will use the **Master** power setting, and this option allows a **custom** power setting to be set on a channel, or for the channel set to use the **Master** power setting.
 
+#### Ch Squelch<!-- linebreak -->
+
+Controls the custom / individual squelch assigned to the channel.
+
+See also the section in about controlling power.
+
+**By default**, all channels will use the **Master** squelch setting. This is the squelch value defined in the Options squelch setting for the band of the channel.
+A **custom** squelch setting can be applied to the channel by pressing the right and left arrow keys. Custom squelch settings are in 5% steps. 
+
+
 #### Accepting and saving the changes to the channel<!-- linebreak -->
 
 - Pressing the **Green** menu key confirms the changes.
 - Pressing **Function** + **Green** saves the settings to the codeplug, or in the case of the VFO the changes are saved to the non-volatile settings.
 - Pressing the **Red** menu key closes the menu without making any changes to the channel.
 
+
+
+<div style="page-break-after: always; break-after: page;"></div>
+
+### Language Screen
+
+This screen allows the language of the on screen texts to be selected.
+Notes. 
+1. This does not change the language of the Voice Prompts, because the voice prompts are not part of the main firmware file and must be loaded separately using the OpenGD77 CPS.
+2. Not all languages are actively maintained by the original native translator, so the translations of some langaues are not perfect.
+If you noticed a problem with a language translation, please post to the https://www.opengd77.com forum, providing a better translation.
 
 <div style="page-break-after: always; break-after: page;"></div>
 
