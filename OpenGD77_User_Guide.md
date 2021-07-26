@@ -1217,24 +1217,30 @@ The clock is currently an experimental feature and is not guaranteed to be accur
 
 This setting controls the Economy or Rx Power Saving, operation of the radio.
 The range is 0 to 5.
-Rx power saving is acheived by controling by turning the Rx and other parts of the internal electronics of the radio Off for small amount of time, to reduce current consumption and hence increase battery life.
+Rx power saving is acheived by pulsing the Rx and other parts of the internal electronics of the radio Off for small amount of time, to reduce current consumption and hence increase battery life.
 The minimum setting is 0, which disables the Rx power saving and results in the Rx and all other electronics in the radio being powered on continously. 
-The default setting is 1, which uses a 1:1 duty cycle. With an overall duty period of 240 milliseconds. 120 milliseconds On, 120 millisconds off.
-A setting of 2 results in a 1:3 duty cycle, with overal period 330 millisconds
-A setting of 3 results in a 1:5 duty cycle, with overal period 500 millisconds
-A setting of 4 results in a 1:9 duty cycle, with overal period 810 millisconds
-A setting of 5 results in a 1:17 duty cycle, with overal period 1630 millisconds
+The default setting is 1, which uses a 1:1 duty cycle. With an overall duty period of 240 milliseconds. 120 milliseconds On, 120 millisconds off. in this Eco Level, power saving does not start until the radio had been idle for 10 seconds.
+
+This table shows the values for all Eco Levels
+
+Level | Entry delay (seconds) | Max latency | Average current / mA | Approximate battery life (hours)
+----- | --------------------- | ----------- | -------------------- | --------------------------------
+0 | N/A | N/A | 62 | 32
+1 | 10 | 240 | 41 | 49
+2 | 8 | 330 | 33 | 60
+3 | 6 | 500 | 28 | 72
+4 | 4 | 810 | 24 | 84
+5 | 4 | 1360 | 22 | 93
 
 Higher values of Eco level reduce the current consumption and increase the battery life, when the radio is idle and not receiving.
-As soon as the radio receives a signal it immeditly turns on all necessary hardware, and is no longer effectively in power saving mode.
+As soon as the radio receives a signal it immediatly turns on all necessary hardware, and is no longer in power saving mode.
 
 Higher values may cause the radio to not hear signals that are shorer than the overall duty cycle, so the operator needs to balance their individual need to extend the battery life with the ability to detect the siganl the want to receive.
 
 The amount of current consumption does not decrease linearly with the Eco Level value, because the radio has come core components like the CPU and voltage regulators, which always consume the same amount of current, regardless of the Eco Level.
-Hence values above level 3 or 4, do not greatly reduce the current consumption of the radio.
 
-Although the default value is 1, which results in considerably reduction in consumpion, with minimal loss ability to detect a signal, values of 2 , 3 and 4 work well for most people, with no noticable loss in radio functionality.
-Level 5 may result in some degredation in the ability to detect a signal.
+Although the default value is 1, which results in approximately 30% less current consumpion with minimal loss ability to detect a signal, values of 2 , 3 work well for most people, with no noticable loss in radio functionality.
+Levels 4 and 5 may result in some degredation in the ability to detect a signal, but can be used to extend the battery life.
 
 
 <div style="page-break-after: always; break-after: page;"></div>
