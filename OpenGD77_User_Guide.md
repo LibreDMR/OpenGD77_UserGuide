@@ -240,7 +240,7 @@ Installation of the firmware is undertaken at the owners own risk, but the offic
 There are two mechanisms that can be used when connecting your computer to the radio.
 
 1. Firmware upgrade.
- - Get the radio into dfu mode by:
+ - Get the radio into firmware update mode by:
    * Holding down the two buttons indicated below (**S1**,**Fn**) and turning the radio on.
      - Radioddity GD-77 or GD-77s or the TYT MD-760 or MD-730:
        * Hold down the **two small buttons** next to the PTT button.
@@ -255,10 +255,10 @@ There are two mechanisms that can be used when connecting your computer to the r
    * The Firmware is easily installed from the Extras menu in the [CPS](#cps-software).
 ![](media/Firmware_loader-01.png)
 
-       * Choose Your radio model.                        
+       * Choose your radio model.                        
 ![](media/Firmware_loader-02.png)
 
-       * For Software licencing reasons the first time that you use the firmware loader you must click 'Firmware Installation Instructions' and follow the procedure described.
+       * For Software licensing reasons the first time that you use the firmware loader you must click 'Firmware Installation Instructions' and follow the procedure described.
        It is only necessary to do this once. If you do not do this then it is only possible to use the radio in FM mode. 
        
        **Note!  Do not attempt to download the Manufacturer's firmware v4.3.6 to the radio, it is only needed by the CPS for patching purposes.**
@@ -288,7 +288,7 @@ There are two mechanisms that can be used when connecting your computer to the r
 
 The official firmware for each of these radios use slightly different codeplug formats.
 
-Users radios other than the GD-77 will need to convert their codeplug using the tools written by Colin G4EML (see <http://www.gb3gf.co.uk/downloads.html>).
+Users of radios other than the GD-77 will need to convert their codeplug using the tools written by Colin G4EML (see <http://www.gb3gf.co.uk/downloads.html>).
 
 Specifically export their existing codeplug to CSV format, and then import those CSV files into the OpenGD77 version of Colin's tools.
 
@@ -303,11 +303,11 @@ Not all the supported radios have the same number of buttons, or the same screen
 
 Also, not all radios support all the functionalities.
 
-- The Radioddity GD-77 (aka *TYT MD-760*), has 2 buttons below the PTT. The **black** button is technically known as **SK1**, and the **blue** button is know as **SK2** and is also referred to, in this manual, as the **Function** button. This radio also has an **Orange** button at the top.
+- The Radioddity GD-77 (aka *TYT MD-760*), has 2 buttons below the PTT. The **black** button is technically known as **SK1**, and the **blue** button is known as **SK2** and is also referred to, in this manual, as the **Function** button. This radio also has an **Orange** button at the top.
 - The Baofeng RD-5R / DM-5R USB hardware will not support USB connections while the radio is transmitting, so **it is not possible** to use Hotspot mode on this radio.
 - The Baofeng RD-5R / DM-5R does not have left or right arrow buttons, so the **A/B** button is used to replace the left arrow and the **Band** button is used to replace the right arrow.
 - The Baofeng RD-5R / DM-5R does not have the **Orange** button, and its functionality has been simulated by using a **Long press** on the orange coloured **MR/VFO** button.
-- The Baofeng RD-5R / DM-5R has 2 buttons on the side, but their position is different from the GD-77 and DM-1801. The button above the PTT is used as the **Black** button on the side of the GD-77, also know as button **SK1**. The button below the PTT is used as the **Function** button, also known as **SK2**.
+- The Baofeng RD-5R / DM-5R has 2 buttons on the side, but their position is different from the GD-77 and DM-1801. The button above the PTT is used as the **Black** button on the side of the GD-77, also known as button **SK1**. The button below the PTT is used as the **Function** button, also known as **SK2**.
 - The Radioddity GD-77S does not have a keypad or screen, hence its operation is completely different from the other supported radios that have a screen (*see the appendix on [GD-77S operation](#gd-77s-operation)*).
 - The Baofeng DM-1801 / DM-860 has a dedicated **MR/VFO** button, which is used to change between Channel and VFO mode, in place of pressing the **Red** menu key.
 - The Baofeng DM-1801 / DM-860 has a dedicated **A/B** button, which is used to change between VFO A and B, in place of pressing the quick menu via the **Orange** button on the top of the radio.
@@ -327,7 +327,7 @@ The frequency used in the VFO for both Tx and Rx will be read from the *VFO A* s
 
 On both the VFO and Channel screens, the mode (**DMR** or **FM**) is shown in the top left of the display, and the battery voltage or percentage is shown in the top right of the display.
 
-In **DMR** mode, the current *TimeSlot* is shown to the right of the **DMR** text, *e.g.* **TS2** for TimeSlot 2, and the *Color Code*, *e.g.* **C1** for Color Code 1, is shown to the left of the battery voltage / percentage. When TimeSlot [filtering](#ts-filter-dmr-mode-only)) is turned off, the **TS1** or **TS2** indicator is in inverse color.
+In **DMR** mode, the current *TimeSlot* is shown to the right of the **DMR** text, *e.g.* **TS2** for TimeSlot 2, and the *Color Code*, *e.g.* **C1** for Color Code 1, is shown to the left of the battery voltage / percentage. When TimeSlot [filtering](#ts-filter-dmr-mode-only)) is turned off, the **TS1** or **TS2** indicator is in inverse colour.
 
 The current Tx power is shown in the middle of the top of the screen (*e.g.* 750mW).
 
@@ -375,7 +375,7 @@ By default, all Channels are set to use the **Master** power, however this setti
 
 When a Channel has a custom power setting, the power will be displayed in a **Bold font**.
 
-Increasing and descreasing the power on a Channel with a custom power setting will temporarily override the power on the Channel, but this change is not saved to the codeplug. So, changing channels will result in the temporary override being lost.
+Increasing and decreasing the power on a Channel with a custom power setting will temporarily override the power on the Channel, but this change is not saved to the codeplug. So, changing channels will result in the temporary override being lost.
 
 To make a **permanent** change to a Channel custom power value, you must open the [**Channel Details**](#channel-details) screen, and then exit by pressing **Function** + **Green**.
 
@@ -388,7 +388,7 @@ Changing the power on **either** VFO also changes the **Master** power setting.
 
 Power can be set to **50mW**, **250mW**, **500mW**, **750mW**, **1W**, **2W**, **3W**, **4W**, **5W** and **-W+**.
 
-The **-W+** power setting configures the PA drive to the value specifed by the User Power value in the Options menu. 
+The **-W+** power setting configures the PA drive to the value specified by the User Power value in the Options menu. 
 By default this is set to the maximum value which will result in the radio producing more than 5W.
 **Power settings resulting in the radio producing more than 5W are designed for emergency use only, and results in around 5.5W being produced on 70cm and 7W on 2m.**
 
@@ -403,7 +403,7 @@ To access this power setting, select the **5W** power setting, then press and ho
 - The power output will only be correct after the operator has calibrated their own radio, as these radios **do not seem to have very accurate power calibration applied in the factory**.
 - Power output on settings below **1W** is **not** very accurate, because the calibration only holds data points for the **1W** and **5W** power values.
 - Between **1W** and **5W**, the PA FET output power is approximately directly proportional to the PA drive level, hence the interpolated drive levels result in *reasonably accurate* power levels for **2W**, **3W** and **4W**.
-- However, below **1W** the PA FET ouput power **is not directly proportional** to the PA drive level, and **conserably varies** between different radios. Hence the power accuracy below **1W** is at best around **80% accurate**.
+- However, below **1W** the PA FET output power **is not directly proportional** to the PA drive level, and **considerably varies** between different radios. Hence the power accuracy below **1W** is at best around **80% accurate**.
 - Also, the PA FET minimum operational power threshold is very close to (or sometimes even above **50mW**), so operating at this power level **can produce unwanted spurious emissions**.
 - Please confirm your power output and spectral emissions **before** using the **50mW** setting anywhere it may cause interference.
 
@@ -537,13 +537,13 @@ This function essentially reverses the TX and RX frequencies.
 
 ##### Copy the RX frequency to the TX frequency<!-- linebreak -->
 
-Copies the RX frequency to the TX frequency.
+Copies the Rx frequency to the Tx frequency.
 
 - Press **Green** key or **Orange** button to confirm.
 
-##### Copy TX frequency to the RX frequency<!-- linebreak -->
+##### Copy Tx frequency to the Rx frequency<!-- linebreak -->
 
-Copies the TX frequency to the RX frequency.
+Copies the Tx frequency to the Rx frequency.
 
 - Press **Green** key or **Orange** button to confirm.
 
@@ -655,7 +655,7 @@ When a *TG* has been **manually entered**, the display shows a **1 pixel box** a
 
 - Press the **Hash** (**#**) two times to enter a Private Call DMR ID number.
 
-![personnal DMR ID entry screen](media/private-call-entry.png)
+![personal DMR ID entry screen](media/private-call-entry.png)
 
 In all numeric entry screens, pressing the **Red** menu key exits back to the previous screen, either the VFO or Channel screen.
 
@@ -667,7 +667,7 @@ In all numeric entry screens, pressing the **Red** menu key exits back to the pr
 
 The contact name is shown in the middle of the screen, *e.g.* “**TG 505 TS2**” and the *TalkGroup* or *PC* number is shown in smaller text at the bottom of the screen.
 
-- Press the **Up** or **Down**  arrows to cycle through the list of *Digital Contacts*.
+- Press the **Up** or **Down** arrows to cycle through the list of *Digital Contacts*.
 - Press **Green** to select or **Red** to cancel.
 
 Private calls can also be selected in this manner.
@@ -682,13 +682,13 @@ Private calls can also be selected in this manner.
 
 This DMR ID will be used for transmission **until** the radio is rebooted or you enter another DMR ID via the same screen.
 
-To make the change permanent, so that its written back to the codeplug Press **Function** + **Green** instead of **Green** to confirm the number.
+To make the change permanent, so that it’s written back to the codeplug Press **Function** + **Green** instead of **Green** to confirm the number.
 
 ### FM specific functionality (*VFO and Channel screens*)
 
 #### FM and FM Narrow<!-- linebreak -->
 
-For FM with **25kHz bandwidth** with the text “**FM**” is displayed in the top left of the screen. For narrow band with **12.5kHz bandwidth** the text “**FMN**” is displayed.
+For FM with **25kHz bandwidth** with the text “**FM**” is displayed in the top left of the screen. For narrow band **12.5kHz bandwidth** the text “**FMN**” is displayed.
 
 #### CTCSS Tone or DCS Code<!-- linebreak -->
 
@@ -761,7 +761,7 @@ When entering a frequency:
 
 #### To adjust the TX frequency, independent of the RX frequency<!-- linebreak -->
 
-- Press the and hold **Function** button on the side of the radio, and then the **Down** arrow.
+- Press and hold **Function** button on the side of the radio, and then the **Down** arrow.
 
 This will change the currently selected frequency to the TX frequency, and the arrow will move to the left of the “**T**” instead of the “**R**”
 
