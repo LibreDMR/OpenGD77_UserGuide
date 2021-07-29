@@ -59,7 +59,7 @@ For the latest information and discussions, please refer to the development and 
       * [Frequency change up/down step](#frequency-change-updown-step)
       * [Numerical frequency entry](#numerical-frequency-entry)
       * [To adjust the TX frequency, independent of the RX frequency](#to-adjust-the-tx-frequency-independent-of-the-rx-frequency)
-	  * [Spectrum sweep scan](#sectrum-sweep-scan)
+	  * [Spectrum sweep scan](#spectrum-sweep-scan)
   * [Monitor mode](#monitor-mode)
   * [Transmitting](#transmitting)
     * [Timeout warning beep](#timeout-warning-beep)
