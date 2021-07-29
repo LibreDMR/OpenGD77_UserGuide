@@ -59,6 +59,7 @@ For the latest information and discussions, please refer to the development and 
       * [Frequency change up/down step](#frequency-change-updown-step)
       * [Numerical frequency entry](#numerical-frequency-entry)
       * [To adjust the TX frequency, independent of the RX frequency](#to-adjust-the-tx-frequency-independent-of-the-rx-frequency)
+	  * [Spectrum sweep scan](#sectrum-sweep-scan)
   * [Monitor mode](#monitor-mode)
   * [Transmitting](#transmitting)
     * [Timeout warning beep](#timeout-warning-beep)
@@ -776,6 +777,23 @@ Use this method to set different TX and RX frequencies. For example, this can be
 - If different TX and RX frequencies are set, and the currently selected input is set to RX, changing the RX frequency will also change the TX frequency, and the difference between the RX and TX frequency will be maintained if possible.
 
 The only case where the frequency difference **will not be maintained** is if the TX frequency goes outside of the range of frequencies supported by the radio hardware.
+
+#### Spectrum sweep scan<!-- linebreak -->
+
+Press and hold the **Hash**  # key to enter Spectrum sweep scan mode.
+
+The radio then starts scanning a band of frequencies centered on the current Rx frequency, and displays the signal strengh in the forum of a spectrum amplitude graph.
+The bandwidth of the scan is shown in the top left corner of the display e.g. +/- 800kHz
+
+**Left** / **Right** : Step down or up central frequency of sweep
+**SK2 + Left** / **SK2 + Right**: Change overall sweep bandwidth aka zoom
+**Down** / **Up**: Decrease / increase virtual gain
+**SK2 + Down** / **SK2 + Up**: Decrease / Increase virtual noise floor
+**SK1 + Up** or **SK1 +Down**: Resets the gains/floor to default
+Monitor mode (long press on SK2) suspends the scan and open the receiver to the central frequency.
+
+![Spectum scan](media/vfo-spectrum-scan.png)
+
 
 ## Monitor mode
 
