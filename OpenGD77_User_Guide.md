@@ -786,11 +786,18 @@ The radio then starts scanning a band of frequencies centered on the current Rx 
 The bandwidth of the scan is shown in the top left corner of the display e.g. +/- 800kHz
 
 **Left** / **Right** : Step down or up central frequency of sweep
+
 **SK2 + Left** / **SK2 + Right**: Change overall sweep bandwidth aka zoom
+
 **Down** / **Up**: Decrease / increase virtual gain
+
 **SK2 + Down** / **SK2 + Up**: Decrease / Increase virtual noise floor
+
 **SK1 + Up** or **SK1 +Down**: Resets the gains/floor to default
+
 Monitor mode (long press on SK2) suspends the scan and open the receiver to the central frequency.
+
+
 
 ![Spectum scan](media/vfo-spectrum-scan.png)
 
