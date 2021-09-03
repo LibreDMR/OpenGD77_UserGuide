@@ -78,9 +78,12 @@ For the latest information and discussions, please refer to the development and 
     * [RSSI](#rssi)
     * [Radio info](#radio-info)
       * [Battery voltage and percentage](#battery-voltage-and-percentage)
+      * [Time clock](#time-clock)
       * [CPU Temperature](#cpu-temperature)
       * [Battery voltage history](#battery-voltage-history)
-      * [Time clock](#time-clock)
+      * [Date screen](#date-screen)
+      * [Timezone screen](#timezone-screen)
+      * [Location screen](#location-screen)
     * [Contacts](#contacts)
       * [DMR Contacts](#dmr-contacts)
       * [FM DTMF Contacts](#fm-dtmf-contacts)
@@ -108,6 +111,8 @@ For the latest information and discussions, please refer to the development and 
       * [Batt Cal](#batt-cal)
       * [Time Cal](#time-cal)
       * [Eco Level](#eco-level)
+      * [Suspend](#suspend)
+      * [Satellite follow mode](#satellite-follow-mode)
     * [Display Options](#display-options)
       * [Brightness](#brightness)
       * [Min Bright](#min-bright)
@@ -120,6 +125,7 @@ For the latest information and discussions, please refer to the development and 
 	  * [Battery units](#battery-units)
 	  * [Info](#info)
 	  * [LEDs](#leds)
+	  * [Time](#time-display-format)
     * [Sound Options](#sound-options)
       * [Timeout beep](#timeout-beep)
       * [Beep volume](#beep-volume)
@@ -152,6 +158,7 @@ For the latest information and discussions, please refer to the development and 
       * [Accepting and saving the changes to the channel](#accepting-and-saving-the-changes-to-the-channel)
     * [Language Screen](#language-screen)
     * [Credits Screen](#credits-screen)
+	* [Satellite Screen](#satellite-screen)
   * [Making and receiving DMR Private Calls](#making-and-receiving-dmr-private-calls)
     * [To make a Private Call](#to-make-a-private-call)
     * [To Receive a Private Call](#to-receive-a-private-call)
@@ -361,7 +368,9 @@ On both the VFO and Channel screens:
 
 ### Changing Timeslot in DMR mode
 
-- In DMR mode, pressing the **Star** key toggles between *TimeSlot 1* and *TimeSlot 2*.
+- In DMR mode, pressing the **Star** key toggles between *TimeSlot 1* and *TimeSlot 2* and sets this as the Timeslot override.
+
+To clear a Timeslot override, press and old the **Star** key.
 
 ### Changing bandwidth in FM mode
 
@@ -809,7 +818,7 @@ The only case where the frequency difference **will not be maintained** is if th
 
 - Press and hold the **Hash**  # key to enter Spectrum sweep scan mode.
 
-The radio then starts scanning a band of frequencies centered on the current Rx frequency, and displays the signal strengh in the forum of a spectrum amplitude graph.
+The radio then starts scanning a band of frequencies centered on the current Rx frequency, and displays the signal strength in the forum of a spectrum amplitude graph.
 The bandwidth of the scan is shown in the top left corner of the display e.g. +/- 800kHz
 
   - **Left** / **Right** : Step down or up central frequency of sweep
@@ -820,7 +829,7 @@ The bandwidth of the scan is shown in the top left corner of the display e.g. +/
 
 Monitor mode (long press on SK2) suspends the scan and open the receiver to the central frequency.
 
-![Spectum scan](media/vfo-spectrum-scan.png)
+![Spectrum scan](media/vfo-spectrum-scan.png)
 
 <div style="page-break-after: always; break-after: page;"></div>
 
@@ -900,7 +909,7 @@ When not actively scanning, pressing the **Up** or **Down** arrows performs the 
 
 - Press the **Left** arrow key to reverse the scan direction.
 - Press the **Up** arrow to skip over the current frequency and continue the scan.
-- Press the **Right** arrow arrow to mark the current frequency as a *nuisance* frequency, which will be omitted by the scan.
+- Press the **Right** arrow to mark the current frequency as a *nuisance* frequency, which will be omitted by the scan.
 
 Pressing any other button will stop the scan
 
@@ -1024,7 +1033,23 @@ This shows battery voltage and percentage.
 
 ![battery status screen](media/battery.png)
 
-- Press the **Down** key to display the CPU temperature.  
+- Press the **Down** key to display the next page.  
+
+#### Time clock
+
+![realtime clock](media/radioinfo-time.png)
+
+Displays the time in either UTC or Local time, depending on the Display Options Time: setting.
+To set the clock enter the full time in 24 hour time including all hours minutes and seconds, and press the **Green** menu key.
+
+If using Local time. **You MUST set the Timezone before setting the time**
+
+Notes.
+The clock only keeps time when the radio is turned on, or in Suspend Mode.
+The time accuracy varies from radio to radio, but can be accurate to approximately 5 second per day.
+Problems with time accuracy can be partially corrected by using the Time Cal: setting in the Options menu
+
+- Press the **Down** key to display the next page.
 
 #### CPU temperature
 
@@ -1032,7 +1057,7 @@ This displays the CPU temperature in Celcius.
 
 ![temperature screen](media/temperature.png)
 
-- Press the **Down** key to display the battery usage chart.
+- Press the **Down** key to display the next page.
 
 #### Battery voltage history
 
@@ -1040,25 +1065,59 @@ This shows the history of battery voltage on an hourly basis.
 
 ![battery history graph](media/battery-graph.png)
 
-- Press the **Down** key to display the time clock.
+- Press the **Down** key to display the next page.
 
-#### Time clock
+#### Date screen
 
-To set the clock enter the full time in 24 hour time including all hours minutes and seconds, and press the **Green** menu key.
+![date](media/radioinfo-date.png)
 
-Notes.
-The clock only keeps time when the radio is turned on.
-The time accuracy varies from radio to radio, but can be accurate to approximately 1 second per day.
+This displays and allows the entry of the date in either UTC or Local time, depending on the Display Options Time: setting.
+To set the date enter the full date in format YYYY MM DD (Year Month Day), and press the **Green** menu key.
+
+If using Local date / time. **You MUST set the Timezone before setting the date **
+
+- Press the **Down** key to display the next page.
+
+#### Timezone screen
+
+![timezone](media/radioinfo-timezone.png)
+
+This displays and allows the entry of the local timezone
+Press the **Right** arrow to increase the value in steps of 1 hour
+
+Press the **Left** arrow to increase the value in steps of 1 hour
+
+If your timezone is not on a 1 hour boundary, press **SK2** and **Right** or **LEFT** to adjust the timezone in 15 minute  increments
+
+The timezone is saved immediately. Pressing **Green** is not required.
+
+- Press the **Down** key to display the next page.
+
+#### Location screen
+
+![location](media/radioinfo-location.png)
+
+This displays and allows the entry of the location in Latitude / Longitude
+
+This screen is currently only used for the Satellite functionality.
+But may be used in the future to send APRS data.
+
+Enter the full Latitude / Longitude in DD.DDD DDD.DDD format (D degrees)
+
+To change southern / northern hemisphere, press **Down** / **Up**
+To change western / eastern hemisphere, press **SK2** + **Down** / **Up**
+
+Before the location is set, this screen will display the message "NOT SET" and show question marks in place of the Lat / Long value
 
 ### Contacts
 
 #### DMR Contacts
 
-Allows selection, Editing or Deletion of DMR Contcats
+Allows selection, Editing or Deletion of DMR Contacts
 
 #### FM DMTF Contacts
 
-Allows selection, Editing or Deletion of FM DTMF Contcats
+Allows selection, Editing or Deletion of FM DTMF Contacts
 
 #### New Contact
 
@@ -1101,12 +1160,12 @@ This setting controls the frequency band ranges inside which the radio can trans
 
 Options are
 
-- ***OFF***: where tranmission is **not limited** to band ranges.
+- ***OFF***: where transmission is **not limited** to band ranges.
 - ***ON***: where the **band limits for the USA** are applied (**this is the Default setting**):
   - 144MHz - 148MHz,
   - 222MHz - 225MHz,
   - 420MHz - 450MHz.
-- ***CPS***: where the VHF and UHF limits set **in the CPS** are used. If the CPS band limts do not contain valid values, for example the UHF frequency band range is **less than** or **intersects** with the VHF band range, the radio will use the **Default** settings (as above)
+- ***CPS***: where the VHF and UHF limits set **in the CPS** are used. If the CPS band limits do not contain valid values, for example the UHF frequency band range is **less than** or **intersects** with the VHF band range, the radio will use the **Default** settings (as above)
 
 ![CPS band limit window](media/cps-band-limits.png)
 
@@ -1120,7 +1179,7 @@ The hardware band limits are:
 
 These limits are because the *AT1846S RF* chip **will not operate reliably** outside this range, and this range is actually beyond the published specification of the AT1846S, which is technically 134MHz - 174MHz, 200MHz - 260MHz, 400MHz - 520MHz.
 
-It should also be noted that the radio does **not** have a PA or Rx section for the 200MHz band, **so operating in this range has high suprious emissions, usually on the 1<sup>st</sup> harmonic of the frequency in use**.
+It should also be noted that the radio does **not** have a PA or Rx section for the 200MHz band, **so operating in this range has high spurious emissions, usually on the 1<sup>st</sup> harmonic of the frequency in use**.
 
 
 #### Key long<!-- linebreak -->
@@ -1150,8 +1209,8 @@ This works when **Pause** is selected as the scan mode.
 #### Scan dwell<!-- linebreak -->
 
 During scan mode, this controls the duration that the receiver listens ( dwells ) on each frequency and listens for a signal.
-The default is 30 milliseonds.
-On DMR if the value is less than 60 millisconds, the value of 60 millisconds is used, because this is the minimum time for one complete DMR frame of 2 timeslots.
+The default is 30 milliseconds.
+On DMR if the value is less than 60 milliseconds, the value of 60 milliseconds is used, because this is the minimum time for one complete DMR frame of 2 timeslots.
 
 Longer values can help when scanning for weak signals or signals which fade in and out, but will reduce the number of frequencies or channels scanned per second
 
@@ -1235,7 +1294,7 @@ On VHF (2m band), using a GD-77, with a fully charged battery, the power output 
 
 The purpose of this setting is to give the operator the ability to not only transmit more power than the official maximum power, for example for emergency operation.
 But it also allows the radio to transmit very low power levels, if low values of PA drive are used.
-A value of 0 would result in no drive to the PA at all, but there will still be RF generated by the main RF / transcriver chip in the radio.
+A value of 0 would result in no drive to the PA at all, but there will still be RF generated by the main RF / transceiver chip in the radio.
 Some of the signal from the RF chip is likely to leak into the antenna output of the radio and it definitely leaks through the plastic case of the radio.
 So a value of 0 does not stop the radio completely from generating RF.
 
@@ -1274,9 +1333,9 @@ The clock is currently an experimental feature and is not guaranteed to be accur
 
 This setting controls the Economy or Rx Power Saving, operation of the radio.
 The range is 0 to 5.
-Rx power saving is acheived by pulsing the Rx and other parts of the internal electronics of the radio Off for small amount of time, to reduce current consumption and hence increase battery life.
-The minimum setting is 0, which disables the Rx power saving and results in the Rx and all other electronics in the radio being powered on continously.
-The default setting is 1, which uses a 1:1 duty cycle. With an overall duty period of 240 milliseconds. 120 milliseconds On, 120 millisconds off. in this Eco Level, power saving does not start until the radio had been idle for 10 seconds.
+Rx power saving is achieved by pulsing the Rx and other parts of the internal electronics of the radio Off for small amount of time, to reduce current consumption and hence increase battery life.
+The minimum setting is 0, which disables the Rx power saving and results in the Rx and all other electronics in the radio being powered on continuously.
+The default setting is 1, which uses a 1:1 duty cycle. With an overall duty period of 240 milliseconds. 120 milliseconds On, 120 milliseconds off. In this Eco Level, power saving does not start until the radio had been idle for 10 seconds.
 
 This table shows the values for all Eco Levels
 
@@ -1290,15 +1349,38 @@ Level | Entry delay (seconds) | Max latency | Average current / mA | Approximate
 5 | 4 | 1360 | 22 | 93
 
 Higher values of Eco level reduce the current consumption and increase the battery life, when the radio is idle and not receiving.
-As soon as the radio receives a signal it immediatly turns on all necessary hardware, and is no longer in power saving mode.
+As soon as the radio receives a signal it immediately turns on all necessary hardware, and is no longer in power saving mode.
 
-Higher values may cause the radio to not hear signals that are shorer than the overall duty cycle, so the operator needs to balance their individual need to extend the battery life with the ability to detect the siganl the want to receive.
+Higher values may cause the radio to not hear signals that are shorter than the overall duty cycle, so the operator needs to balance their individual need to extend the battery life with the ability to detect the siganl the want to receive.
 
-The amount of current consumption does not decrease linearly with the Eco Level value, because the radio has come core components like the CPU and voltage regulators, which always consume the same amount of current, regardless of the Eco Level.
+The amount of current consumption does not decrease linearly with the Eco Level value, because the radio has some core components like the CPU and voltage regulators, which always consume the same amount of current, regardless of the Eco Level.
 
-Although the default value is 1, which results in approximately 30% less current consumpion with minimal loss ability to detect a signal, values of 2 , 3 work well for most people, with no noticable loss in radio functionality.
-Levels 4 and 5 may result in some degredation in the ability to detect a signal, but can be used to extend the battery life.
+Although the default value is 1, which results in approximately 30% less current consumption with minimal loss ability to detect a signal, values of 2 , 3 work well for most people, with no noticeable loss in radio functionality.
+Levels 4 and 5 may result in some degradation in the ability to detect a signal, but can be used to extend the battery life.
 
+#### Suspend<!-- linebreak -->
+
+![options suspend](media/options-suspend-on.png)
+
+This setting controls what happens when the power / volume control on the radio is turned off.  
+In order to maintain a realtime clock, the radio now has a "Suspend" mode which keeps the CPU running at low speed with all other radio systems turned off
+
+If suspend mode is enabled, turning off the power / volume control puts the radio into suspend mode.
+Turning on the power / volume control wakes the radio from suspend mode.
+
+If button **SK2** is held in while the power / volume control is turned off, and with suspend mode enabled, the radio will do a full power off, and the realtime clock will not be maintained.
+If suspend mode is not enabled, holding **SK2** while the power / volume control is turned off, will enter suspend mode.
+
+Note. Suspend mode consumes about 20mA from the battery, and will flatten the battery in around 3 or 4 days, for a brand new battery that is fully charged.
+This mode is primarily intended for use with Satellite mode, which requires the exact time and date to be know, in order to predict satellite passes and calculate satellite Doppler corrected frequencies.
+
+#### Satellite follow mode<!-- linebreak -->
+
+![options satellite on](media/options-sat-manual.png)
+
+This setting is used to control whether in satellite mode, on the Polar or Live screens, whether the radio automatically changes to the next available satellite after the current satellite has passed over and gone below the horizon.
+
+Default is **Manual** and the currently selected satellite does not change. "Auto" automatically switches to the next available satellite.
 
 <div style="page-break-after: always; break-after: page;"></div>
 
@@ -1399,6 +1481,17 @@ If this setting is set to off, the LED will not illuminate either on Rx or Tx.
 
 <div style="page-break-after: always; break-after: page;"></div>
 
+#### Time display format<!-- linebreak -->
+
+This setting controls whether the value of time and date that is entered and displayed is "UTC" or "Local"
+
+When this is set to Local, it uses the value set in Radio Information Timezone to calculate the date and time for the clock date and satellite passes
+
+If "UTC" is selected, all dates and times displayed will have UTC after the value to indicate that UTC is being used.
+If "Local" is selected, dates and times do not show any text to indicate that Local time is use
+
+<div style="page-break-after: always; break-after: page;"></div>
+
 ### Sound Options
 
 ![sound options menu](media/sound-options.png)
@@ -1472,9 +1565,9 @@ This setting controls the **audible feedback** to button and key presses etc and
   - "**Voice L2**" and
   - "**Voice L3**", in the latter two cases the L indicates the "Level"
 
-  The voice level is used to control whether the voice prompt is played immediatly, or whether the operator needs to press button SK1 to play the which describes the last change made to the radio.
+  The voice level is used to control whether the voice prompt is played immediately, or whether the operator needs to press button SK1 to play the which describes the last change made to the radio.
 
-  For example. On **Voice** mode, which is **level 1**, the things which are voiced immediatly voiced are:
+  For example. On **Voice** mode, which is **level 1**, the things which are voiced immediately voiced are:
 
   - Number key, and # key buttons being pressed.
   - Changes to squelch level.
@@ -1483,7 +1576,7 @@ This setting controls the **audible feedback** to button and key presses etc and
 
   Voice **level 2** has almost identical operation to Voice **level 1**, except that if a key or button is pressed while a prompt is already being played, **there will be a slight reduction in the verbosity of the next response**.
 
-  Voice **level 3**, all items voice **immediatly**, including:
+  Voice **level 3**, all items voice **immediately**, including:
   - Channel names are announced as you arrow through channels in channel mode;
   - Talkgroup names are announced as you arrow through them in DMR mode;
 
@@ -1504,7 +1597,7 @@ This setting controls the **audible feedback** to button and key presses etc and
 
 Displays the channel name, and also allows the name to be changed.
 A flashing underline is shown at the current text insertion position, which will initially be after the last text character of the name.
-Pressing the appropriate button on the numerical keypad, enters numbers and letters. e.g. The "2" button, initially enters 2, but immediatly pressing "2" again enters the letter "A"
+Pressing the appropriate button on the numerical keypad, enters numbers and letters. e.g. The "2" button, initially enters 2, but immediately pressing "2" again enters the letter "A"
 Pressing SK2 + Left, deletes a character.
 
 #### RX<!-- linebreak -->
@@ -1613,7 +1706,7 @@ A **custom** squelch setting can be applied to the channel by pressing the right
 This screen allows the language of the on screen texts to be selected.
 Notes.
 1. This does not change the language of the Voice Prompts, because the voice prompts are not part of the main firmware file and must be loaded separately using the OpenGD77 CPS.
-2. Not all languages are actively maintained by the original native translator, so the translations of some langaues are not perfect.
+2. Not all languages are actively maintained by the original native translator, so the translations of some languages are not perfect.
 If you noticed a problem with a language translation, please post to the https://www.opengd77.com forum, providing a better translation.
 
 <div style="page-break-after: always; break-after: page;"></div>
@@ -1625,6 +1718,161 @@ If you noticed a problem with a language translation, please post to the https:/
 Details of the creators of firmware.
 
 If other developers contribute to the development effort they will be added to this screen, and the addition details will be viewed by pressing the **Down** arrow to scroll the text.
+
+<div style="page-break-after: always; break-after: page;"></div>
+
+### Satellite Screen
+
+This screen predicts when Amateur Radio satellites will pass overhead the current location, for the next 24 hours using the location, date and time entered by the operator.
+It also automatically corrects for Doppler shift on both the Tx and Rx frequenices, as well as displaying the azimuth and elevation of the satellite in a varierty of ways, including numberical and polar plot.
+
+Before this screen can be used, the operator **MUST** enter their location, as well as the current time / date into the Radio Info screen.
+Also the satellite orbital data Keps' **MUST** be uploaded using the CPS.
+
+If the operator has not entered the date / time or location, they will be prompted to do this.
+
+For example, after power cycling the radio, the date and time will cleared and would need to be re-entered
+
+Uploading the latest Keps' from the CPS also sets the date and time, so in practice its often easier to upload the Keps' than to set the date / time manually
+
+When using the satellite functionality the operator does **not** need to set the satellite frequency or CTCSS, as these values are upload from the CPS as part of the Kep's data and date / time upload
+To change the satellite frequencies or upload different satellites, the satellites.txt installed as part of the CPS can be modified.
+
+For satellites like SO-50, which have an "Arming" CTCSS tone. Press SK1 during transmission to transmit the "Arm" CTCSS tone.
+
+
+The first screen displayed is the master predictions list. This lists the prediction of all passes for all satellites in the next 24 hours, displayed chronologically.
+
+![location](media/satellite-main-predictions-list.png)
+
+
+Because of the number of calculations that need to be performed, the predictions take a few seconds to be calculated. While this is happening a progress bar is shown.
+
+Once the list appears, it shows the satellite name as well as the time that the satellite will appear above the horizon (known as Acquisition of Satellite - AOS), and the maximum elevation in degrees
+If a satellite is currently above the horizon, this is show by a black bar on the right side of the screen next to that satellite / pass.
+
+![location](media/satellite-main-predictions-list-AOS.png)
+
+Use the **Down** / **Up** arrows to scroll down / up though the list.
+
+
+Note.
+Some satellites, e.g. SO-86 are on an equatorial orbit and only pass over equatorial locations, hence passes for that satellite will not appear in the predictions list for locations outside this geographic area.
+
+
+Pressing **Green** to select a specific satellite / pass displays the predicted **Polar view** for that satellite / pass.
+
+**Polar view**
+
+![location](media/satellite-polar-before-AOS.png)
+
+The polar view graphic shows the path of the satellite shown as a plan view from vertically above the location of the radio, with the outside circle being the horizon, and the two inner circles being 30 deg and 60 deg and the centre being directly overhead the location.
+When the satellite is currently below the horizon, a large dot is show where the satellite will appear on the horizon.
+If the satellite is above the horizon, the dot shows the current position of the satellite.
+
+When the satellite is below the horizon, the time to the next pass is shown in the top left of the screen in either HH:MM:SS or MM:SS or SS s depending on how long it is until the pass
+When the satellite is below the horizon, the maximum elevation is shown in the bottom left of the screen.
+
+When the satellite is above the horizon, the current Azimuth is shown the top left corner of the screen, the current elevation is shown in the bottom left of the screen, and the satellite position is shown on the polar plot.
+
+![location](media/satellite-polar-mid-pass.png)
+
+Further in the same pass, the display changes, every second, to show the movement of the satellite as well as changes in azimuth and elevation
+
+![location](media/satellite-polar-mid-pass-2.png)
+
+
+The current RSSI signal strength is shown at all times as a vertical bar, so that operators can adjust their antennas for maximum signal.
+
+On this screen, the squelch and power can be adjusted using the same keys as on the Channel and VFO screens.
+
+Press **down** to enter the individual satellite predictions screen, or **Up** to enter the satellite live data screen
+
+
+**Satellite individual predictions screen**
+
+![location](media/satellite-individual-passes-1.png)
+
+
+This screen allows the predictions for individual satellites to be viewed, including the time and maximum elevation of the pass and the duration of the pass.
+
+Press **Right** / **Left** to step though the pass predictions for the currently selected satellite 
+
+![location](media/satellite-individual-passes-2.png)
+
+
+Press **down** to enter the satellite live data screen or **Up** to enter the Polar view.
+
+**Satellite live data screen**
+
+This screen shows the current Azimuth and Elevation of the selected satellite, regardless of which pass has been selected.
+It also shows the current Transmit and Receive, the power level, and the battery voltage.
+
+Negative elevation values indicate that the current satellite is below the horizon
+
+![location](media/satellite-live-before-AOS.png)
+
+The screen updates once a second to continuously.
+
+![location](media/satellite-live-mid-pass-1.png)
+
+![location](media/satellite-live-mid-pass-2.png)
+
+On the Polar, Live and Individual satellite predictions screens. Press SK2 + **Up** / **Down** to change to a different satellite.
+
+**Note**
+
+If a satellite has no passes over the current location, the radio will display "Pass: None" or "Empty List" depending on the screen currently selected.
+e.g. IO-86 only passes over equatorial locations.
+
+**Satellite alarm**
+
+To be alerted about a specific satellite pass.
+
+Press SK2 + Green on any of the satellite screens, before 1 minute prior to that pass, and leave the radio in Satellite mode.
+
+Then 1 minute before the satellite is predicted to appear above the horizon, the radio will beep.
+Press **Green** to cancel the alarm once it has started or turn the radio on / off or into and out of suspend mode to remove an existing alarm
+If the alarm is not cancelled after 1 minute it will automatically stop.
+
+**CPS Intergation**
+
+The CPS has a extra feature added to download the Kep's data and upload this to the radio, as well as setting the date / time of the radio.
+In the Extras -> OpenGD77 support screen of the CPS. Connect the USB cable to the radio, make sure the radio is turned on, and press the "Install satellite Keps" button.
+The CPS defaults to downloading the Keps from a specific web URL, however if the operator perfers to use a differnt source of Kep's data, they can change the URL.
+
+The satellites which are imported and uploaded to the radio are defined in the file satellites.txt which is installed with the CPS into its installation directory.
+This file is a standard format CSV file, and contains the satellite catalog number, as well as the display name in the radio, and the Tx, Rx frequencies and Tx CTCSS as well as the "Arming" CTCSS for satellites which use an "Arming" tone. 
+The operator can edit this file to add or remove satellites as required.
+The maximum number of satellites which can be loaded into the radio is 15, but currently there are 8 AMSAT satellites in this data
+
+Catalogue number | Display name | Rx | Tx | CTCSS | ArmCTCSS
+---------------- | ------------ | -- | -- | ----- | --------
+22825U | AO27 | 436795000 | 145850000 | 0 | 0
+43017U | AO91 | 145960000 | 435250000 | 670 | 0
+43137U | AO92 | 145880000 | 435350000 | 670 | 0
+40908U | CAS3H | 437200000 | 144350000 | 0 | 0
+40931U | IO86 | 435880000 | 145880000 | 885 | 0
+43678U | PO101 | 145900000 | 437500000 | 1413 | 0
+25544U | ISS | 437800000 | 145990000 | 670 | 0
+27607U | SO50 | 436795000 | 145850000 | 670 | 744
+
+
+CTCSS and ArmCTCSS values are the tone frequency time 10 e.g. 67Hz = 670
+
+**Technical notes**
+
+The satellite position and prediction calculations are generated in real time by the firmware in the radio, and the currently selected satellite data is updated once per second.
+
+The predictions are usually accurate to around +/- 5 seconds of AOS time , LOS time and duration, compared with other satellite prediction software including AMSAT's online prediction page and other PC applications like GPredict
+Prediction programs like GPredict usually don't show exactly same values for start, or end, to the online AMSAT predictions either.
+
+Predictions will not be be completely accurate unless the satellite Kep's data is updated frequently.  If practical the keps should be uploaded on a daily basis, though normally the satellites don't move too far from their predicted path for several days, or even a week.
+
+The prediction calculation is a custom implementation, written for the OpenGD77, using the methodology from the original AMSAT prediction calculation called PLAN13 written in the 1983.
+See https://www.amsat.org/amsat/articles/g3ruh/111.html
+
+
 
 
 <div style="page-break-after: always; break-after: page;"></div>
