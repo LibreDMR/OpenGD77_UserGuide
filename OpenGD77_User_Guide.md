@@ -82,18 +82,26 @@ For the latest information and discussions, please refer to the development and 
       * [CPU Temperature](#cpu-temperature)
       * [Battery voltage history](#battery-voltage-history)
       * [Date screen](#date-screen)
-      * [Timezone screen](#timezone-screen)
       * [Location screen](#location-screen)
     * [Contacts](#contacts)
       * [DMR Contacts](#dmr-contacts)
       * [FM DTMF Contacts](#fm-dtmf-contacts)
       * [New Contact](#new-contact)
     * [Last Heard](#last-heard)
-    * [Firmware Info](#firmware-info)
-    * [Options](#options)
-      * [Band Limits](#band-limits)
+    * [Firmware Info and credits](#firmware-info-and-credits)
+	*  Options - contains the 4 following options screens
+    * [General Options](#general-options)
       * [Key long](#key-long)
       * [Key rpt](#key-rpt)
+      * [Hotspot](#hotspot)
+      * [Temp Cal](#temp-cal)
+      * [Batt Cal](#batt-cal)
+      * [Time Cal](#time-cal)
+      * [Eco Level](#eco-level)
+      * [Suspend](#suspend)
+      * [Satellite follow mode](#satellite-follow-mode)
+    * [Radio Options](#radio-options)
+      * [Band Limits](#band-limits)
       * [Filter time](#filter-time)
       * [Scan delay](#scan-delay)
       * [Scan dwell](#scan-dwell)
@@ -103,16 +111,9 @@ For the latest information and discussions, please refer to the development and 
       * [Squelch 220](#squelch-220)
       * [Squelch VHF](#squelch-vhf)
       * [PTT Latch](#ptt-latch)
-      * [Hotspot](#hotspot)
       * [TA Tx](#ta-tx)
       * [Allow PC](#allow-pc)
-      * [User Power](#user-power)
-      * [Temp Cal](#temp-cal)
-      * [Batt Cal](#batt-cal)
-      * [Time Cal](#time-cal)
-      * [Eco Level](#eco-level)
-      * [Suspend](#suspend)
-      * [Satellite follow mode](#satellite-follow-mode)
+      * [User Power](#user-power)  
     * [Display Options](#display-options)
       * [Brightness](#brightness)
       * [Min Bright](#min-bright)
@@ -125,6 +126,7 @@ For the latest information and discussions, please refer to the development and 
 	  * [Battery units](#battery-units)
 	  * [Info](#info)
 	  * [LEDs](#leds)
+      * [Timezone](#timezone)	  
 	  * [Time](#time-display-format)
     * [Sound Options](#sound-options)
       * [Timeout beep](#timeout-beep)
@@ -157,7 +159,6 @@ For the latest information and discussions, please refer to the development and 
 	  * [Channel squelch](#channel-squelch)
       * [Accepting and saving the changes to the channel](#accepting-and-saving-the-changes-to-the-channel)
     * [Language Screen](#language-screen)
-    * [Credits Screen](#credits-screen)
 	* [Satellite Screen](#satellite-screen)
   * [Making and receiving DMR Private Calls](#making-and-receiving-dmr-private-calls)
     * [To make a Private Call](#to-make-a-private-call)
@@ -1078,21 +1079,6 @@ If using Local date / time. **You MUST set the Timezone before setting the date 
 
 - Press the **Down** key to display the next page.
 
-#### Timezone screen
-
-![timezone](media/radioinfo-timezone.png)
-
-This displays and allows the entry of the local timezone
-Press the **Right** arrow to increase the value in steps of 1 hour
-
-Press the **Left** arrow to increase the value in steps of 1 hour
-
-If your timezone is not on a 1 hour boundary, press **SK2** and **Right** or **LEFT** to adjust the timezone in 15 minute  increments
-
-The timezone is saved immediately. Pressing **Green** is not required.
-
-- Press the **Down** key to display the next page.
-
 #### Location screen
 
 ![location](media/radioinfo-location.png)
@@ -1123,8 +1109,6 @@ Allows selection, Editing or Deletion of FM DTMF Contacts
 
 Allows a new DMR Contact to be created
 
-
-
 ### Last Heard
 
 Displays a record of the last 32 DMR stations that the radio has received.
@@ -1135,52 +1119,28 @@ Displays a record of the last 32 DMR stations that the radio has received.
 - Pressing the **Green** key will set the selected station DMR ID as the new PC / TG contact.
 - Hold **Blue** button to view details like TalkGroup and time elapsed
 
-### Firmware Info
+### Firmware Info and credits
 
 ![firmware info screen](media/firmware-info.png)
 
-Displays the date and time the firmware was built, and also the Github commit code in brackets.
+Displays the date and time the firmware was built, and also the Github commit code in brackets on the first page
 
 To view details on Github, append the code to <https://github.com/rogerclarkmelbourne/OpenGD77/commit/>
 
 *e.g.* <https://github.com/rogerclarkmelbourne/OpenGD77/commit/a0ebbc7>
 
+Press **Down** to access the multiple credits pages
+
+![credits screen](media/credits.png)
+
+Details of the creators of firmware, current and past developers who have made major contributions to the firmware.
+Note. Its not practical to list every person who has helped with the development of the firmware.
 
 <div style="page-break-after: always; break-after: page;"></div>
 
-### Options
+### General Options
 
 This menu controls various settings specific to the firmware
-
-![options menu](media/options-screen.png)
-
-#### Band Limits<!-- linebreak -->
-
-This setting controls the frequency band ranges inside which the radio can transmit.
-
-Options are
-
-- ***OFF***: where transmission is **not limited** to band ranges.
-- ***ON***: where the **band limits for the USA** are applied (**this is the Default setting**):
-  - 144MHz - 148MHz,
-  - 222MHz - 225MHz,
-  - 420MHz - 450MHz.
-- ***CPS***: where the VHF and UHF limits set **in the CPS** are used. If the CPS band limits do not contain valid values, for example the UHF frequency band range is **less than** or **intersects** with the VHF band range, the radio will use the **Default** settings (as above)
-
-![CPS band limit window](media/cps-band-limits.png)
-
-The CPS band limits **do not affect** the overall hardware band limits, hence it **is not possible** to extend the hardware limits by using values for the CPS band limits which extend outside the hardware limits.
-
-The hardware band limits are:
-
-- 127MHz - 178MHz,
-- 190MHz - 282MHz,
-- 380MHz - 564MHz.
-
-These limits are because the *AT1846S RF* chip **will not operate reliably** outside this range, and this range is actually beyond the published specification of the AT1846S, which is technically 134MHz - 174MHz, 200MHz - 260MHz, 400MHz - 520MHz.
-
-It should also be noted that the radio does **not** have a PA or Rx section for the 200MHz band, **so operating in this range has high spurious emissions, usually on the 1<sup>st</sup> harmonic of the frequency in use**.
-
 
 #### Key long<!-- linebreak -->
 
@@ -1190,64 +1150,6 @@ This setting controls the time (*in seconds*) after which a key is considered to
 
 This setting controls the speed of key repetitions when a key is held.
 
-#### Filter time<!-- linebreak -->
-
-This feature works when *TimeSlot* filtering is turned **off** (**Filter: Off** in the *Quick Menu*).
-
-It sets the duration the radio listens in to one particular *TimeSlot* before resuming listening to the other *TimeSlot* for traffic.
-
-This prevents the radio from switching to the other *TimeSlot* in the event that there is a long pause or transmission gap in the current *TimeSlot* being heard.
-
-When **TimeSlot** filtering is turned **on** (**Filter: TS** in *Quick Menu*), this does not have any effect.
-
-#### Scan delay<!-- linebreak -->
-
-During scan mode, this controls the duration that the radio tunes in to a channel before resuming scan.
-
-This works when **Pause** is selected as the scan mode.
-
-#### Scan dwell<!-- linebreak -->
-
-During scan mode, this controls the duration that the receiver listens ( dwells ) on each frequency and listens for a signal.
-The default is 30 milliseconds.
-On DMR if the value is less than 60 milliseconds, the value of 60 milliseconds is used, because this is the minimum time for one complete DMR frame of 2 timeslots.
-
-Longer values can help when scanning for weak signals or signals which fade in and out, but will reduce the number of frequencies or channels scanned per second
-
-#### Scan mode<!-- linebreak -->
-
-This setting controls how the receiver stops when there is a signal during scan mode.
-
-- **Hold**: continuously tunes in to a channel when a signal is received.
-- **Pause**: tunes in to that signal for a specified duration (*Scan Delay*) and then resumes scan.
-- **Stop**: the scan mode will exits on the first valid received signal.
-
-#### Scan on Boot<!-- linebreak -->
-
-This setting controls whether the radio automatically starts scanning when its turned on (booted up).
-The default for this setting is Off.
-
-#### Squelch UHF<!-- linebreak -->
-
-This setting controls the squelch level for **70cm UHF** when using an analog Channel or during analog mode in VFO. **Default is 45%**.
-
-#### Squelch 220<!-- linebreak -->
-
-This setting controls the squelch level for **220MHz** when using an analog channel or during analog mode in VFO. **Default is 45%**.
-
-#### Squelch VHF<!-- linebreak -->
-
-This setting controls the squelch level for **2m VHF** when using an analog channel or during analog mode in VFO. **Default is 45%**.
-
-#### PTT Latch<!-- linebreak -->
-
-When **PTT latch** is enabled, the **PTT** switch toggles the radio to transmit or receive. In this mode the PTT does not need to be pressed continuously during an over.
-
-*Note:*
-
-- The PTT latch function **only works** if a timeout has been defined for the Channel or VFO, to prevent constant accidental transmission.
-
-<div style="page-break-after: always; break-after: page;"></div>
 
 #### Hotspot<!-- linebreak -->
 
@@ -1262,48 +1164,6 @@ Options are
 - **BlueDV**: for use with BlueDV.
 
 On the GD-77S. To enable hotspot mode, Press and hold the **SK1** (**Black**) button while turning on the radio. This will toggle hotspot mode between **MMDVM** and **BlueDV** mode.
-
-#### TA Tx<!-- linebreak -->
-
-Enables **transmission** of *Talker Alias* data.
-
-*Note:*
-
-- Talker Alias reception is always operational. Do not enable this feature because you are not receiving TA data, as it does not control TA Rx.
-
-The text of **Line1** and **Line2** from the "**Boot Item**" CPS screen is used for this transmission, with no space between the **Line1** and **Line2** data.
-
-*Note:*
-
-- Use of this feature **will cause problems on Motorola based repeaters and networks**, and should only be used for simplex and possibly on *Brandmeister* and other networks which correctly support Talker Alias.
-
-#### Allow PC<!-- linebreak -->
-
-Allows **Private Calls** to be received.
-
-
-#### User Power<!-- linebreak -->
-
-This setting controls the PA power level when the power setting of +W- is enabled.
-The value of this setting is the internal numerical value sent to the digital to analogue converter connected to the PA drive circuit.
-The default value is 4100 which is the maximum possible value. Hence by default the +W- power setting will result in the radio transmitting the maximum power it can.
-The power output is normally greater than 5W, which is the official maximum power output.
-
-On UHF (70 cm band), using a GD-77, with a fully charged battery, the power output is usually around 5.5W to 6W.
-On VHF (2m band), using a GD-77, with a fully charged battery, the power output is usually somewhere between 7W and 8W.
-
-The purpose of this setting is to give the operator the ability to not only transmit more power than the official maximum power, for example for emergency operation.
-But it also allows the radio to transmit very low power levels, if low values of PA drive are used.
-A value of 0 would result in no drive to the PA at all, but there will still be RF generated by the main RF / transceiver chip in the radio.
-Some of the signal from the RF chip is likely to leak into the antenna output of the radio and it definitely leaks through the plastic case of the radio.
-So a value of 0 does not stop the radio completely from generating RF.
-
-This setting can also be used to configure the radio to produce low levels of power e.g. below 50mW which can be useful when only transmitting to a local hotspot.
-
-The power level for a given user setting value, varies considerably from radio to radio and will vary depending on battery voltage and transmit frequency.
-The power level will also vary depending on model of radio e.g. GD-77, DM-1801 or RD-5R etc. With the RD-5R power levels being considerably different from the GD-77 and DMR-1801 because the RF and PA hardware is completely different.
-
-A power meter is the only way to know what power output each individual radio will produce on a specific frequency, for a specific user power setting, at a specific battery voltage.
 
 #### Temp Cal<!-- linebreak -->
 
@@ -1381,6 +1241,140 @@ This mode is primarily intended for use with Satellite mode, which requires the 
 This setting is used to control whether in satellite mode, on the Polar or Live screens, whether the radio automatically changes to the next available satellite after the current satellite has passed over and gone below the horizon.
 
 Default is **Manual** and the currently selected satellite does not change. "Auto" automatically switches to the next available satellite.
+
+<div style="page-break-after: always; break-after: page;"></div>
+
+
+### Radio Options
+
+This menu controls various settings specific to the radio / RF functionality
+
+#### Band Limits<!-- linebreak -->
+
+This setting controls the frequency band ranges inside which the radio can transmit.
+
+Options are
+
+- ***OFF***: where transmission is **not limited** to band ranges.
+- ***ON***: where the **band limits for the USA** are applied (**this is the Default setting**):
+  - 144MHz - 148MHz,
+  - 222MHz - 225MHz,
+  - 420MHz - 450MHz.
+- ***CPS***: where the VHF and UHF limits set **in the CPS** are used. If the CPS band limits do not contain valid values, for example the UHF frequency band range is **less than** or **intersects** with the VHF band range, the radio will use the **Default** settings (as above)
+
+![CPS band limit window](media/cps-band-limits.png)
+
+The CPS band limits **do not affect** the overall hardware band limits, hence it **is not possible** to extend the hardware limits by using values for the CPS band limits which extend outside the hardware limits.
+
+The hardware band limits are:
+
+- 127MHz - 178MHz,
+- 190MHz - 282MHz,
+- 380MHz - 564MHz.
+
+These limits are because the *AT1846S RF* chip **will not operate reliably** outside this range, and this range is actually beyond the published specification of the AT1846S, which is technically 134MHz - 174MHz, 200MHz - 260MHz, 400MHz - 520MHz.
+
+It should also be noted that the radio does **not** have a PA or Rx section for the 200MHz band, **so operating in this range has high spurious emissions, usually on the 1<sup>st</sup> harmonic of the frequency in use**.
+
+#### Filter time<!-- linebreak -->
+
+This feature works when *TimeSlot* filtering is turned **off** (**Filter: Off** in the *Quick Menu*).
+
+It sets the duration the radio listens in to one particular *TimeSlot* before resuming listening to the other *TimeSlot* for traffic.
+
+This prevents the radio from switching to the other *TimeSlot* in the event that there is a long pause or transmission gap in the current *TimeSlot* being heard.
+
+When **TimeSlot** filtering is turned **on** (**Filter: TS** in *Quick Menu*), this does not have any effect.
+
+#### Scan delay<!-- linebreak -->
+
+During scan mode, this controls the duration that the radio tunes in to a channel before resuming scan.
+
+This works when **Pause** is selected as the scan mode.
+
+#### Scan dwell<!-- linebreak -->
+
+During scan mode, this controls the duration that the receiver listens ( dwells ) on each frequency and listens for a signal.
+The default is 30 milliseconds.
+On DMR if the value is less than 60 milliseconds, the value of 60 milliseconds is used, because this is the minimum time for one complete DMR frame of 2 timeslots.
+
+Longer values can help when scanning for weak signals or signals which fade in and out, but will reduce the number of frequencies or channels scanned per second
+
+#### Scan mode<!-- linebreak -->
+
+This setting controls how the receiver stops when there is a signal during scan mode.
+
+- **Hold**: continuously tunes in to a channel when a signal is received.
+- **Pause**: tunes in to that signal for a specified duration (*Scan Delay*) and then resumes scan.
+- **Stop**: the scan mode will exits on the first valid received signal.
+
+#### Scan on Boot<!-- linebreak -->
+
+This setting controls whether the radio automatically starts scanning when its turned on (booted up).
+The default for this setting is Off.
+
+#### Squelch UHF<!-- linebreak -->
+
+This setting controls the squelch level for **70cm UHF** when using an analog Channel or during analog mode in VFO. **Default is 45%**.
+
+#### Squelch 220<!-- linebreak -->
+
+This setting controls the squelch level for **220MHz** when using an analog channel or during analog mode in VFO. **Default is 45%**.
+
+#### Squelch VHF<!-- linebreak -->
+
+This setting controls the squelch level for **2m VHF** when using an analog channel or during analog mode in VFO. **Default is 45%**.
+
+#### PTT Latch<!-- linebreak -->
+
+When **PTT latch** is enabled, the **PTT** switch toggles the radio to transmit or receive. In this mode the PTT does not need to be pressed continuously during an over.
+
+*Note:*
+
+- The PTT latch function **only works** if a timeout has been defined for the Channel or VFO, to prevent constant accidental transmission.
+
+<div style="page-break-after: always; break-after: page;"></div>
+
+#### TA Tx<!-- linebreak -->
+
+Enables **transmission** of *Talker Alias* data.
+
+*Note:*
+
+- Talker Alias reception is always operational. Do not enable this feature because you are not receiving TA data, as it does not control TA Rx.
+
+The text of **Line1** and **Line2** from the "**Boot Item**" CPS screen is used for this transmission, with no space between the **Line1** and **Line2** data.
+
+*Note:*
+
+- Use of this feature **will cause problems on Motorola based repeaters and networks**, and should only be used for simplex and possibly on *Brandmeister* and other networks which correctly support Talker Alias.
+
+#### Allow PC<!-- linebreak -->
+
+Allows **Private Calls** to be received.
+
+#### User Power<!-- linebreak -->
+
+This setting controls the PA power level when the power setting of +W- is enabled.
+The value of this setting is the internal numerical value sent to the digital to analogue converter connected to the PA drive circuit.
+The default value is 4100 which is the maximum possible value. Hence by default the +W- power setting will result in the radio transmitting the maximum power it can.
+The power output is normally greater than 5W, which is the official maximum power output.
+
+On UHF (70 cm band), using a GD-77, with a fully charged battery, the power output is usually around 5.5W to 6W.
+On VHF (2m band), using a GD-77, with a fully charged battery, the power output is usually somewhere between 7W and 8W.
+
+The purpose of this setting is to give the operator the ability to not only transmit more power than the official maximum power, for example for emergency operation.
+But it also allows the radio to transmit very low power levels, if low values of PA drive are used.
+A value of 0 would result in no drive to the PA at all, but there will still be RF generated by the main RF / transceiver chip in the radio.
+Some of the signal from the RF chip is likely to leak into the antenna output of the radio and it definitely leaks through the plastic case of the radio.
+So a value of 0 does not stop the radio completely from generating RF.
+
+This setting can also be used to configure the radio to produce low levels of power e.g. below 50mW which can be useful when only transmitting to a local hotspot.
+
+The power level for a given user setting value, varies considerably from radio to radio and will vary depending on battery voltage and transmit frequency.
+The power level will also vary depending on model of radio e.g. GD-77, DM-1801 or RD-5R etc. With the RD-5R power levels being considerably different from the GD-77 and DMR-1801 because the RF and PA hardware is completely different.
+
+A power meter is the only way to know what power output each individual radio will produce on a specific frequency, for a specific user power setting, at a specific battery voltage.
 
 <div style="page-break-after: always; break-after: page;"></div>
 
@@ -1480,6 +1474,18 @@ The default setting is On, so that both the LED on the top of the radio will ill
 If this setting is set to off, the LED will not illuminate either on Rx or Tx.
 
 <div style="page-break-after: always; break-after: page;"></div>
+
+#### Timezone<!-- linebreak -->
+
+![timezone](media/timezone.png)
+
+This displays and allows the entry of the local timezone
+Press the **Right** arrow to increase the value in steps of 1 hour
+
+Press the **Left** arrow to increase the value in steps of 1 hour
+
+If your timezone is not on a 1 hour boundary, press **SK2** and **Right** or **LEFT** to adjust the timezone in 15 minute  increments
+
 
 #### Time display format<!-- linebreak -->
 
@@ -1711,15 +1717,7 @@ If you noticed a problem with a language translation, please post to the https:/
 
 <div style="page-break-after: always; break-after: page;"></div>
 
-### Credits Screen
 
-![credits screen](media/credits.png)
-
-Details of the creators of firmware.
-
-If other developers contribute to the development effort they will be added to this screen, and the addition details will be viewed by pressing the **Down** arrow to scroll the text.
-
-<div style="page-break-after: always; break-after: page;"></div>
 
 ### Satellite Screen
 
