@@ -80,10 +80,10 @@ For the latest information and discussions, please refer to the development and 
     * [Radio info](#radio-info)
       * [Battery voltage and percentage](#battery-voltage-and-percentage)
       * [Time clock](#time-clock)
-      * [CPU Temperature](#cpu-temperature)
-      * [Battery voltage history](#battery-voltage-history)
       * [Date screen](#date-screen)
       * [Location screen](#location-screen)
+      * [CPU Temperature](#cpu-temperature)
+      * [Battery voltage history](#battery-voltage-history)
     * [Contacts](#contacts)
       * [DMR Contacts](#dmr-contacts)
       * [FM DTMF Contacts](#fm-dtmf-contacts)
@@ -91,53 +91,53 @@ For the latest information and discussions, please refer to the development and 
     * [Last Heard](#last-heard)
     * [Firmware Info and credits](#firmware-info-and-credits)
 	*  Options - contains the 4 following options screens
-    * [General Options](#general-options)
-      * [Key long](#key-long)
-      * [Key rpt](#key-rpt)
-      * [Hotspot](#hotspot)
-      * [Temp Cal](#temp-cal)
-      * [Batt Cal](#batt-cal)
-      * [Time Cal](#time-cal)
-      * [Eco Level](#eco-level)
-      * [Suspend](#suspend)
-      * [Satellite follow mode](#satellite-follow-mode)
-    * [Radio Options](#radio-options)
-      * [Band Limits](#band-limits)
-      * [Filter time](#filter-time)
-      * [Scan delay](#scan-delay)
-      * [Scan dwell](#scan-dwell)
-      * [Scan mode](#scan-mode)
-      * [Scan on Boot](#scan-on-boot)
-      * [Squelch UHF](#squelch-uhf)
-      * [Squelch 220](#squelch-220)
-      * [Squelch VHF](#squelch-vhf)
-      * [PTT Latch](#ptt-latch)
-      * [TA Tx](#ta-tx)
-      * [Allow PC](#allow-pc)
-      * [User Power](#user-power)  
-    * [Display Options](#display-options)
-      * [Brightness](#brightness)
-      * [Min Bright](#min-bright)
-      * [Contrast](#contrast)
-      * [Display mode](#display-mode)
-      * [Timeout](#timeout)
-      * [Colour mode](#colour-mode)
-      * [Order](#order)
-      * [Contact](#contact)
-	  * [Battery units](#battery-units)
-	  * [Info](#info)
-	  * [LEDs](#leds)
-      * [Timezone](#timezone)	  
-	  * [Time](#time-display-format)
-    * [Sound Options](#sound-options)
-      * [Timeout beep](#timeout-beep)
-      * [Beep volume](#beep-volume)
-      * [DMR Beep](#dmr-beep)
-      * [DMR mic](#dmr-mic)
-      * [FM mic](#fm-mic)
-      * [VOX threshold](#vox-threshold)
-      * [VOX Tail](#vox-tail)
-      * [Prompt](#Prompt)
+        * [General Options](#general-options)
+          * [Key long](#key-long)
+          * [Key rpt](#key-rpt)
+          * [Hotspot](#hotspot)
+          * [Temp Cal](#temp-cal)
+          * [Batt Cal](#batt-cal)
+          * [Time Cal](#time-cal)
+          * [Eco Level](#eco-level)
+          * [Suspend](#suspend)
+          * [Satellite follow mode](#satellite-follow-mode)
+        * [Radio Options](#radio-options)
+          * [Band Limits](#band-limits)
+          * [Filter time](#filter-time)
+          * [Scan delay](#scan-delay)
+          * [Scan dwell](#scan-dwell)
+          * [Scan mode](#scan-mode)
+          * [Scan on Boot](#scan-on-boot)
+          * [Squelch UHF](#squelch-uhf)
+          * [Squelch 220](#squelch-220)
+          * [Squelch VHF](#squelch-vhf)
+          * [PTT Latch](#ptt-latch)
+          * [TA Tx](#ta-tx)
+          * [Allow PC](#allow-pc)
+          * [User Power](#user-power)
+        * [Display Options](#display-options)
+          * [Brightness](#brightness)
+          * [Min Bright](#min-bright)
+          * [Contrast](#contrast)
+          * [Display mode](#display-mode)
+          * [Timeout](#timeout)
+          * [Colour mode](#colour-mode)
+          * [Order](#order)
+          * [Contact](#contact)
+          * [Battery units](#battery-units)
+          * [Info](#info)
+          * [LEDs](#leds)
+          * [Timezone](#timezone)
+          * [Time](#time-display-format)
+        * [Sound Options](#sound-options)
+          * [Timeout beep](#timeout-beep)
+          * [Beep volume](#beep-volume)
+          * [DMR Beep](#dmr-beep)
+          * [DMR mic](#dmr-mic)
+          * [FM mic](#fm-mic)
+          * [VOX threshold](#vox-threshold)
+          * [VOX Tail](#vox-tail)
+          * [Prompt](#Prompt)
     * [Channel Details](#channel-details)
       * [Channel name](#channel-name)
       * [RX](#rx)
@@ -400,9 +400,9 @@ Changing the power on **either** VFO also changes the **Master** power setting.
 - Press **Function** + **Right** to increase the power.
 - Press **Function** + **Left** to decrease the power.
 
-Power can be set to **50mW**, **250mW**, **500mW**, **750mW**, **1W**, **2W**, **3W**, **4W**, **5W** and **-W+**.
+Power can be set to **50mW**, **250mW**, **500mW**, **750mW**, **1W**, **2W**, **3W**, **4W**, **5W** and **+W-**.
 
-The **-W+** power setting configures the PA drive to the value specified by the User Power value in the Options menu.
+The **+W-** power setting configures the PA drive to the value specified by the User Power value in the Options menu.
 By default this is set to the maximum value which will result in the radio producing more than 5W.
 **Power settings resulting in the radio producing more than 5W are designed for emergency use only, and results in around 5.5W being produced on 70cm and 7W on 2m.**
 
@@ -411,8 +411,6 @@ See the User power setting menu for more information.
 
 
 To access this power setting, select the **5W** power setting, then press and hold **Function** + **Right**
-
-<div style="page-break-after: always; break-after: page;"></div>
 
 *Notes:*
 
@@ -953,7 +951,9 @@ The keypad entry follows the same functionality as stock GD77 firmware.
 
 ![GD-77 cheatsheet](media/RadioButtonsHSs.jpg)<!-- { width=600 } -->
 
-![DM-1801 cheapsheet](media/DM-1801-Cheatsheet-01.svg)<!-- { width=600 } -->
+![DM-1801 cheatsheet](media/DM-1801-Cheatsheet-01.svg)<!-- { width=600 } -->
+
+![RD-5R cheatsheet](media/RD5R-CheatSheet.png)<!-- { width=600 } -->
 
 
 <div style="page-break-after: always; break-after: page;"></div>
@@ -996,11 +996,12 @@ Pressing "OK"  using the **Green** button, would create a QuickKey to an individ
 
 Pressing the **Left** or **Right** arrow keys, store a QuickKey which will decrease or increase the setting in question.
 
-![](media/quickkey_individual_setting.png)
+![quickkey setting assignment](media/quickkey_individual_setting.png)
 
 
 Using a QuickKey which decreases or increases a setting, shows special screen displaying the setting that has been changed and its new value.
-![](media/quickkey_action_individual_setting.png)
+
+![quickkey setting action](media/quickkey_action_individual_setting.png)
 
 
 To reassign a QuickKey to a different menu, it must first be cleared. On either the VFO or Channel screen, press and hold **SK2** and the number key in question, and wait for the beep sequence to play, to indicate the QuickKey has been cleared.
@@ -1087,22 +1088,6 @@ Problems with time accuracy can be partially corrected by using the Time Cal: se
 
 - Press the **Down** key to display the next page.
 
-#### CPU temperature
-
-This displays the CPU temperature in Celcius.  
-
-![temperature screen](media/temperature.png)
-
-- Press the **Down** key to display the next page.
-
-#### Battery voltage history
-
-This shows the history of battery voltage on an hourly basis.  
-
-![battery history graph](media/battery-graph.png)
-
-- Press the **Down** key to display the next page.
-
 #### Date screen
 
 ![date](media/radioinfo-date.png)
@@ -1129,6 +1114,22 @@ To change southern / northern hemisphere, press **Down** / **Up**
 To change western / eastern hemisphere, press **SK2** + **Down** / **Up**
 
 Before the location is set, this screen will display the message "NOT SET" and show question marks in place of the Lat / Long value
+
+#### CPU temperature
+
+This displays the CPU temperature in Celcius.  
+
+![temperature screen](media/temperature.png)
+
+- Press the **Down** key to display the next page.
+
+#### Battery voltage history
+
+This shows the history of battery voltage on an hourly basis.  
+
+![battery history graph](media/battery-graph.png)
+
+- Press the **Down** key to display the next page.
 
 ### Contacts
 
@@ -1847,7 +1848,7 @@ Negative elevation values indicate that the current satellite is below the horiz
 
 The screen updates once a second to continuously.
 
-![location](media/satellite-live-mid-pass-1.png)
+![location](media/satellite-live-mid-pass.png)
 
 ![location](media/satellite-live-mid-pass-2.png)
 
@@ -1868,7 +1869,7 @@ Then 1 minute before the satellite is predicted to appear above the horizon, the
 Press **Green** to cancel the alarm once it has started or turn the radio on / off or into and out of suspend mode to remove an existing alarm
 If the alarm is not cancelled after 1 minute it will automatically stop.
 
-**CPS Intergation**
+**CPS Integration**
 
 The CPS has a extra feature added to download the Kep's data and upload this to the radio, as well as setting the date / time of the radio.
 In the Extras -> OpenGD77 support screen of the CPS. Connect the USB cable to the radio, make sure the radio is turned on, and press the "Install satellite Keps" button.
@@ -1879,16 +1880,16 @@ This file is a standard format CSV file, and contains the satellite catalog numb
 The operator can edit this file to add or remove satellites as required.
 The maximum number of satellites which can be loaded into the radio is 15, but currently there are 8 AMSAT satellites in this data
 
-Catalogue number | Display name | Rx | Tx | CTCSS | ArmCTCSS
----------------- | ------------ | -- | -- | ----- | --------
-22825U | AO27 | 436795000 | 145850000 | 0 | 0
-43017U | AO91 | 145960000 | 435250000 | 670 | 0
-43137U | AO92 | 145880000 | 435350000 | 670 | 0
-40908U | CAS3H | 437200000 | 144350000 | 0 | 0
-40931U | IO86 | 435880000 | 145880000 | 885 | 0
-43678U | PO101 | 145900000 | 437500000 | 1413 | 0
-25544U | ISS | 437800000 | 145990000 | 670 | 0
-27607U | SO50 | 436795000 | 145850000 | 670 | 744
+| Catalogue # | Display name | Rx | Tx | CTCSS | ArmCTCSS |
+| --- | --- | --- | --- | --- | --- |
+| 22825U | AO27 | 436795000 | 145850000 | 0 | 0 |
+| 43017U | AO91 | 145960000 | 435250000 | 670 | 0 |
+| 43137U | AO92 | 145880000 | 435350000 | 670 | 0 |
+| 40908U | CAS3H | 437200000 | 144350000 | 0 | 0 |
+| 40931U | IO86 | 435880000 | 145880000 | 885 | 0 |
+| 43678U | PO101 | 145900000 | 437500000 | 1413 | 0 |
+| 25544U | ISS | 437800000 | 145990000 | 670 | 0 |
+| 27607U | SO50 | 436795000 | 145850000 | 670 | 744 |
 
 
 CTCSS and ArmCTCSS values are the tone frequency time 10 e.g. 67Hz = 670
@@ -2029,7 +2030,7 @@ Power | Pi-Star RFLevel
 2W  | 40
 4W  | 80
 5W  | 99
--W+ | N/A
++W- | N/A
 
 The receive frequency specified by Pi-Star will be displayed at the bottom of the screen.
 
