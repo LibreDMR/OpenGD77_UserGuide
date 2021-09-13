@@ -1003,7 +1003,7 @@ Using a QuickKey which decreases or increases a setting, shows special screen di
 ![](media/quickkey_action_individual_setting.png)
 
 
-To reassign a QuickKey to a different menu, it must first be cleared. On either the VFO or Channel screen, press and hold **SK2** and the number key in question, and wait for the beep sqeuence to play, to indicate the QuickKey has been cleared.
+To reassign a QuickKey to a different menu, it must first be cleared. On either the VFO or Channel screen, press and hold **SK2** and the number key in question, and wait for the beep sequence to play, to indicate the QuickKey has been cleared.
 
 
 Note. 
