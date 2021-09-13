@@ -73,6 +73,7 @@ For the latest information and discussions, please refer to the development and 
     * [Text entry](#text-entry)
   * [The control keys and buttons](#the-control-keys-and-buttons)
   * [The Menu System](#the-menu-system)
+  * [QuickKeys](#quickkeys)
   * [Main Menu](#main-menu)
     * [Zone](#zone)
     * [RSSI](#rssi)
@@ -959,7 +960,7 @@ The keypad entry follows the same functionality as stock GD77 firmware.
 
 ## The Menu System
 
-The **OpenGD77** firmware utilizes a significantly revised menu structure compared to the official firmware.
+The firmware has its own menu system, which is completely different from the official firmware.
 
 Targeted at amateur use, this focuses on being more straightforward, with highlight on commonly-used features.
 
@@ -980,6 +981,40 @@ Please refer to the menu map below.
 
 
 <div style="page-break-after: always; break-after: page;"></div>
+
+## QuickKeys
+
+Individual menu screens scan be accessed quickly using the QuickKeys system.
+
+Menus are assigned a QuickKey number, by entering the menu in question and pressing button **SK2** and any number key at the same time.
+
+On the VFO or Channel screen pressing the same key e.g. **SK2** and "2" will open the same menu again.
+
+QuickKeys can also be used to set individual settings in menus. Pressing **SK2** and any number key, on an individial setting, will display arrows to the left and right and the text "OK"
+
+Pressing "OK"  using the **Green** button, would create a QuickKey to an individual setting, but would not change it.  
+
+Pressing the **Left** or **Right** arrow keys, store a QuickKey which will decrease or increase the setting in question.
+
+![](media/quickkey_individual_setting.png)
+
+
+Using a QuickKey which decreases or increases a setting, shows special screen displaying the setting that has been changed and its new value.
+![](media/quickkey_action_individual_setting.png)
+
+
+To reassign a QuickKey to a different menu, it must first be cleared. On either the VFO or Channel screen, press and hold **SK2** and the number key in question, and wait for the beep sqeuence to play, to indicate the QuickKey has been cleared.
+
+
+Note. 
+
+QuickKeys can't be activated inside a menu, they can only be used on the VFO or Channel screen, and can only be assigned to menus or menu items.
+
+
+<div style="page-break-after: always; break-after: page;"></div>
+
+
+
 
 ## Main Menu
 
