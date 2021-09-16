@@ -515,7 +515,11 @@ The Channel screen displays the current Channel number as well as the current zo
 
 - **CC Filter** (*DMR mode only*)
 
-  Controls whether the radio filters by *Color Code*.
+  This setting allows the radio to receive DMR signals even if the Colour Code is not known.
+  **But the setting does not actually disable the CC Filter**, because the hardware, HR-C6000 chip, does not support reception of DMR signals without a Colour Code being specified.
+  The functionality of the CC filter being disabled, is peformed by a software algorithm, written by Colin G4EML, where the CC value set in the HR-C6000 is changed for every DMR TS frame that is received, until the HR-C6000 reports that the CC of the Rx DMR signal is the same as the CC which has been set in the HR-C6000.
+  
+  This feature shoule **NOT** be used for normal operation, the CC match detection is slow, and can cause the DMR signals to not be received correctely until the CC is found by the algorithm. 
 
   - Use the **Right** or **Left** arrows to enable or disable.
 
@@ -528,6 +532,10 @@ The Channel screen displays the current Channel number as well as the current zo
   - Use the **Right** or **Left** arrows to enable or disable.
 
   When *Timeslot* filtering is disabled the *Timeslot* number is displayed in inverse video.
+  
+  Note. This feature does not actually disable a filter, becasue the DMR hardware chip, HR-C6000, does not fully support receiption of signals on both timeslots at the same time. 
+This feature uses a software algorithm written by Daniel F1RMB, which initially listens for caller ID data on both timeslots, and when valid data occurs on a timeslot, the firmware just listens on that timeslot.
+If caller ID is not present on the received timeslot for a timeout period of approximately 2.5 seconds, the algorithm checks on the other timeslot and switches to that if caller ID data is on that timeslot.
 
 #### VFO Quick Menu<!-- linebreak -->
 
