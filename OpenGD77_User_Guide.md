@@ -206,7 +206,7 @@ This firmware is specifically designed for **Amateur Radio** use, and has featur
 *Note:*
 
 - **The firmware is still under development and there are some key areas of functionality which are supported in the official firmware but not in this firmware**
-- SMS message Tx and Rx **are not currently supported**, but may possibly be supported in the future.
+- SMS message Tx and Rx **are not currently supported**, but may be supported in the future.
 - Scan Lists **are not supported** because Channel or Zone scan feature provides almost identical functionality.
 - Privacy and Encryption **will not** be supported, as its illegal for Amateur Radio use, developers in some countries (*e.g.* Australia) are now legally required to put a back door access into any encryption systems at the request of the government, hence effectively making it illegal or impossible to develop systems that contain encryption.
 
@@ -238,7 +238,7 @@ The firmware can be installed onto the following radios
 - Baofeng DM-1801A
 - Baofeng RD-5R (also known as Baofeng DM-5R Tier 2)
 
-The firmware must be installed using the using the 'Extras/Firmware Loader' menu in the OpenGD77 CPS. The original Manufacturers firware loader cannot be used to load the OpenGD77 firmware.
+The firmware must be installed using the 'Extras/Firmware Loader' menu in the OpenGD77 CPS. The original Manufacturers firmware loader cannot be used to load the OpenGD77 firmware.
 
 Installation of the firmware is undertaken at the owners own risk, but the official firmware can usually be reloaded onto the radio if the user has problems with the firmware, **as long as the operator takes a full backup of their radio using the OpenGD77 CPS immediately after the firmware has been installed** (see [*backup section*](#backup-before-you-do-anything-else))
 
@@ -258,29 +258,29 @@ There are two mechanisms that can be used when connecting your computer to the r
       * Baofeng DM-1801 or DM-1801A or DM-860:
         * Hold down the **two small buttons** under the PTT button.
       * Baofeng RD-5R or DM-5R Tier2:
-        * The Orange **S1** (Call) and Black Fn (**Moni** or **S2**) buttons (either side of the PTT).  
+        * The Orange **S1** (Call) and Black Fn (**Moni** or **S2**) buttons (either side of the PTT).
 ![buttons layout](media/PTT-layout.png)<!-- { width=420 } -->
 
 <div style="page-break-after: always; break-after: page;"></div>
 
   * The LCD screen will be blank.
-  
+
   * Connection will use the HID codes and a driver is not required to be installed.
-  
-  * The Firmware is easily installed from the Extras menu in the [CPS](#cps-software).  
+
+  * The Firmware is easily installed from the Extras menu in the [CPS](#cps-software).
 ![firmware loader menu access](media/Firmware_loader-01.png)<!-- { width=400 } -->
 
-    - Choose your radio model.  
+    - Choose your radio model.
 ![firmware loader window](media/Firmware_loader-02.png)<!-- { width=420 } -->
 
     - For Software licensing reasons the first time that you use the firmware loader you must click 'Firmware Installation Instructions' and follow the procedure described.
 
       It is only necessary to do this once. If you do not do this then it is only possible to use the radio in FM mode.
-	  
+
       **Note!  Do not attempt to download the Manufacturer's firmware v4.3.6 to the radio, it is only needed by the CPS for patching purposes.**
-	  
+
       Once you have successfully completed this procedure the Title bar of the Firmware Loader will display [+DMR]
-	  
+
     - Click 'Select a file & Update'
     - Select a previously downloaded .bin firmware file. (The most recent file can be found at the download location given in [section 1.1](#download-links-and-other-resources))
       The Selected Firmware file will be patched with data from the official firmware and then downloaded to the radio.
@@ -339,7 +339,7 @@ The frequency used in the VFO for both Tx and Rx will be read from the *VFO A* s
 
 On both the VFO and Channel screens, the mode (**DMR** or **FM**) is shown in the top left of the display, and the battery voltage or percentage is shown in the top right of the display.
 
-In **DMR** mode, the current *TimeSlot* is shown to the right of the **DMR** text, *e.g.* **TS2** for TimeSlot 2, and the *Color Code*, *e.g.* **C1** for Color Code 1, is shown to the left of the battery voltage / percentage. When TimeSlot [filtering](#ts-filter-dmr-mode-only)) is turned off, the **TS1** or **TS2** indicator is in inverse colour.
+In **DMR** mode, the current *TimeSlot* is shown to the right of the **DMR** text, *e.g.* **TS2** for TimeSlot 2, and the *Color Code*, *e.g.* **C1** for Color Code 1, is shown to the left of the battery voltage / percentage. When TimeSlot [filtering](#ts-filter-dmr-mode-only) is turned off, the **TS1** or **TS2** indicator is in inverse colour.
 
 The current Tx power is shown in the middle of the top of the screen (*e.g.* 750mW).
 
@@ -351,7 +351,7 @@ The channel screen displays the same information in the top row, but displays th
 
 In DMR mode the **TalkGroup** (in this case __*ColoradoHD*__), will also be displayed.
 
-![displayed informations](media/dmr-screen.png)
+![displayed information](media/dmr-screen.png)
 
 
 On both the VFO and Channel screens:
@@ -364,7 +364,7 @@ On both the VFO and Channel screens:
 
 - The VFO is actually a special type of Channel; hence the [Channel Details](#channel-details) screen also works for the VFO.
 
-### Changing between VFO and Channel
+### Changing between FM mode and DMR mode
 
 - Press the **Function** + **Star** keys to toggle between FM and DMR mode, on either the **VFO** or **Channel** screens.
 
@@ -372,7 +372,7 @@ On both the VFO and Channel screens:
 
 - In DMR mode, pressing the **Star** key toggles between *TimeSlot 1* and *TimeSlot 2* and sets this as the Timeslot override.
 
-To clear a Timeslot override, press and old the **Star** key.
+To clear a Timeslot override, press and hold the **Star** key.
 
 ### Changing bandwidth in FM mode
 
@@ -403,7 +403,7 @@ Changing the power on **either** VFO also changes the **Master** power setting.
 Power can be set to **50mW**, **250mW**, **500mW**, **750mW**, **1W**, **2W**, **3W**, **4W**, **5W** and **+W-**.
 
 The **+W-** power setting configures the PA drive to the value specified by the User Power value in the Options menu.
-By default this is set to the maximum value which will result in the radio producing more than 5W.
+By default, this is set to the maximum value which will result in the radio producing more than 5W.
 **Power settings resulting in the radio producing more than 5W are designed for emergency use only, and results in around 5.5W being produced on 70cm and 7W on 2m.**
 
 If the User power setting is configured to a lower value, it can also be used for very low power output, for example less than 50mW.
@@ -417,8 +417,8 @@ To access this power setting, select the **5W** power setting, then press and ho
 - The power output will only be correct after the operator has calibrated their own radio, as these radios **do not seem to have very accurate power calibration applied in the factory**.
 - Power output on settings below **1W** is **not** very accurate, because the calibration only holds data points for the **1W** and **5W** power values.
 - Between **1W** and **5W**, the PA FET output power is approximately directly proportional to the PA drive level, hence the interpolated drive levels result in *reasonably accurate* power levels for **2W**, **3W** and **4W**.
-- However, below **1W** the PA FET output power **is not directly proportional** to the PA drive level, and **considerably varies** between different radios. Hence the power accuracy below **1W** is at best around **80% accurate**.
-- Also, the PA FET minimum operational power threshold is very close to (or sometimes even above **50mW**), so operating at this power level **can produce unwanted spurious emissions**.
+- However, below **1W** the PA FET output power **is not directly proportional** to the PA drive level, and **considerably varies** between different radios. Hence, the power accuracy below **1W** is at best around **80% accurate**.
+- Also, the PA FET minimum operational power threshold is very close to (or sometimes even above) **50mW**, so operating at this power level **can produce unwanted spurious emissions**.
 - Please confirm your power output and spectral emissions **before** using the **50mW** setting anywhere it may cause interference.
 
 ### Signal strength bar graph
@@ -435,8 +435,8 @@ In FM mode the signal meter should operate all the time.
 
 *Note:*
 
-- Currently the S meter reading is **not** very accurate because the radio hardware Rx sensitivity is **not calibrated** at the factor.
-- Hence the value displayed is based on a radio with average sensitivity, individual radios may be **more or less** sensitive than average, therefore the S meter will read **higher or lower** than is absolutely correct.
+- Currently, the S meter reading is **not** very accurate because the radio hardware Rx sensitivity is **not calibrated** at the factor.
+- Hence, the value displayed is based on a radio with average sensitivity, individual radios may be **more or less** sensitive than average, therefore the S meter will read **higher or lower** than is absolutely correct.
 
 
 <div style="page-break-after: always; break-after: page;"></div>
@@ -517,9 +517,9 @@ The Channel screen displays the current Channel number as well as the current zo
 
   This setting allows the radio to receive DMR signals even if the Colour Code is not known.
   **But the setting does not actually disable the CC Filter**, because the hardware, HR-C6000 chip, does not support reception of DMR signals without a Colour Code being specified.
-  The functionality of the CC filter being disabled, is peformed by a software algorithm, written by Colin G4EML, where the CC value set in the HR-C6000 is changed for every DMR TS frame that is received, until the HR-C6000 reports that the CC of the Rx DMR signal is the same as the CC which has been set in the HR-C6000.
-  
-  This feature shoule **NOT** be used for normal operation, the CC match detection is slow, and can cause the DMR signals to not be received correctely until the CC is found by the algorithm. 
+  The functionality of the CC filter being disabled, is performed by a software algorithm, written by Colin G4EML, where the CC value set in the HR-C6000 is changed for every DMR TS frame that is received, until the HR-C6000 reports that the CC of the Rx DMR signal is the same as the CC which has been set in the HR-C6000.
+
+  This feature should **NOT** be used for normal operation, the CC match detection is slow, and can cause the DMR signals to not be received correctly until the CC is found by the algorithm.
 
   - Use the **Right** or **Left** arrows to enable or disable.
 
@@ -532,14 +532,14 @@ The Channel screen displays the current Channel number as well as the current zo
   - Use the **Right** or **Left** arrows to enable or disable.
 
   When *Timeslot* filtering is disabled the *Timeslot* number is displayed in inverse video.
-  
-  Note. This feature does not actually disable a filter, becasue the DMR hardware chip, HR-C6000, does not fully support receiption of signals on both timeslots at the same time. 
-This feature uses a software algorithm written by Daniel F1RMB, which initially listens for caller ID data on both timeslots, and when valid data occurs on a timeslot, the firmware just listens on that timeslot.
-If caller ID is not present on the received timeslot for a timeout period of approximately 2.5 seconds, the algorithm checks on the other timeslot and switches to that if caller ID data is on that timeslot.
+
+  Note. This feature does not actually disable a filter, because the DMR hardware chip, HR-C6000, does not fully support reception of signals on both timeslots at the same time.
+  This feature uses a software algorithm written by Daniel F1RMB, which initially listens for caller ID data on both timeslots, and when valid data occurs on a timeslot, the firmware just listens on that timeslot.
+  If caller ID is not present on the received timeslot for a timeout period of approximately 2.5 seconds, the algorithm checks on the other timeslot and switches to that if caller ID data is on that timeslot.
 
 #### VFO Quick Menu<!-- linebreak -->
 
-- Pressing the **Orange** button on the top of the radio in VFO mode displays the Quick menu for the VFO screen. Currently this has five options.
+- Pressing the **Orange** button on the top of the radio in VFO mode displays the Quick menu for the VFO screen. Currently, this has five options.
 
 ![VFO quick menu](media/vfo-quick-menu.png)
 
@@ -608,7 +608,7 @@ If a tone is detected; both the Rx and Tx CTCSS / DCS values are set to the tone
 
 When a DMR signal is received which uses the same *Color Code* as selected for the VFO or Channel, the radio display will show the station’s **Talkgroup** and **DMR ID**.
 
-![talkgroup and DMR id](media/talkgroup-and-dmr-id.png)
+![talkgroup and DMR ID](media/talkgroup-and-dmr-id.png)
 
 If the DMR ID is in the *DMR ID database*, previously loaded into the radio, the **callsign** and **name** will be displayed.
 
@@ -620,7 +620,7 @@ If receiving a signal from the *Brandmeister* network, and if the station’s DM
 
 ![talker alias](media/talker-alias.png)
 
-The callsign will be displayed in the centre of the screen, and additional information will be displayed at the bottom of the screen. The additional information will default to the text "**DMR ID:**” followed by the stations **DMR ID number**.
+The callsign will be displayed in the centre of the screen, and additional information will be displayed at the bottom of the screen. The additional information will default to the text "**DMR ID:**" followed by the stations **DMR ID number**.
 
 <div style="page-break-after: always; break-after: page;"></div>
 
@@ -651,7 +651,7 @@ A new feature introduced to the CPS allows a default *TimeSlot* to be applied to
 
 By default, the **Channel TS override** is disabled. This means that if the **Left** or **Right** arrows are pressed to select this **TG** within the *Rx Group list*, the *Timeslot* assigned to the Channel (*in the CPS*) or manually changed using the **Star** key will not change.
 
-However if the **Digital Contact** has an **override TS** assigned (*e.g.* TS 1), when this **Digital Contact TG** is selected by pressing the **Right** or **Left** arrows, the *Timeslot* will be set to the *Timeslot* assigned to the **Digital Contact TG**.
+However, if the **Digital Contact** has an **override TS** assigned (*e.g.* TS 1), when this **Digital Contact TG** is selected by pressing the **Right** or **Left** arrows, the *Timeslot* will be set to the *Timeslot* assigned to the **Digital Contact TG**.
 
 <div style="page-break-after: always; break-after: page;"></div>
 
@@ -742,7 +742,7 @@ The variable squelch can be set to different values for each Channel and for the
 
 In this example the squelch in the VFO is set to 20%.
 
-If the squelch is changed in the VFO the value will be remembered even if the radio is power cycled. However if the squelch on a channel is changed, the value is only a temporary override.
+If the squelch is changed in the VFO the value will be remembered even if the radio is power cycled. However, if the squelch on a channel is changed, the value is only a temporary override.
 
 To make the squelch change permanent to a Channel, press **Function** + **Green** to enter the *Channel Details* screen, and then press **Function** + **Green** again to save the channel data to the codeplug.
 
@@ -771,7 +771,7 @@ The tone will also be audible through the speaker.
 ![dtmf contact list screen](media/dtmf-contact-list.png)
 
 - Press **Green** key to transmit that sequence.
-- Any keypress will stop the current sequence transmission.
+- Any key press will stop the current sequence transmission.
 
 <div style="page-break-after: always; break-after: page;"></div>
 
@@ -820,11 +820,11 @@ Use this method to set different TX and RX frequencies. For example, this can be
 
 - If different TX and RX frequencies are set, and the currently selected input is set to RX, changing the RX frequency will also change the TX frequency, and the difference between the RX and TX frequency will be maintained if possible.
 
-The only case where the frequency difference **will not be maintained** is if the TX frequency goes outside of the range of frequencies supported by the radio hardware.
+The only case where the frequency difference **will not be maintained** is if the TX frequency goes outside the range of frequencies supported by the radio hardware.
 
 #### Spectrum sweep scan<!-- linebreak -->
 
-- Press and hold the **Hash**  # key to enter Spectrum sweep scan mode.
+- Press and hold the **Hash** # key to enter Spectrum sweep scan mode.
 
 The radio then starts scanning a band of frequencies centered on the current Rx frequency, and displays the signal strength in the forum of a spectrum amplitude graph.
 The bandwidth of the scan is shown in the top left corner of the display e.g. +/- 800kHz
@@ -877,7 +877,7 @@ A timeout warning can be configured in the **Sound Options** menu. The radio wil
 
 ### TOT
 
-If **TOT** is setup for the current Channel or VFO, when the timer counts down to zero the transmission will stop, a warning beep will be played and the radio will stop transmitting.
+If **TOT** is set up for the current Channel or VFO, when the timer counts down to zero the transmission will stop, a warning beep will be played and the radio will stop transmitting.
 
 ![timeout screen](media/timeout.png)
 
@@ -998,9 +998,9 @@ Menus are assigned a QuickKey number, by entering the menu in question and press
 
 On the VFO or Channel screen pressing the same key e.g. **SK2** and "2" will open the same menu again.
 
-QuickKeys can also be used to set individual settings in menus. Pressing **SK2** and any number key, on an individial setting, will display arrows to the left and right and the text "OK"
+QuickKeys can also be used to set individual settings in menus. Pressing **SK2** and any number key, on an individual setting, will display arrows to the left and right and the text "OK"
 
-Pressing "OK"  using the **Green** button, would create a QuickKey to an individual setting, but would not change it.  
+Pressing "OK" using the **Green** button, would create a QuickKey to an individual setting, but would not change it.
 
 Pressing the **Left** or **Right** arrow keys, store a QuickKey which will decrease or increase the setting in question.
 
@@ -1015,7 +1015,7 @@ Using a QuickKey which decreases or increases a setting, shows special screen di
 To reassign a QuickKey to a different menu, it must first be cleared. On either the VFO or Channel screen, press and hold **SK2** and the number key in question, and wait for the beep sequence to play, to indicate the QuickKey has been cleared.
 
 
-Note. 
+Note.
 
 QuickKeys can't be activated inside a menu, they can only be used on the VFO or Channel screen, and can only be assigned to menus or menu items.
 
@@ -1074,11 +1074,11 @@ Displays various information about the status of the radio.
 
 #### Battery voltage and percentage
 
-This shows battery voltage and percentage.  
+This shows battery voltage and percentage.
 
 ![battery status screen](media/battery.png)
 
-- Press the **Down** key to display the next page.  
+- Press the **Down** key to display the next page.
 
 #### Time clock
 
@@ -1125,7 +1125,7 @@ Before the location is set, this screen will display the message "NOT SET" and s
 
 #### CPU temperature
 
-This displays the CPU temperature in Celcius.  
+This displays the CPU temperature in Celsius.
 
 ![temperature screen](media/temperature.png)
 
@@ -1133,7 +1133,7 @@ This displays the CPU temperature in Celcius.
 
 #### Battery voltage history
 
-This shows the history of battery voltage on an hourly basis.  
+This shows the history of battery voltage on an hourly basis.
 
 ![battery history graph](media/battery-graph.png)
 
@@ -1167,9 +1167,9 @@ Displays a record of the last 32 DMR stations that the radio has received.
 
 ![firmware info screen](media/firmware-info.png)
 
-Displays the date and time the firmware was built, and also the Github commit code in brackets on the first page
+Displays the date and time the firmware was built, and also the GitHub commit code in brackets on the first page
 
-To view details on Github, append the code to <https://github.com/rogerclarkmelbourne/OpenGD77/commit/>
+To view details on GitHub, append the code to <https://github.com/rogerclarkmelbourne/OpenGD77/commit/>
 
 *e.g.* <https://github.com/rogerclarkmelbourne/OpenGD77/commit/a0ebbc7>
 
@@ -1178,7 +1178,7 @@ Press **Down** to access the multiple credits pages
 ![credits screen](media/credits.png)
 
 Details of the creators of firmware, current and past developers who have made major contributions to the firmware.
-Note. Its not practical to list every person who has helped with the development of the firmware.
+Note. It's not practical to list every person who has helped with the development of the firmware.
 
 <div style="page-break-after: always; break-after: page;"></div>
 
@@ -1223,7 +1223,7 @@ This setting allows value of the voltage display to be calibrated.
 The range is +/- 0.5V.
 
 Note.
-The battery voltage measurement is taken by the CPU from the internal battery volatage rail, and can differ from the value measured on the external charging terminals of the battery, especially when the radio is transmitting.
+The battery voltage measurement is taken by the CPU from the internal battery voltage rail, and can differ from the value measured on the external charging terminals of the battery, especially when the radio is transmitting.
 Changing this calibration will affect both the voltage and percentage display.
 
 #### Time Cal<!-- linebreak -->
@@ -1255,18 +1255,18 @@ Level | Entry delay (seconds) | Max latency | Average current / mA | Approximate
 Higher values of Eco level reduce the current consumption and increase the battery life, when the radio is idle and not receiving.
 As soon as the radio receives a signal it immediately turns on all necessary hardware, and is no longer in power saving mode.
 
-Higher values may cause the radio to not hear signals that are shorter than the overall duty cycle, so the operator needs to balance their individual need to extend the battery life with the ability to detect the siganl the want to receive.
+Higher values may cause the radio to not hear signals that are shorter than the overall duty cycle, so the operator needs to balance their individual need to extend the battery life with the ability to detect the signal the want to receive.
 
 The amount of current consumption does not decrease linearly with the Eco Level value, because the radio has some core components like the CPU and voltage regulators, which always consume the same amount of current, regardless of the Eco Level.
 
-Although the default value is 1, which results in approximately 30% less current consumption with minimal loss ability to detect a signal, values of 2 , 3 work well for most people, with no noticeable loss in radio functionality.
+Although the default value is 1, which results in approximately 30% less current consumption with minimal loss ability to detect a signal, values of 2, 3 work well for most people, with no noticeable loss in radio functionality.
 Levels 4 and 5 may result in some degradation in the ability to detect a signal, but can be used to extend the battery life.
 
 #### Suspend<!-- linebreak -->
 
 ![options suspend](media/options-suspend-on.png)
 
-This setting controls what happens when the power / volume control on the radio is turned off.  
+This setting controls what happens when the power / volume control on the radio is turned off.
 In order to maintain a realtime clock, the radio now has a "Suspend" mode which keeps the CPU running at low speed with all other radio systems turned off
 
 If suspend mode is enabled, turning off the power / volume control puts the radio into suspend mode.
@@ -1275,8 +1275,8 @@ Turning on the power / volume control wakes the radio from suspend mode.
 If button **SK2** is held in while the power / volume control is turned off, and with suspend mode enabled, the radio will do a full power off, and the realtime clock will not be maintained.
 If suspend mode is not enabled, holding **SK2** while the power / volume control is turned off, will enter suspend mode.
 
-Note. Suspend mode consumes about 20mA from the battery, and will flatten the battery in around 3 or 4 days, for a brand new battery that is fully charged.
-This mode is primarily intended for use with Satellite mode, which requires the exact time and date to be know, in order to predict satellite passes and calculate satellite Doppler corrected frequencies.
+Note. Suspend mode consumes about 20mA from the battery, and will flatten the battery in around 3 or 4 days, for a brand-new battery that is fully charged.
+This mode is primarily intended for use with Satellite mode, which requires the exact time and date to be known, in order to predict satellite passes and calculate satellite Doppler corrected frequencies.
 
 #### Satellite follow mode<!-- linebreak -->
 
@@ -1284,7 +1284,7 @@ This mode is primarily intended for use with Satellite mode, which requires the 
 
 This setting is used to control whether in satellite mode, on the Polar or Live screens, whether the radio automatically changes to the next available satellite after the current satellite has passed over and gone below the horizon.
 
-Default is **Manual** and the currently selected satellite does not change. "Auto" automatically switches to the next available satellite.
+Default is **Manual**, and the currently selected satellite does not change. "Auto" automatically switches to the next available satellite.
 
 <div style="page-break-after: always; break-after: page;"></div>
 
@@ -1338,7 +1338,7 @@ This works when **Pause** is selected as the scan mode.
 
 #### Scan dwell<!-- linebreak -->
 
-During scan mode, this controls the duration that the receiver listens ( dwells ) on each frequency and listens for a signal.
+During scan mode, this controls the duration that the receiver listens (dwells) on each frequency and listens for a signal.
 The default is 30 milliseconds.
 On DMR if the value is less than 60 milliseconds, the value of 60 milliseconds is used, because this is the minimum time for one complete DMR frame of 2 timeslots.
 
@@ -1350,11 +1350,11 @@ This setting controls how the receiver stops when there is a signal during scan 
 
 - **Hold**: continuously tunes in to a channel when a signal is received.
 - **Pause**: tunes in to that signal for a specified duration (*Scan Delay*) and then resumes scan.
-- **Stop**: the scan mode will exits on the first valid received signal.
+- **Stop**: the scan mode will exit on the first valid received signal.
 
 #### Scan on Boot<!-- linebreak -->
 
-This setting controls whether the radio automatically starts scanning when its turned on (booted up).
+This setting controls whether the radio automatically starts scanning when it's turned on (booted up).
 The default for this setting is Off.
 
 #### Squelch UHF<!-- linebreak -->
@@ -1401,7 +1401,7 @@ Allows **Private Calls** to be received.
 
 This setting controls the PA power level when the power setting of +W- is enabled.
 The value of this setting is the internal numerical value sent to the digital to analogue converter connected to the PA drive circuit.
-The default value is 4100 which is the maximum possible value. Hence by default the +W- power setting will result in the radio transmitting the maximum power it can.
+The default value is 4100 which is the maximum possible value. Hence, by default the +W- power setting will result in the radio transmitting the maximum power it can.
 The power output is normally greater than 5W, which is the official maximum power output.
 
 On UHF (70 cm band), using a GD-77, with a fully charged battery, the power output is usually around 5.5W to 6W.
@@ -1410,7 +1410,7 @@ On VHF (2m band), using a GD-77, with a fully charged battery, the power output 
 The purpose of this setting is to give the operator the ability to not only transmit more power than the official maximum power, for example for emergency operation.
 But it also allows the radio to transmit very low power levels, if low values of PA drive are used.
 A value of 0 would result in no drive to the PA at all, but there will still be RF generated by the main RF / transceiver chip in the radio.
-Some of the signal from the RF chip is likely to leak into the antenna output of the radio and it definitely leaks through the plastic case of the radio.
+Some signal from the RF chip is likely to leak into the antenna output of the radio, and it definitely leaks through the plastic case of the radio.
 So a value of 0 does not stop the radio completely from generating RF.
 
 This setting can also be used to configure the radio to produce low levels of power e.g. below 50mW which can be useful when only transmitting to a local hotspot.
@@ -1444,7 +1444,7 @@ The default value is **0%**, so that when the display is in its **Off** state, t
 
 The firmware allows the display contrast to be set.
 
-Lower values result in dark text, higher values result in darker text but the background also starts to become dark at higher settings.
+Lower values result in dark text, higher values result in darker text, but the background also starts to become dark at higher settings.
 
 #### Display mode<!-- linebreak -->
 
@@ -1484,7 +1484,7 @@ The default is **Ct/Db/TA**, which means the received DMR ID is first checked in
 
 #### Contact<!-- linebreak -->
 
-Controls the position on the screen where the DMR Callsign and Name etc, is displayed.
+Controls the position on the screen where the DMR Callsign and Name etc., is displayed.
 
 Options are
 
@@ -1499,12 +1499,12 @@ Controls whether the battery is show as a percentage or as voltage.
 
 Options are
 
-- **%**:  Shows the battery percentage *e.g.* **0%** to **100%**.
-- **V**:  Shows the battery voltage *e.g.* **8.1V**.
+- **%**: Shows the battery percentage *e.g.* **0%** to **100%**.
+- **V**: Shows the battery voltage *e.g.* **8.1V**.
 
 #### Info<!-- linebreak -->
 
-This setting controls whether the radio displays addional information on the VFO of Channel screen, by making the DMR Timeslot, or the Power level text bold, or both bold.
+This setting controls whether the radio displays additional information on the VFO of Channel screen, by making the DMR Timeslot, or the Power level text bold, or both bold.
 
 If TS or Both setting is selected, the TS value will be shown in bold if an override is applied to the TS, from a Contact TS override.
 If Pwr or Both setting is selected the power value will be shown in bold if a channel specific power override is being applied to the normal power setting.
@@ -1528,7 +1528,7 @@ Press the **Right** arrow to increase the value in steps of 1 hour
 
 Press the **Left** arrow to increase the value in steps of 1 hour
 
-If your timezone is not on a 1 hour boundary, press **SK2** and **Right** or **LEFT** to adjust the timezone in 15 minute  increments
+If your timezone is not on a 1-hour boundary, press **SK2** and **Right** or **LEFT** to adjust the timezone in 15 minute increments
 
 
 #### Time display format<!-- linebreak -->
@@ -1596,20 +1596,20 @@ Controls the length of time **after** the operator stops speaking, before the tr
 
 #### Prompt<!-- linebreak -->
 
-This setting controls the **audible feedback** to button and key presses etc and has the following options:
+This setting controls the **audible feedback** to button and key presses etc. and has the following options:
 
 - **Silent**: The radio does not provide any audio feedback to button
 - **Beep**: The radio emits a beep when keys or buttons are pressed. There are 2 different pitches of beep.
 
     When navigating through *Channels* or *Talkgroups* or *menu items*, when the first item in the list is reached the **higher pitch** beep is emitted.
 
-    Also when switching between *Timeslots*, the **higher pitch** beep is emitted on **TS1**.
+    Also, when switching between *Timeslots*, the **higher pitch** beep is emitted on **TS1**.
 
     When **switching between FM and DMR** mode the **higher pitch** beep is emitted when the mode is **DMR**.
 
     When changing power, the **higher pitch** beep is emitted when the **lowest power level is selected**.
 
-- In addition to the beep, the firmware also supports voice prompts **if an voice prompt file is loaded via the CPS**.
+- In addition to the beep, the firmware also supports voice prompts **if a voice prompt file is loaded via the CPS**.
   There are 3 levels of voice prompt,
   - "**Voice**",
   - "**Voice L2**" and
@@ -1704,7 +1704,7 @@ Selects the VFO / Channel frequency step size.
 
 #### TOT<!-- linebreak -->
 
-Sets the time out timer to **OFF** or **ON**.
+Sets the time-out timer to **OFF** or **ON**.
 
 #### Rx Only<!-- linebreak -->
 
@@ -1753,7 +1753,7 @@ A **custom** squelch setting can be applied to the channel by pressing the right
 
 ### Language Screen
 
-This screen allows the language of the on screen texts to be selected.
+This screen allows the language of the on-screen texts to be selected.
 Notes.
 1. This does not change the language of the Voice Prompts, because the voice prompts are not part of the main firmware file and must be loaded separately using the OpenGD77 CPS.
 2. Not all languages are actively maintained by the original native translator, so the translations of some languages are not perfect.
@@ -1766,16 +1766,16 @@ If you noticed a problem with a language translation, please post to the https:/
 ### Satellite Screen
 
 This screen predicts when Amateur Radio satellites will pass overhead the current location, for the next 24 hours using the location, date and time entered by the operator.
-It also automatically corrects for Doppler shift on both the Tx and Rx frequenices, as well as displaying the azimuth and elevation of the satellite in a varierty of ways, including numberical and polar plot.
+It also automatically corrects for Doppler shift on both the Tx and Rx frequencies, as well as displaying the azimuth and elevation of the satellite in a variety of ways, including numerical and polar plot.
 
 Before this screen can be used, the operator **MUST** enter their location, as well as the current time / date into the Radio Info screen.
-Also the satellite orbital data Keps' **MUST** be uploaded using the CPS.
+Also, the satellite orbital data Keps' **MUST** be uploaded using the CPS.
 
 If the operator has not entered the date / time or location, they will be prompted to do this.
 
-For example, after power cycling the radio, the date and time will cleared and would need to be re-entered
+For example, after power cycling the radio, the date and time will be cleared, and they need to be re-entered
 
-Uploading the latest Keps' from the CPS also sets the date and time, so in practice its often easier to upload the Keps' than to set the date / time manually
+Uploading the latest Keps' from the CPS also sets the date and time, so in practice it's often easier to upload the Keps' than to set the date / time manually
 
 When using the satellite functionality the operator does **not** need to set the satellite frequency or CTCSS, as these values are upload from the CPS as part of the Kep's data and date / time upload
 To change the satellite frequencies or upload different satellites, the satellites.txt installed as part of the CPS can be modified.
@@ -1819,7 +1819,7 @@ When the satellite is above the horizon, the current Azimuth is shown the top le
 
 ![location](media/satellite-polar-mid-pass.png)
 
-Further in the same pass, the display changes, every second, to show the movement of the satellite as well as changes in azimuth and elevation
+Further, in the same pass, the display changes, every second, to show the movement of the satellite as well as changes in azimuth and elevation
 
 ![location](media/satellite-polar-mid-pass-2.png)
 
@@ -1838,7 +1838,7 @@ Press **down** to enter the individual satellite predictions screen, or **Up** t
 
 This screen allows the predictions for individual satellites to be viewed, including the time and maximum elevation of the pass and the duration of the pass.
 
-Press **Right** / **Left** to step though the pass predictions for the currently selected satellite 
+Press **Right** / **Left** to step though the pass predictions for the currently selected satellite
 
 ![location](media/satellite-individual-passes-2.png)
 
@@ -1854,7 +1854,7 @@ Negative elevation values indicate that the current satellite is below the horiz
 
 ![location](media/satellite-live-before-AOS.png)
 
-The screen updates once a second to continuously.
+The screen updates once a second to continuously update.
 
 ![location](media/satellite-live-mid-pass.png)
 
@@ -1879,12 +1879,12 @@ If the alarm is not cancelled after 1 minute it will automatically stop.
 
 **CPS Integration**
 
-The CPS has a extra feature added to download the Kep's data and upload this to the radio, as well as setting the date / time of the radio.
+The CPS has an extra feature added to download the Kep's data and upload this to the radio, as well as setting the date / time of the radio.
 In the Extras -> OpenGD77 support screen of the CPS. Connect the USB cable to the radio, make sure the radio is turned on, and press the "Install satellite Keps" button.
-The CPS defaults to downloading the Keps from a specific web URL, however if the operator perfers to use a differnt source of Kep's data, they can change the URL.
+The CPS defaults to downloading the Keps from a specific web URL, however if the operator prefers to use a different source of Kep's data, they can change the URL.
 
 The satellites which are imported and uploaded to the radio are defined in the file satellites.txt which is installed with the CPS into its installation directory.
-This file is a standard format CSV file, and contains the satellite catalog number, as well as the display name in the radio, and the Tx, Rx frequencies and Tx CTCSS as well as the "Arming" CTCSS for satellites which use an "Arming" tone. 
+This file is a standard format CSV file, and contains the satellite catalog number, as well as the display name in the radio, and the Tx, Rx frequencies and Tx CTCSS as well as the "Arming" CTCSS for satellites which use an "Arming" tone.
 The operator can edit this file to add or remove satellites as required.
 The maximum number of satellites which can be loaded into the radio is 15, but currently there are 8 AMSAT satellites in this data
 
@@ -1906,10 +1906,10 @@ CTCSS and ArmCTCSS values are the tone frequency time 10 e.g. 67Hz = 670
 
 The satellite position and prediction calculations are generated in real time by the firmware in the radio, and the currently selected satellite data is updated once per second.
 
-The predictions are usually accurate to around +/- 5 seconds of AOS time , LOS time and duration, compared with other satellite prediction software including AMSAT's online prediction page and other PC applications like GPredict
+The predictions are usually accurate to around +/- 5 seconds of AOS time, LOS time and duration, compared with other satellite prediction software including AMSAT's online prediction page and other PC applications like GPredict
 Prediction programs like GPredict usually don't show exactly same values for start, or end, to the online AMSAT predictions either.
 
-Predictions will not be be completely accurate unless the satellite Kep's data is updated frequently.  If practical the keps should be uploaded on a daily basis, though normally the satellites don't move too far from their predicted path for several days, or even a week.
+Predictions will not be completely accurate unless the satellite Kep's data is updated frequently.  If practical the keps should be uploaded on a daily basis, though normally the satellites don't move too far from their predicted path for several days, or even a week.
 
 The prediction calculation is a custom implementation, written for the OpenGD77, using the methodology from the original AMSAT prediction calculation called PLAN13 written in the 1983.
 See https://www.amsat.org/amsat/articles/g3ruh/111.html
@@ -1942,7 +1942,7 @@ To return to normal Talkgroup operation, there are 3 methods:
 
 1. Press **Function** + **Red** menu key.
 2. Press the **Left** or **Right** arrow key which will load the next TG in the Rx Group list assigned to the VFO or the Channel.
-3. Press the **Hash** (**#**) key, then enter a TG number and press the **Green** menu key..
+3. Press the **Hash** (**#**) key, then enter a TG number and press the **Green** menu key.
 
 
 *Note:*
@@ -1960,7 +1960,7 @@ With the callers *Callsign* and *Name* (or ID) displayed.
 To accept the call, and configure the radio to return the Private call back to the calling station:
 
 - Press the **Green** menu key, for YES.
-- Otherwise either press the **Red** menu key for No, or ignore the prompt and continue using the radio as normal.
+- Otherwise, either press the **Red** menu key for No, or ignore the prompt and continue using the radio as normal.
 
 If you accept the Private Call, the radio will be switched into **Private Call mode**, ready for transmission.
 
@@ -2013,7 +2013,7 @@ If the radio still fails to enter hotspot mode, check your USB connections.
 
 *Note:*
 
-- By default Pi-Star configures the “modem” to have a power setting of “100” in the Expert -> MMDVMHost settings.
+- By default, Pi-Star configures the “modem” to have a power setting of “100” in the Expert -> MMDVMHost settings.
 
 This is 100% of the maximum power of the modem, and in the case of the radio the maximum power output is **5W**, but the radio is not designed to operate as a hotspot, where it may be continuously transmitting.
 
@@ -2021,9 +2021,9 @@ The maximum power setting that the radio can support for continuous transmission
 
 It is the responsibility of the user to set an appropriate power level that will not overheat and damage the PA.
 
-In Hotspot mode, if Pi-Star (MMDVMHost) sends a power setting of 100%, the assumption is that that Pi-Star has not been correctly configured for the OpenGD77 and this value is disregarded.
+In Hotspot mode, if Pi-Star (MMDVMHost) sends a power setting of 100%, the assumption is that Pi-Star has not been correctly configured for the OpenGD77 and this value is disregarded.
 
-Instead the firmware will use the current (Channel or VFO) power setting, which will default to 1W.
+Instead, the firmware will use the current (Channel or VFO) power setting, which will default to 1W.
 
 If the power setting in the Pi-Star MMDVMHost Expert settings is any other value *e.g.* **50%**, the hotspot will use that power setting closest to the chosen value.
 So **50%** of *5W* is **2.5W**, and the closest power setting to this is *2W*.
@@ -2061,7 +2061,7 @@ The LED on the top of the radio also turns red to indicate the radio is transmit
 
 The radio can also be set to the default settings by holding the **Blue** (**SK2**) key while turning on the radio.
 
-Additionally holding the **Blue** (**SK2**) button as well as the **Up AND Down** arrow keys , resets **any** custom boot melody and custom boot image that has been uploaded using the OpenGD77 CPS.
+Additionally, holding the **Blue** (**SK2**) button as well as the **Up AND Down** arrow keys, resets **any** custom boot melody and custom boot image that has been uploaded using the OpenGD77 CPS.
 
 On the GD-77S, which does not have a keypad, holding **Blue** (**SK2**) **AND Orange** resets **any** custom boot melody.
 
@@ -2139,7 +2139,7 @@ See details of available power step levels in the normal firmware.
 *Note:*
 
 - You **cannot** use the standard Radioddity CPS, or Baofeng CPS, to write to a radio flashed with the firmware.
-If you wish to use the Radioddity CPS the radio will **need to run the official Radioddity firmware**. Once the codeplug has been written to the radio with your ID and callsign, you can then flash the firmware to the radio and it will then read and operate with the code plug written to it with the standard firmware and CPS software.
+If you wish to use the Radioddity CPS the radio will **need to run the official Radioddity firmware**. Once the codeplug has been written to the radio with your ID and callsign, you can then flash the firmware to the radio, and it will then read and operate with the code plug written to it with the standard firmware and CPS software.
 
 Please download the latest OpenGD77 CPS from the location given in [section 1.1](#download-links-and-other-resources))
 
@@ -2160,7 +2160,7 @@ Next create one or more “**TG Lists**” and populate each with the sets of th
 
 ![TG list window](media/cps-TGlists.png)
 
-Now setup the **Channels**. Enter the frequencies, slot and color code as normal for a DMR channel.
+Now set up the **Channels**. Enter the frequencies, slot and color code as normal for a DMR channel.
 
 Next select the **TG List** that you wish to use for the channel.
 
@@ -2170,9 +2170,9 @@ The firmware can use the *TG list* to filter the incoming DMR signal, or it can 
 
 *Note:*
 
-- You must use the *TG list* to define the TG’s you want to use with each Channel. Hence you must have at least **1 TG list** and it must contain at least **1 Digital Contact** which is a *TalkGroup*.
+- You must use the *TG list* to define the TG’s you want to use with each Channel. Hence, you must have at least **1 TG list** and it must contain at least **1 Digital Contact** which is a *TalkGroup*.
 
-Finally save your codeplug to your computer before writing the code plug to the radio using either the standard Radioddity CPS to program the radio before flashing it to OpenGD77, or, if you are using the special OpenGD77 compatible version of the CPS, (as detailed in the next section) you can write the codeplug directly to an already flashed OpenGD77 radio.
+Finally, save your codeplug to your computer before writing the code plug to the radio using either the standard Radioddity CPS to program the radio before flashing it to OpenGD77, or, if you are using the special OpenGD77 compatible version of the CPS, (as detailed in the next section) you can write the codeplug directly to an already flashed OpenGD77 radio.
 
 #### New Driver Installation<!-- linebreak -->
 
@@ -2191,7 +2191,7 @@ In the CPS, there is a new menu item under the Extras menu, for OpenGD77 Support
 
 ![OpenGD77 support window](media/cps-opengd77-support.png)<!-- { width=480 } -->
 
-From here you can **backup** the internal **64k EEPROM** and the **1 mega byte Flash** chip, as well as Reading and Writing the codeplug.
+From here you can **backup** the internal **64k EEPROM** and the **1 megabyte Flash** chip, as well as Reading and Writing the codeplug.
 
 The calibration data stored in the Flash chip (At address *0x8f000*) can be backed up and restored without backing up the whole of the Flash.
 
@@ -2284,4 +2284,4 @@ For reference, the tone values in OpenGD77 are:
 
 #### Boot Image<!-- linebreak -->
 
-The Boot image needs to be **128 wide x 64 pixels high**. It needs to be in **1-bit png format**. (*An indexed image format that is not supported by some modern paint programs*).
+The Boot image needs to be **128 wide x 64 pixels high**. It needs to be in **1-bit PNG format**. (*An indexed image format that is not supported by some modern paint programs*).
