@@ -620,7 +620,7 @@ If receiving a signal from the *Brandmeister* network, and if the station’s DM
 
 ![talker alias](media/talker-alias.png)
 
-The callsign will be displayed in the centre of the screen, and additional information will be displayed at the bottom of the screen. The additional information will default to the text "**DMR ID:**" followed by the stations **DMR ID number**.
+The callsign will be displayed in the centre of the screen, and additional information will be displayed at the bottom of the screen. The additional information will default to the text "**DMR ID:**" followed by the station's **DMR ID number**.
 
 <div style="page-break-after: always; break-after: page;"></div>
 
