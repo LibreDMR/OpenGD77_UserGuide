@@ -339,7 +339,7 @@ The frequency used in the VFO for both Tx and Rx will be read from the *VFO A* s
 
 On both the VFO and Channel screens, the mode (**DMR** or **FM**) is shown in the top left of the display, and the battery voltage or percentage is shown in the top right of the display.
 
-In **DMR** mode, the current *TimeSlot* is shown to the right of the **DMR** text, *e.g.* **TS2** for TimeSlot 2, and the *Color Code*, *e.g.* **C1** for Color Code 1, is shown to the left of the battery voltage / percentage. When TimeSlot [filtering](#ts-filter-dmr-mode-only) is turned off, the **TS1** or **TS2** indicator is in inverse colour.
+In **DMR** mode, the current *TimeSlot* is shown to the right of the **DMR** text, *e.g.* **TS2** for TimeSlot 2, and the *Color Code*, *e.g.* **C1** for Color Code 1, is shown to the left of the battery voltage / percentage. When TimeSlot filtering is turned off, the **TS1** or **TS2** indicator is in inverse colour.
 
 The current Tx power is shown in the middle of the top of the screen (*e.g.* 750mW).
 
