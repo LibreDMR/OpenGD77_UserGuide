@@ -785,7 +785,7 @@ When the currently selected frequency is the **RX** frequency, an arrow (**\>**)
 
 #### Frequency change up/down step<!-- linebreak -->
 
-- Pressing the **Up** or **Down** arrows will change frequency by the value defined in the frequency step value defined for the VFO in the CPS.
+- Pressing the **Up** or **Down** arrows will change frequency by the frequency step value defined for the VFO in the CPS.
 
 The step can be adjusted by pressing **Function** + **Green** to enter the Channel Details mode, and then adjusting the “**Step**” setting
 
