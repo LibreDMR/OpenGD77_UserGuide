@@ -877,7 +877,7 @@ A timeout warning can be configured in the **Sound Options** menu. The radio wil
 
 ### TOT
 
-If **TOT** is set up for the current Channel or VFO, when the timer counts down to zero the transmission will stop, a warning beep will be played and the radio will stop transmitting.
+If **TOT** is set up for the current Channel or VFO, when the timer counts down to zero, a warning beep will be played and the radio will stop transmitting.
 
 ![timeout screen](media/timeout.png)
 
