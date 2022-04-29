@@ -157,7 +157,9 @@ For the latest information and discussions, please refer to the development and 
       * [All Skip](#all-skip)
       * [VOX](#vox)
 	  * [Channel Power](#ch-power)
-	  * [Channel squelch](#channel-squelch)
+	  * [Channel squelch](#ch-squelch)
+	  * [Channel beep](#ch-beep)
+	  * [Channel Eco mode](#ch-eco)	  
       * [Accepting and saving the changes to the channel](#accepting-and-saving-the-changes-to-the-channel)
     * [Language Screen](#language-screen)
 	* [Satellite Screen](#satellite-screen)
@@ -1741,6 +1743,15 @@ See also the section in about controlling power.
 **By default**, all channels will use the **Master** squelch setting. This is the squelch value defined in the Options squelch setting for the band of the channel.
 A **custom** squelch setting can be applied to the channel by pressing the right and left arrow keys. Custom squelch settings are in 5% steps.
 
+#### Ch Beep<!-- linebreak -->
+
+Controls whether beeps are played on the channel.
+By default beeps are enabled on all channels, but beeps can be disabled on individual channels by setting this option to No.
+
+#### Ch Eco<!-- linebreak -->
+
+Controls whether Eco modes function on this channel.
+By default Eco modes are enabled on all channels, but Eco mode can be disabled on individual by setting this option to No.
 
 #### Accepting and saving the changes to the channel<!-- linebreak -->
 
