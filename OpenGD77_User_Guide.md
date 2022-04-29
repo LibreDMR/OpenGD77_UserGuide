@@ -61,6 +61,7 @@ For the latest information and discussions, please refer to the development and 
       * [Numerical frequency entry](#numerical-frequency-entry)
       * [To adjust the TX frequency, independent of the RX frequency](#to-adjust-the-tx-frequency-independent-of-the-rx-frequency)
 	  * [Spectrum sweep scan](#spectrum-sweep-scan)
+	  * [VFO Dual Watch](#vfo-dual-watch)
   * [Monitor mode](#monitor-mode)
   * [Transmitting](#transmitting)
     * [Timeout warning beep](#timeout-warning-beep)
@@ -840,6 +841,21 @@ The bandwidth of the scan is shown in the top left corner of the display e.g. +/
 Monitor mode (long press on SK2) suspends the scan and open the receiver to the central frequency.
 
 ![Spectrum scan](media/vfo-spectrum-scan.png)
+
+#### VFO Dual Watch
+
+In the VFO Quick Menu, select Dual Watch
+
+In this mode, the radio will scan the VFO A and VFO B frequencies.
+In this mode rather than displaying the Rx and Tx frequency of an individual VFO, the Rx frequency of VFO A and VFO B is displayed.
+While scanning in this mode, the FM/DMR mode area of the screen, flashes the [DW]
+To exit Dual Watch press any key.
+
+Note. 
+VFO Dual Watch, functions in the same way as the Zone scan in Channel mode.
+Both VFO A and VFO B have equal priority. Once the scan has stopped on one VFO, because there is a signal, the scan does not sample the other VFO to determine if it also has a signal.
+VFO A and B do not need to both be FM or both be DMR. Either VFO A or B can be either FM, FM Narrow or DMR mode.
+
 
 <div style="page-break-after: always; break-after: page;"></div>
 
