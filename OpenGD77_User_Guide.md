@@ -139,6 +139,7 @@ For the latest information and discussions, please refer to the development and 
           * [VOX threshold](#vox-threshold)
           * [VOX Tail](#vox-tail)
           * [Prompt](#Prompt)
+		  * [DMR Rx AGC](#DMR-Rx-AGC)
     * [Channel Details](#channel-details)
       * [Channel name](#channel-name)
       * [RX](#rx)
@@ -1654,6 +1655,25 @@ This setting controls the **audible feedback** to button and key presses etc. an
   For example, if the last voice prompt was the *Talkgroup name*, then pressing **SK1** will play the **Talkgroup name again**.
 
   Pressing **SK1** whilst a voice prompt is playing, **terminates the voice prompt playback**.
+
+#### DMR Rx AGC<!-- linebreak -->
+
+This setting controls the DMR audio levelling function.
+
+
+When this function is enabled, the firmware monitors the peak amplitude of the DMR Rx audio, and adjusts the audio output gain so that the audio amplitude from the speaker remains more constantly.
+By default this is disabled. Set to Off.
+
+Setting this to 0dB (gain boost) enables this function.
+Increasing the AGC value, increases the additional audio gain which is applied. Hence increasing the value will increase the overall volume of the audio.
+Operators in high noise environments can increase this value to make the radio speaker level louder that has previously been possible, however if the AGC value is increased too much, it will result in clipping of the audio signal and result in distortion when receiving from some stations.
+
+Like most AGC systems, the audio levelling uses a sample window period and also a level control low pass filter, so that normal changes to voice audio amplitude are not levelled out.
+Hence it takes approximately 1 second for the AGC to adjust to each new DMR signal which is received.
+However the AGC control level for each DMR station which is received, is stored as part of the Last Heard data, so that if the same station is heard again, the last known AGC value for that station is applied immediately, hence the audio level is changed immediately and does not take 1 second to adjust to the level of that station.
+
+It should be noted that this system is not perfect and some variation in audio level will be observed.
+During testing, it was noted, that signals received via gateways from other networks, or people using phone Apps etc, often have much higher audio levels, and sometimes that output gain control hardware in the radio is not able to attenuate the signal enough to ensure the audio is at the same level as DMR signals from DMR networks.
 
 
 <div style="page-break-after: always; break-after: page;"></div>
