@@ -555,6 +555,7 @@ The Channel screen displays the current Channel number as well as the current zo
 
 - Pressing the **Orange** button twice while in VFO mode quickly toggles between **VFO A** and **VFO B**.
 - On the Baofeng DM-1801 / DM-860, this function is controlled using the **A/B** button.
+- **Long Press** of the **Red** button also changes from VFO A to VFO B, or vice versa.
 
 ##### Exchange the TX and RX frequencies<!-- linebreak -->
 
@@ -858,6 +859,11 @@ Both VFO A and VFO B have equal priority. Once the scan has stopped on one VFO, 
 VFO A and B do not need to both be FM or both be DMR. Either VFO A or B can be either FM, FM Narrow or DMR mode.
 
 
+#### Easily changing from VFO A  to VFO B , and vice versa
+
+An alternative method to change the current VFO, is to **Long Press** on the **Red** key
+
+
 <div style="page-break-after: always; break-after: page;"></div>
 
 ## Monitor mode
@@ -1038,11 +1044,7 @@ Note.
 
 QuickKeys can't be activated inside a menu, they can only be used on the VFO or Channel screen, and can only be assigned to menus or menu items.
 
-
 <div style="page-break-after: always; break-after: page;"></div>
-
-
-
 
 ## Main Menu
 
