@@ -135,6 +135,8 @@ For the latest information and discussions, please refer to the development and 
           * [Timeout beep](#timeout-beep)
           * [Beep volume](#beep-volume)
           * [DMR Beep](#dmr-beep)
+          * [RX Beep](#rx-beep)
+          * [Talker](#talker)
           * [DMR mic](#dmr-mic)
           * [FM mic](#fm-mic)
           * [VOX threshold](#vox-threshold)
@@ -1595,6 +1597,28 @@ Options are:
 - **None**
 - **Start**
 - **Stop**
+- **Both**
+
+#### RX Beep<!-- linebreak -->
+
+This controls the emission of specific beeps when receiving a signal (FM and DMR), based on the presence of an RF carrier and/or a talker (DMR only).
+
+Options are:
+
+- **None**
+- **Carrier**
+- **Talker** (see [*Talker*](#talker) option below)
+- **Both**
+
+*Note:* If **Talker** is selected, in FM the beeps tones will be the identical as DMR's Talker ones instead of regular **Carrier** ones.
+
+#### Talker<!-- linebreak -->
+
+This controls the **RX Beep** *Talker* option. It could limit the beep to the talker's transmission ending when **End only** is selected, or enable beeps on talker's transmission beginning/ending when selecting **Both**.
+
+Options are:
+
+- **End only**
 - **Both**
 
 #### DMR mic<!-- linebreak -->
