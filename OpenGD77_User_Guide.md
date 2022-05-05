@@ -116,6 +116,7 @@ For the latest information and discussions, please refer to the development and 
           * [TA Tx](#ta-tx)
           * [Allow PC](#allow-pc)
           * [User Power](#user-power)
+          * [DMR crc](#dmr-crc)
         * [Display Options](#display-options)
           * [Brightness](#brightness)
           * [Min Bright](#min-bright)
@@ -161,7 +162,7 @@ For the latest information and discussions, please refer to the development and 
 	  * [Channel Power](#ch-power)
 	  * [Channel squelch](#ch-squelch)
 	  * [Channel beep](#ch-beep)
-	  * [Channel Eco mode](#ch-eco)	  
+	  * [Channel Eco mode](#ch-eco)
       * [Accepting and saving the changes to the channel](#accepting-and-saving-the-changes-to-the-channel)
     * [Language Screen](#language-screen)
 	* [Satellite Screen](#satellite-screen)
@@ -226,7 +227,7 @@ This firmware is specifically designed for **Amateur Radio** use, and has featur
 - **OpenGD77 CPS**
 <https://www.opengd77.com/downloads/CPS>
 
-- **OpenGD77Forum:**
+- **OpenGD77 Forum:**
 <https://www.opengd77.com/>
 
 
@@ -1441,6 +1442,11 @@ The power level for a given user setting value, varies considerably from radio t
 The power level will also vary depending on model of radio e.g. GD-77, DM-1801 or RD-5R etc. With the RD-5R power levels being considerably different from the GD-77 and DMR-1801 because the RF and PA hardware is completely different.
 
 A power meter is the only way to know what power output each individual radio will produce on a specific frequency, for a specific user power setting, at a specific battery voltage.
+
+#### DMR crc<!-- linebreak -->
+
+This settings disables the DMR CRC checking, which could be helpful in some cases while listening some specific networks.
+
 
 <div style="page-break-after: always; break-after: page;"></div>
 
