@@ -138,8 +138,8 @@ For the latest information and discussions, please refer to the development and 
           * [FM mic](#fm-mic)
           * [VOX threshold](#vox-threshold)
           * [VOX Tail](#vox-tail)
-          * [Prompt](#Prompt)
-		  * [DMR Rx AGC](#DMR-Rx-AGC)
+          * [Prompt](#prompt)
+          * [DMR Rx AGC](#dmr-rx-agc)
     * [Channel Details](#channel-details)
       * [Channel name](#channel-name)
       * [RX](#rx)
@@ -859,9 +859,9 @@ Both VFO A and VFO B have equal priority. Once the scan has stopped on one VFO, 
 VFO A and B do not need to both be FM or both be DMR. Either VFO A or B can be either FM, FM Narrow or DMR mode.
 
 
-#### Easily changing from VFO A  to VFO B , and vice versa
+#### Easily changing from VFO A to VFO B, and vice versa
 
-An alternative method to change the current VFO, is to **Long Press** on the **Red** key
+An alternative method to change the current VFO, is to **Long Press** on the **Red** key.
 
 
 <div style="page-break-after: always; break-after: page;"></div>
@@ -1675,7 +1675,7 @@ Hence it takes approximately 1 second for the AGC to adjust to each new DMR sign
 However the AGC control level for each DMR station which is received, is stored as part of the Last Heard data, so that if the same station is heard again, the last known AGC value for that station is applied immediately, hence the audio level is changed immediately and does not take 1 second to adjust to the level of that station.
 
 It should be noted that this system is not perfect and some variation in audio level will be observed.
-During testing, it was noted, that signals received via gateways from other networks, or people using phone Apps etc, often have much higher audio levels, and sometimes that output gain control hardware in the radio is not able to attenuate the signal enough to ensure the audio is at the same level as DMR signals from DMR networks.
+During testing, it was noted that signals received via gateways from other networks or people using phone Apps etc; often have much higher audio levels, and sometimes that output gain control hardware in the radio is not able to attenuate the signal enough to ensure the audio is at the same level as DMR signals from DMR networks.
 
 
 <div style="page-break-after: always; break-after: page;"></div>
