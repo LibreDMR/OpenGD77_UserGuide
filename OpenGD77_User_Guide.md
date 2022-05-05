@@ -540,7 +540,9 @@ The Channel screen displays the current Channel number as well as the current zo
 
   When *Timeslot* filtering is disabled the *Timeslot* number is displayed in inverse video.
 
-  Note. This feature does not actually disable a filter, because the DMR hardware chip, HR-C6000, does not fully support reception of signals on both timeslots at the same time.
+  *Note:*
+  
+  This feature does not actually disable a filter, because the DMR hardware chip, HR-C6000, does not fully support reception of signals on both timeslots at the same time.
   This feature uses a software algorithm written by Daniel F1RMB, which initially listens for caller ID data on both timeslots, and when valid data occurs on a timeslot, the firmware just listens on that timeslot.
   If caller ID is not present on the received timeslot for a timeout period of approximately 2.5 seconds, the algorithm checks on the other timeslot and switches to that if caller ID data is on that timeslot.
 
@@ -856,7 +858,8 @@ In this mode rather than displaying the Rx and Tx frequency of an individual VFO
 While scanning in this mode, the FM/DMR mode area of the screen, flashes the [DW]
 To exit Dual Watch press any key.
 
-Note. 
+*Note:*
+
 VFO Dual Watch, functions in the same way as the Zone scan in Channel mode.
 Both VFO A and VFO B have equal priority. Once the scan has stopped on one VFO, because there is a signal, the scan does not sample the other VFO to determine if it also has a signal.
 VFO A and B do not need to both be FM or both be DMR. Either VFO A or B can be either FM, FM Narrow or DMR mode.
@@ -1043,7 +1046,7 @@ Using a QuickKey which decreases or increases a setting, shows special screen di
 To reassign a QuickKey to a different menu, it must first be cleared. On either the VFO or Channel screen, press and hold **SK2** and the number key in question, and wait for the beep sequence to play, to indicate the QuickKey has been cleared.
 
 
-Note.
+*Note:*
 
 QuickKeys can't be activated inside a menu, they can only be used on the VFO or Channel screen, and can only be assigned to menus or menu items.
 
@@ -1113,7 +1116,8 @@ To set the clock enter the full time in 24 hour time including all hours minutes
 
 If using Local time. **You MUST set the Timezone before setting the time**
 
-Notes.
+*Notes:*
+
 The clock only keeps time when the radio is turned on, or in Suspend Mode.
 The time accuracy varies from radio to radio, but can be accurate to approximately 5 second per day.
 Problems with time accuracy can be partially corrected by using the Time Cal: setting in the Options menu
@@ -1203,7 +1207,10 @@ Press **Down** to access the multiple credits pages
 ![credits screen](media/credits.png)
 
 Details of the creators of firmware, current and past developers who have made major contributions to the firmware.
-Note. It's not practical to list every person who has helped with the development of the firmware.
+
+*Note:*
+
+It's not practical to list every person who has helped with the development of the firmware.
 
 <div style="page-break-after: always; break-after: page;"></div>
 
@@ -1239,7 +1246,8 @@ On the GD-77S. To enable hotspot mode, Press and hold the **SK1** (**Black**) bu
 This setting allows the internal CPU temperature sensor to be calibrated by the operator.
 The range is +/- 10 deg C in 0.5 deg C steps.
 
-Note.
+*Note:*
+
 The temperature value is the value measured by the CPU its self. It's not the temperature of the PA or the radio as a whole.
 
 #### Batt Cal<!-- linebreak -->
@@ -1247,7 +1255,8 @@ The temperature value is the value measured by the CPU its self. It's not the te
 This setting allows value of the voltage display to be calibrated.
 The range is +/- 0.5V.
 
-Note.
+*Note:*
+
 The battery voltage measurement is taken by the CPU from the internal battery voltage rail, and can differ from the value measured on the external charging terminals of the battery, especially when the radio is transmitting.
 Changing this calibration will affect both the voltage and percentage display.
 
@@ -1300,7 +1309,9 @@ Turning on the power / volume control wakes the radio from suspend mode.
 If button **SK2** is held in while the power / volume control is turned off, and with suspend mode enabled, the radio will do a full power off, and the realtime clock will not be maintained.
 If suspend mode is not enabled, holding **SK2** while the power / volume control is turned off, will enter suspend mode.
 
-Note. Suspend mode consumes about 20mA from the battery, and will flatten the battery in around 3 or 4 days, for a brand-new battery that is fully charged.
+*Note:*
+
+Suspend mode consumes about 20mA from the battery, and will flatten the battery in around 3 or 4 days, for a brand-new battery that is fully charged.
 This mode is primarily intended for use with Satellite mode, which requires the exact time and date to be known, in order to predict satellite passes and calculate satellite Doppler corrected frequencies.
 
 #### Satellite follow mode<!-- linebreak -->
@@ -1834,7 +1845,9 @@ By default Eco modes are enabled on all channels, but Eco mode can be disabled o
 ### Language Screen
 
 This screen allows the language of the on-screen texts to be selected.
-Notes.
+
+*Notes:*
+
 1. This does not change the language of the Voice Prompts, because the voice prompts are not part of the main firmware file and must be loaded separately using the OpenGD77 CPS.
 2. Not all languages are actively maintained by the original native translator, so the translations of some languages are not perfect.
 If you noticed a problem with a language translation, please post to the https://www.opengd77.com forum, providing a better translation.
@@ -1878,7 +1891,8 @@ If a satellite is currently above the horizon, this is show by a black bar on th
 Use the **Down** / **Up** arrows to scroll down / up though the list.
 
 
-Note.
+*Note:*
+
 Some satellites, e.g. SO-86 are on an equatorial orbit and only pass over equatorial locations, hence passes for that satellite will not appear in the predictions list for locations outside this geographic area.
 
 
@@ -1942,7 +1956,7 @@ The screen updates once a second to continuously update.
 
 On the Polar, Live and Individual satellite predictions screens. Press SK2 + **Up** / **Down** to change to a different satellite.
 
-**Note**
+*Note:*
 
 If a satellite has no passes over the current location, the radio will display "Pass: None" or "Empty List" depending on the screen currently selected.
 e.g. IO-86 only passes over equatorial locations.
