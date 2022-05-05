@@ -520,17 +520,17 @@ The Channel screen displays the current Channel number as well as the current zo
 
   When this filter is enabled, the *DMR* mode indication at the top of the screen is displayed in inverse video.
 
-- **CC Filter** (*DMR mode only*)
+- **CC Scan** (*DMR mode only*) (formerly known as **CC Filter**)
 
   This setting allows the radio to receive DMR signals even if the Colour Code is not known.
-  **But the setting does not actually disable the CC Filter**, because the hardware, HR-C6000 chip, does not support reception of DMR signals without a Colour Code being specified.
-  The functionality of the CC filter being disabled, is performed by a software algorithm, written by Colin G4EML, where the CC value set in the HR-C6000 is changed for every DMR TS frame that is received, until the HR-C6000 reports that the CC of the Rx DMR signal is the same as the CC which has been set in the HR-C6000.
+  **But the setting does not actually disable the CC requirement**, because the hardware, HR-C6000 chip, does not support reception of DMR signals without a Colour Code being specified.  
+  The functionality of the CC scanning being enabled, is performed by a software algorithm, written by Colin G4EML, where the CC value set in the HR-C6000 is changed for every DMR TS frame that is received, until the HR-C6000 reports that the CC of the Rx DMR signal is the same as the CC which has been set in the HR-C6000.
 
   This feature should **NOT** be used for normal operation, the CC match detection is slow, and can cause the DMR signals to not be received correctly until the CC is found by the algorithm.
 
   - Use the **Right** or **Left** arrows to enable or disable.
 
-  When *Color Code* filtering is disabled the *Color Code* number is displayed in inverse video.
+  When *Color Code* scanning is enabled, the *Color Code* number is displayed in inverse video.
 
 - **TS Filter** (*DMR mode only*)
 
