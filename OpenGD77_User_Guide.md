@@ -1317,7 +1317,7 @@ This mode is primarily intended for use with Satellite mode, which requires the 
 
 #### Safe Power On<!-- linebreak -->
 
-This setting forces SK1 to be pressed when powering up the transceiver, preventing unwanted power-ups, such as when the radio is in a backpack, which can drain the battery. This parameter is also operational when suspend mode is enabled.
+This setting requires SK1 to be pressed when powering up the transceiver, preventing unwanted power-ups, such as when the radio is in a backpack, which can drain the battery. This parameter is also operational when suspend mode is enabled.
 
 *Note:*
 
