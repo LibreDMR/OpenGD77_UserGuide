@@ -101,6 +101,7 @@ For the latest information and discussions, please refer to the development and 
           * [Time Cal](#time-cal)
           * [Eco Level](#eco-level)
           * [Suspend](#suspend)
+          * [Safe Pwr-On](#safe-power-on)
           * [Satellite follow mode](#satellite-follow-mode)
         * [Radio Options](#radio-options)
           * [Band Limits](#band-limits)
@@ -1313,6 +1314,14 @@ If suspend mode is not enabled, holding **SK2** while the power / volume control
 
 Suspend mode consumes about 20mA from the battery, and will flatten the battery in around 3 or 4 days, for a brand-new battery that is fully charged.
 This mode is primarily intended for use with Satellite mode, which requires the exact time and date to be known, in order to predict satellite passes and calculate satellite Doppler corrected frequencies.
+
+#### Safe Power On<!-- linebreak -->
+
+This setting requires SK1 to be pressed when powering up the transceiver, preventing unwanted power-ups, such as when the radio is in a backpack, which can drain the battery. This parameter is also operational when suspend mode is enabled.
+
+*Note:*
+
+This setting is also available on the RD-5R, even if suspend mode isn't.
 
 #### Satellite follow mode<!-- linebreak -->
 
