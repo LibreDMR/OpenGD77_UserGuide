@@ -102,6 +102,7 @@ For the latest information and discussions, please refer to the development and 
           * [Eco Level](#eco-level)
           * [Suspend](#suspend)
           * [Safe Pwr-On](#safe-power-on)
+          * [APO](#apo-automatic-power-off)
           * [Satellite follow mode](#satellite-follow-mode)
         * [Radio Options](#radio-options)
           * [Band Limits](#band-limits)
@@ -1322,6 +1323,17 @@ This setting requires SK1 to be pressed when powering up the transceiver, preven
 *Note:*
 
 This setting is also available on the RD-5R, even if suspend mode isn't.
+
+#### APO (Automatic Power Off)<!-- linebreak -->
+
+This setting enables the ability to the transceiver to switches OFF (in fact, it jumps to suspend mode at the moment), if no keys are pressed, and no valid signal is received for the selected amount of time (30, 60, 90, 120 and 180 minutes).
+
+One minute before the transceiver switches OFF, an "**APO**" message is displayed and notification beep tones are played.
+
+*Note:*
+
+ - The APO function does not work if the transceiver is scanning.
+ - If APO function is enabled, the battery information (*percentage or voltage*) will be displayed in **bold font**.
 
 #### Satellite follow mode<!-- linebreak -->
 
