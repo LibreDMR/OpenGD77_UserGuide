@@ -102,7 +102,8 @@ For the latest information and discussions, please refer to the development and 
           * [Eco Level](#eco-level)
           * [Suspend](#suspend)
           * [Safe Pwr-On](#safe-power-on)
-          * [APO](#apo-automatic-power-off)
+          * [Auto Pwr-Off](#auto-power-off)
+          * [APO with RF](#apo-with-rf)
           * [Satellite follow mode](#satellite-follow-mode)
         * [Radio Options](#radio-options)
           * [Band Limits](#band-limits)
@@ -1324,16 +1325,21 @@ This setting requires SK1 to be pressed when powering up the transceiver, preven
 
 This setting is also available on the RD-5R, even if suspend mode isn't.
 
-#### APO (Automatic Power Off)<!-- linebreak -->
+#### Auto Power Off<!-- linebreak -->
 
-This setting enables the ability to the transceiver to switches OFF (in fact, it jumps to suspend mode at the moment), if no keys are pressed, and no valid signal is received for the selected amount of time (30, 60, 90, 120 and 180 minutes).
+This setting (*APO*) enables the ability to the transceiver to switches OFF (in fact, it jumps to suspend mode at the moment), if no keys are pressed in the selected amount of time (30, 60, 90, 120 and 180 minutes).
 
-One minute before the transceiver switches OFF, an "**APO**" message is displayed and notification beep tones are played.
+One minute before the transceiver switches OFF, an "**Auto Pwr-Off**" message is displayed and notification beep tones are played.
 
 *Note:*
 
- - The APO function does not work if the transceiver is scanning.
- - If APO function is enabled, the battery information (*percentage or voltage*) will be displayed in **bold font**.
+ - The **Auto Pwr-Off** function does not work if the transceiver is scanning.
+ - If **Auto Pwr-Off** function is enabled, the battery information (*percentage or voltage*) will be displayed in **bold font**.
+ - If [**APO with RF**](#apo-with-rf) is enabled, the timer will also get resetted if a valid signal is received.
+
+#### APO with RF<!-- linebreak -->
+
+If [**Auto Pwr-Off**](#auto-power-off) is enabled, the *APO* timer will also be resetted when receiving a valid signal.
 
 #### Satellite follow mode<!-- linebreak -->
 
