@@ -1333,7 +1333,10 @@ One minute before the transceiver switches OFF, an "**Auto Pwr-Off**" message is
 
 *Note:*
 
- - The **Auto Pwr-Off** function does not work if the transceiver is scanning.
+ - The **Auto Pwr-Off** function does not work:
+   * if the transceiver is scanning.
+   * if a Satellite alarm is set.
+   * while in hotspot mode.
  - If **Auto Pwr-Off** function is enabled, the battery information (*percentage or voltage*) will be displayed in **bold font**.
  - If [**APO with RF**](#apo-with-rf) is enabled, the timer will also get resetted if a valid signal is received.
 
