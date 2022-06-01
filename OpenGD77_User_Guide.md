@@ -1327,9 +1327,9 @@ This setting is also available on the RD-5R, even if suspend mode isn't.
 
 #### Auto Power Off<!-- linebreak -->
 
-This setting (*APO*) enables the ability to the transceiver to switches OFF (in fact, it jumps to suspend mode at the moment), if no keys are pressed in the selected amount of time (30, 60, 90, 120 and 180 minutes).
+This setting (*APO*) enables the transceiver to switch off, if the radio is not used in the selected amount of time (30, 60, 90, 120 and 180 minutes); i.e. No keys or buttons, including PTT no keys are pressed.
 
-One minute before the transceiver switches OFF, an "**Auto Pwr-Off**" message is displayed and notification beep tones are played.
+One minute before the transceiver switches off, an "**Auto Pwr-Off**" message is displayed and notification beep tones are played.
 
 *Note:*
 
@@ -1338,11 +1338,12 @@ One minute before the transceiver switches OFF, an "**Auto Pwr-Off**" message is
    * if a Satellite alarm is set.
    * while in hotspot mode.
  - If **Auto Pwr-Off** function is enabled, the battery information (*percentage or voltage*) will be displayed in **bold font**.
- - If [**APO with RF**](#apo-with-rf) is enabled, the timer will also get resetted if a valid signal is received.
+ - If [**APO with RF**](#apo-with-rf) is enabled, the timer will also get reset if a valid signal is received.
+ - Technically; the APO function uses the same low power functionality as Suspend mode, so the radio will continue to consume about 16mA when in Auto Power Off, we are currently trying to reduce this current, but because the firmware can't completely cut off power to all the radio hardware, it will never be possible to completely turn off the radio in the same way as the volumne / power knob does.
 
 #### APO with RF<!-- linebreak -->
 
-If [**Auto Pwr-Off**](#auto-power-off) is enabled, the *APO* timer will also be resetted when receiving a valid signal.
+If [**Auto Pwr-Off**](#auto-power-off) is enabled, the *APO* timer will also be reset when receiving a valid signal.
 
 #### Satellite follow mode<!-- linebreak -->
 
