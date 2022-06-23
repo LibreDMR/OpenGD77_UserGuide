@@ -1,13 +1,15 @@
 ![](media/OpenGD77-logo.png)
 
-# OpenGD77 / OpenGD77S / OpenDM1801 / OpenDM1801A / OpenRD5R User Guide
+# OpenGD77 / OpenGD77S / OpenDM1801 - VERSION 1 HARDWARE ONLY / OpenDM1801A / OpenRD5R User Guide
 
 For the latest information and discussions, please refer to the development and community forum at <https://opengd77.com>
+
+# IMPORTANT. The firmware is NOT compatible with the new 2022 version of the Baofeng DM-1801 #
 
 <!-- TOC titleSize:2 tabSpaces:2 depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 skip:0 title:1 charForUnorderedList:* -->
 
 ## Table of Contents
-* [OpenGD77 / OpenGD77S / OpenDM1801 / OpenDM1801A / OpenRD5R User Guide](#opengd77--opengd77s--opendm1801--opendm1801a--openrd5r-user-guide)
+* [OpenGD77 / OpenGD77S / OpenDM1801 - VERSION 1 HARDWARE ONLY / OpenDM1801A / OpenRD5R User Guide](#opengd77--opengd77s--opendm1801--opendm1801a--openrd5r-user-guide)
   * [Introduction](#introduction)
     * [Download links and other resources](#download-links-and-other-resources)
   * [Installation](#installation)
@@ -204,7 +206,7 @@ For the latest information and discussions, please refer to the development and 
 
 ## Introduction
 
-This user guide is a work in progress as is the OpenGD77, OpenGD77S, OpenDM1801, OpenDM1801A and OpenRD5R firmware.
+This user guide is a work in progress as is the OpenGD77, OpenGD77S, OpenDM1801 - VERSION 1 HARDWARE ONLY, OpenDM1801A and OpenRD5R firmware.
 
 Due to the rapid pace of development some photos of screens are now out of date and not completely accurate.
 
@@ -244,7 +246,7 @@ The firmware can be installed onto the following radios
 
 - Radioddity GD-77 (also known as TYT MD-760)
 - Radioddity GD-77S
-- Baofeng DM-1801 (also known as Baofeng DM-860)
+- Baofeng DM-1801 - VERSION 1 HARDWARE ONLY (also known as Baofeng DM-860)
 - Baofeng DM-1801A
 - Baofeng RD-5R (also known as Baofeng DM-5R Tier 2)
 
@@ -253,7 +255,7 @@ The firmware must be installed using the 'Extras/Firmware Loader' menu in the Op
 Installation of the firmware is undertaken at the owners own risk, but the official firmware can usually be reloaded onto the radio if the user has problems with the firmware, **as long as the operator takes a full backup of their radio using the OpenGD77 CPS immediately after the firmware has been installed** (see [*backup section*](#backup-before-you-do-anything-else))
 
 *Note:*
-
+- *The firmware is not compatible with the new 2022 version of the Baofeng DM-1801 which uses competely different internal hardware and electronics*
 - The official Radioddity CPS PC software is not compatible with the firmware, and the **OpenGD77 CPS** must be used instead. This can be downloaded from the link show in [section 1.1](#download-links-and-other-resources) of this guide. This CPS must also be used for the Baofeng DM-1801 and all other supported radios
 
 ### Transferring data to Radio
@@ -265,7 +267,7 @@ There are two mechanisms that can be used when connecting your computer to the r
     * Holding down the two buttons indicated below (**S1**,**Fn**) and turning the radio on.
       * Radioddity GD-77 or GD-77s or the TYT MD-760 or MD-730:
         * Hold down the **two small buttons** next to the PTT button.
-      * Baofeng DM-1801 or DM-1801A or DM-860:
+      * Baofeng DM-1801 Version 1 or DM-1801A or DM-860:
         * Hold down the **two small buttons** under the PTT button.
       * Baofeng RD-5R or DM-5R Tier2:
         * The Orange **S1** (Call) and Black Fn (**Moni** or **S2**) buttons (either side of the PTT).
