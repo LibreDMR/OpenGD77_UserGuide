@@ -255,7 +255,7 @@ The firmware must be installed using the 'Extras/Firmware Loader' menu in the Op
 Installation of the firmware is undertaken at the owners own risk, but the official firmware can usually be reloaded onto the radio if the user has problems with the firmware, **as long as the operator takes a full backup of their radio using the OpenGD77 CPS immediately after the firmware has been installed** (see [*backup section*](#backup-before-you-do-anything-else))
 
 *Note:*
-- *The firmware is not compatible with the new 2022 version of the Baofeng DM-1801 which uses competely different internal hardware and electronics*
+- *The firmware is not compatible with the new 2022 version of the Baofeng DM-1801 which uses completely different internal hardware and electronics*
 - The official Radioddity CPS PC software is not compatible with the firmware, and the **OpenGD77 CPS** must be used instead. This can be downloaded from the link show in [section 1.1](#download-links-and-other-resources) of this guide. This CPS must also be used for the Baofeng DM-1801 and all other supported radios
 
 ### Transferring data to Radio
