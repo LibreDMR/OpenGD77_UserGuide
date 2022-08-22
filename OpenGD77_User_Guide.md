@@ -279,11 +279,11 @@ There are two mechanisms that can be used when connecting your computer to the r
 
   * Connection will use the HID codes and a driver is not required to be installed.
 
-  * The Firmware is easily installed from the Extras menu in the [CPS](#cps-software).
-![firmware loader menu access](media/Firmware_loader-01.png)<!-- { width=400 } -->
+  * The Firmware is easily installed from the Extras menu in the [CPS](#cps-software).  
+    ![firmware loader menu access](media/Firmware_loader-01.png)<!-- { width=400 } -->
 
-    - Choose your radio model.
-![firmware loader window](media/Firmware_loader-02.png)<!-- { width=420 } -->
+    - Choose your radio model.  
+      ![firmware loader window](media/Firmware_loader-02.png)<!-- { width=420 } -->
 
     - For Software licensing reasons the first time that you use the firmware loader you must click 'Firmware Installation Instructions' and follow the procedure described.
 
