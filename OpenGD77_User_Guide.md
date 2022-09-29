@@ -1,10 +1,10 @@
 ![](media/OpenGD77-logo.png)
 
-# OpenGD77 / OpenGD77S / OpenDM1801 - VERSION 1 HARDWARE ONLY / OpenDM1801A / OpenRD5R User Guide
+# OpenGD77 / OpenGD77S / OpenDM1801 - VERSION 1 HARDWARE ONLY / OpenDM1801A - VERSION 1 HARDWARE ONLY / OpenRD5R User Guide
 
 For the latest information and discussions, please refer to the development and community forum at <https://opengd77.com>
 
-# IMPORTANT. The firmware is NOT compatible with the new 2022 version of the Baofeng DM-1801 #
+# VERY IMPORTANT. The firmware is NOT compatible with the new 2022 version of the Baofeng DM-1801, or the new DM-1801A #
 
 <!-- TOC titleSize:2 tabSpaces:2 depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 skip:0 title:1 charForUnorderedList:* -->
 
