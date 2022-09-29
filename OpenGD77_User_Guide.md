@@ -1,6 +1,7 @@
 ![](media/OpenGD77-logo.png)
 
-# OpenGD77 / OpenGD77S / OpenDM1801 - VERSION 1 HARDWARE ONLY / OpenDM1801A - VERSION 1 HARDWARE ONLY / OpenRD5R User Guide
+# OpenGD77 / OpenGD77S / OpenDM1801* / OpenDM1801A* / OpenRD5R / MD-9600 (RT-90) / MD-UV380 (RT-3S)
+# User Guide
 
 For the latest information and discussions, please refer to the development and community forum at <https://opengd77.com>
 
@@ -9,7 +10,7 @@ For the latest information and discussions, please refer to the development and 
 <!-- TOC titleSize:2 tabSpaces:2 depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 skip:0 title:1 charForUnorderedList:* -->
 
 ## Table of Contents
-* [OpenGD77 / OpenGD77S / OpenDM1801 - VERSION 1 HARDWARE ONLY / OpenDM1801A - VERSION 1 HARDWARE ONLY/ OpenRD5R User Guide](#opengd77--opengd77s--opendm1801--opendm1801a--openrd5r-user-guide)
+* [OpenGD77 / OpenGD77S / OpenDM1801* / OpenDM1801A* / OpenRD5R / MD-9600 (RT-90) / MD-UV380 (RT-3S) User Guide](#opengd77--opengd77s--opendm1801--opendm1801a--openrd5r-user-guide)
   * [Introduction](#introduction)
     * [Download links and other resources](#download-links-and-other-resources)
   * [Installation](#installation)
