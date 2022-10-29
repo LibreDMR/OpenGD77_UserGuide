@@ -1,19 +1,21 @@
 ![](media/OpenGD77-logo.png)
 
-# OpenGD77 / OpenGD77S / OpenDM1801（仅限第 1 版硬件） / OpenDM1801A / OpenRD5R 用户指南
+# OpenGD77 / OpenGD77S / OpenDM1801\* / OpenDM1801A\* / OpenRD5R / MD-9600 (RT-90) / MD-UV380 (RT-3S)
+# 用户指南
 
 翻译：BH4ESK BH4FTP  
 校对：BG5IPF BG7XTQ
 
 获取最新消息或与我们讨论，请到我们的官方论坛 <https://opengd77.com>
 
-# 重要提示：该固件不兼容 2022 新版宝锋 DM-1801 #
+＃ **重要**提示：该固件不兼容 2022 新版宝锋 DM-1801，或新版 DM-1801A #
 
 <!-- TOC titleSize:2 tabSpaces:2 depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 skip:0 title:1 charForUnorderedList:* -->
 
 ## 目录
 
-- [OpenGD77 / OpenGD77S / OpenDM1801（仅限第 1 版硬件） / OpenDM1801A / OpenRD5R 用户指南](#opengd77--opengd77s--opendm1801仅限第-1-版硬件--opendm1801a--openrd5r-用户指南)
+- [OpenGD77 / OpenGD77S / OpenDM1801\* / OpenDM1801A\* / OpenRD5R / MD-9600 (RT-90) / MD-UV380 (RT-3S)](#opengd77--opengd77s--opendm1801--opendm1801a--openrd5r--md-9600-rt-90--md-uv380-rt-3s)
+- [用户指南](#用户指南)
   - [目录](#目录)
   - [简介](#简介)
     - [下载链接与其他资源](#下载链接与其他资源)
@@ -34,16 +36,16 @@
       - [显示 FM 模式具体信道信息](#显示-fm-模式具体信道信息)
       - [上行监听功能](#上行监听功能)
       - [信道界面快捷菜单](#信道界面快捷菜单)
-        - [复制一个信道配置至 VFO（Channel --> VFO）](#复制一个信道配置至-vfochannel----vfo)
-        - [将 VFO 信息写入当前信道（VFO --> Channel）](#将-vfo-信息写入当前信道vfo----channel)
+        - [复制一个信道配置至 VFO（Channel --\> VFO）](#复制一个信道配置至-vfochannel----vfo)
+        - [将 VFO 信息写入当前信道（VFO --\> Channel）](#将-vfo-信息写入当前信道vfo----channel)
         - [过滤器设置（Filter）](#过滤器设置filter)
       - [频率界面快捷菜单](#频率界面快捷菜单)
         - [选择 VFO A/B](#选择-vfo-ab)
-        - [交换接收与发射频率（Tx <--> Rx）](#交换接收与发射频率tx----rx)
-        - [将接收频率复制到发射频率（Rx --> Tx）](#将接收频率复制到发射频率rx----tx)
-        - [将发射频率复制到接收频率（Tx --> Rx）](#将发射频率复制到接收频率tx----rx)
+        - [交换接收与发射频率（Tx \<--\> Rx）](#交换接收与发射频率tx----rx)
+        - [将接收频率复制到发射频率（Rx --\> Tx）](#将接收频率复制到发射频率rx----tx)
+        - [将发射频率复制到接收频率（Tx --\> Rx）](#将发射频率复制到接收频率tx----rx)
         - [过滤器（Filter）（_仅限 DMR 模式_）](#过滤器filter仅限-dmr-模式)
-        - [存储 VFO 配置至新建信道（VFO --> New Chan）](#存储-vfo-配置至新建信道vfo----new-chan)
+        - [存储 VFO 配置至新建信道（VFO --\> New Chan）](#存储-vfo-配置至新建信道vfo----new-chan)
         - [哑音扫描（Tone Scan）（仅限 FM 模式）](#哑音扫描tone-scan仅限-fm-模式)
     - [与 DMR 有关的一些设置](#与-dmr-有关的一些设置)
       - [时隙选择](#时隙选择)
@@ -209,7 +211,7 @@
 
 ## 简介
 
-本用户手册及其系统固件（OpenGD77, OpenGD77S, OpenDM1801（仅限第 1 版硬件）, OpenDM1801A 以及 OpenRD5R）现处于原始开发阶段。\*
+本用户手册及其系统固件（OpenGD77, OpenGD77S, OpenDM1801（仅限第 1 版硬件）, OpenDM1801A（仅限第 1 版硬件）以及 OpenRD5R）现处于原始开发阶段。\*
 
 > \*译者注：国外型号与国内型号有所不同，对应关系请看下文安装部分
 
@@ -255,7 +257,7 @@ _请注意 :_
 
 - 宝锋 DM-1801（仅限第 1 版硬件） （又名 宝锋 DM-860）
 
-- 宝锋 DM-1801A
+- 宝锋 DM-1801A（仅限第 1 版硬件）
 
 - 宝锋 DM-5R Tier II （又名 宝锋 RD-5R）
 
@@ -264,8 +266,8 @@ _请注意 :_
 安装本固件的风险由用户自行承担。**请在刷入固件后立即使用 OpenGD77 CPS 对电台进行完整备份**（详见*[备份](#在您做任何其他事情之前备份)*，如果遇到任何问题，原厂固件通常可以被重新刷入。
 
 _请注意 :_
-- *该固件与宝锋 DM-1801 的新 2022 版本不兼容，因为其使用了完全不同的内部硬件和电子设备。*
-- 原厂提供的 CPS 软件与本固件不兼容，请使用 **OpenGD77 CPS**。它可以从本指南的[1.1 章节处](#下载链接与其他资源)下载。包括宝锋 DM-1801 和其他支持的电台必须使用OpenGD77 CPS。
+- *该固件与宝锋 DM-1801 的新 2022 版本或 DM-1801A 不兼容，因为其使用了完全不同的内部硬件和电子设备。*
+- 原厂提供的 CPS 软件与本固件不兼容，请使用 **OpenGD77 CPS**。它可以从本指南的[1.1 章节处](#下载链接与其他资源)下载。包括宝锋、特易通、Retevis 和其他支持的电台必须使用OpenGD77 CPS。
 
 ### 将数据传输到电台
 
@@ -281,7 +283,7 @@ _请注意 :_
 
       - 按住 PTT 按键旁边的**两个小按键**。
 
-    - 宝锋 DM-1801（第 1 版）或 DM-1801A 或 DM-860：
+    - 宝锋 DM-1801（第 1 版）或 DM-1801A（第 1 版）或 DM-860：
 
       - 按住 PTT 按键下方的**两个小按键**。
 
