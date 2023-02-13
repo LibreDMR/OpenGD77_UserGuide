@@ -5,7 +5,10 @@
 
 For the latest information and discussions, please refer to the development and community forum at <https://opengd77.com>
 
-# VERY IMPORTANT. The firmware is NOT compatible with the new 2022 version of the Baofeng DM-1801, or the new DM-1801A #
+
+# VERY IMPORTANT. The firmware is NOT compatible with the new versions of the TYT MD-UV380 / Retevis or the new versions of the TYT MD-9600 / Retevis. These radios use a fake / unbranded CPU #
+
+# The firmware is also NOT compatible with the new 2022 version of the Baofeng DM-1801, or the new DM-1801A #
 
 <!-- TOC titleSize:2 tabSpaces:2 depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 skip:0 title:1 charForUnorderedList:* -->
 
