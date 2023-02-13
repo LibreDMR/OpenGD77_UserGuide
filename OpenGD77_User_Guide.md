@@ -258,7 +258,7 @@ Note. Versions with JA in the name are localised for Japanese users and only sup
 
 
 - **OpenGD77 CPS**
-<https://www.opengd77.com/downloads/CPS>
+<https://www.opengd77.com/downloads/CPS/Latest>
 
 
 - **Latest Source code for fully released firmware:**
