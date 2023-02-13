@@ -1801,7 +1801,7 @@ This screen currently only applies to the TYT MD-UV380 / Retevis RT-3S
 
 #### Cal Freq<!-- linebreak -->
 This selects the current calibration point. This is the frequency that the radio will transmit on and the Power Adjust setting will change.  There are 5 calibration points for VHF and 8 calibration points for UHF. The firmware interpolates between these points to calculate the calibration required for other frequencies.
-Hence to calibrate the power for the 2M band, the 136.5MHz, 145.5MHz and 155.0MHz calibration points must all be adjusted. This is because 144-148 MHz spans multiple points. 
+Hence to calibrate the power for the 2M band, the 136.0MHz, 145.5MHz and 155.0MHz calibration points must all be adjusted. This is because 144-148 MHz spans multiple points. 
 
 #### Cal Power<!-- linebreak -->
 For each calibration point, there are 4 power levels which need to be calibrated. 250mW, 1W, 2W and 4W
