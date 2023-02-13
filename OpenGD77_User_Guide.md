@@ -1804,7 +1804,7 @@ During testing, it was noted that signals received via gateways from other netwo
 
 This screen currently only applies to the TYT MD-UV380 / Retevis RT-3S 
 
-![sound options menu](media/calibration-screen.png)
+![radio calibation screen](media/calibration_screen.png)
 
 #### Cal Freq<!-- linebreak -->
 This sets the current frequency range, that the Power Adjust setting will change.  There are 5 ranges for VHF e.g. 136.MHz - 145.5MHz and 8 ranges for UHF. 
