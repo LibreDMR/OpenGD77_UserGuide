@@ -1820,6 +1820,7 @@ This value allows the calibration to be restored to the factory defaults. This w
 To restore factory defaults, set this to "Yes" and press the Green button.
 After the factory calibration has been applied, this setting returns to "No"
 
+#### Calibration Procedure<!-- linebreak -->
 1. To calibrate the Tx power of the radio you will need a power meter and a dummy load. 
 2. Connect the radio to the power meter. 
 3. Collect the dummy load to the antenna connection of the power meter.
