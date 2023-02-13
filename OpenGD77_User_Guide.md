@@ -179,6 +179,7 @@ For the latest information and discussions, please refer to the development and 
 	  * [Channel Eco mode](#ch-eco)
       * [Accepting and saving the changes to the channel](#accepting-and-saving-the-changes-to-the-channel)
 	* [Satellite Screen](#satellite-screen)
+	* [GPS Screen](#GPS-screen)	
   * [Making and receiving DMR Private Calls](#making-and-receiving-dmr-private-calls)
     * [To make a Private Call](#to-make-a-private-call)
     * [To Receive a Private Call](#to-receive-a-private-call)
@@ -2123,8 +2124,38 @@ Predictions will not be completely accurate unless the satellite Kep's data is u
 The prediction calculation is a custom implementation, written for the OpenGD77, using the methodology from the original AMSAT prediction calculation called PLAN13 written in the 1983.
 See https://www.amsat.org/amsat/articles/g3ruh/111.html
 
+<div style="page-break-after: always; break-after: page;"></div>
+
+### GPS Screen
+
+The GPS screen is currently only available on the TYT MD-UV380/390 / Retevis RT-3S and TYT MD-9600 / Retevis RT-90 for radios which have GPS fitted, or in the case of the MD-9600 where users have modified the radio to attach and internal or external GPS module
+
+Because the GPS receiver consumes over 50mA constantly when in use, the GPS receiver is not powered by default in the MD-UV380/RT-3S firmware.
+
+To use the GPS receive in the radio, you must first enable the GPS in the General Options menu.
+If the radio is not fitted with GPS, or the GPS does not appear to function, this option will show the value "None".
+If the radio is fitted with a GPS, the valuie of this option will initially display "Off"
+To use the GPS, change this value to "On", or "NMEA". Setting the GPS to NMEA will enable the GPS module and send all NMEA data from the GPS module to the USB serial port of the radio.
+Notes.
+1. Setting the GPS to output NMEA data will prevent the CPS communicating with the radio, and the GPS setting should be set to "Off" or "On", when using the CPS.
+2. The GPS receive in both the UV380 and MD9600 is not very sensitive, and can take a long time to acquire the position, and the GPS in these radios do not work indoors.
+
+Initially after turning on the GPS, the GPS screen will show the text "Acquiring".  On the UV380 signal strength bars for any satellites which the GPS is receiving will also be displayed.
+On the MD-9600 version, there is not enough room on the first GPS screen to show the signal strength bars, so they are shown on a second page to the GPS screen, which is accessed by pressing the Down arrow button
 
 
+![GPS_acquiring](media/GPS_acquiring.png)
+
+Both the MD-UV380 and MD-9600 versions also have a page in the GPS screen, which shows the polar positions of any detected GPS satellites, however this screen is not functional until the GPS position is known.
+
+Once the GPS position has been acquired, the position will be displayed, including Latitude, Longitude, Altitude and accuracy.
+
+![GPS_1](media/GPS1.png)
+
+![GPS_2](media/GPS2.png)
+
+The GPS automatically updates the Real Time clock in the radio, and the position is used for DMR APRS transmissions.
+ 
 
 <div style="page-break-after: always; break-after: page;"></div>
 
