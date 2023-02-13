@@ -95,6 +95,7 @@ For the latest information and discussions, please refer to the development and 
     * [Last Heard](#last-heard)
     * [Firmware Info and credits](#firmware-info-and-credits)
 	*  Options - contains the 4 following options screens
+	    * [Language](#language-screen)	
         * [General Options](#general-options)
           * [Key long](#key-long)
           * [Key rpt](#key-rpt)
@@ -149,6 +150,7 @@ For the latest information and discussions, please refer to the development and 
           * [VOX Tail](#vox-tail)
           * [Prompt](#prompt)
           * [DMR Rx AGC](#dmr-rx-agc)
+	 
     * [Channel Details](#channel-details)
       * [Channel name](#channel-name)
       * [RX](#rx)
