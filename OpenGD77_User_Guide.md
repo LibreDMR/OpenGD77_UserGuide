@@ -234,11 +234,36 @@ This firmware is specifically designed for **Amateur Radio** use, and has featur
 
 **Firmware binaries:**
 
-- **Latest Source code for fully released firmware:**
-<https://www.opengd77.com/downloads/releases>
+**GD-77/GD-77S/DM-1801/RD-5R**
+<https://www.opengd77.com/downloads/GD77/Latest>
+
+**TYT MD-9600 / Retevis RT-90**
+<https://www.opengd77.com/downloads/MD9600/Firmware/Latest>
+
+The MD-9600 / RT-90 has been produced with multiple different PLL and IF chips during its production run. 
+You need to install the version which matches your hardware version
+The version is written on the PCB inside the top of the radio, except sometimes TYT changed the hardware without changing the version on the PCB.
+For radios with hardware version 4A use Version 5 firmware
+For very old radios with hardware version 2 written on the PCB, may need to be loaded with Version 1 firmware.
+
+Basically if your radio does not receive or transmit, try a different firmware hardware version.
+
+
+
+**TYT MD-UV380 / Retevis RT-3S**
+<https://www.opengd77.com/downloads/MDUV380/Firmware/Latest>
+
+
+Note. Versions with JA in the name are localised for Japanese users and only support Japanese and English languages
+
 
 - **OpenGD77 CPS**
 <https://www.opengd77.com/downloads/CPS>
+
+
+- **Latest Source code for fully released firmware:**
+<https://www.opengd77.com/downloads/releases>
+
 
 - **OpenGD77 Forum:**
 <https://www.opengd77.com/>
