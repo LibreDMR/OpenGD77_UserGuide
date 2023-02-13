@@ -1823,8 +1823,8 @@ This value adjusts the master frequency reference oscillator. This is a 8 bit nu
 
 #### Factory Cal<!-- linebreak -->
 This value allows the calibration to be restored to the factory defaults. This will normally show "No"
-To restore factory defaults, set this to Yes and press the Green button.
-
+To restore factory defaults, set this to "Yes" and press the Green button.
+After the factory calibration has been applied, this setting returns to "No"
 
 1. To calibrate the Tx power of the radio you will need a power meter and a dummy load. 
 2. Connect the radio to the power meter. 
