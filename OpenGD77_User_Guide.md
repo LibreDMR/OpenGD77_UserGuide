@@ -1,12 +1,12 @@
 ![](media/OpenGD77-logo.png)
 
-# OpenGD77 / OpenGD77S / OpenDM1801* / OpenDM1801A* / OpenRD5R / MD-9600 (RT-90) / MD-UV380 (RT-3S)
+# OpenGD77 / OpenGD77S / OpenDM1801* / OpenDM1801A* / OpenRD5R / MD-9600 (RT-90) / MD-UV380 (RT-3S) / MD-UV390
 # User Guide
 
 For the latest information and discussions, please refer to the development and community forum at <https://opengd77.com>
 
 
-# VERY IMPORTANT. The firmware is NOT compatible with the new versions of the TYT MD-UV380 / Retevis or the new versions of the TYT MD-9600 / Retevis. These radios use a fake / unbranded CPU #
+# VERY IMPORTANT. The firmware is NOT compatible with the new versions of the TYT MD-UV380 /  MD-UV390 / Retevis RT-3S or the new versions of the TYT MD-9600 / Retevis. These radios use a fake / unbranded CPU #
 
 # The firmware is also NOT compatible with the new 2022 version of the Baofeng DM-1801, or the new DM-1801A #
 
@@ -213,9 +213,7 @@ For the latest information and discussions, please refer to the development and 
 
 ## Introduction
 
-This user guide is a work in progress as is the OpenGD77, OpenGD77S, OpenDM1801 - VERSION 1 HARDWARE ONLY, OpenDM1801A - VERSION 1 HARDWARE ONLY and OpenRD5R firmware.
-
-Due to the rapid pace of development some photos of screens are now out of date and not completely accurate.
+This user guide is a work in progress as is the OpenGD77, OpenGD77S, OpenDM1801, OpenDM1801A , OpenRD5R, OpenMDUV380, OpenMD9600 firmware.
 
 The photos will be updated when the firmware in a particular area stabilises.
 
@@ -228,7 +226,6 @@ This firmware is specifically designed for **Amateur Radio** use, and has featur
 - SMS message Tx and Rx **are not currently supported**, but may be supported in the future.
 - Scan Lists **are not supported** because Channel or Zone scan feature provides almost identical functionality.
 - Privacy and Encryption **will not** be supported, as its illegal for Amateur Radio use, developers in some countries (*e.g.* Australia) are now legally required to put a back door access into any encryption systems at the request of the government, hence effectively making it illegal or impossible to develop systems that contain encryption.
-
 
 
 ### Download links and other resources
@@ -249,14 +246,10 @@ For very old radios with hardware version 2 written on the PCB, may need to be l
 
 Basically if your radio does not receive or transmit, try a different firmware hardware version.
 
-
-
 **TYT MD-UV380 / Retevis RT-3S**
 <https://www.opengd77.com/downloads/MDUV380/Firmware/Latest>
 
-
 Note. Versions with JA in the name are localised for Japanese users and only support Japanese and English languages
-
 
 - **OpenGD77 CPS**
 <https://www.opengd77.com/downloads/CPS/Latest>
