@@ -153,7 +153,7 @@ For the latest information and discussions, please refer to the development and 
           * [VOX Tail](#vox-tail)
           * [Prompt](#prompt)
           * [DMR Rx AGC](#dmr-rx-agc)
-        * [Radio Calibration](#calibration-screen)
+        * [Radio Calibration](#Calibration-screen)
 	 
     * [Channel Details](#channel-details)
       * [Channel name](#channel-name)
