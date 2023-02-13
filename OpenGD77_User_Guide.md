@@ -234,7 +234,7 @@ This firmware is specifically designed for **Amateur Radio** use, and has featur
 
 **Firmware binaries:**
 
-- **Latest version:**
+- **Latest Source code for fully released firmware:**
 <https://www.opengd77.com/downloads/releases>
 
 - **OpenGD77 CPS**
