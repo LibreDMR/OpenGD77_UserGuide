@@ -1800,19 +1800,20 @@ This screen currently only applies to the TYT MD-UV380 / Retevis RT-3S
 ![radio calibation screen](media/calibration_screen.png)
 
 #### Cal Freq<!-- linebreak -->
-This sets the current frequency range, that the Power Adjust setting will change.  There are 5 ranges for VHF e.g. 136.MHz - 145.5MHz and 8 ranges for UHF. 
-Hence to calibrate the power for the 2M band, both the 136.5MHz and 145.5MHz ranges must be adjusted.
+This selects the current calibration point. This is the frequency that the radio will transmit on and the Power Adjust setting will change.  There are 5 calibration points for VHF and 8 calibration points for UHF. The firmware interpolates between these points to calculate the calibration required for other frequencies.
+Hence to calibrate the power for the 2M band, the 136.5MHz, 145.5MHz and 155.0MHz calibration points must all be adjusted. This is because 144-148 MHz spans multiple points. 
 
 #### Cal Power<!-- linebreak -->
-For each frequency range, there are 4 power levels which need to be calibrated. 250mW, 1W, 2W and 4W
+For each calibration point, there are 4 power levels which need to be calibrated. 250mW, 1W, 2W and 4W
 
 #### Power Adjust<!-- linebreak -->
 This value controls the amount of PA drive. This is a 8 bit number, and hence has a range from 0 to 255, where 0 is no PA drive and 255 is maximum PA drive.
 
-#### Freq Adjust<!-- linebreak -->
-Note. Frequency adjustment is independant of frequeny range (Cal Freq)
+#### Freq Adjust<!-- linebreak --> 
 
-This value adjusts the master frequency reference oscillator. This is a 8 bit number, and hence has a range from 0 to 255. To lower the frequency, decrease this value, to increase the frequency , increase this value.
+This value adjusts the master frequency reference oscillators. This is a 8 bit number, and hence has a range from 0 to 255. To lower the frequency, decrease this value, to increase the frequency , increase this value.
+
+Note. There are seperate reference oscillators for VHF and UHF. Therefore the frequency should be adjusted twice. Once with a VHF calibration point and once with a UHF one. The calibration point used for each band is unimportant and the frequency calibration only needs to be done once on each band.  
 
 #### Factory Cal<!-- linebreak -->
 This value allows the calibration to be restored to the factory defaults. This will normally show "No"
@@ -1822,11 +1823,11 @@ After the factory calibration has been applied, this setting returns to "No"
 1. To calibrate the Tx power of the radio you will need a power meter and a dummy load. 
 2. Connect the radio to the power meter. 
 3. Collect the dummy load to the antenna connection of the power meter.
-4. Select the desired Tx frequency range e.g. for 144Mhz, the Cal freq would need to be set to 136.5MHz, because this range covers from 136.5MHz to 145.5MHz and hence includes 144Mhz.
+4. Select the desired Tx calibration point.
 5. Select the power level (e.g. 250mW)
-6. Press the PTT and adjust the Power Adjust value, until the power meter shows 250mW
+6. Press the PTT and adjust the Power Adjust value, until the power meter shows 250mW.
 7. Repeat steps 5 and 6 for all other power levels
-8. Repeat steps 4 to 7 for all desired frequency ranges
+8. Repeat steps 4 to 7 for all other calibration points.
 
 When power calibration has been completed, pressing **Green** exits from the calibration screen, retaining the current settings in RAM only.
 To permanently save the settings press **SK2** + **Green** 
