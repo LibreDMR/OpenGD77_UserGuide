@@ -178,7 +178,6 @@ For the latest information and discussions, please refer to the development and 
 	  * [Channel beep](#ch-beep)
 	  * [Channel Eco mode](#ch-eco)
       * [Accepting and saving the changes to the channel](#accepting-and-saving-the-changes-to-the-channel)
-    * [Language Screen](#language-screen)
 	* [Satellite Screen](#satellite-screen)
   * [Making and receiving DMR Private Calls](#making-and-receiving-dmr-private-calls)
     * [To make a Private Call](#to-make-a-private-call)
