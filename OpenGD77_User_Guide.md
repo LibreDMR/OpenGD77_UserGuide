@@ -1800,7 +1800,7 @@ During testing, it was noted that signals received via gateways from other netwo
 
 
 
-###Calibration screen 
+### Calibration screen 
 
 This screen currently only applies to the TYT MD-UV380 / Retevis RT-3S 
 
