@@ -2132,9 +2132,9 @@ The GPS screen is currently only available on the TYT MD-UV380/390 / Retevis RT-
 
 Because the GPS receiver consumes over 50mA constantly when in use, the GPS receiver is not powered by default in the MD-UV380/RT-3S firmware.
 
-To use the GPS receive in the radio, you must first enable the GPS in the General Options menu.
+To use the GPS receiver in the radio, you must first enable the GPS in the General Options menu.
 If the radio is not fitted with GPS, or the GPS does not appear to function, this option will show the value "None".
-If the radio is fitted with a GPS, the valuie of this option will initially display "Off"
+If the radio is fitted with a GPS, the value of this option will initially display "Off"
 To use the GPS, change this value to "On", or "NMEA". Setting the GPS to NMEA will enable the GPS module and send all NMEA data from the GPS module to the USB serial port of the radio.
 Notes.
 1. Setting the GPS to output NMEA data will prevent the CPS communicating with the radio, and the GPS setting should be set to "Off" or "On", when using the CPS.
@@ -2155,6 +2155,8 @@ Once the GPS position has been acquired, the position will be displayed, includi
 ![GPS_2](media/GPS2.png)
 
 The GPS automatically updates the Real Time clock in the radio, and the position is used for DMR APRS transmissions.
+
+On the UV380/RT-3S the GPS satellite RSSI bar graphs are colour coded.  Blue is for USA GPS Satellites, and Red is for other satellite systems.
  
 
 <div style="page-break-after: always; break-after: page;"></div>
