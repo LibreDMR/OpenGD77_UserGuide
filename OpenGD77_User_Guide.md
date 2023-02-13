@@ -280,6 +280,9 @@ The firmware can be installed onto the following radios
 - Baofeng DM-1801 - VERSION 1 HARDWARE ONLY (also known as Baofeng DM-860)
 - Baofeng DM-1801A - VERSION 1 HARDWARE ONLY
 - Baofeng RD-5R (also known as Baofeng DM-5R Tier 2)
+- TYT MD-9600 / Retevis RT-90 (Manufactured before approx September 2022)
+- TYT MD-UV380 / Retevis RT-3S (Manufactured before approx September 2022)
+
 
 The firmware must be installed using the 'Extras/Firmware Loader' menu in the OpenGD77 CPS. The original Manufacturers firmware loader cannot be used to load the OpenGD77 firmware.
 
@@ -287,6 +290,7 @@ Installation of the firmware is undertaken at the owners own risk, but the offic
 
 *Note:*
 - *The firmware is not compatible with the new 2022 version of the Baofeng DM-1801 or DM-1801A which now uses completely different internal hardware and electronics*
+- *The firmware is also not compatible with the new 2022 version of the MD-9600 / RT-90 or MD-UV380/RT-S because it uses a unbranded / fake CPU chip which crashes the firmware*
 - The official Radioddity CPS PC software is not compatible with the firmware, and the **OpenGD77 CPS** must be used instead. This can be downloaded from the link show in [section 1.1](#download-links-and-other-resources) of this guide. This CPS must also be used for the Baofeng , TYT, Retevis and all other supported radios
 
 ### Transferring data to Radio
@@ -295,16 +299,24 @@ There are two mechanisms that can be used when connecting your computer to the r
 
 1. Firmware upgrade.
   * Get the radio into firmware update mode by:
-    * Holding down the two buttons indicated below (**S1**,**Fn**) and turning the radio on.
+    * Holding down the two buttons indicated below (**S1**,**Fn**) and turn the radio on.
       * Radioddity GD-77 or GD-77s or the TYT MD-760 or MD-730:
         * Hold down the **two small buttons** next to the PTT button.
       * Baofeng DM-1801 Version 1 or DM-1801A - Version 1 only or DM-860:
         * Hold down the **two small buttons** under the PTT button.
       * Baofeng RD-5R or DM-5R Tier2:
         * The Orange **S1** (Call) and Black Fn (**Moni** or **S2**) buttons (either side of the PTT).
+      * TYT MD-9600 / Retevis RT-90
+        * Hold the green power button and the orange button, while applying 12V power to the radio. Note updating the OpenGD77 firmware to a newer version does not require the power to be removed and reconnected
+      * TYT MD-UV380 / Retevis RT-3S
+        * Hold the top 2 buttons on the side of the radio (**S1** and PTT) and turn the radio on.
+
+		
 ![buttons layout](media/PTT-layout.png)<!-- { width=420 } -->
 
 <div style="page-break-after: always; break-after: page;"></div>
+
+#The following information applies to installation of the firmware onto the GD-77/GD-77S/DM-1801/RD-5R only#
 
   * The LCD screen will be blank.
 
