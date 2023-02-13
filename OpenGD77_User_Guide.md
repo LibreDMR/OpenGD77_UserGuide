@@ -153,6 +153,7 @@ For the latest information and discussions, please refer to the development and 
           * [VOX Tail](#vox-tail)
           * [Prompt](#prompt)
           * [DMR Rx AGC](#dmr-rx-agc)
+        * [Radio Calibration](#calibration-screen)
 	 
     * [Channel Details](#channel-details)
       * [Channel name](#channel-name)
@@ -1660,6 +1661,7 @@ If "Local" is selected, dates and times do not show any text to indicate that Lo
 
 <div style="page-break-after: always; break-after: page;"></div>
 
+
 ### Sound Options
 
 ![sound options menu](media/sound-options.png)
@@ -1794,6 +1796,50 @@ However the AGC control level for each DMR station which is received, is stored 
 
 It should be noted that this system is not perfect and some variation in audio level will be observed.
 During testing, it was noted that signals received via gateways from other networks or people using phone Apps etc; often have much higher audio levels, and sometimes that output gain control hardware in the radio is not able to attenuate the signal enough to ensure the audio is at the same level as DMR signals from DMR networks.
+
+
+
+
+###Calibration screen 
+
+This screen currently only applies to the TYT MD-UV380 / Retevis RT-3S 
+
+![sound options menu](media/calibration-screen.png)
+
+#### Cal Freq<!-- linebreak -->
+This sets the current frequency range, that the Power Adjust setting will change.  There are 5 ranges for VHF e.g. 136.MHz - 145.5MHz and 8 ranges for UHF. 
+Hence to calibrate the power for the 2M band, both the 136.5MHz and 145.5MHz ranges must be adjusted.
+
+#### Cal Power<!-- linebreak -->
+For each frequency range, there are 4 power levels which need to be calibrated. 250mW, 1W, 2W and 4W
+
+#### Power Adjust<!-- linebreak -->
+This value controls the amount of PA drive. This is a 8 bit number, and hence has a range from 0 to 255, where 0 is no PA drive and 255 is maximum PA drive.
+
+#### Freq Adjust<!-- linebreak -->
+Note. Frequency adjustment is independant of frequeny range (Cal Freq)
+
+This value adjusts the master frequency reference oscillator. This is a 8 bit number, and hence has a range from 0 to 255. To lower the frequency, decrease this value, to increase the frequency , increase this value.
+
+#### Factory Cal<!-- linebreak -->
+This value allows the calibration to be restored to the factory defaults. This will normally show "No"
+To restore factory defaults, set this to Yes and press the Green button.
+
+
+1. To calibrate the Tx power of the radio you will need a power meter and a dummy load. 
+2. Connect the radio to the power meter. 
+3. Collect the dummy load to the antenna connection of the power meter.
+4. Select the desired Tx frequency range e.g. for 144Mhz, the Cal freq would need to be set to 136.5MHz, because this range covers from 136.5MHz to 145.5MHz and hence includes 144Mhz.
+5. Select the power level (e.g. 250mW)
+6. Press the PTT and adjust the Power Adjust value, until the power meter shows 250mW
+7. Repeat steps 5 and 6 for all other power levels
+8. Repeat steps 4 to 7 for all desired frequency ranges
+
+When power calibration has been completed, pressing **Green** exits from the calibration screen, retaining the current settings in RAM only.
+To permanently save the settings press **SK2** + **Green** 
+
+However, to temporarily test the power e.g. by transmitting using the VFO, pressing **Green** on its own is OK.  You can return back to the calibration screen, after testing using the VFO and the values you adjusted will be used.
+
 
 
 <div style="page-break-after: always; break-after: page;"></div>
