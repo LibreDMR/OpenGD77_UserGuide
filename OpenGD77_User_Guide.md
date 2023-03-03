@@ -213,7 +213,7 @@ For the latest information and discussions, please refer to the development and 
 
 ## Introduction
 
-This user guide is a work in progress as is the OpenGD77, OpenGD77S, OpenDM1801, OpenDM1801A , OpenRD5R, OpenMDUV380, OpenMD9600 firmware.
+This user guide is a work in progress as is the firmware.
 
 The photos will be updated when the firmware in a particular area stabilises.
 
@@ -225,7 +225,7 @@ This firmware is specifically designed for **Amateur Radio** use, and has featur
 - **The firmware is still under development and there are some key areas of functionality which are supported in the official firmware but not in this firmware**
 - SMS message Tx and Rx **are not currently supported**, but may be supported in the future.
 - Scan Lists **are not supported** because Channel or Zone scan feature provides almost identical functionality.
-- Privacy and Encryption **will not** be supported, as its illegal for Amateur Radio use, developers in some countries (*e.g.* Australia) are now legally required to put a back door access into any encryption systems at the request of the government, hence effectively making it illegal or impossible to develop systems that contain encryption.
+- Privacy and Encryption **will never** be supported, as its illegal for Amateur Radio use, developers in some countries (*e.g.* Australia) are now legally required to put a back door access into any encryption systems at the request of the government, hence effectively making it illegal or impossible to develop systems that contain encryption.
 
 
 ### Download links and other resources
