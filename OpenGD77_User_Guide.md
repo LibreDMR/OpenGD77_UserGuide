@@ -1,7 +1,9 @@
 ![](media/OpenGD77-logo.png)
 
-# OpenGD77 / OpenGD77S / OpenDM1801* / OpenDM1801A* / OpenRD5R / MD-9600 (RT-90) / MD-UV380 (RT-3S) / MD-UV390
-# User Guide
+
+# OpenGD77 User Guide
+
+## For  OpenGD77 / OpenGD77S / OpenDM1801* / OpenDM1801A* / OpenRD5R / MD-9600 (RT-90) / MD-UV380 (RT-3S) / MD-UV390
 
 For the latest information and discussions, please refer to the development and community forum at <https://opengd77.com>
 
