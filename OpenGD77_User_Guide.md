@@ -6,8 +6,6 @@
 For the latest information and discussions, please refer to the development and community forum at <https://opengd77.com>
 
 
-# VERY IMPORTANT. The firmware is NOT compatible with the new versions of the TYT MD-UV380 /  MD-UV390 / Retevis RT-3S or the new versions of the TYT MD-9600 / Retevis. These radios use a fake / unbranded CPU #
-
 # The firmware is also NOT compatible with the new 2022 version of the Baofeng DM-1801, or the new DM-1801A #
 
 <!-- TOC titleSize:2 tabSpaces:2 depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 skip:0 title:1 charForUnorderedList:* -->
@@ -274,8 +272,8 @@ The firmware can be installed onto the following radios
 - Baofeng DM-1801 - VERSION 1 HARDWARE ONLY (also known as Baofeng DM-860)
 - Baofeng DM-1801A - VERSION 1 HARDWARE ONLY
 - Baofeng RD-5R (also known as Baofeng DM-5R Tier 2)
-- TYT MD-9600 / Retevis RT-90 (Manufactured before approx September 2022)
-- TYT MD-UV380 / Retevis RT-3S (Manufactured before approx September 2022)
+- TYT MD-9600 / Retevis RT-90
+- TYT MD-UV380 / Retevis RT-3S
 
 
 The firmware must be installed using the 'Extras/Firmware Loader' menu in the OpenGD77 CPS. The original Manufacturers firmware loader cannot be used to load the OpenGD77 firmware.
@@ -284,7 +282,6 @@ Installation of the firmware is undertaken at the owners own risk, but the offic
 
 *Note:*
 - *The firmware is not compatible with the new 2022 version of the Baofeng DM-1801 or DM-1801A which now uses completely different internal hardware and electronics*
-- *The firmware is also not compatible with the new 2022 version of the MD-9600 / RT-90 or MD-UV380/RT-S because it uses a unbranded / fake CPU chip which crashes the firmware*
 - The official Radioddity CPS PC software is not compatible with the firmware, and the **OpenGD77 CPS** must be used instead. This can be downloaded from the link show in [section 1.1](#download-links-and-other-resources) of this guide. This CPS must also be used for the Baofeng , TYT, Retevis and all other supported radios
 
 ### Transferring data to Radio
