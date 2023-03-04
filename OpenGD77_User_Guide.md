@@ -193,6 +193,7 @@ For the latest information and discussions, please refer to the development and 
     * [GD77S DMR Filter mode](#gd77s-dmr-filter-mode)
     * [GD77S Zone mode](#gd77s-zone-mode)
     * [GD77S Power mode](#gd77s-power-mode)
+  * [MD9600 RT90 specific](#MD9600-RT90-specific)
   * [CPS software](#cps-software)
     * [Overview](#overview)
       * [New Driver Installation](#new-driver-installation)
@@ -827,6 +828,8 @@ Down arrow = C
 SK1 + Down arrow = D
 
 
+Note. Currently the MD-9600 version of the firmware can not transmit CTCSS or DCS at the same time as DTMF
+
 #### DTMF sequence entry and transmission<!-- linebreak -->
 
 - Press the **Hash** (**#**) key to enter a DTMF sequence (pressing SK2 + Left, deletes a character)
@@ -1434,7 +1437,7 @@ The CPS band limits **do not affect** the overall hardware band limits, hence it
 The hardware band limits are:
 
 - 127MHz - 178MHz,
-- 190MHz - 282MHz,
+- 190MHz - 282MHz, (Not MD-9600 / RT-90)
 - 380MHz - 564MHz.
 
 These limits are because the *AT1846S RF* chip **will not operate reliably** outside this range, and this range is actually beyond the published specification of the AT1846S, which is technically 134MHz - 174MHz, 200MHz - 260MHz, 400MHz - 520MHz.
@@ -2388,6 +2391,52 @@ See details of available power step levels in the normal firmware.
 *Note:*
 
 - Like in the normal firmware, the power output will only be accurate if the operator **has calibrated** the power of the radio, as the factory power level calibration is likely to be highly inaccurate.
+
+
+<div style="page-break-after: always; break-after: page;"></div>
+
+## MD9600 RT90 specific
+
+The TYT MD-9600 / Retevis RT-90 uses the following keys and buttons
+
+![radio calibation screen](media/MD9600Controls.jpg)
+
+Front panel
+
+P1 = **SK2**
+P2 = **SK1**
+P2 = (NO FUNCTION)
+P4 = * (STAR)
+
+Rotary control changes channel or frequency, and menu settings
+
+On the VFO and Channel screens, the Up and Down arrow map to the Right and Left button functionality on the handheld radios. e.g. On FM, increase and descrease squelch.
+In menu screens, the Up and Down buttons move up or down within the menu's
+
+On the Channel screen, **Long press** of the Up arrow button , starts scanning.
+During scanning pressing the Down arrow button, reverses the direction of scan.
+During scanning the * (Star) button marks the channel as a nuisance channel. This is the same functionality as the Right button on the handheld radios.
+
+VFO scanning can not be operated from the front panel buttons.
+
+
+
+On the mic keypad
+
+A/B = Green
+A key = Red
+B key = Right Arrow
+C key = Left Arrow
+**Long press** of D key toggles **SK2** latch, so SK2 functions can be controlled from the mic
+
+When entering or directly transmitting DTMF on FM, the following key mappings are used to send or enter the A,B,C and D characters.
+
+Up arrow = A
+SK1 + Up arrow = B
+Down arrow = C
+SK1 + Down arrow = D
+
+
 
 
 <div style="page-break-after: always; break-after: page;"></div>
