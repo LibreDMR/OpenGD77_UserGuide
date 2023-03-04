@@ -535,7 +535,10 @@ The Channel screen displays the current Channel number as well as the current zo
 
 *Note:*
 
-- The Baofeng RD-5R does not have an **Orange** button. On this radio press and hold the orange coloured **MR/VFO** button to enter the Quick menu.
+- The Baofeng RD-5R and MD-380UV do not have an **Orange** button. 
+
+On the Baofeng RD-5R press and hold the orange coloured **MR/VFO** button to enter the Quick menu.
+On the TYT MD-380UV press **SK1** and the **Green** button
 
 ##### Copying a channel to VFO<!-- linebreak -->
 
@@ -810,7 +813,19 @@ To make the squelch change permanent to a Channel, press **Function** + **Green*
 
 - Pressing any key (except the **Green** and **Red** menu keys) on the keypad during transmission will transmit the DTMF tones for that key.
 
-The tone will also be audible through the speaker.
+The tone will also be audible through the speaker on the GD-77, RD-5R , DM-1801 and DM-1801A.
+On the MD-380UV and MD-9600 a tone is played through the speaker, but this is not the DTMF tone that is transmitted, because the harware on these radios does not support playing the actual DTMF tone through the speaker.
+
+The MD-9600 microphone buttons for A,B C and D are already used for other functions, e.g. A = ESC/Red button, so the following key sequences need to be used to enter letters A,B,C and D
+
+Up arrow = A
+
+SK1 + Up arrow = B
+
+Down arrow = C
+
+SK1 + Down arrow = D
+
 
 #### DTMF sequence entry and transmission<!-- linebreak -->
 
@@ -963,10 +978,10 @@ Both the Channel and VFO screens support scanning, but their operation is slight
 
 ### Channel scanning
 
-- Press and hold (**Long press**) the **Up** arrow to start scanning the channels in the zone.
-- Press the **Left** arrow to reverse the direction of scan.
-- Press the **Right** arrow to mark the channel as a *nuisance* channel which will be removed from the current scan.
-- Press the **Up** arrow to skip over the current channel, and continue the scan.
+- Press and hold (**Long press**) the **Up** arrow to start scanning the channels in the zone. On the MD-9600 press and hold the **Up arrow** on the front panel of the radio.
+- Press the **Left** arrow to reverse the direction of scan. On the MD-9600 press the **Down arrow** on the front panel of the radio to reverse the scan direction.
+- Press the **Right** arrow to mark the channel as a *nuisance* channel which will be removed from the current scan. On the MD-9600 Press the **Star key** on the microphone
+- Press the **Up** arrow to skip over the current channel, and continue the scan. On the MD-9600 press and hold the **Up arrow** on the front panel of the radio.
 
 Pressing any other button stops the scan.
 
