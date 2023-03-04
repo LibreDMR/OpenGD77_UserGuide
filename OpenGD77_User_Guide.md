@@ -2415,10 +2415,14 @@ The TYT MD-9600 / Retevis RT-90 uses the following keys and buttons
 
 Front panel
 
-P1 = **SK2**<!-- linebreak -->
-P2 = **SK1**<!-- linebreak -->
-P2 = (NO FUNCTION)<!-- linebreak -->
-P4 = * (STAR)<!-- linebreak -->
+P1 = **SK2**
+
+P2 = **SK1**
+
+P2 = (NO FUNCTION)
+
+P4 = * (STAR)
+
 
 Rotary control changes channel or frequency, and menu settings
 
@@ -2426,7 +2430,9 @@ On the VFO and Channel screens, the Up and Down arrow map to the Right and Left 
 In menu screens, the Up and Down buttons move up or down within the menu's
 
 On the Channel screen, **Long press** of the Up arrow button , starts scanning.
+
 During scanning pressing the Down arrow button, reverses the direction of scan.
+
 During scanning the * (Star) button marks the channel as a nuisance channel. This is the same functionality as the Right button on the handheld radios.
 
 VFO scanning can not be operated from the front panel buttons.
@@ -2435,18 +2441,27 @@ VFO scanning can not be operated from the front panel buttons.
 
 On the mic keypad
 
-A/B = Green<!-- linebreak -->
-A key = Red<!-- linebreak -->
-B key = Right Arrow<!-- linebreak -->
-C key = Left Arrow<!-- linebreak -->
+A/B = Green
+
+A key = Red
+
+B key = Right Arrow
+
+C key = Left Arrow
+
 **Long press** of D key toggles **SK2** latch, so SK2 functions can be controlled from the mic
 
 When entering or directly transmitting DTMF on FM, the following key mappings are used to send or enter the A,B,C and D characters.
 
-Up arrow = A<!-- linebreak -->
-SK1 + Up arrow = B<!-- linebreak -->
-Down arrow = C<!-- linebreak -->
-SK1 + Down arrow = D<!-- linebreak -->
+
+Up arrow = A
+
+SK1 + Up arrow = B
+
+Down arrow = C
+
+SK1 + Down arrow = D
+
 
 
 
