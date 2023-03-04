@@ -2415,10 +2415,10 @@ The TYT MD-9600 / Retevis RT-90 uses the following keys and buttons
 
 Front panel
 
-P1 = **SK2**
-P2 = **SK1**
-P2 = (NO FUNCTION)
-P4 = * (STAR)
+P1 = **SK2**<!-- linebreak -->
+P2 = **SK1**<!-- linebreak -->
+P2 = (NO FUNCTION)<!-- linebreak -->
+P4 = * (STAR)<!-- linebreak -->
 
 Rotary control changes channel or frequency, and menu settings
 
@@ -2435,18 +2435,18 @@ VFO scanning can not be operated from the front panel buttons.
 
 On the mic keypad
 
-A/B = Green
-A key = Red
-B key = Right Arrow
-C key = Left Arrow
+A/B = Green<!-- linebreak -->
+A key = Red<!-- linebreak -->
+B key = Right Arrow<!-- linebreak -->
+C key = Left Arrow<!-- linebreak -->
 **Long press** of D key toggles **SK2** latch, so SK2 functions can be controlled from the mic
 
 When entering or directly transmitting DTMF on FM, the following key mappings are used to send or enter the A,B,C and D characters.
 
-Up arrow = A
-SK1 + Up arrow = B
-Down arrow = C
-SK1 + Down arrow = D
+Up arrow = A<!-- linebreak -->
+SK1 + Up arrow = B<!-- linebreak -->
+Down arrow = C<!-- linebreak -->
+SK1 + Down arrow = D<!-- linebreak -->
 
 
 
