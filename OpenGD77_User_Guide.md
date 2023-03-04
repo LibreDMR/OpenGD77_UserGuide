@@ -153,6 +153,7 @@ For the latest information and discussions, please refer to the development and 
           * [VOX Tail](#vox-tail)
           * [Prompt](#prompt)
           * [DMR Rx AGC](#dmr-rx-agc)
+		  * [Click suppr](#click-suppr)
         * [Radio Calibration](#Calibration-screen)
 	 
     * [Channel Details](#channel-details)
@@ -1382,6 +1383,8 @@ This setting requires SK1 to be pressed when powering up the transceiver, preven
 
 This setting is also available on the RD-5R, even if suspend mode isn't.
 
+This setting is not available on the MD-9600 / RT-90
+
 #### Auto Power Off<!-- linebreak -->
 
 This setting (*APO*) enables the transceiver to switch off, if the radio is not used in the selected amount of time (30, 60, 90, 120 and 180 minutes); i.e. No keys or buttons, including PTT no keys are pressed.
@@ -1631,6 +1634,9 @@ Options are
 - **%**: Shows the battery percentage *e.g.* **0%** to **100%**.
 - **V**: Shows the battery voltage *e.g.* **8.1V**.
 
+
+Note. This functionality does not apply to the MD-9600 / RT-90 as it is supplied from external 12V and the display always shows the voltage
+
 #### Info<!-- linebreak -->
 
 This setting controls whether the radio displays additional information on the VFO of Channel screen, by making the DMR Timeslot, or the Power level text bold, or both bold.
@@ -1807,7 +1813,13 @@ However the AGC control level for each DMR station which is received, is stored 
 It should be noted that this system is not perfect and some variation in audio level will be observed.
 During testing, it was noted that signals received via gateways from other networks or people using phone Apps etc; often have much higher audio levels, and sometimes that output gain control hardware in the radio is not able to attenuate the signal enough to ensure the audio is at the same level as DMR signals from DMR networks.
 
+#### Click suppr
 
+This setting is only available on the MD-9600 / RT-90 and controls the Click Suppression function
+
+Some models of MD-9600 / RT-90 empt a loud click when the audio amplifier is turned on. To reduce this, the Click Suppression function can be enabled, however a quiet click can still be heard.
+
+To completely remove the click requires a hardware modification to the radio by the user.
 
 
 ### Calibration screen 
