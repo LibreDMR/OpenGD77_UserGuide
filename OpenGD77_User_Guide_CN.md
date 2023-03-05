@@ -3,11 +3,11 @@
 # OpenGD77 / OpenGD77S / OpenDM1801（仅限第 1 版硬件） / OpenDM1801A / OpenRD5R 用户指南
 
 翻译：BH4ESK BH4FTP  
-校对：BG5IPF
+校对：BG5IPF BG7XTQ
 
 获取最新消息或与我们讨论，请到我们的官方论坛 <https://opengd77.com>
 
-＃ 重要提示：该固件不兼容 2022 新版宝锋 DM-1801 #
+# 重要提示：该固件不兼容 2022 新版宝锋 DM-1801 #
 
 <!-- TOC titleSize:2 tabSpaces:2 depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 skip:0 title:1 charForUnorderedList:* -->
 
