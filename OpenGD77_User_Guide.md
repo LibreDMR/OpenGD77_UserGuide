@@ -290,14 +290,16 @@ Installation of the firmware is undertaken at the owners own risk, but the offic
 
 ### Transferring data to Radio
 
-There are two mechanisms that can be used when connecting your computer to the radio.
+The CPS must be used to install the firmare and also to read and write the codeplug, and write the satellite data, voice prompts and DMR ID database.
 
 1. Firmware upgrade.
   * Get the radio into firmware update mode by:
+  
     * Holding down the two buttons indicated below (**S1**,**Fn**) and turn the radio on.
+	
       * Radioddity GD-77 or GD-77s or the TYT MD-760 or MD-730:
         * Hold down the **two small buttons** next to the PTT button.
-      * Baofeng DM-1801 Version 1 or DM-1801A - Version 1 only or DM-860:
+      * Baofeng DM-1801 or DM-1801A or DM-860:
         * Hold down the **two small buttons** under the PTT button.
       * Baofeng RD-5R or DM-5R Tier2:
         * The Orange **S1** (Call) and Black Fn (**Moni** or **S2**) buttons (either side of the PTT).
@@ -311,12 +313,15 @@ There are two mechanisms that can be used when connecting your computer to the r
 
 <div style="page-break-after: always; break-after: page;"></div>
 
-#The following information applies to installation of the firmware onto the GD-77/GD-77S/DM-1801/RD-5R only#
+  * The LCD screen will be blank. Handheld radios the LED will be illuminated or flash.
 
-  * The LCD screen will be blank.
-
-  * Connection will use the HID codes and a driver is not required to be installed.
-
+  * For GD-77/GD-77S/DM-1801 and RD-R5 no driver is required. 
+	For all other radios the STM DFUSe driver is required. If the driver is not automatically installed by Windows, you may need to use the Windows Device Manager to find and install the correct driver.
+  
+  * Select the radio type
+  
+  ![firmware loader select radio type](media/cps_radio_type_menu.png)
+  
   * The Firmware is easily installed from the Extras menu in the [CPS](#cps-software).  
     ![firmware loader menu access](media/Firmware_loader-01.png)<!-- { width=400 } -->
 
@@ -327,14 +332,16 @@ There are two mechanisms that can be used when connecting your computer to the r
 
       It is only necessary to do this once. If you do not do this then it is only possible to use the radio in FM mode.
 
-      **Note!  Do not attempt to download the Manufacturer's firmware v4.3.6 to the radio, it is only needed by the CPS for patching purposes.**
+      **Note!  Do not attempt to install the Manufacturer's firmware official firmware to the radio, it is only needed by the CPS to add DMR functionality to the firmware.**
 
       Once you have successfully completed this procedure the Title bar of the Firmware Loader will display [+DMR]
 
     - Click 'Select a file & Update'
     - Select a previously downloaded .bin firmware file. (The most recent file can be found at the download location given in [section 1.1](#download-links-and-other-resources))
       The Selected Firmware file will be patched with data from the official firmware and then downloaded to the radio.
-    - When the download is complete cycle the radio Off and On to reset it.
+    - When the download is complete, if the radio does not automatically reboot, turn the power off and on again.
+	
+ ** Note! The codeplug format used in all radios except the GD-77 is not supported by the firmware, so you will need to install an OpenGD77 format codeplug using the CPS before you can any functions of the radio, except the VFO - which can be changed manually**
 
 
 2. Updating the codeplug using [OpenGD77 CPS](#cps-software).
@@ -373,6 +380,9 @@ Also, not all radios support all the functionalities.
 - The Radioddity GD-77S does not have a keypad or screen, hence its operation is completely different from the other supported radios that have a screen (*see the appendix on [GD-77S operation](#gd-77s-operation)*).
 - The Baofeng DM-1801 / DM-860 has a dedicated **MR/VFO** button, which is used to change between Channel and VFO mode, in place of pressing the **Red** menu key.
 - The Baofeng DM-1801 / DM-860 has a dedicated **A/B** button, which is used to change between VFO A and B, in place of pressing the quick menu via the **Orange** button on the top of the radio.
+- The TYT MD-380UV / Retevis RT-3S does not have Right and Left arrow buttons, but has a rotary control on top of the radio. On the VFO and Channel screens, the Up and Down buttons function like the Right and Left button on the GD-77. The rotary contol operates functions like the Up and Down buttons on the GD-77 and can be used to change channel or VFO frequency.
+In menu screens the Up and Down buttons move up and down and the rotary control is used to control the value of each setting, in the same way that the Left and Right buttons do on the GD-77
+- The TYT MD-9600 / Retevis RT-90 is a mobile radio with buttons on the front panel and the microphone. See the section about the MD-9600 for information about key and button mappings.
 
 
 <div style="page-break-after: always; break-after: page;"></div>
@@ -416,7 +426,7 @@ On both the VFO and Channel screens:
 
 ### Changing between FM mode and DMR mode
 
-- Press the **Function** + **Star** keys to toggle between FM and DMR mode, on either the **VFO** or **Channel** screens.
+- Press the **Function** (**SK1**)  + **Star** keys to toggle between FM and DMR mode, on either the **VFO** or **Channel** screens.
 
 ### Changing Timeslot in DMR mode
 
@@ -451,16 +461,17 @@ Changing the power on **either** VFO also changes the **Master** power setting.
 - Press **Function** + **Left** to decrease the power.
 
 Power can be set to **50mW**, **250mW**, **500mW**, **750mW**, **1W**, **2W**, **3W**, **4W**, **5W** and **+W-**.
+The MD-9600 has higher power output and the power settings are different.
 
 The **+W-** power setting configures the PA drive to the value specified by the User Power value in the Options menu.
-By default, this is set to the maximum value which will result in the radio producing more than 5W.
-**Power settings resulting in the radio producing more than 5W are designed for emergency use only, and results in around 5.5W being produced on 70cm and 7W on 2m.**
+By default, this is set to the maximum value which will result in the radio producing its maximum advertised power
+**Power settings resulting in the radio producing more than it is designed to produce, is for emergency use only, as extended may damage the PA**
 
 If the User power setting is configured to a lower value, it can also be used for very low power output, for example less than 50mW.
 See the User power setting menu for more information.
 
 
-To access this power setting, select the **5W** power setting, then press and hold **Function** + **Right**
+To access this power setting, select the maximum power setting, then press and hold **Function** + **Right**
 
 *Notes:*
 
