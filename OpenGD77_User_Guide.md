@@ -31,7 +31,7 @@ For the latest information and discussions, please refer to the development and 
       * [Changing zones](#changing-zones)
 	  * [Displaying the channel Frequency](#displaying-the-channel-frequency)
       * [Displaying FM specific channel information](#displaying-fm-specific-channel-information)
-      * [Listening on a repeater input](#listening-on-a-repeater-input)
+      * [Reverse repeater operation](#Reverse-repeater-operation)
       * [Channel Quick Menu](#channel-quick-menu)
         * [Copying a channel to VFO](#copying-a-channel-to-vfo)
         * [Read the VFO into the current channel](#read-the-vfo-into-the-current-channel)
@@ -529,12 +529,12 @@ The Channel screen displays the current Channel number as well as the current zo
 - Press and hold the **SK1** button to display FM specific information: CTCSS / DCS and squelch setting.
 
 
-#### Listening on a repeater input
+#### Reverse repeater operation
 
-- Pressing the **SK1** button and **Function** button enables the radio to receive on the input to a repeater.
-
-  - This works on both DMR and FM repeaters.
-  - This also shows the channel information as described above.
+- Pressing and hold the **Hash** key and the Tx and Rx frequencies for the channel will be exchanged. The channel name is shown in inverse video. 
+- The radio remains locked in Reverse repeater mode even if the channel or zone is changed.
+- To exit from Reverse repeater mode, press and hold **Hash**
+  
 
 
 <div style="page-break-after: always; break-after: page;"></div>
