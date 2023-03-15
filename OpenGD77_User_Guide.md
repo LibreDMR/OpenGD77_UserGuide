@@ -1149,7 +1149,7 @@ When the *All Channels* zone is selected, the Channel screen displays **All Chan
 
 In this mode, you can enter multiple digits and then press the **Green** key to confirm, or the **Red** key to cancel.
 
-Note that you can quickly cycle through zones by holding the **Blue** button and pressing **Up** or **Down** in *Channel mode*.
+Note that you can quickly cycle through zones by holding the **SK2** button and pressing **Up** or **Down** in *Channel mode*.
 
 ### RSSI
 
@@ -1261,7 +1261,7 @@ Displays a record of the last 32 DMR stations that the radio has received.
 
 - Pressing the **Up** or **Down** arrows cycles through the list to show stations which have been heard.
 - Pressing the **Green** key will set the selected station DMR ID as the new PC / TG contact.
-- Hold **Blue** button to view details like TalkGroup and time elapsed.
+- Hold **SK2** button to view details like TalkGroup and time elapsed.
 - Long press the **Hash** (**#**) key clears the list.
 
 ### Firmware Info and credits
@@ -2343,11 +2343,11 @@ The LED on the top of the radio also turns red to indicate the radio is transmit
 
 ## Resetting the Settings
 
-The radio can also be set to the default settings by holding the **Blue** (**SK2**) key while turning on the radio.
+The radio can also be set to the default settings by holding the **SK2** key while turning on the radio.
 
-Additionally, holding the **Blue** (**SK2**) button as well as the **Up AND Down** arrow keys, resets **any** custom boot melody and custom boot image that has been uploaded using the OpenGD77 CPS.
+Additionally, holding the **SK2** button as well as the **Up** and **Down** arrow keys, resets **any** custom boot melody and custom boot image that has been uploaded using the OpenGD77 CPS.
 
-On the GD-77S, which does not have a keypad, holding **Blue** (**SK2**) **AND Orange** resets **any** custom boot melody.
+On the GD-77S, which does not have a keypad, holding **SK2** and **Orange** resets **any** custom boot melody.
 
 
 <div style="page-break-after: always; break-after: page;"></div>
