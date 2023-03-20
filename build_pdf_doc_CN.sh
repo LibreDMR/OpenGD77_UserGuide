@@ -7,7 +7,7 @@ pandoc \
     -V linkcolor:blue \
     -V geometry:a4paper \
     -V geometry:margin=1.5cm \
-    -V CJKmainfont="Source Han Sans CN" \
+    -V CJKmainfont="Source Han Sans SC" \
     -V mainfont="DejaVu Serif" \
     -V monofont="DejaVu Sans Mono" \
     -V fontsize="12pt" \
