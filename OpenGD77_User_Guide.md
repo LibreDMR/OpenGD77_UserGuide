@@ -227,7 +227,7 @@ This firmware is specifically designed for **Amateur Radio** use, and has featur
 - **The firmware is still under development and there are some key areas of functionality which are supported in the official firmware but not in this firmware**
 - SMS message Tx and Rx **are not currently supported**, but may be supported in the future.
 - Scan Lists **are not supported** because Channel or Zone scan feature provides almost identical functionality.
-- Privacy and Encryption **will never** be supported, as its illegal for Amateur Radio use, developers in some countries (*e.g.* Australia) are now legally required to put a back door access into any encryption systems at the request of the government, hence effectively making it illegal or impossible to develop systems that contain encryption.
+- Privacy and Encryption **will never** be supported, as it's illegal for Amateur Radio use, developers in some countries (*e.g.* Australia) are now legally required to put a back door access into any encryption systems at the request of the government, hence effectively making it illegal or impossible to develop systems that contain encryption.
 
 
 ### Download links and other resources
@@ -280,17 +280,17 @@ The firmware can be installed onto the following radios
 - TYT MD-UV380 / Retevis RT-3S
 
 
-The firmware must be installed using the 'Extras/Firmware Loader' menu in the OpenGD77 CPS. The original Manufacturers firmware loader cannot be used to load the OpenGD77 firmware.
+The firmware must be installed using the 'Extras/Firmware Loader' menu in the OpenGD77 CPS. The original Manufacturers' firmware loader cannot be used to load the OpenGD77 firmware.
 
-Installation of the firmware is undertaken at the owners own risk, but the official firmware can usually be reloaded onto the radio if the user has problems with the firmware, **as long as the operator takes a full backup of their radio using the OpenGD77 CPS immediately after the firmware has been installed** (see [*backup section*](#backup-before-you-do-anything-else))
+Installation of the firmware is undertaken at the owner's own risk, but the official firmware can usually be reloaded onto the radio if the user has problems with the firmware, **as long as the operator takes a full backup of their radio using the OpenGD77 CPS immediately after the firmware has been installed** (see [*backup section*](#backup-before-you-do-anything-else))
 
 *Note:*
 - *The firmware is not compatible with the new 2022 version of the Baofeng DM-1801 or DM-1801A which now uses completely different internal hardware and electronics*
-- The official Radioddity CPS PC software is not compatible with the firmware, and the **OpenGD77 CPS** must be used instead. This can be downloaded from the link show in [section 1.1](#download-links-and-other-resources) of this guide. This CPS must also be used for the Baofeng , TYT, Retevis and all other supported radios
+- The official Radioddity CPS PC software is not compatible with the firmware, and the **OpenGD77 CPS** must be used instead. This can be downloaded from the link shown in [section 1.1](#download-links-and-other-resources) of this guide. This CPS must also be used for the Baofeng , TYT, Retevis and all other supported radios
 
 ### Transferring data to Radio
 
-The CPS must be used to install the firmare and also to read and write the codeplug, and write the satellite data, voice prompts and DMR ID database.
+The CPS must be used to install the firmware and also to read and write the codeplug, and write the satellite data, voice prompts and DMR ID database.
 
 1. Firmware upgrade.
   * Get the radio into firmware update mode by:
@@ -315,7 +315,7 @@ The CPS must be used to install the firmare and also to read and write the codep
 
   * The LCD screen will be blank. Handheld radios the LED will be illuminated or flash.
 
-  * For GD-77/GD-77S/DM-1801 and RD-R5 no driver is required. 
+  * For GD-77/GD-77S/DM-1801 and RD-5R no driver is required. 
 	For all other radios the STM DFUSe driver is required. If the driver is not automatically installed by Windows, you may need to use the Windows Device Manager to find and install the correct driver.
   
   * Select the radio type
@@ -380,7 +380,7 @@ Also, not all radios support all the functionalities.
 - The Radioddity GD-77S does not have a keypad or screen, hence its operation is completely different from the other supported radios that have a screen (*see the appendix on [GD-77S operation](#gd-77s-operation)*).
 - The Baofeng DM-1801 / DM-860 has a dedicated **MR/VFO** button, which is used to change between Channel and VFO mode, in place of pressing the **Red** menu key.
 - The Baofeng DM-1801 / DM-860 has a dedicated **A/B** button, which is used to change between VFO A and B, in place of pressing the quick menu via the **Orange** button on the top of the radio.
-- The TYT MD-380UV / Retevis RT-3S does not have Right and Left arrow buttons, but has a rotary control on top of the radio. On the VFO and Channel screens, the Up and Down buttons function like the Right and Left button on the GD-77. The rotary contol operates functions like the Up and Down buttons on the GD-77 and can be used to change channel or VFO frequency.
+- The TYT MD-380UV / Retevis RT-3S does not have Right and Left arrow buttons, but has a rotary control on top of the radio. On the VFO and Channel screens, the Up and Down buttons function like the Right and Left button on the GD-77. The rotary control operates functions like the Up and Down buttons on the GD-77 and can be used to change channel or VFO frequency.
 In menu screens the Up and Down buttons move up and down and the rotary control is used to control the value of each setting, in the same way that the Left and Right buttons do on the GD-77
 - The TYT MD-9600 / Retevis RT-90 is a mobile radio with buttons on the front panel and the microphone. See the section about the MD-9600 for information about key and button mappings.
 
@@ -403,7 +403,7 @@ In **DMR** mode, the current *TimeSlot* is shown to the right of the **DMR** tex
 
 The current Tx power is shown in the middle of the top of the screen (*e.g.* 750mW).
 
-On the **VFO** screen, the TX and RX frequency are shown, as well as the TalkGroup when in DMR mode.
+On the **VFO** screen, the TX and RX frequencies are shown, as well as the TalkGroup when in DMR mode.
 
 The arrow to the left of the **R** (receive frequency) indicates that the keypad up and down arrows and number entry keys will control the RX frequency.
 
@@ -484,7 +484,7 @@ To access this power setting, select the maximum power setting, then press and h
 
 ### Signal strength bar graph
 
-In both FM and DMR mode, the signal strength of the received signal is shown as a bar graph across the width of the screen.
+In both FM and DMR modes, the signal strength of the received signal is shown as a bar graph across the width of the screen.
 
 **100%** bar graph is approximately **S9 +40dB**.
 
@@ -531,7 +531,7 @@ The Channel screen displays the current Channel number as well as the current zo
 
 #### Reverse repeater operation
 
-- Pressing and hold the **Hash** key and the Tx and Rx frequencies for the channel will be exchanged. The channel name is shown in inverse video. 
+- Pressing and holding the **Hash** key and the Tx and Rx frequencies for the channel will be exchanged. The channel name is shown in inverse video. 
 - The radio remains locked in Reverse repeater mode even if the channel or zone is changed.
 - To exit from Reverse repeater mode, press and hold **Hash**
   
@@ -657,7 +657,7 @@ The default is to scan **All** tones (CTCSS and DCS). To scan for CTCSS or DCS o
 
 - Press the **Orange** button or **Green** key to confirm the copy, or **Red** key to cancel.
 
-Cancelling the scan restores the Rx CTCSS / DCS to its value prior to the scan being started.
+Canceling the scan restores the Rx CTCSS / DCS to its value prior to the scan being started.
 
 If a tone is detected; both the Rx and Tx CTCSS / DCS values are set to the tone which was detected by the scan.
 
@@ -827,7 +827,7 @@ To make the squelch change permanent to a Channel, press **Function** + **Green*
 - Pressing any key (except the **Green** and **Red** menu keys) on the keypad during transmission will transmit the DTMF tones for that key.
 
 The tone will also be audible through the speaker on the GD-77, RD-5R , DM-1801 and DM-1801A.
-On the MD-380UV and MD-9600 a tone is played through the speaker, but this is not the DTMF tone that is transmitted, because the harware on these radios does not support playing the actual DTMF tone through the speaker.
+On the MD-380UV and MD-9600 a tone is played through the speaker, but this is not the DTMF tone that is transmitted, because the hardware on these radios does not support playing the actual DTMF tone through the speaker.
 
 The MD-9600 microphone buttons for A,B C and D are already used for other functions, e.g. A = ESC/Red button, so the following key sequences need to be used to enter letters A,B,C and D
 
@@ -1410,7 +1410,7 @@ One minute before the transceiver switches off, an "**Auto Pwr-Off**" message is
    * while in hotspot mode.
  - If **Auto Pwr-Off** function is enabled, the battery information (*percentage or voltage*) will be displayed in **bold font**.
  - If [**APO with RF**](#apo-with-rf) is enabled, the timer will also get reset if a valid signal is received.
- - Technically; the APO function uses the same low power functionality as Suspend mode, so the radio will continue to consume about 16mA when in Auto Power Off, we are currently trying to reduce this current, but because the firmware can't completely cut off power to all the radio hardware, it will never be possible to completely turn off the radio in the same way as the volumne / power knob does.
+ - Technically; the APO function uses the same low power functionality as Suspend mode, so the radio will continue to consume about 16mA when in Auto Power Off, we are currently trying to reduce this current, but because the firmware can't completely cut off power to all the radio hardware, it will never be possible to completely turn off the radio in the same way as the volume / power knob does.
 
 #### APO with RF<!-- linebreak -->
 
@@ -1807,7 +1807,7 @@ This setting controls the **audible feedback** to button and key presses etc. an
 
 #### DMR Rx AGC<!-- linebreak -->
 
-This setting controls the DMR audio levelling function.
+This setting controls the DMR audio leveling function.
 
 
 When this function is enabled, the firmware monitors the peak amplitude of the DMR Rx audio, and adjusts the audio output gain so that the audio amplitude from the speaker remains more constantly.
@@ -1817,7 +1817,7 @@ Setting this to 0dB (gain boost) enables this function.
 Increasing the AGC value, increases the additional audio gain which is applied. Hence increasing the value will increase the overall volume of the audio.
 Operators in high noise environments can increase this value to make the radio speaker level louder that has previously been possible, however if the AGC value is increased too much, it will result in clipping of the audio signal and result in distortion when receiving from some stations.
 
-Like most AGC systems, the audio levelling uses a sample window period and also a level control low pass filter, so that normal changes to voice audio amplitude are not levelled out.
+Like most AGC systems, the audio leveling uses a sample window period and also a level control low pass filter, so that normal changes to voice audio amplitude are not leveled out.
 Hence it takes approximately 1 second for the AGC to adjust to each new DMR signal which is received.
 However the AGC control level for each DMR station which is received, is stored as part of the Last Heard data, so that if the same station is heard again, the last known AGC value for that station is applied immediately, hence the audio level is changed immediately and does not take 1 second to adjust to the level of that station.
 
@@ -1828,7 +1828,7 @@ During testing, it was noted that signals received via gateways from other netwo
 
 This setting is only available on the MD-9600 / RT-90 and controls the Click Suppression function
 
-Some models of MD-9600 / RT-90 empt a loud click when the audio amplifier is turned on. To reduce this, the Click Suppression function can be enabled, however a quiet click can still be heard.
+Some models of MD-9600 / RT-90 emit a loud click when the audio amplifier is turned on. To reduce this, the Click Suppression function can be enabled, however a quiet click can still be heard.
 
 To completely remove the click requires a hardware modification to the radio by the user.
 
@@ -1853,7 +1853,7 @@ This value controls the amount of PA drive. This is a 8 bit number, and hence ha
 
 This value adjusts the master frequency reference oscillators. This is a 8 bit number, and hence has a range from 0 to 255. To lower the frequency, decrease this value, to increase the frequency , increase this value.
 
-Note. There are seperate reference oscillators for VHF and UHF. Therefore the frequency should be adjusted twice. Once with a VHF calibration point and once with a UHF one. The calibration point used for each band is unimportant and the frequency calibration only needs to be done once on each band.  
+Note. There are separate reference oscillators for VHF and UHF. Therefore the frequency should be adjusted twice. Once with a VHF calibration point and once with a UHF one. The calibration point used for each band is unimportant and the frequency calibration only needs to be done once on each band.  
 
 #### Factory Cal<!-- linebreak -->
 This value allows the calibration to be restored to the factory defaults. This will normally show "No"
@@ -1861,9 +1861,9 @@ To restore factory defaults, set this to "Yes" and press the Green button.
 After the factory calibration has been applied, this setting returns to "No"
 
 #### Calibration Procedure<!-- linebreak -->
-1. To calibrate the Tx power of the radio you will need a power meter and a dummy load. 
-2. Connect the radio to the power meter. 
-3. Collect the dummy load to the antenna connection of the power meter.
+1. To calibrate the Tx power of the radio you will need a power meter and a dummy load.
+2. Connect the radio to the power meter.
+3. Connect the dummy load to the antenna connection of the power meter.
 4. Select the desired Tx calibration point.
 5. Select the power level (e.g. 250mW)
 6. Press the PTT and adjust the Power Adjust value, until the power meter shows 250mW.
@@ -2017,7 +2017,7 @@ If you noticed a problem with a language translation, please post to the https:/
 ### Satellite Screen
 
 This screen predicts when Amateur Radio satellites will pass overhead the current location, for the next 24 hours using the location, date and time entered by the operator.
-It also automatically corrects for Doppler shift on both the Tx and Rx frequencies, as well as displaying the azimuth and elevation of the satellite in a variety of ways, including numerical and polar plot.
+It also automatically corrects for Doppler shift on both the Tx and Rx frequencies, as well as displays the azimuth and elevation of the satellite in a variety of ways, including numerical and polar plots.
 
 Before this screen can be used, the operator **MUST** enter their location, as well as the current time / date into the Radio Info screen.
 Also, the satellite orbital data Keps' **MUST** be uploaded using the CPS.
@@ -2028,7 +2028,7 @@ For example, after power cycling the radio, the date and time will be cleared, a
 
 Uploading the latest Keps' from the CPS also sets the date and time, so in practice it's often easier to upload the Keps' than to set the date / time manually
 
-When using the satellite functionality the operator does **not** need to set the satellite frequency or CTCSS, as these values are upload from the CPS as part of the Kep's data and date / time upload
+When using the satellite functionality the operator does **not** need to set the satellite frequency or CTCSS, as these values are uploaded from the CPS as part of the Kep's data and date / time upload
 To change the satellite frequencies or upload different satellites, the satellites.txt installed as part of the CPS can be modified.
 
 For satellites like SO-50, which have an "Arming" CTCSS tone. Press SK1 during transmission to transmit the "Arm" CTCSS tone.
@@ -2042,11 +2042,11 @@ The first screen displayed is the master predictions list. This lists the predic
 Because of the number of calculations that need to be performed, the predictions take a few seconds to be calculated. While this is happening a progress bar is shown.
 
 Once the list appears, it shows the satellite name as well as the time that the satellite will appear above the horizon (known as Acquisition of Satellite - AOS), and the maximum elevation in degrees
-If a satellite is currently above the horizon, this is show by a black bar on the right side of the screen next to that satellite / pass.
+If a satellite is currently above the horizon, this is shown by a black bar on the right side of the screen next to that satellite / pass.
 
 ![location](media/satellite-main-predictions-list-AOS.png)
 
-Use the **Down** / **Up** arrows to scroll down / up though the list.
+Use the **Down** / **Up** arrows to scroll down / up through the list.
 
 
 *Note:*
@@ -2090,7 +2090,7 @@ Press **down** to enter the individual satellite predictions screen, or **Up** t
 
 This screen allows the predictions for individual satellites to be viewed, including the time and maximum elevation of the pass and the duration of the pass.
 
-Press **Right** / **Left** to step though the pass predictions for the currently selected satellite
+Press **Right** / **Left** to step through the pass predictions for the currently selected satellite
 
 ![location](media/satellite-individual-passes-2.png)
 
@@ -2127,7 +2127,7 @@ Press SK2 + Green on any of the satellite screens, before 1 minute prior to that
 
 Then 1 minute before the satellite is predicted to appear above the horizon, the radio will beep.
 Press **Green** to cancel the alarm once it has started or turn the radio on / off or into and out of suspend mode to remove an existing alarm
-If the alarm is not cancelled after 1 minute it will automatically stop.
+If the alarm is not canceled after 1 minute it will automatically stop.
 
 **CPS Integration**
 
@@ -2180,7 +2180,7 @@ If the radio is fitted with a GPS, the value of this option will initially displ
 To use the GPS, change this value to "On", or "NMEA". Setting the GPS to NMEA will enable the GPS module and send all NMEA data from the GPS module to the USB serial port of the radio.
 Notes.
 1. Setting the GPS to output NMEA data will prevent the CPS communicating with the radio, and the GPS setting should be set to "Off" or "On", when using the CPS.
-2. The GPS receive in both the UV380 and MD9600 is not very sensitive, and can take a long time to acquire the position, and the GPS in these radios do not work indoors.
+2. The GPS receive in both the UV380 and MD9600 is not very sensitive, and can take a long time to acquire the position, and the GPS in these radios does not work indoors.
 
 Initially after turning on the GPS, the GPS screen will show the text "Acquiring".  On the UV380 signal strength bars for any satellites which the GPS is receiving will also be displayed.
 On the MD-9600 version, there is not enough room on the first GPS screen to show the signal strength bars, so they are shown on a second page to the GPS screen, which is accessed by pressing the Down arrow button
@@ -2248,7 +2248,7 @@ To accept the call, and configure the radio to return the Private call back to t
 
 If you accept the Private Call, the radio will be switched into **Private Call mode**, ready for transmission.
 
-The callers' ID or Name is shown *e.g.*:
+The caller's ID or Name is shown *e.g.*:
 
 ![private call screen](media/private-call.png)
 
@@ -2437,7 +2437,7 @@ P4 = * (STAR)
 
 Rotary control changes channel or frequency, and menu settings
 
-On the VFO and Channel screens, the Up and Down arrow map to the Right and Left button functionality on the handheld radios. e.g. On FM, increase and descrease squelch.
+On the VFO and Channel screens, the Up and Down arrow map to the Right and Left button functionality on the handheld radios. e.g. On FM, increase and decrease squelch.
 In menu screens, the Up and Down buttons move up or down within the menu's
 
 On the Channel screen, **Long press** of the Up arrow button , starts scanning.
