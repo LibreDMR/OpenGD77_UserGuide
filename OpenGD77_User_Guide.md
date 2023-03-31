@@ -31,7 +31,7 @@ For the latest information and discussions, please refer to the development and 
       * [Changing zones](#changing-zones)
 	  * [Displaying the channel Frequency](#displaying-the-channel-frequency)
       * [Displaying FM specific channel information](#displaying-fm-specific-channel-information)
-      * [Reverse repeater operation](#Reverse-repeater-operation)
+      * [Reverse repeater operation](#reverse-repeater-operation)
       * [Channel Quick Menu](#channel-quick-menu)
         * [Copying a channel to VFO](#copying-a-channel-to-vfo)
         * [Read the VFO into the current channel](#read-the-vfo-into-the-current-channel)
@@ -154,7 +154,7 @@ For the latest information and discussions, please refer to the development and 
           * [Prompt](#prompt)
           * [DMR Rx AGC](#dmr-rx-agc)
 		  * [Click suppr](#click-suppr)
-        * [Radio Calibration](#Calibration-screen)
+        * [Radio Calibration](#calibration-screen)
 	 
     * [Channel Details](#channel-details)
       * [Channel name](#channel-name)
@@ -194,7 +194,7 @@ For the latest information and discussions, please refer to the development and 
     * [GD77S DMR Filter mode](#gd77s-dmr-filter-mode)
     * [GD77S Zone mode](#gd77s-zone-mode)
     * [GD77S Power mode](#gd77s-power-mode)
-  * [MD9600 RT90 specific](#MD9600-RT90-specific)
+  * [MD-9600 / RT-90 specific](#md-9600-rt-90-specific)
   * [CPS software](#cps-software)
     * [Overview](#overview)
       * [New Driver Installation](#new-driver-installation)
@@ -380,7 +380,7 @@ Also, not all radios support all the functionalities.
 - The Radioddity GD-77S does not have a keypad or screen, hence its operation is completely different from the other supported radios that have a screen (*see the appendix on [GD-77S operation](#gd-77s-operation)*).
 - The Baofeng DM-1801 / DM-860 has a dedicated **MR/VFO** button, which is used to change between Channel and VFO mode, in place of pressing the **Red** menu key.
 - The Baofeng DM-1801 / DM-860 has a dedicated **A/B** button, which is used to change between VFO A and B, in place of pressing the quick menu via the **Orange** button on the top of the radio.
-- The TYT MD-380UV / Retevis RT-3S does not have Right and Left arrow buttons, but has a rotary control on top of the radio. On the VFO and Channel screens, the Up and Down buttons function like the Right and Left button on the GD-77. The rotary control operates functions like the Up and Down buttons on the GD-77 and can be used to change channel or VFO frequency.
+- The TYT MD-UV380 / Retevis RT-3S does not have Right and Left arrow buttons, but has a rotary control on top of the radio. On the VFO and Channel screens, the Up and Down buttons function like the Right and Left button on the GD-77. The rotary control operates functions like the Up and Down buttons on the GD-77 and can be used to change channel or VFO frequency.
 In menu screens the Up and Down buttons move up and down and the rotary control is used to control the value of each setting, in the same way that the Left and Right buttons do on the GD-77
 - The TYT MD-9600 / Retevis RT-90 is a mobile radio with buttons on the front panel and the microphone. See the section about the MD-9600 for information about key and button mappings.
 
@@ -548,10 +548,10 @@ The Channel screen displays the current Channel number as well as the current zo
 
 *Note:*
 
-- The Baofeng RD-5R and MD-380UV do not have an **Orange** button. 
+- The Baofeng RD-5R and MD-UV380 do not have an **Orange** button. 
 
 On the Baofeng RD-5R press and hold the orange coloured **MR/VFO** button to enter the Quick menu.
-On the TYT MD-380UV press **SK1** and the **Green** button
+On the TYT MD-UV380 press **SK1** and the **Green** button
 
 ##### Copying a channel to VFO<!-- linebreak -->
 
@@ -827,7 +827,7 @@ To make the squelch change permanent to a Channel, press **Function** + **Green*
 - Pressing any key (except the **Green** and **Red** menu keys) on the keypad during transmission will transmit the DTMF tones for that key.
 
 The tone will also be audible through the speaker on the GD-77, RD-5R , DM-1801 and DM-1801A.
-On the MD-380UV and MD-9600 a tone is played through the speaker, but this is not the DTMF tone that is transmitted, because the hardware on these radios does not support playing the actual DTMF tone through the speaker.
+On the MD-UV380 and MD-9600 a tone is played through the speaker, but this is not the DTMF tone that is transmitted, because the hardware on these radios does not support playing the actual DTMF tone through the speaker.
 
 The MD-9600 microphone buttons for A,B C and D are already used for other functions, e.g. A = ESC/Red button, so the following key sequences need to be used to enter letters A,B,C and D
 
@@ -1663,19 +1663,15 @@ This setting controls whether the green / red LED on the top of the radio illumi
 The default setting is On, so that both the LED on the top of the radio will illuminate green on Rx and red on Tx
 If this setting is set to off, the LED will not illuminate either on Rx or Tx.
 
-<div style="page-break-after: always; break-after: page;"></div>
-
 #### Timezone<!-- linebreak -->
 
-![timezone](media/timezone.png)
+This setting allows you to set the local timezone.
 
-This displays and allows the entry of the local timezone
-Press the **Right** arrow to increase the value in steps of 1 hour
+Press the **Right** arrow to increase the value in steps of 1 hour.
 
-Press the **Left** arrow to increase the value in steps of 1 hour
+Press the **Left** arrow to increase the value in steps of 1 hour.
 
-If your timezone is not on a 1-hour boundary, press **SK2** and **Right** or **LEFT** to adjust the timezone in 15 minute increments
-
+If your timezone is not on a 1-hour boundary, press **SK2** and **Right** or **Left** to adjust the timezone in 15 minute increments.
 
 #### Time display format<!-- linebreak -->
 
@@ -1837,7 +1833,7 @@ To completely remove the click requires a hardware modification to the radio by 
 
 This screen currently only applies to the TYT MD-UV380 / Retevis RT-3S 
 
-![radio calibation screen](media/calibration_screen.png)
+![radio calibration screen](media/calibration_screen.png)
 
 #### Cal Freq<!-- linebreak -->
 This selects the current calibration point. This is the frequency that the radio will transmit on and the Power Adjust setting will change.  There are 5 calibration points for VHF and 8 calibration points for UHF. The firmware interpolates between these points to calculate the calibration required for other frequencies.
@@ -2170,7 +2166,7 @@ See https://www.amsat.org/amsat/articles/g3ruh/111.html
 
 ### GPS Screen
 
-The GPS screen is currently only available on the TYT MD-UV380/390 / Retevis RT-3S and TYT MD-9600 / Retevis RT-90 for radios which have GPS fitted, or in the case of the MD-9600 where users have modified the radio to attach and internal or external GPS module
+The GPS screen is currently only available on the TYT MD-UV3{8,9}0 / Retevis RT-3S and TYT MD-9600 / Retevis RT-90 for radios which have GPS fitted, or in the case of the MD-9600 where users have modified the radio to attach and internal or external GPS module
 
 Because the GPS receiver consumes over 50mA constantly when in use, the GPS receiver is not powered by default in the MD-UV380/RT-3S firmware.
 
@@ -2180,7 +2176,7 @@ If the radio is fitted with a GPS, the value of this option will initially displ
 To use the GPS, change this value to "On", or "NMEA". Setting the GPS to NMEA will enable the GPS module and send all NMEA data from the GPS module to the USB serial port of the radio.
 Notes.
 1. Setting the GPS to output NMEA data will prevent the CPS communicating with the radio, and the GPS setting should be set to "Off" or "On", when using the CPS.
-2. The GPS receive in both the UV380 and MD9600 is not very sensitive, and can take a long time to acquire the position, and the GPS in these radios does not work indoors.
+2. The GPS receive in both the MD-UV380 and MD-9600 is not very sensitive, and can take a long time to acquire the position, and the GPS in these radios does not work indoors.
 
 Initially after turning on the GPS, the GPS screen will show the text "Acquiring".  On the UV380 signal strength bars for any satellites which the GPS is receiving will also be displayed.
 On the MD-9600 version, there is not enough room on the first GPS screen to show the signal strength bars, so they are shown on a second page to the GPS screen, which is accessed by pressing the Down arrow button
@@ -2418,27 +2414,26 @@ See details of available power step levels in the normal firmware.
 
 <div style="page-break-after: always; break-after: page;"></div>
 
-## MD9600 RT90 specific
+## MD-9600 / RT-90 specific
 
 The TYT MD-9600 / Retevis RT-90 uses the following keys and buttons
 
-![radio calibation screen](media/MD9600Controls.jpg)
+![MD-9600 / RT-90 overview](media/MD9600Controls.jpg)<!-- { width=600 } -->
 
-Front panel
+<div style="page-break-after: always; break-after: page;"></div>
 
-P1 = **SK2**
+**Front panel:**
 
-P2 = **SK1**
+  - P1 = **SK2**
+  - P2 = **SK1**
+  - P2 = (NO FUNCTION)
+  - P4 = * (STAR)
 
-P2 = (NO FUNCTION)
 
-P4 = * (STAR)
+Rotary control changes channel or frequency, and menu settings.
 
-
-Rotary control changes channel or frequency, and menu settings
-
-On the VFO and Channel screens, the Up and Down arrow map to the Right and Left button functionality on the handheld radios. e.g. On FM, increase and decrease squelch.
-In menu screens, the Up and Down buttons move up or down within the menu's
+On the VFO and Channel screens, the Up and Down arrow map to the Right and Left button functionality on the handheld radios. e.g. On FM, increase and descrease squelch.
+In menu screens, the Up and Down buttons move up or down within the menu's.
 
 On the Channel screen, **Long press** of the Up arrow button , starts scanning.
 
@@ -2449,31 +2444,24 @@ During scanning the * (Star) button marks the channel as a nuisance channel. Thi
 VFO scanning can not be operated from the front panel buttons.
 
 
+**On the mic keypad:**
 
-On the mic keypad
-
-A/B = Green
-
-A key = Red
-
-B key = Right Arrow
-
-C key = Left Arrow
-
-**Long press** of D key toggles **SK2** latch, so SK2 functions can be controlled from the mic
-
-When entering or directly transmitting DTMF on FM, the following key mappings are used to send or enter the A,B,C and D characters.
+  - A/B = Green
+  - A key = Red
+  - B key = Right Arrow
+  - C key = Left Arrow
 
 
-Up arrow = A
-
-SK1 + Up arrow = B
-
-Down arrow = C
-
-SK1 + Down arrow = D
+**Long press** of D key toggles **SK2** latch, so SK2 functions can be controlled from the mic.
 
 
+
+When entering or directly transmitting DTMF on FM, the following key mappings are used to send or enter the A, B, C and D characters:
+
+- **Up arrow** = A
+- **SK1 + Up arrow** = B
+- **Down arrow** = C
+- **SK1 + Down arrow** = D
 
 
 
