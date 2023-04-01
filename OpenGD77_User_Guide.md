@@ -194,7 +194,7 @@ For the latest information and discussions, please refer to the development and 
     * [GD77S DMR Filter mode](#gd77s-dmr-filter-mode)
     * [GD77S Zone mode](#gd77s-zone-mode)
     * [GD77S Power mode](#gd77s-power-mode)
-  * [MD-9600 / RT-90 specific](#md-9600-rt-90-specific)
+  * [MD-9600|RT-90 specific](#md-9600rt-90-specific)
   * [CPS software](#cps-software)
     * [Overview](#overview)
       * [New Driver Installation](#new-driver-installation)
@@ -237,10 +237,10 @@ This firmware is specifically designed for **Amateur Radio** use, and has featur
 **GD-77/GD-77S/DM-1801/RD-5R**
 <https://www.opengd77.com/downloads/GD77/Latest>
 
-**TYT MD-9600 / Retevis RT-90**
+**TYT MD-9600 | Retevis RT-90**
 <https://www.opengd77.com/downloads/MD9600/Firmware/Latest>
 
-The MD-9600 / RT-90 has been produced with multiple different PLL and IF chips during its production run. 
+The MD-9600 | RT-90 has been produced with multiple different PLL and IF chips during its production run.
 You need to install the version which matches your hardware version
 The version is written on the PCB inside the top of the radio, except sometimes TYT changed the hardware without changing the version on the PCB.
 For radios with hardware version 4A use Version 5 firmware
@@ -248,7 +248,7 @@ For very old radios with hardware version 2 written on the PCB, may need to be l
 
 Basically if your radio does not receive or transmit, try a different firmware hardware version.
 
-**TYT MD-UV380 / Retevis RT-3S**
+**TYT MD-UV380 | Retevis RT-3S**
 <https://www.opengd77.com/downloads/MDUV380/Firmware/Latest>
 
 Note. Versions with JA in the name are localised for Japanese users and only support Japanese and English languages
@@ -276,8 +276,8 @@ The firmware can be installed onto the following radios
 - Baofeng DM-1801 - VERSION 1 HARDWARE ONLY (also known as Baofeng DM-860)
 - Baofeng DM-1801A - VERSION 1 HARDWARE ONLY
 - Baofeng RD-5R (also known as Baofeng DM-5R Tier 2)
-- TYT MD-9600 / Retevis RT-90
-- TYT MD-UV380 / Retevis RT-3S
+- TYT MD-9600 | Retevis RT-90
+- TYT MD-UV380 | Retevis RT-3S
 
 
 The firmware must be installed using the 'Extras/Firmware Loader' menu in the OpenGD77 CPS. The original Manufacturers' firmware loader cannot be used to load the OpenGD77 firmware.
@@ -303,9 +303,9 @@ The CPS must be used to install the firmware and also to read and write the code
         * Hold down the **two small buttons** under the PTT button.
       * Baofeng RD-5R or DM-5R Tier2:
         * The Orange **S1** (Call) and Black Fn (**Moni** or **S2**) buttons (either side of the PTT).
-      * TYT MD-9600 / Retevis RT-90
+      * TYT MD-9600 | Retevis RT-90
         * Hold the green power button and the orange button, while applying 12V power to the radio. Note updating the OpenGD77 firmware to a newer version does not require the power to be removed and reconnected
-      * TYT MD-UV380 / Retevis RT-3S
+      * TYT MD-UV380 | Retevis RT-3S
         * Hold the top 2 buttons on the side of the radio (**S1** and PTT) and turn the radio on.
 
 		
@@ -380,9 +380,9 @@ Also, not all radios support all the functionalities.
 - The Radioddity GD-77S does not have a keypad or screen, hence its operation is completely different from the other supported radios that have a screen (*see the appendix on [GD-77S operation](#gd-77s-operation)*).
 - The Baofeng DM-1801 / DM-860 has a dedicated **MR/VFO** button, which is used to change between Channel and VFO mode, in place of pressing the **Red** menu key.
 - The Baofeng DM-1801 / DM-860 has a dedicated **A/B** button, which is used to change between VFO A and B, in place of pressing the quick menu via the **Orange** button on the top of the radio.
-- The TYT MD-UV380 / Retevis RT-3S does not have Right and Left arrow buttons, but has a rotary control on top of the radio. On the VFO and Channel screens, the Up and Down buttons function like the Right and Left button on the GD-77. The rotary control operates functions like the Up and Down buttons on the GD-77 and can be used to change channel or VFO frequency.
+- The TYT MD-UV380 | Retevis RT-3S does not have Right and Left arrow buttons, but has a rotary control on top of the radio. On the VFO and Channel screens, the Up and Down buttons function like the Right and Left button on the GD-77. The rotary control operates functions like the Up and Down buttons on the GD-77 and can be used to change channel or VFO frequency.
 In menu screens the Up and Down buttons move up and down and the rotary control is used to control the value of each setting, in the same way that the Left and Right buttons do on the GD-77
-- The TYT MD-9600 / Retevis RT-90 is a mobile radio with buttons on the front panel and the microphone. See the section about the MD-9600 for information about key and button mappings.
+- The TYT MD-9600 | Retevis RT-90 is a mobile radio with buttons on the front panel and the microphone. See the section about the MD-9600 for information about key and button mappings.
 
 
 <div style="page-break-after: always; break-after: page;"></div>
@@ -1394,7 +1394,7 @@ This setting requires SK1 to be pressed when powering up the transceiver, preven
 
 This setting is also available on the RD-5R, even if suspend mode isn't.
 
-This setting is not available on the MD-9600 / RT-90
+This setting is not available on the MD-9600 | RT-90
 
 #### Auto Power Off<!-- linebreak -->
 
@@ -1451,7 +1451,7 @@ The CPS band limits **do not affect** the overall hardware band limits, hence it
 The hardware band limits are:
 
 - 127MHz - 178MHz,
-- 190MHz - 282MHz, (Not MD-9600 / RT-90)
+- 190MHz - 282MHz, (not MD-9600 | RT-90)
 - 380MHz - 564MHz.
 
 These limits are because the *AT1846S RF* chip **will not operate reliably** outside this range, and this range is actually beyond the published specification of the AT1846S, which is technically 134MHz - 174MHz, 200MHz - 260MHz, 400MHz - 520MHz.
@@ -1646,7 +1646,7 @@ Options are
 - **V**: Shows the battery voltage *e.g.* **8.1V**.
 
 
-Note. This functionality does not apply to the MD-9600 / RT-90 as it is supplied from external 12V and the display always shows the voltage
+Note. This functionality does not apply to the MD-9600 | RT-90 as it is supplied from external 12V and the display always shows the voltage
 
 #### Info<!-- linebreak -->
 
@@ -1822,16 +1822,16 @@ During testing, it was noted that signals received via gateways from other netwo
 
 #### Click suppr
 
-This setting is only available on the MD-9600 / RT-90 and controls the Click Suppression function
+This setting is only available on the MD-9600 | RT-90 and controls the Click Suppression function
 
-Some models of MD-9600 / RT-90 emit a loud click when the audio amplifier is turned on. To reduce this, the Click Suppression function can be enabled, however a quiet click can still be heard.
+Some models of MD-9600 | RT-90 emit a loud click when the audio amplifier is turned on. To reduce this, the Click Suppression function can be enabled, however a quiet click can still be heard.
 
 To completely remove the click requires a hardware modification to the radio by the user.
 
 
 ### Calibration screen 
 
-This screen currently only applies to the TYT MD-UV380 / Retevis RT-3S 
+This screen currently only applies to the TYT MD-UV380 | Retevis RT-3S.
 
 ![radio calibration screen](media/calibration_screen.png)
 
@@ -2166,9 +2166,9 @@ See https://www.amsat.org/amsat/articles/g3ruh/111.html
 
 ### GPS Screen
 
-The GPS screen is currently only available on the TYT MD-UV3{8,9}0 / Retevis RT-3S and TYT MD-9600 / Retevis RT-90 for radios which have GPS fitted, or in the case of the MD-9600 where users have modified the radio to attach and internal or external GPS module
+The GPS screen is currently only available on the TYT MD-UV380 | MD-UV390 | Retevis RT-3S and TYT MD-9600 | Retevis RT-90 for radios which have GPS fitted, or in the case of the MD-9600 where users have modified the radio to attach and internal or external GPS module
 
-Because the GPS receiver consumes over 50mA constantly when in use, the GPS receiver is not powered by default in the MD-UV380/RT-3S firmware.
+Because the GPS receiver consumes over 50mA constantly when in use, the GPS receiver is not powered by default in the MD-UV380 | RT-3S firmware.
 
 To use the GPS receiver in the radio, you must first enable the GPS in the General Options menu.
 If the radio is not fitted with GPS, or the GPS does not appear to function, this option will show the value "None".
@@ -2194,7 +2194,7 @@ Once the GPS position has been acquired, the position will be displayed, includi
 
 The GPS automatically updates the Real Time clock in the radio, and the position is used for DMR APRS transmissions.
 
-On the UV380/RT-3S the GPS satellite RSSI bar graphs are colour coded.  Blue is for USA GPS Satellites, and Red is for other satellite systems.
+On the UV380 | RT-3S the GPS satellite RSSI bar graphs are colour coded.  Blue is for USA GPS Satellites, and Red is for other satellite systems.
  
 
 <div style="page-break-after: always; break-after: page;"></div>
@@ -2414,11 +2414,11 @@ See details of available power step levels in the normal firmware.
 
 <div style="page-break-after: always; break-after: page;"></div>
 
-## MD-9600 / RT-90 specific
+## MD-9600|RT-90 specific
 
-The TYT MD-9600 / Retevis RT-90 uses the following keys and buttons
+The TYT MD-9600 | Retevis RT-90 uses the following keys and buttons
 
-![MD-9600 / RT-90 overview](media/MD9600Controls.jpg)<!-- { width=600 } -->
+![MD-9600 | RT-90 overview](media/MD9600Controls.jpg)<!-- { width=600 } -->
 
 <div style="page-break-after: always; break-after: page;"></div>
 
