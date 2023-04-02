@@ -341,7 +341,7 @@ The CPS must be used to install the firmware and also to read and write the code
       The Selected Firmware file will be patched with data from the official firmware and then downloaded to the radio.
     - When the download is complete, if the radio does not automatically reboot, turn the power off and on again.
 	
- ** Note! The codeplug format used in all radios except the GD-77 is not supported by the firmware, so you will need to install an OpenGD77 format codeplug using the CPS before you can any functions of the radio, except the VFO - which can be changed manually**
+ **Note! The codeplug format used in all radios except the GD-77 is not supported by the firmware, so you will need to install an OpenGD77 format codeplug using the CPS before you can any functions of the radio, except the VFO - which can be changed manually**
 
 
 2. Updating the codeplug using [OpenGD77 CPS](#cps-software).
