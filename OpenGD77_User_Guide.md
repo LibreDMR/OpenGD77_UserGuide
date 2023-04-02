@@ -373,13 +373,13 @@ Not all the supported radios have the same number of buttons, or the same screen
 Also, not all radios support all the functionalities.
 
 - The Radioddity GD-77 (aka *TYT MD-760*), has 2 buttons below the PTT. The **black** button is technically known as **SK1**, and the **blue** button is known as **SK2** and is also referred to, in this manual, as the **Function** button. This radio also has an **Orange** button at the top.
-- The Baofeng RD-5R / DM-5R USB hardware will not support USB connections while the radio is transmitting, so **it is not possible** to use Hotspot mode on this radio.
-- The Baofeng RD-5R / DM-5R does not have left or right arrow buttons, so the **A/B** button is used to replace the left arrow and the **Band** button is used to replace the right arrow.
-- The Baofeng RD-5R / DM-5R does not have the **Orange** button, and its functionality has been simulated by using a **Long press** on the orange coloured **MR/VFO** button.
-- The Baofeng RD-5R / DM-5R has 2 buttons on the side, but their position is different from the GD-77 and DM-1801. The button above the PTT is used as the **Black** button on the side of the GD-77, also known as button **SK1**. The button below the PTT is used as the **Function** button, also known as **SK2**.
+- The Baofeng RD-5R | DM-5R USB hardware will not support USB connections while the radio is transmitting, so **it is not possible** to use Hotspot mode on this radio.
+- The Baofeng RD-5R | DM-5R does not have left or right arrow buttons, so the **A/B** button is used to replace the left arrow and the **Band** button is used to replace the right arrow.
+- The Baofeng RD-5R | DM-5R does not have the **Orange** button, and its functionality has been simulated by using a **Long press** on the orange coloured **MR/VFO** button.
+- The Baofeng RD-5R | DM-5R has 2 buttons on the side, but their position is different from the GD-77 and DM-1801. The button above the PTT is used as the **Black** button on the side of the GD-77, also known as button **SK1**. The button below the PTT is used as the **Function** button, also known as **SK2**.
 - The Radioddity GD-77S does not have a keypad or screen, hence its operation is completely different from the other supported radios that have a screen (*see the appendix on [GD-77S operation](#gd-77s-operation)*).
-- The Baofeng DM-1801 / DM-860 has a dedicated **MR/VFO** button, which is used to change between Channel and VFO mode, in place of pressing the **Red** menu key.
-- The Baofeng DM-1801 / DM-860 has a dedicated **A/B** button, which is used to change between VFO A and B, in place of pressing the quick menu via the **Orange** button on the top of the radio.
+- The Baofeng DM-1801 | DM-860 has a dedicated **MR/VFO** button, which is used to change between Channel and VFO mode, in place of pressing the **Red** menu key.
+- The Baofeng DM-1801 | DM-860 has a dedicated **A/B** button, which is used to change between VFO A and B, in place of pressing the quick menu via the **Orange** button on the top of the radio.
 - The TYT MD-UV380 | Retevis RT-3S does not have Right and Left arrow buttons, but has a rotary control on top of the radio. On the VFO and Channel screens, the Up and Down buttons function like the Right and Left button on the GD-77. The rotary control operates functions like the Up and Down buttons on the GD-77 and can be used to change channel or VFO frequency.
 In menu screens the Up and Down buttons move up and down and the rotary control is used to control the value of each setting, in the same way that the Left and Right buttons do on the GD-77
 - The TYT MD-9600 | Retevis RT-90 is a mobile radio with buttons on the front panel and the microphone. See the section about the MD-9600 for information about key and button mappings.
@@ -616,7 +616,7 @@ On the TYT MD-UV380 press **SK1** and the **Green** button
 ##### VFO selection A or B<!-- linebreak -->
 
 - Pressing the **Orange** button twice while in VFO mode quickly toggles between **VFO A** and **VFO B**.
-- On the Baofeng DM-1801 / DM-860, this function is controlled using the **A/B** button.
+- On the Baofeng DM-1801 | DM-860, this function is controlled using the **A/B** button.
 - **Long Press** of the **Red** button also changes from VFO A to VFO B, or vice versa.
 
 ##### Exchange the TX and RX frequencies<!-- linebreak -->
@@ -1301,7 +1301,7 @@ This setting controls the speed of key repetitions when a key is held.
 
 #### Hotspot<!-- linebreak -->
 
-  - **Hotspot mode is not supported on the Baofeng RD-5R / DM-5R because the hardware does not support reliable USB communications while the radio is transmitting**
+  - **Hotspot mode is not supported on the Baofeng RD-5R | DM-5R because the hardware does not support reliable USB communications while the radio is transmitting**
 
 This option controls whether the firmware will enter hotspot mode when connected to MMDVMHost, including Pi-Star, or to BlueDV.
 
@@ -2257,7 +2257,7 @@ Once the Private Call is complete, you can return to the *Talkgroup* you were on
 
 **IMPORTANT INFORMATION**
 
-**Hotspot mode is not supported on the Baofeng RD-5R / DM-5R because the hardware does not support reliable USB communications while the radio is transmitting**
+**Hotspot mode is not supported on the Baofeng RD-5R | DM-5R because the hardware does not support reliable USB communications while the radio is transmitting**
 
 - The USB connection between the radio and the host system *e.g.* Pi-Star **needs to be protected from RF injection**, otherwise the USB connection will **occasionally be reset** when the radio is transmitting, which will cause the hotspot to **stop working**.
 - **Do not use the antenna on top of the radio** when in hotspot mode, this usually causes RF injection problems which **can't** be resolved by screening or ferrite chokes.
