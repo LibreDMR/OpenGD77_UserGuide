@@ -994,8 +994,8 @@ Both the Channel and VFO screens support scanning, but their operation is slight
 ### Channel scanning
 
 - Press and hold (**Long press**) the **Up** arrow to start scanning the channels in the zone. On the MD-9600 press and hold the **Up arrow** on the front panel of the radio.
-- Press the **Left** arrow to reverse the direction of scan. On the MD-9600 press the **Down arrow** on the front panel of the radio to reverse the scan direction.
-- Press the **Right** arrow to mark the channel as a *nuisance* channel which will be removed from the current scan. On the MD-9600 Press the **Star key** on the microphone
+- Press the **Left** arrow to reverse the direction of scan. Press the **Down arrow** on a MD-UV380 | RT-3S, or the one on the front panel for a MD-9600 | RT-90, to reverse the scan direction.
+- Press the **Right** arrow to mark the channel as a *nuisance* channel which will be removed from the current scan. Press the **Star key** on a MD-UV380 | RT-3S, or the one on the microphone for a MD-9600 | RT-90.
 - Press the **Up** arrow to skip over the current channel, and continue the scan. On the MD-9600 press and hold the **Up arrow** on the front panel of the radio.
 
 Pressing any other button stops the scan.
@@ -1018,9 +1018,9 @@ Scan limits can be changed by manually entering both frequencies *e.g.*
 
 When not actively scanning, pressing the **Up** or **Down** arrows performs the normal function in the VFO of increasing or decreasing the frequency.
 
-- Press the **Left** arrow key to reverse the scan direction.
+- Press the **Left** arrow key to reverse the scan direction. Press the **Down arrow** on a MD-UV380 | RT-3S, or the one on the front panel for a MD-9600 | RT-90, to reverse the scan direction.
 - Press the **Up** arrow to skip over the current frequency and continue the scan.
-- Press the **Right** arrow to mark the current frequency as a *nuisance* frequency, which will be omitted by the scan.
+- Press the **Right** arrow to mark the current frequency as a *nuisance* frequency, which will be omitted by the scan. Press the **Star key** on a MD-UV380 | RT-3S, or the one on the microphone for a MD-9600 | RT-90.
 
 Pressing any other button will stop the scan
 
