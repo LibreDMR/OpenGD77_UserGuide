@@ -1245,7 +1245,7 @@ This shows the history of battery voltage on an hourly basis.
 
 Allows selection, Editing or Deletion of DMR Contacts
 
-#### FM DMTF Contacts
+#### FM DTMF Contacts
 
 Allows selection, Editing or Deletion of FM DTMF Contacts
 
