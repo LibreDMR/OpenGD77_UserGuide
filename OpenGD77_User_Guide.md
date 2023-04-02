@@ -332,7 +332,7 @@ The CPS must be used to install the firmware and also to read and write the code
 
       It is only necessary to do this once. If you do not do this then it is only possible to use the radio in FM mode.
 
-      **Note!  Do not attempt to install the Manufacturer's firmware official firmware to the radio, it is only needed by the CPS to add DMR functionality to the firmware.**
+      **Note!  Do not attempt to install the Manufacturer's official firmware to the radio, it is only needed by the CPS to add DMR functionality to the firmware.**
 
       Once you have successfully completed this procedure the Title bar of the Firmware Loader will display [+DMR]
 
