@@ -719,7 +719,7 @@ A new feature introduced to the CPS allows a default *TimeSlot* to be applied to
 By default, the **Channel TS override** is disabled. This means that if the **Left** or **Right** arrows are pressed to select this **TG** within the *Rx Group list*, the *Timeslot* assigned to the Channel (*in the CPS*) or manually changed using the **Star** key will not change.
 
 However, if the **Digital Contact** has an **override TS** assigned (*e.g.* TS 1), when this **Digital Contact TG** is selected by pressing the **Right** or **Left** arrows, the *Timeslot* will be set to the *Timeslot* assigned to the **Digital Contact TG**.  
-In this case, the Timeslot is displayed as **cS**_x_ on the Channel/VFO screens (cS1 in this example).
+In this case, the Timeslot is displayed as **cS***x* on the Channel/VFO screens (cS1 in this example).
 
 <div style="page-break-after: always; break-after: page;"></div>
 
