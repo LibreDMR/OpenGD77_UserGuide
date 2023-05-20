@@ -3,7 +3,7 @@
 
 # OpenGD77 User Guide
 
-## For OpenGD77 / OpenGD77S / OpenDM1801* / OpenDM1801A* / OpenRD5R / MD-9600 (RT-90) / MD-UV380 (RT-3S) / DM-1701 / MD-UV390
+## For OpenGD77 / OpenGD77S / OpenDM1801* / OpenDM1801A* / OpenRD5R / MD-9600 (RT-90) / MD-UV380 (RT-3S) / MD-UV390 / DM-1701 / RT-84
 
 For the latest information and discussions, please refer to the development and community forum at <https://opengd77.com>
 
@@ -13,7 +13,7 @@ For the latest information and discussions, please refer to the development and 
 <!-- TOC titleSize:2 tabSpaces:2 depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 skip:0 title:1 charForUnorderedList:* -->
 
 ## Table of Contents
-* [OpenGD77 / OpenGD77S / OpenDM1801* / OpenDM1801A* / OpenRD5R / MD-9600 (RT-90) / MD-UV380 (RT-3S) / DM-1701 User Guide](#for-opengd77--opengd77s--opendm1801--opendm1801a--openrd5r--md-9600-rt-90--md-uv380-rt-3s--dm-1701--md-uv390)
+* [OpenGD77 / OpenGD77S / OpenDM1801* / OpenDM1801A* / OpenRD5R / MD-9600 (RT-90) / MD-UV380 (RT-3S) / DM-1701 / RT-84 User Guide](#for-opengd77--opengd77s--opendm1801--opendm1801a--openrd5r--md-9600-rt-90--md-uv380-rt-3s--md-uv390--dm-1701--rt-84)
   * [Introduction](#introduction)
     * [Download links and other resources](#download-links-and-other-resources)
   * [Installation](#installation)
@@ -251,7 +251,7 @@ For very old radios with hardware version 2 written on the PCB, may need to be l
 
 Basically if your radio does not receive or transmit, try a different firmware hardware version.
 
-**TYT MD-UV380 | Retevis RT-3S | Baofeng DM-1701**
+**TYT MD-UV380 | Retevis RT-3S | Baofeng DM-1701 | Retevis RT-84**
 <https://www.opengd77.com/downloads/MDUV380/Firmware/Latest>
 
 Note. Versions with JA in the name are localised for Japanese users and only support Japanese and English languages
@@ -280,7 +280,7 @@ The firmware can be installed onto the following radios
 - Baofeng DM-1801A - VERSION 1 HARDWARE ONLY
 - Baofeng RD-5R (also known as Baofeng DM-5R Tier 2)
 - TYT MD-9600 | Retevis RT-90
-- TYT MD-UV380 | Retevis RT-3S | Baofeng DM-1701
+- TYT MD-UV380 | Retevis RT-3S | Baofeng DM-1701 | Retevis RT-84
 
 
 The firmware must be installed using the 'Extras/Firmware Loader' menu in the OpenGD77 CPS. The original Manufacturers' firmware loader cannot be used to load the OpenGD77 firmware.
@@ -308,7 +308,7 @@ The CPS must be used to install the firmware and also to read and write the code
         * The Orange **S1** (Call) and Black Fn (**Moni** or **S2**) buttons (either side of the PTT).
       * TYT MD-9600 | Retevis RT-90
         * Hold the green power button and the orange button, while applying 12V power to the radio. Note updating the OpenGD77 firmware to a newer version does not require the power to be removed and reconnected
-      * TYT MD-UV380 | Retevis RT-3S | Baofeng DM-1701
+      * TYT MD-UV380 | Retevis RT-3S | Baofeng DM-1701 | Retevis RT-84
         * Hold the top 2 buttons on the side of the radio (**S1** and PTT) and turn the radio on.
 
 		
@@ -384,7 +384,7 @@ Also, not all radios support all the functionalities.
 - The Baofeng DM-1801 | DM-860 has a dedicated **MR/VFO** button, which is used to change between Channel and VFO mode, in place of pressing the **Red** menu key.
 - The Baofeng DM-1801 | DM-860 has a dedicated **A/B** button, which is used to change between VFO A and B, in place of pressing the quick menu via the **Orange** button on the top of the radio.
 - The TYT MD-UV380 | Retevis RT-3S does not have Right and Left arrow buttons, but has a rotary control on top of the radio. On the VFO and Channel screens, the Up and Down buttons function like the Right and Left button on the GD-77. The rotary control operates functions like the Up and Down buttons on the GD-77 and can be used to change channel or VFO frequency.
-- The Baofeng DM-1701 does not have the Right and Left array buttons, P1 is used as Left button, P2 is used as Right button. The **Orange** button is located above the PTT.
+- The Baofeng DM-1701 | Retevis RT-84 does not have the Right and Left array buttons, P1 is used as Left button, P2 is used as Right button. The **Orange** button is located above the PTT.
 In menu screens the Up and Down buttons move up and down and the rotary control is used to control the value of each setting, in the same way that the Left and Right buttons do on the GD-77
 - The TYT MD-9600 | Retevis RT-90 is a mobile radio with buttons on the front panel and the microphone. See the section about the MD-9600 for information about key and button mappings.
 
@@ -1835,7 +1835,7 @@ To completely remove the click requires a hardware modification to the radio by 
 
 ### Calibration screen 
 
-This screen currently only applies to the TYT MD-UV380 | Retevis RT-3S | Baofeng DM-1701.
+This screen currently only applies to the TYT MD-UV380 | Retevis RT-3S | Baofeng DM-1701 | Retevis RT-84.
 
 ![radio calibration screen](media/calibration_screen.png)
 
@@ -1880,7 +1880,7 @@ However, to temporarily test the power e.g. by transmitting using the VFO, press
 
 ### Theme Options
 
-This screen currently only applies to the TYT MD-UV380 | Retevis RT-3S | Baofeng DM-1701.
+This screen currently only applies to the TYT MD-UV380 | Retevis RT-3S | Baofeng DM-1701 | Retevis RT-84.
 
 ![theme options screen](media/theme-menu.png)
 
@@ -1891,7 +1891,7 @@ In this screen, you can adjust theme items colours.
 - Press **SK2** + **Green** key, to make the changes permanent,
 - Press **SK1** + **Green** key to get back to defaut theme (Black & White), temporary (just reboot to restore the latest saved theme),
 - Press **SK1** + **SK2** + **Green** key, the default theme (Black & White) will be restored **permanently** (erasing the previously stored theme),
-- Press **Red** key to cancels all the changes.
+- Press **Red** key to cancel all the changes.
 
 
 #### Colour Picker<!-- linebreak -->
@@ -2217,9 +2217,9 @@ See https://www.amsat.org/amsat/articles/g3ruh/111.html
 
 ### GPS Screen
 
-The GPS screen is currently only available on the TYT MD-UV380 | MD-UV390 | Retevis RT-3S | Baofeng DM-1701 and TYT MD-9600 | Retevis RT-90 for radios which have GPS fitted, or in the case of the MD-9600 where users have modified the radio to attach and internal or external GPS module
+The GPS screen is currently only available on the TYT MD-UV380 | MD-UV390 | Retevis RT-3S | Baofeng DM-1701 | Retevis RT-84 and TYT MD-9600 | Retevis RT-90 for radios which have GPS fitted, or in the case of the MD-9600 where users have modified the radio to attach and internal or external GPS module
 
-Because the GPS receiver consumes over 50mA constantly when in use, the GPS receiver is not powered by default in the MD-UV380 | RT-3S | DM-1701 firmware.
+Because the GPS receiver consumes over 50mA constantly when in use, the GPS receiver is not powered by default in the MD-UV380 | RT-3S | DM-1701 | RT-84 firmware.
 
 To use the GPS receiver in the radio, you must first enable the GPS in the General Options menu.
 If the radio is not fitted with GPS, or the GPS does not appear to function, this option will show the value "None".
@@ -2245,7 +2245,7 @@ Once the GPS position has been acquired, the position will be displayed, includi
 
 The GPS automatically updates the Real Time clock in the radio, and the position is used for DMR APRS transmissions.
 
-On the UV380 | RT-3S | DM-1701 the GPS satellite RSSI bar graphs are colour coded.  Blue is for USA GPS Satellites, and Red is for other satellite systems.
+On the UV380 | RT-3S | DM-1701 RT-84 the GPS satellite RSSI bar graphs are colour coded.  Blue is for USA GPS Satellites, and Red is for other satellite systems.
  
 
 <div style="page-break-after: always; break-after: page;"></div>
