@@ -1181,6 +1181,11 @@ This shows battery voltage and percentage.
 
 ![battery status screen](media/battery.png)
 
+Press and hold the **SK2** button to display the *pure* battery voltage (non averaged value).
+
+![pure battery voltage](media/pure-battery.png)
+
+
 - Press the **Down** key to display the next page.
 
 #### Time clock
