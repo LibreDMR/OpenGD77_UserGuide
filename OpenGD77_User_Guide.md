@@ -1070,6 +1070,7 @@ The keypad entry follows the same functionality as stock GD77 firmware.
 
 ![RD-5R cheatsheet](media/RD5R-CheatSheet.png)<!-- { width=600 } -->
 
+![MD-9600 cheatsheet](media/MD9600-CheatSheet.png)<!-- { width=600 } -->
 
 <div style="page-break-after: always; break-after: page;"></div>
 
