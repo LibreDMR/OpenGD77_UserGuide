@@ -167,7 +167,7 @@ For the latest information and discussions, please refer to the development and 
       * [DMR ID](#dmr-id)
       * [Color Code](#color-code)
       * [Timeslot](#timeslot)
-      * [Tx/RX Grp](#txrx-grp)
+      * [Rx Grp](#txrx-grp)
       * [Tx CTCSS or DCS](#tx-ctcss-or-dcs)
       * [Rx CTCSS or DCS](#rx-ctcss-or-dcs)
       * [Bandwidth](#bandwidth)
@@ -1971,9 +1971,17 @@ Sets the *Color Code* when the VFO / Channel is set to **DMR**.
 
 Selects DMR *Timeslot* 1 or 2 when the VFO / Channel is set to **DMR**.
 
-#### Tx/RX Grp<!-- linebreak -->
+#### Rx Grp<!-- linebreak -->
 
-Selects which *Tx / Rx group* is assigned to the current channel (**DMR only**).
+Selects which *Rx group* is assigned to the current channel (**DMR only**).<!-- linebreak -->
+
+*Note:* only *Rx Grp* **OR** *Contact* could be selected at once.
+
+#### Contact<!-- linebreak -->
+
+Selects which *Contact* is assigned to the current channel (**DMR only**).<!-- linebreak -->
+
+*Note:* only *Contact* **OR** *Rx Grp* could be selected at once.
 
 #### Tx CTCSS or DCS<!-- linebreak -->
 
