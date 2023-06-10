@@ -48,7 +48,7 @@ For the latest information and discussions, please refer to the development and 
       * [Timeslot selection](#timeslot-selection)
       * [DMR ID callsign and name display](#dmr-id-callsign-and-name-display)
       * [Talker Alias display](#talker-alias-display)
-      * [Talkgroup selection from the Rx Group list](#talkgroup-selection-from-the-rx-group-list)
+      * [Talkgroup selection from the TG list](#talkgroup-selection-from-the-tg-list)
       * [Assignment of Timeslot to Digital Contact TalkGroup](#assignment-of-timeslot-to-digital-contact-talkgroup)
       * [TalkGroup displayed in inverse video](#talkgroup-displayed-in-inverse-video)
       * [Manual TalkGroup number entry](#manual-talkgroup-number-entry)
@@ -167,7 +167,7 @@ For the latest information and discussions, please refer to the development and 
       * [DMR ID](#dmr-id)
       * [Color Code](#color-code)
       * [Timeslot](#timeslot)
-      * [Rx Grp](#txrx-grp)
+      * [TG Lst](#tg-lst)
       * [Tx CTCSS or DCS](#tx-ctcss-or-dcs)
       * [Rx CTCSS or DCS](#rx-ctcss-or-dcs)
       * [Bandwidth](#bandwidth)
@@ -377,7 +377,7 @@ Also, not all radios support all the functionalities.
 
 - The Radioddity GD-77 (aka *TYT MD-760*), has 2 buttons below the PTT. The **black** button is technically known as **SK1**, and the **blue** button is known as **SK2** and is also referred to, in this manual, as the **Function** button. This radio also has an **Orange** button at the top.
 - The Baofeng RD-5R | DM-5R USB hardware will not support USB connections while the radio is transmitting, so **it is not possible** to use Hotspot mode on this radio.
-- The Baofeng RD-5R | DM-5R does not have left or right arrow buttons, so the **A/B** button is used to replace the left arrow and the **Band** button is used to replace the right arrow.
+- The Baofeng RD-5R | DM-5R does not have Left or Right arrow buttons, so the **A/B** button is used to replace the Left arrow and the **Band** button is used to replace the Right arrow.
 - The Baofeng RD-5R | DM-5R does not have the **Orange** button, and its functionality has been simulated by using a **Long press** on the orange coloured **MR/VFO** button.
 - The Baofeng RD-5R | DM-5R has 2 buttons on the side, but their position is different from the GD-77 and DM-1801. The button above the PTT is used as the **Black** button on the side of the GD-77, also known as button **SK1**. The button below the PTT is used as the **Function** button, also known as **SK2**.
 - The Radioddity GD-77S does not have a keypad or screen, hence its operation is completely different from the other supported radios that have a screen (*see the appendix on [GD-77S operation](#gd-77s-operation)*).
@@ -577,7 +577,7 @@ On the TYT MD-UV380 press **SK1** and the **Green** button
     - **None**: for no filtering, *i.e.* **promiscuous** mode.
     - **TG**: to filter by the selected *Talkgroup*.
     - **Ct**: to filter by *Private Call Contacts* in the codeplug.
-    - **RxG**: to filter by *Talkgroups* in the TG list / Rx Group list.
+    - **TGL**: to filter by *Talkgroups* in the TG list.
 
   When this filter is enabled, the *DMR* mode indication at the top of the screen is displayed in inverse video.
 
@@ -703,7 +703,7 @@ If the station has entered any data into the **APRS section** of their Brandmeis
 
 - As the **Talker Alias** data is sent slowly as it is embedded inside the DMR audio data frames, the callsign will appear first and about half a second later the DMR ID or other text will arrive via the DMR data and be displayed.
 
-#### Talkgroup selection from the Rx Group list<!-- linebreak -->
+#### Talkgroup selection from the TG list<!-- linebreak -->
 
 Press the **Left** or **Right** arrow keys to cycle through the *TalkGroups* in the **TG List** assigned to the VFO or Channel in the CPS.
 
@@ -720,7 +720,7 @@ This *TalkGroup* will apply to **both** RX and TX.
 
 A new feature introduced to the CPS allows a default *TimeSlot* to be applied to each **Digital Contact** or **TalkGroup**.
 
-By default, the **Channel TS override** is disabled. This means that if the **Left** or **Right** arrows are pressed to select this **TG** within the *Rx Group list*, the *Timeslot* assigned to the Channel (*in the CPS*) or manually changed using the **Star** key will not change.
+By default, the **Channel TS override** is disabled. This means that if the **Left** or **Right** arrows are pressed to select this **TG** within the *TG list*, the *Timeslot* assigned to the Channel (*in the CPS*) or manually changed using the **Star** key will not change.
 
 However, if the **Digital Contact** has an **override TS** assigned (*e.g.* TS 1), when this **Digital Contact TG** is selected by pressing the **Right** or **Left** arrows, the *Timeslot* will be set to the *Timeslot* assigned to the **Digital Contact TG**.  
 In this case, the Timeslot is displayed as **cS***x* on the Channel/VFO screens (cS1 in this example).
@@ -1971,17 +1971,17 @@ Sets the *Color Code* when the VFO / Channel is set to **DMR**.
 
 Selects DMR *Timeslot* 1 or 2 when the VFO / Channel is set to **DMR**.
 
-#### Rx Grp<!-- linebreak -->
+#### TG Lst<!-- linebreak -->
 
-Selects which *Rx group* is assigned to the current channel (**DMR only**).<!-- linebreak -->
+Selects which *TG list* is assigned to the current channel (**DMR only**).<!-- linebreak -->
 
-*Note:* only *Rx Grp* **OR** *Contact* could be selected at once.
+*Note:* only *TG Lst* **OR** *Contact* could be selected at once.
 
 #### Contact<!-- linebreak -->
 
 Selects which *Contact* is assigned to the current channel (**DMR only**).<!-- linebreak -->
 
-*Note:* only *Contact* **OR** *Rx Grp* could be selected at once.
+*Note:* only *Contact* **OR** *TG Lst* could be selected at once.
 
 #### Tx CTCSS or DCS<!-- linebreak -->
 
@@ -2286,7 +2286,7 @@ In DMR mode, either in the VFO or the Channel screen:
 To return to normal Talkgroup operation, there are 3 methods:
 
 1. Press **Function** + **Red** menu key.
-2. Press the **Left** or **Right** arrow key which will load the next TG in the Rx Group list assigned to the VFO or the Channel.
+2. Press the **Left** or **Right** arrow key which will load the next TG in the TG list assigned to the VFO or the Channel.
 3. Press the **Hash** (**#**) key, then enter a TG number and press the **Green** menu key.
 
 
@@ -2548,7 +2548,7 @@ Please see the next section for information specific to the OpenGD77 CPS. The in
 
 The firmware simplifies the concept of TalkGroups, for maximum convenience for radio amateurs. Unlike most commercial DMR radios it is not necessary to create multiple channels to use the same frequency with many different transmit TalkGroups. Changing is as simple as scrolling **Left** and **Right** across your TalkGroup list or entering an *ad hoc* TalkGroup by pressing the **hash** key.
 
-In DMR mode when using either the VFO or the Zones and Channels, you can use the LEFT/RIGHT arrow keys to scroll through and select any of the TalkGroups in the Rx Group list assigned to the current channel, or to VFO A.
+In DMR mode when using either the VFO or the Zones and Channels, you can use the **Left** / **Right** arrow keys to scroll through and select any of the TalkGroups in the TG list assigned to the current channel, or to VFO A.
 
 When programming the radio using the CPS, first add all the **TalkGroups** that you think you may wish to use into the *Digital Contacts* list.
 
