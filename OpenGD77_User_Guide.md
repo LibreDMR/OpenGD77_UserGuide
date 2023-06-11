@@ -111,7 +111,8 @@ For the latest information and discussions, please refer to the development and 
           * [Safe Pwr-On](#safe-power-on)
           * [Auto Pwr-Off](#auto-power-off)
           * [APO with RF](#apo-with-rf)
-          * [Satellite follow mode](#satellite-follow-mode)
+          * [Sat (Satellite follow mode)](#sat-satellite-follow-mode)
+          * [GPS](#gps)
         * [Radio Options](#radio-options)
           * [Band Limits](#band-limits)
           * [Filter time](#filter-time)
@@ -1426,13 +1427,27 @@ One minute before the transceiver switches off, an "**Auto Pwr-Off**" message is
 
 If [**Auto Pwr-Off**](#auto-power-off) is enabled, the *APO* timer will also be reset when receiving a valid signal.
 
-#### Satellite follow mode<!-- linebreak -->
+#### Sat (Satellite follow mode)<!-- linebreak -->
 
 ![options satellite on](media/options-sat-manual.png)
 
 This setting is used to control whether in satellite mode, on the Polar or Live screens, whether the radio automatically changes to the next available satellite after the current satellite has passed over and gone below the horizon.
 
 Default is **Manual**, and the currently selected satellite does not change. "Auto" automatically switches to the next available satellite.
+
+#### GPS<!-- linebreak -->
+
+This setting is only available on the TYT MD-9600 | Retevis RT-90 and TYT MD-UV380 | Retevis RT-3S | Baofeng DM-1701 | Retevis RT-84.
+
+Because the GPS receiver consumes over 50mA constantly when in use, the GPS receiver is not powered by default.
+
+Options are:
+
+  - **Off**: turn off GPS module power (except on the TYT MD-9600 | Retevis RT-90 for technical reasons),
+  - **On**: turn on GPS module power,
+  - **NMEA**: the GPS module sends all NMEA data to the USB serial port of the radio.
+
+**WARNING: Setting the GPS to output NMEA data will prevent the CPS communicating with the radio, and the GPS setting should be set to "Off" or "On", when using the CPS.**
 
 <div style="page-break-after: always; break-after: page;"></div>
 
@@ -2234,12 +2249,15 @@ See https://www.amsat.org/amsat/articles/g3ruh/111.html
 The GPS screen is currently only available on the TYT MD-UV380 | MD-UV390 | Retevis RT-3S | Baofeng DM-1701 | Retevis RT-84 and TYT MD-9600 | Retevis RT-90 for radios which have GPS fitted, or in the case of the MD-9600 where users have modified the radio to attach and internal or external GPS module
 
 Because the GPS receiver consumes over 50mA constantly when in use, the GPS receiver is not powered by default in the MD-UV380 | RT-3S | DM-1701 | RT-84 firmware.
+GPS power state could be changed in this screen using **Green** + **SK2** and **Red** + **SK2** (available value are the same than in **General Options**).
 
-To use the GPS receiver in the radio, you must first enable the GPS in the General Options menu.
+To use the GPS receiver in the radio, you must first enable the GPS in the [**General Options**](#gps) menu.
 If the radio is not fitted with GPS, or the GPS does not appear to function, this option will show the value "None".
 If the radio is fitted with a GPS, the value of this option will initially display "Off"
 To use the GPS, change this value to "On", or "NMEA". Setting the GPS to NMEA will enable the GPS module and send all NMEA data from the GPS module to the USB serial port of the radio.
-Notes.
+
+*Notes:*
+
 1. Setting the GPS to output NMEA data will prevent the CPS communicating with the radio, and the GPS setting should be set to "Off" or "On", when using the CPS.
 2. The GPS receive in both the MD-UV380 and MD-9600 is not very sensitive, and can take a long time to acquire the position, and the GPS in these radios does not work indoors.
 
@@ -2259,8 +2277,8 @@ Once the GPS position has been acquired, the position will be displayed, includi
 
 The GPS automatically updates the Real Time clock in the radio, and the position is used for DMR APRS transmissions.
 
-On the UV380 | RT-3S | DM-1701 RT-84 the GPS satellite RSSI bar graphs are colour coded.  Blue is for USA GPS Satellites, and Red is for other satellite systems.
- 
+On the UV380 | RT-3S | DM-1701 RT-84 the GPS satellite RSSI bar graphs are colour coded. By default, Blue is for USA GPS Satellites and Red is for other satellite systems.
+
 
 <div style="page-break-after: always; break-after: page;"></div>
 
