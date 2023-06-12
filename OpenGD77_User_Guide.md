@@ -169,6 +169,7 @@ For the latest information and discussions, please refer to the development and 
       * [Color Code](#color-code)
       * [Timeslot](#timeslot)
       * [TG Lst](#tg-lst)
+      * [Contact](#contact-1)
       * [Tx CTCSS or DCS](#tx-ctcss-or-dcs)
       * [Rx CTCSS or DCS](#rx-ctcss-or-dcs)
       * [Bandwidth](#bandwidth)
@@ -1992,7 +1993,7 @@ Selects which *TG list* is assigned to the current channel (**DMR only**).<!-- l
 
 *Note:* only *TG Lst* **OR** *Contact* could be selected at once.
 
-#### Contact<!-- linebreak -->
+#### Contact&nbsp;<!-- linebreak -->
 
 Selects which *Contact* is assigned to the current channel (**DMR only**).<!-- linebreak -->
 
