@@ -2214,7 +2214,7 @@ To be alerted about a specific satellite pass:
 
 To manually resume from suspend mode, press:
  - **Orange** button on GD-77 | GD-77S | DM-1801 | DM-1801A | RD-5R (check [variations between different supported radios](#variations-between-different-supported-radios) section for DM-1701 | RT-84) 
- - **SK2** + **PTT** buttons on MD-UV380 | RT-3S | DM-1701 | RT-84.
+ - **SK2** + **PTT** buttons on MD-UV380 | RT-3S.
 
 To cancel the alarm once it has started:
  - Press **Green** key.
