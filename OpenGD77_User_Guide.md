@@ -29,7 +29,7 @@ For the latest information and discussions, please refer to the development and 
     * [Channel screen specific functionality](#channel-screen-specific-functionality)
       * [Changing channels within the current zone](#changing-channels-within-the-current-zone)
       * [Changing zones](#changing-zones)
-	  * [Displaying the channel Frequency](#displaying-the-channel-frequency)
+      * [Displaying the channel Frequency](#displaying-the-channel-frequency)
       * [Displaying FM specific channel information](#displaying-fm-specific-channel-information)
       * [Reverse repeater operation](#reverse-repeater-operation)
       * [Channel Quick Menu](#channel-quick-menu)
@@ -61,13 +61,13 @@ For the latest information and discussions, please refer to the development and 
       * [Squelch](#squelch)
       * [1750Hz Tone for repeater operation](#1750hz-tone-for-repeater-operation)
       * [DTMF tone transmission](#dtmf-tone-transmission)
-	  * [DTMF sequence entry and transmission](#dtmf-sequence-entry-and-transmission)
+      * [DTMF sequence entry and transmission](#dtmf-sequence-entry-and-transmission)
     * [VFO specific functionality](#vfo-specific-functionality)
       * [Frequency change up/down step](#frequency-change-updown-step)
       * [Numerical frequency entry](#numerical-frequency-entry)
       * [To adjust the TX frequency, independent of the RX frequency](#to-adjust-the-tx-frequency-independent-of-the-rx-frequency)
-	  * [Spectrum sweep scan](#spectrum-sweep-scan)
-	  * [VFO Dual Watch](#vfo-dual-watch)
+      * [Spectrum sweep scan](#spectrum-sweep-scan)
+      * [VFO Dual Watch](#vfo-dual-watch)
   * [Monitor mode](#monitor-mode)
   * [Transmitting](#transmitting)
     * [Timeout warning beep](#timeout-warning-beep)
@@ -97,8 +97,8 @@ For the latest information and discussions, please refer to the development and 
       * [New Contact](#new-contact)
     * [Last Heard](#last-heard)
     * [Firmware Info and credits](#firmware-info-and-credits)
-	*  Options - contains the 4 following options screens
-	    * [Language](#language-screen)	
+    *  Options **(contains the 7 following options screens)**
+        * [Language](#language-screen)
         * [General Options](#general-options)
           * [Key long](#key-long)
           * [Key rpt](#key-rpt)
@@ -154,12 +154,11 @@ For the latest information and discussions, please refer to the development and 
           * [VOX Tail](#vox-tail)
           * [Prompt](#prompt)
           * [DMR Rx AGC](#dmr-rx-agc)
-		  * [Click suppr](#click-suppr)
+          * [Click suppr](#click-suppr)
         * [Radio Calibration](#calibration-screen)
         * [Theme Options](#theme-options)
           * [Colour Picker](#colour-picker)
           * [Theme Items](#here-is-the-detailed-list-of-the-theme-items)
-	 
     * [Channel Details](#channel-details)
       * [Channel name](#channel-name)
       * [RX](#rx)
@@ -179,13 +178,19 @@ For the latest information and discussions, please refer to the development and 
       * [Zone Skip](#zone-skip)
       * [All Skip](#all-skip)
       * [VOX](#vox)
-	  * [Channel Power](#ch-power)
-	  * [Channel squelch](#ch-squelch)
-	  * [Channel beep](#ch-beep)
-	  * [Channel Eco mode](#ch-eco)
+      * [Channel Power](#ch-power)
+      * [Channel squelch](#ch-squelch)
+      * [Channel beep](#ch-beep)
+      * [Channel Eco mode](#ch-eco)
       * [Accepting and saving the changes to the channel](#accepting-and-saving-the-changes-to-the-channel)
-	* [Satellite Screen](#satellite-screen)
-	* [GPS Screen](#gps-screen)
+    * [Satellite Screen](#satellite-screen)
+      * [Polar view](#polar-view)
+      * [Satellite individual predictions screen](#satellite-individual-predictions-screen)
+      * [Satellite live data screen](#satellite-live-data-screen)
+      * [Satellite alarm](#satellite-alarm)
+      * [CPS Integratione](#cps-integration)
+      * [Technical notes](#technical-notes)
+    * [GPS Screen](#gps-screen)
   * [Making and receiving DMR Private Calls](#making-and-receiving-dmr-private-calls)
     * [To make a Private Call](#to-make-a-private-call)
     * [To Receive a Private Call](#to-receive-a-private-call)
@@ -199,7 +204,7 @@ For the latest information and discussions, please refer to the development and 
     * [GD77S DMR Filter mode](#gd77s-dmr-filter-mode)
     * [GD77S Zone mode](#gd77s-zone-mode)
     * [GD77S Power mode](#gd77s-power-mode)
-  * [MD-9600|RT-90 specific](#md-9600rt-90-specific)
+  * [MD-9600 and RT-90 specific](#md-9600-and-rt-90-specific)
   * [CPS software](#cps-software)
     * [Overview](#overview)
       * [New Driver Installation](#new-driver-installation)
@@ -207,10 +212,10 @@ For the latest information and discussions, please refer to the development and 
       * [IMPORTANT FIRST STEP: Backup First](#backup-before-you-do-anything-else)
       * [Reading and Writing Your Codeplug](#reading-and-writing-your-codeplug)
       * [Writing DMR IDs -- the User Database](#writing-dmr-ids----the-user-database)
-	  * [Boot Tune](#boot-tune)
-	    * [Boot Tune in Morse code](#boot-tune-in-morse-code)
-	  * [Melodies and Notes](#melodies-and-notes)
-	  * [Boot Image](#boot-image)
+      * [Boot Tune](#boot-tune)
+        * [Boot Tune in Morse code](#boot-tune-in-morse-code)
+      * [Melodies and Notes](#melodies-and-notes)
+      * [Boot Image](#boot-image)
 <!-- /TOC -->
 
 
@@ -239,7 +244,7 @@ This firmware is specifically designed for **Amateur Radio** use, and has featur
 
 **Firmware binaries:**
 
-**GD-77/GD-77S/DM-1801/RD-5R**
+**GD-77 | GD-77S | DM-1801 | DM-1801A | RD-5R**
 <https://www.opengd77.com/downloads/GD77/Latest>
 
 **TYT MD-9600 | Retevis RT-90**
@@ -320,7 +325,7 @@ The CPS must be used to install the firmware and also to read and write the code
 
   * The LCD screen will be blank. Handheld radios the LED will be illuminated or flash.
 
-  * For GD-77/GD-77S/DM-1801 and RD-5R no driver is required. 
+  * For GD-77 | GD-77S | DM-1801 | DM-1801A and RD-5R no driver is required. 
 	For all other radios the STM DFUSe driver is required. If the driver is not automatically installed by Windows, you may need to use the Windows Device Manager to find and install the correct driver.
   
   * Select the radio type
@@ -832,7 +837,7 @@ To make the squelch change permanent to a Channel, press **Function** + **Green*
 
 - Pressing any key (except the **Green** and **Red** menu keys) on the keypad during transmission will transmit the DTMF tones for that key.
 
-The tone will also be audible through the speaker on the GD-77, RD-5R , DM-1801 and DM-1801A.
+The tone will also be audible through the speaker on the GD-77, RD-5R, DM-1801 and DM-1801A.
 On the MD-UV380 and MD-9600 a tone is played through the speaker, but this is not the DTMF tone that is transmitted, because the hardware on these radios does not support playing the actual DTMF tone through the speaker.
 
 The MD-9600 microphone buttons for A,B C and D are already used for other functions, e.g. A = ESC/Red button, so the following key sequences need to be used to enter letters A,B,C and D
@@ -2133,7 +2138,8 @@ Some satellites, e.g. SO-86 are on an equatorial orbit and only pass over equato
 
 Pressing **Green** to select a specific satellite / pass displays the predicted **Polar view** for that satellite / pass.
 
-**Polar view**
+
+#### Polar view<!-- linebreak -->
 
 ![location](media/satellite-polar-before-AOS.png)
 
@@ -2157,10 +2163,10 @@ The current RSSI signal strength is shown at all times as a vertical bar, so tha
 
 On this screen, the squelch and power can be adjusted using the same keys as on the Channel and VFO screens.
 
-Press **down** to enter the individual satellite predictions screen, or **Up** to enter the satellite live data screen
+Press **Down** to enter the individual satellite predictions screen, or **Up** to enter the satellite live data screen
 
 
-**Satellite individual predictions screen**
+#### Satellite individual predictions screen<!-- linebreak -->
 
 ![location](media/satellite-individual-passes-1.png)
 
@@ -2172,9 +2178,10 @@ Press **Right** / **Left** to step through the pass predictions for the currentl
 ![location](media/satellite-individual-passes-2.png)
 
 
-Press **down** to enter the satellite live data screen or **Up** to enter the Polar view.
+Press **Down** to enter the satellite live data screen or **Up** to enter the Polar view.
 
-**Satellite live data screen**
+
+#### Satellite live data screen<!-- linebreak -->
 
 This screen shows the current Azimuth and Elevation of the selected satellite, regardless of which pass has been selected.
 It also shows the current Transmit and Receive, the power level, and the battery voltage.
@@ -2196,17 +2203,27 @@ On the Polar, Live and Individual satellite predictions screens. Press SK2 + **U
 If a satellite has no passes over the current location, the radio will display "Pass: None" or "Empty List" depending on the screen currently selected.
 e.g. IO-86 only passes over equatorial locations.
 
-**Satellite alarm**
 
-To be alerted about a specific satellite pass.
+#### Satellite alarm<!-- linebreak -->
 
-Press SK2 + Green on any of the satellite screens, before 1 minute prior to that pass, and leave the radio in Satellite mode.
+To be alerted about a specific satellite pass:
 
-Then 1 minute before the satellite is predicted to appear above the horizon, the radio will beep.
-Press **Green** to cancel the alarm once it has started or turn the radio on / off or into and out of suspend mode to remove an existing alarm
-If the alarm is not canceled after 1 minute it will automatically stop.
+ - Press **SK2** + **Green** on any of the satellite screens before 1 minute prior to that pass, the radio will go in suspend mode to save the battery, **except on MD-9600 | RT-90**.
+ - 1 minute before the satellite is predicted to appear above the horizon, the radio will resume from suspend mode then emits an alarm beep.
+ - Press any keypad key to silence the alarm.
 
-**CPS Integration**
+To manually resume from suspend mode, press:
+ - **Orange** button on GD-77 | GD-77S | DM-1801 | DM-1801A | RD-5R (check [variations between different supported radios](#variations-between-different-supported-radios) section for DM-1701 | RT-84) 
+ - **SK2** + **PTT** buttons on MD-UV380 | RT-3S | DM-1701 | RT-84.
+
+To cancel the alarm once it has started:
+ - Press **Green** key.
+ - Turn the radio on / off.
+
+If the satellite pass alarm (1 minute long) is not canceled (using the **Green** key), the radio will go back in suspend mode, still in the optic of battery saving.
+
+
+#### CPS Integration<!-- linebreak -->
 
 The CPS has an extra feature added to download the Kep's data and upload this to the radio, as well as setting the date / time of the radio.
 In the Extras -> OpenGD77 support screen of the CPS. Connect the USB cable to the radio, make sure the radio is turned on, and press the "Install satellite Keps" button.
@@ -2231,19 +2248,21 @@ The maximum number of satellites which can be loaded into the radio is 15, but c
 
 CTCSS and ArmCTCSS values are the tone frequency time 10 e.g. 67Hz = 670
 
-**Technical notes**
+
+#### Technical notes<!-- linebreak -->
 
 The satellite position and prediction calculations are generated in real time by the firmware in the radio, and the currently selected satellite data is updated once per second.
 
 The predictions are usually accurate to around +/- 5 seconds of AOS time, LOS time and duration, compared with other satellite prediction software including AMSAT's online prediction page and other PC applications like GPredict
 Prediction programs like GPredict usually don't show exactly same values for start, or end, to the online AMSAT predictions either.
 
-Predictions will not be completely accurate unless the satellite Kep's data is updated frequently.  If practical the keps should be uploaded on a daily basis, though normally the satellites don't move too far from their predicted path for several days, or even a week.
+Predictions will not be completely accurate unless the satellite Kep's data is updated frequently. If practical the keps should be uploaded on a daily basis, though normally the satellites don't move too far from their predicted path for several days, or even a week.
 
 The prediction calculation is a custom implementation, written for the OpenGD77, using the methodology from the original AMSAT prediction calculation called PLAN13 written in the 1983.
 See https://www.amsat.org/amsat/articles/g3ruh/111.html
 
 <div style="page-break-after: always; break-after: page;"></div>
+
 
 ### GPS Screen
 
@@ -2498,7 +2517,7 @@ See details of available power step levels in the normal firmware.
 
 <div style="page-break-after: always; break-after: page;"></div>
 
-## MD-9600|RT-90 specific
+## MD-9600 and RT-90 specific
 
 The TYT MD-9600 | Retevis RT-90 uses the following keys and buttons
 
