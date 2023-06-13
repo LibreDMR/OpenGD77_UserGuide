@@ -2217,8 +2217,7 @@ To manually resume from suspend mode, press:
  - **SK2** + **PTT** buttons on MD-UV380 | RT-3S.
 
 To cancel the alarm once it has started:
- - Press **Green** key.
- - Turn the radio on / off.
+ - Press **Green** key, or turn the radio on / off.
 
 If the satellite pass alarm (1 minute long) is not canceled (using the **Green** key), the radio will go back in suspend mode, still in the optic of battery saving.
 
