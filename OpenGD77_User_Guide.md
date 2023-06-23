@@ -120,11 +120,10 @@ For the latest information and discussions, please refer to the development and 
           * [Scan dwell](#scan-dwell)
           * [Scan mode](#scan-mode)
           * [Scan on Boot](#scan-on-boot)
-          * [Squelch UHF](#squelch-uhf)
-          * [Squelch 220](#squelch-220)
-          * [Squelch VHF](#squelch-vhf)
+          * [VHF Squelch](#xxx-squelch)
+          * [200 Squelch](#xxx-squelch)
+          * [UHF Squelch](#xxx-squelch)
           * [PTT Latch](#ptt-latch)
-          * [TA Tx](#ta-tx)
           * [Allow PC](#allow-pc)
           * [User Power](#user-power)
           * [DMR crc](#dmr-crc)
@@ -132,12 +131,12 @@ For the latest information and discussions, please refer to the development and 
           * [Brightness](#brightness)
           * [Min Bright](#min-bright)
           * [Contrast](#contrast)
-          * [Display mode](#display-mode)
+          * [Mode](#mode)
           * [Timeout](#timeout)
-          * [Colour mode](#colour-mode)
+          * [Screen](#screen)
           * [Order](#order)
           * [Contact](#contact)
-          * [Battery units](#battery-units)
+          * [Battery (units)](#battery-units)
           * [Info](#info)
           * [LEDs](#leds)
           * [Timezone](#timezone)
@@ -169,8 +168,8 @@ For the latest information and discussions, please refer to the development and 
       * [Timeslot](#timeslot)
       * [TG Lst](#tg-lst)
       * [Contact](#contact-1)
-      * [Tx CTCSS or DCS](#tx-ctcss-or-dcs)
-      * [Rx CTCSS or DCS](#rx-ctcss-or-dcs)
+      * [Rx CSS](#rx-css-ctcss-or-dcs)
+      * [Tx CSS](#tx-css-ctcss-or-dcs)
       * [Bandwidth](#bandwidth)
       * [Step](#step)
       * [TOT](#tot)
@@ -178,10 +177,12 @@ For the latest information and discussions, please refer to the development and 
       * [Zone Skip](#zone-skip)
       * [All Skip](#all-skip)
       * [VOX](#vox)
-      * [Channel Power](#ch-power)
-      * [Channel squelch](#ch-squelch)
-      * [Channel beep](#ch-beep)
-      * [Channel Eco mode](#ch-eco)
+      * [Ch Power](#ch-power)
+      * [Squelch](#squelch-channel)
+      * [Beep](#beep-channel)
+      * [Eco](#eco-channel)
+      * [TA Tx TS1](#ta-tx-tsx)
+      * [TA Tx TS2](#ta-tx-tsx)
       * [Accepting and saving the changes to the channel](#accepting-and-saving-the-changes-to-the-channel)
     * [Satellite Screen](#satellite-screen)
       * [Polar view](#polar-view)
@@ -507,7 +508,7 @@ In FM mode the signal meter should operate all the time.
 
 *Note:*
 
-- Currently, the S meter reading is **not** very accurate because the radio hardware Rx sensitivity is **not calibrated** at the factor.
+- Currently, the S meter reading is **not** very accurate because the radio hardware Rx sensitivity is **not calibrated** at the factory.
 - Hence, the value displayed is based on a radio with average sensitivity, individual radios may be **more or less** sensitive than average, therefore the S meter will read **higher or lower** than is absolutely correct.
 
 
@@ -1405,6 +1406,8 @@ If suspend mode is not enabled, holding **SK2** while the power / volume control
 Suspend mode consumes about 20mA from the battery, and will flatten the battery in around 3 or 4 days, for a brand-new battery that is fully charged.
 This mode is primarily intended for use with Satellite mode, which requires the exact time and date to be known, in order to predict satellite passes and calculate satellite Doppler corrected frequencies.
 
+This setting is only available on GD-77 | DM-1801 | DM-1801A.
+
 #### Safe Power On<!-- linebreak -->
 
 This setting requires SK1 to be pressed when powering up the transceiver, preventing unwanted power-ups, such as when the radio is in a backpack, which can drain the battery. This parameter is also operational when suspend mode is enabled.
@@ -1528,17 +1531,11 @@ This setting controls how the receiver stops when there is a signal during scan 
 This setting controls whether the radio automatically starts scanning when it's turned on (booted up).
 The default for this setting is Off.
 
-#### Squelch UHF<!-- linebreak -->
+#### *xxx* Squelch<!-- linebreak -->
 
-This setting controls the squelch level for **70cm UHF** when using an analog Channel or during analog mode in VFO. **Default is 45%**.
-
-#### Squelch 220<!-- linebreak -->
-
-This setting controls the squelch level for **220MHz** when using an analog channel or during analog mode in VFO. **Default is 45%**.
-
-#### Squelch VHF<!-- linebreak -->
-
-This setting controls the squelch level for **2m VHF** when using an analog channel or during analog mode in VFO. **Default is 45%**.
+- **VHF**: This setting controls the squelch level for **2m VHF** when using an analog channel or during analog mode in VFO. **Default is 45%**.
+- **220**: This setting controls the squelch level for **220MHz** when using an analog channel or during analog mode in VFO. **Default is 45%**.
+- **UHF**: This setting controls the squelch level for **70cm UHF** when using an analog Channel or during analog mode in VFO. **Default is 45%**.
 
 #### PTT Latch<!-- linebreak -->
 
@@ -1549,20 +1546,6 @@ When **PTT latch** is enabled, the **PTT** switch toggles the radio to transmit 
 - The PTT latch function **only works** if a timeout has been defined for the Channel or VFO, to prevent constant accidental transmission.
 
 <div style="page-break-after: always; break-after: page;"></div>
-
-#### TA Tx<!-- linebreak -->
-
-Enables **transmission** of *Talker Alias* data.
-
-*Note:*
-
-- Talker Alias reception is always operational. Do not enable this feature because you are not receiving TA data, as it does not control TA Rx.
-
-The text of **Line1** and **Line2** from the "**Boot Item**" CPS screen is used for this transmission, with no space between the **Line1** and **Line2** data.
-
-*Note:*
-
-- Use of this feature **will cause problems on Motorola based repeaters and networks**, and should only be used for simplex and possibly on *Brandmeister* and other networks which correctly support Talker Alias.
 
 #### Allow PC<!-- linebreak -->
 
@@ -1622,7 +1605,7 @@ The firmware allows the display contrast to be set.
 
 Lower values result in dark text, higher values result in darker text, but the background also starts to become dark at higher settings.
 
-#### Display mode<!-- linebreak -->
+#### Mode<!-- linebreak -->
 
 Controls the display backlight operation
 
@@ -1637,12 +1620,12 @@ Sets the time before the display backlight is extinguished (**default No timeout
 
 Setting this value to "**No**" prevents the backlight from turning off at all.
 
-#### Colour mode<!-- linebreak -->
+#### Screen<!-- linebreak -->
 
 This option allows for Normal or inverse colour display.
 
-- **Normal** is white background with black pixels
-- **Inverse** is black background with white pixels.
+- **Normal** is white background with black pixels on monochrome platforms, theme colours are positive on coloured platforms. 
+- **Inverse** is black background with white pixels on monochrome platforms, theme colours are negative on coloured platforms
 
 *Note:*
 
@@ -1670,7 +1653,7 @@ Options are
 
 The default is **1 Line**.
 
-#### Battery units<!-- linebreak -->
+#### Battery (units)<!-- linebreak -->
 Controls whether the battery is show as a percentage or as voltage.
 
 Options are
@@ -1706,7 +1689,7 @@ Press the **Left** arrow to increase the value in steps of 1 hour.
 
 If your timezone is not on a 1-hour boundary, press **SK2** and **Right** or **Left** to adjust the timezone in 15 minute increments.
 
-#### Time display format<!-- linebreak -->
+#### Time (display format)<!-- linebreak -->
 
 This setting controls whether the value of time and date that is entered and displayed is "UTC" or "Local"
 
@@ -2006,17 +1989,17 @@ Selects which *Contact* is assigned to the current channel (**DMR only**).<!-- l
 
 *Note:* only *Contact* **OR** *TG Lst* could be selected at once.
 
-#### Tx CTCSS or DCS<!-- linebreak -->
-
-Sets the *transmit CTCSS tone or DCS code* when the VFO / Channel is set to **FM**.
-
-#### Rx CTCSS or DCS<!-- linebreak -->
+#### Rx CSS (CTCSS or DCS)<!-- linebreak -->
 
 Sets the *receive CTCSS tone or DCS code* when the VFO / Channel is set to **FM**.
 
 For both Tx and Rx CTCSS / DCS.
 - **Long press**, **Right** or **Left** arrows, skips forward, or back by 5 entries in the list of possible CTCSS / DCS settings.
 - Pressing **Function** + **Right** or **Function** + **Left** skips to the end or beginning of the current CTCSS / DCS items.
+
+#### Tx CSS (CTCSS or DCS)<!-- linebreak -->
+
+Sets the *transmit CTCSS tone or DCS code* when the VFO / Channel is set to **FM**.
 
 #### Bandwidth<!-- linebreak -->
 
@@ -2055,7 +2038,7 @@ See also the section in about controlling power.
 
 **By default**, all channels will use the **Master** power setting, and this option allows a **custom** power setting to be set on a channel, or for the channel set to use the **Master** power setting.
 
-#### Ch Squelch<!-- linebreak -->
+#### Squelch (Channel)<!-- linebreak -->
 
 Controls the custom / individual squelch assigned to the channel.
 
@@ -2064,15 +2047,32 @@ See also the section in about controlling power.
 **By default**, all channels will use the **Master** squelch setting. This is the squelch value defined in the Options squelch setting for the band of the channel.
 A **custom** squelch setting can be applied to the channel by pressing the right and left arrow keys. Custom squelch settings are in 5% steps.
 
-#### Ch Beep<!-- linebreak -->
+#### Beep (Channel)<!-- linebreak -->
 
 Controls whether beeps are played on the channel.
 By default beeps are enabled on all channels, but beeps can be disabled on individual channels by setting this option to No.
 
-#### Ch Eco<!-- linebreak -->
+#### Eco (Channel)<!-- linebreak -->
 
 Controls whether Eco modes function on this channel.
 By default Eco modes are enabled on all channels, but Eco mode can be disabled on individual by setting this option to No.
+
+#### TA Tx TS*x*<!-- linebreak -->
+
+Enables **transmission** of *Talker Alias* data on the specified Timeslot (TS1/TS2).
+
+Options are:
+
+- **Off**: no Talker Alias transmission.
+- **APRS**: the position, if defined in "**Radio Info**" screen (or by the GPS module, on featured platforms) is used for this transmission.
+- **Text**: the text of **Line1** and **Line2** from the "**Boot Item**" CPS screen is used for this transmission, with no space between the **Line1** and **Line2** data.
+- **Both**: send both informations listed above, alternatively.
+
+*Note:*
+
+- Talker Alias reception is always operational. Do not enable this feature because you are not receiving TA data, as it does not control TA Rx.
+
+- Use of this feature **will cause problems on Motorola based repeaters and networks**, and should only be used for simplex and possibly on *Brandmeister* and other networks which correctly support Talker Alias. -->
 
 #### Accepting and saving the changes to the channel<!-- linebreak -->
 
