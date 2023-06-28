@@ -1780,6 +1780,7 @@ Controls the length of time **after** the operator stops speaking, before the tr
 This setting controls the **audible feedback** to button and key presses etc. and has the following options:
 
 - **Silent**: The radio does not provide any audio feedback to button
+- **No Keys**: Identical as **Beep** (see below), except it doesn't emit any beep on button and key presses.
 - **Beep**: The radio emits a beep when keys or buttons are pressed. There are 2 different pitches of beep.
 
     When navigating through *Channels* or *Talkgroups* or *menu items*, when the first item in the list is reached the **higher pitch** beep is emitted.
