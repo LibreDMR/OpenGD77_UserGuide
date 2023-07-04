@@ -23,6 +23,7 @@ For the latest information and discussions, please refer to the development and 
   * [Main screens (VFO and Channel modes)](#main-screens-vfo-and-channel-modes)
     * [Changing between FM mode and DMR mode](#changing-between-fm-mode-and-dmr-mode)
     * [Changing Timeslot in DMR mode](#changing-timeslot-in-dmr-mode)
+    * [Automatic setting of Talkgroup/PrivateCall and Timeslot in DMR mode](#automatic-setting-of-talkgroupprivatecall-and-timeslot-in-dmr-mode)
     * [Changing bandwidth in FM mode](#changing-bandwidth-in-fm-mode)
     * [Controlling Tx power](#controlling-tx-power)
     * [Signal strength bar graph](#signal-strength-bar-graph)
@@ -445,6 +446,18 @@ On both the VFO and Channel screens:
 - In DMR mode, pressing the **Star** key toggles between *TimeSlot 1* and *TimeSlot 2* and sets this as the Timeslot override.
 
 To clear a Timeslot override, press and hold the **Star** key.
+
+### Automatic setting of Talkgroup/PrivateCall and Timeslot in DMR mode
+
+When in DMR mode, if the DMR filter is turned off, it's possible to automatically set the radio to the right Talkgroup (even if it's **not** in the TG list or defined as the channel's contact) while receiving:
+
+ - While receiving, click the SK2 button once, the radio will set Talkgroup override by itself.
+
+*Note:*
+
+- If the Timeslot filter is turned off, it will be also overriden; 
+
+To clear the overrides, see [Changing Timeslot in DMR mode](#changing-timeslot-in-dmr-mode) and [Manual TalkGroup number entry](#manual-talkgroup-number-entry) sections.
 
 ### Changing bandwidth in FM mode
 
