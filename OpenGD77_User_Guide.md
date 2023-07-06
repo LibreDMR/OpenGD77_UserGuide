@@ -135,6 +135,7 @@ For the latest information and discussions, please refer to the development and 
           * [Mode](#mode)
           * [Timeout](#timeout)
           * [Screen](#screen)
+          * [Auto theme](#auto-theme)
           * [Order](#order)
           * [Contact](#contact)
           * [Battery (units)](#battery-units)
@@ -157,6 +158,8 @@ For the latest information and discussions, please refer to the development and 
           * [Click suppr](#click-suppr)
         * [Radio Calibration](#calibration-screen)
         * [Theme Options](#theme-options)
+          * [Theme chooser](#theme-chooser)
+          * [Theme options](#theme-options)
           * [Colour Picker](#colour-picker)
           * [Theme Items](#here-is-the-detailed-list-of-the-theme-items)
     * [Channel Details](#channel-details)
@@ -1638,11 +1641,26 @@ Setting this value to "**No**" prevents the backlight from turning off at all.
 This option allows for Normal or inverse colour display.
 
 - **Normal** is white background with black pixels on monochrome platforms, theme colours are positive on coloured platforms. 
-- **Inverse** is black background with white pixels on monochrome platforms, theme colours are negative on coloured platforms
+- **Inverted** is black background with white pixels on monochrome platforms, theme colours are negative on coloured platforms
 
 *Note:*
 
 - This does not completely replicate the GD-77 “*Black*” display hardware version, because that radio uses a different LCD panel which physically has a black background, whereas the normal GD-77 has an LCD panel with a white background.
+
+#### Auto theme<!-- linebreak -->
+
+This option allows the firmware to automatically change the theme between Day and Night, according to daytime.
+
+**Please Note**: the location, date and time **has** to be defined in order to make it work. These values can be defined by hand (in the [Radio info](#radio-info) screen) or automatically using the embedded GPS on featured transceivers.
+
+The firmware calculates the sun position and switch to the correct theme when the sunrite/sunset time has come.
+
+- On colours platforms, you can edit the two themes, using the [Theme Options](#theme-options) or the CPS.
+- On monochome platforms, the firmware toggles between non inverted screen for Day, and inverted for Night. If the [Screen](#screen) display option is set to **Inverted**, the Day/Night display invertion are reversed (**Inverted** for Day, **Normal** for Night).
+
+The user can override the current daytime theme, pressing **SK1** + **Red**, in the Channel or VFO screens **only**.
+
+Once the daytime theme is override, the automatic theme switching is disabled. Long press on **SK1** + **Red** clears this override (or power cycle the radio).
 
 #### Order<!-- linebreak -->
 
@@ -1907,6 +1925,16 @@ However, to temporarily test the power e.g. by transmitting using the VFO, press
 ### Theme Options
 
 This screen currently only applies to the TYT MD-UV380 | Retevis RT-3S | Baofeng DM-1701 | Retevis RT-84.
+
+#### Theme Chooser<!-- linebreak -->
+
+![theme daytime selection](media/theme-daytime.png)
+
+In this screen, you can select the Day or Night theme (see Display [Auto theme](#auto-theme) option).
+
+Press **Green** to enter the theme options screen (see below).
+
+#### Theme Options<!-- linebreak -->
 
 ![theme options screen](media/theme-menu.png)
 
