@@ -439,7 +439,7 @@ On both the VFO and Channel screens:
 
 ### Changing between FM mode and DMR mode
 
-- Press the **Function** (**SK1**)  + **Star** keys to toggle between FM and DMR mode, on either the **VFO** or **Channel** screens.
+- Press the **SK1** + **Star** keys to toggle between FM and DMR mode, on either the **VFO** or **Channel** screens.
 
 ### Changing Timeslot in DMR mode
 
@@ -476,14 +476,14 @@ When a Channel has a custom power setting, the power will be displayed in a **Bo
 
 Increasing and decreasing the power on a Channel with a custom power setting will temporarily override the power on the Channel, but this change is not saved to the codeplug. So, changing channels will result in the temporary override being lost.
 
-To make a **permanent** change to a Channel custom power value, you must open the [**Channel Details**](#channel-details) screen, and then exit by pressing **Function** + **Green**.
+To make a **permanent** change to a Channel custom power value, you must open the [**Channel Details**](#channel-details) screen, and then exit by pressing **SK2** + **Green**.
 
 Increasing or decreasing the power level on a Channel which uses the **Master** power control, will change the **Master** power level **for all other channels** which use the **Master** power and **also both VFOs**.
 
 Changing the power on **either** VFO also changes the **Master** power setting.
 
-- Press **Function** + **Right** to increase the power.
-- Press **Function** + **Left** to decrease the power.
+- Press **SK2** + **Right** to increase the power.
+- Press **SK2** + **Left** to decrease the power.
 
 Power can be set to **50mW**, **250mW**, **500mW**, **750mW**, **1W**, **2W**, **3W**, **4W**, **5W** and **+W-**.
 The MD-9600 has higher power output and the power settings are different.
@@ -496,7 +496,7 @@ If the User power setting is configured to a lower value, it can also be used fo
 See the User power setting menu for more information.
 
 
-To access this power setting, select the maximum power setting, then press and hold **Function** + **Right**
+To access this power setting, select the maximum power setting, then press and hold **SK2** + **Right**
 
 *Notes:*
 
@@ -540,7 +540,7 @@ The Channel screen displays the current Channel number as well as the current zo
 
 #### Changing zones<!-- linebreak -->
 
-- Pressing **Function** + **Up** arrow or **Function** + **Down** arrow changes to the next or previous Zone, respectively.
+- Pressing **SK2** + **Up** arrow or **SK2** + **Down** arrow changes to the next or previous Zone, respectively.
 
 ![another zone](media/changing-zones.png)
 
@@ -556,10 +556,10 @@ The Channel screen displays the current Channel number as well as the current zo
 
 #### Reverse repeater operation
 
-- Pressing and holding the **Hash** key and the Tx and Rx frequencies for the channel will be exchanged. The channel name is shown in inverse video. 
+- Channel mode: Pressing and holding the **Hash** key and the Tx and Rx frequencies for the channel will be exchanged. The channel name is shown in inverse video.
+- VFO mode: Pressing and holding **SK1** and **SK2** and the Tx and Rx frequencies will be exchanged.
 - The radio remains locked in Reverse repeater mode even if the channel or zone is changed.
 - To exit from Reverse repeater mode, press and hold **Hash**
-  
 
 
 <div style="page-break-after: always; break-after: page;"></div>
@@ -754,7 +754,7 @@ If a *Talkgroup* is displayed in inverse video during reception of a DMR signal,
 
 ![talkgroup in inverse video](media/talkgroup-inverse-video.png)
 
-If you want to transmit on the same *TalkGroup* as the currently received signal, press the **Function** button on the side of the radio **while** the *TalkGroup* is being displayed in inverse. The *TX TalkGroup* will now be set to the *RX TalkGroup*.
+If you want to transmit on the same *TalkGroup* as the currently received signal, press the **SK2** button on the side of the radio **while** the *TalkGroup* is being displayed in inverse. The *TX TalkGroup* will now be set to the *RX TalkGroup*.
 
 ![talkgroup temporary set](media/talkgroup-override.png)
 
@@ -797,13 +797,13 @@ Private calls can also be selected in this manner.
 
 #### Station DMR ID number entry<!-- linebreak -->
 
-- In **Contact selection mode**, press **Function** + **Hash** (**#**) key, and an *alternative* **DMR ID** can be entered for the radio (*for test purposes*) to temporarily override your normal DMR ID number which was loaded from the codeplug.
+- In **Contact selection mode**, press **SK2** + **Hash** (**#**) key, and an *alternative* **DMR ID** can be entered for the radio (*for test purposes*) to temporarily override your normal DMR ID number which was loaded from the codeplug.
 
 ![DMR ID entry screen](media/user-dmr-id.png)
 
 This DMR ID will be used for transmission **until** the radio is rebooted or you enter another DMR ID via the same screen.
 
-To make the change permanent, so that it’s written back to the codeplug Press **Function** + **Green** instead of **Green** to confirm the number.
+To make the change permanent, so that it’s written back to the codeplug Press **SK2** + **Green** instead of **Green** to confirm the number.
 
 <div style="page-break-after: always; break-after: page;"></div>
 
@@ -837,7 +837,7 @@ In this example the squelch in the VFO is set to 20%.
 
 If the squelch is changed in the VFO the value will be remembered even if the radio is power cycled. However, if the squelch on a channel is changed, the value is only a temporary override.
 
-To make the squelch change permanent to a Channel, press **Function** + **Green** to enter the *Channel Details* screen, and then press **Function** + **Green** again to save the channel data to the codeplug.
+To make the squelch change permanent to a Channel, press **SK2** + **Green** to enter the *Channel Details* screen, and then press **SK2** + **Green** again to save the channel data to the codeplug.
 
 *Note:*
 
@@ -845,7 +845,7 @@ To make the squelch change permanent to a Channel, press **Function** + **Green*
 
 #### 1750Hz Tone for repeater operation<!-- linebreak -->
 
-- Pressing the **Function** button during FM transmission, sends the 1750Hz tone required for some repeater operation.
+- Pressing the **SK2** button during FM transmission, sends the 1750Hz tone required for some repeater operation.
 
 #### DTMF tone transmission<!-- linebreak -->
 
@@ -894,7 +894,7 @@ When the currently selected frequency is the **RX** frequency, an arrow (**\>**)
 
 - Pressing the **Up** or **Down** arrows will change frequency by the frequency step value defined for the VFO in the CPS.
 
-The step can be adjusted by pressing **Function** + **Green** to enter the Channel Details mode, and then adjusting the “**Step**” setting
+The step can be adjusted by pressing **SK2** + **Green** to enter the Channel Details mode, and then adjusting the “**Step**” setting
 
 #### Numerical frequency entry<!-- linebreak -->
 
@@ -913,11 +913,11 @@ When entering a frequency:
 
 #### To adjust the TX frequency, independent of the RX frequency<!-- linebreak -->
 
-- Press and hold **Function** button on the side of the radio, and then the **Down** arrow.
+- Press and hold **SK2** button on the side of the radio, and then the **Down** arrow.
 
 This will change the currently selected frequency to the TX frequency, and the arrow will move to the left of the “**T**” instead of the “**R**”
 
-To change the RX frequency again, press **Function** + **Up** arrow.
+To change the RX frequency again, press **SK2** + **Up** arrow.
 
 When the TX frequency is changed, the RX frequency will not be changed.
 
@@ -942,7 +942,7 @@ The bandwidth of the scan is shown in the top left corner of the display e.g. +/
   - **SK2 + Down** / **SK2 + Up**: Decrease / Increase virtual noise floor
   - **SK1 + Up** or **SK1 +Down**: Resets the gains/floor to default
 
-Monitor mode (long press on SK2) suspends the scan and open the receiver to the central frequency.
+Monitor mode (long press on **SK2**) suspends the scan and open the receiver to the central frequency.
 
 ![Spectrum scan](media/vfo-spectrum-scan.png)
 
@@ -973,16 +973,16 @@ An alternative method to change the current VFO, is to **Long Press** on the **R
 
 Monitor mode enables the operator to listen to a signal even if it is currently being filtered by either the **DMR TG**, **TS** or **CC** filters or the **FM CTCSS / DCS** filter or **FM squelch** level setting.
 
-- To enable Monitor mode press and hold button **Function** button (which is the **SK2** button on the GD-77).
+- To enable Monitor mode press and hold button **SK2** button (which is the **SK2** button on the GD-77).
 
-After 2 seconds the radio will enter monitor mode, and stay in this mode until the **Function** is released.
+After 2 seconds the radio will enter monitor mode, and stay in this mode until the **SK2** is released.
 
 When Monitor mode is active:
 
 - In **FM mode**: any Rx **CTCSS / DCS** filter is disabled, and the squelch is changed to be fully open.
 - In **DMR mode**: the **TG**, **TS** and **CC** filters are disabled, and if **no DMR signal is detected within 250mS** the radio is switched to FM mode with the CTCSS / DCS and squelch disabled.
 
-Releasing the **Function** button returns the radio back into the mode and filter configuration prior to it being pressed.
+Releasing the **SK2** button returns the radio back into the mode and filter configuration prior to it being pressed.
 
 
 <div style="page-break-after: always; break-after: page;"></div>
@@ -1064,7 +1064,7 @@ To lock the keypad.
 
 On either the VFO or the Channel screen, press the **Green** menu key to display the **Main menu**, then press the **Star** key. Pressing the **Star** key from any top-level item within the Main menu locks the keypad.
 
-- To unlock the keypad, press and hold the **Function** button and press the **Star** key.
+- To unlock the keypad, press and hold the **SK2** button and press the **Star** key.
 
 You can also lock the **PTT** button by pressing the **Green** menu key to display the Main menu and then pressing the **Hash** (**#**) key. The keypad **and** the **PTT** can both be locked at the same time by first locking the **PTT** and then the keypad.
 
@@ -1077,7 +1077,7 @@ The firmware now supports alphanumeric text entry while creating a new contact o
 ![alphanumric entry](media/text-entry.png)
 
 - Press **Left** and **Right** to move the cursor.
-- Press **Function** + **Left** to backspace, and **Function** + **Right** to insert a space.
+- Press **SK2** + **Left** to backspace, and **SK2** + **Right** to insert a space.
 
 The keypad entry follows the same functionality as stock GD77 firmware.
 
@@ -2009,7 +2009,7 @@ Sets the *receive CTCSS tone or DCS code* when the VFO / Channel is set to **FM*
 
 For both Tx and Rx CTCSS / DCS.
 - **Long press**, **Right** or **Left** arrows, skips forward, or back by 5 entries in the list of possible CTCSS / DCS settings.
-- Pressing **Function** + **Right** or **Function** + **Left** skips to the end or beginning of the current CTCSS / DCS items.
+- Pressing **SK2** + **Right** or **SK2** + **Left** skips to the end or beginning of the current CTCSS / DCS items.
 
 #### Tx CSS (CTCSS or DCS)<!-- linebreak -->
 
@@ -2091,7 +2091,7 @@ Options are:
 #### Accepting and saving the changes to the channel<!-- linebreak -->
 
 - Pressing the **Green** menu key confirms the changes.
-- Pressing **Function** + **Green** saves the settings to the codeplug, or in the case of the VFO the changes are saved to the non-volatile settings.
+- Pressing **SK2** + **Green** saves the settings to the codeplug, or in the case of the VFO the changes are saved to the non-volatile settings.
 - Pressing the **Red** menu key closes the menu without making any changes to the channel.
 
 
@@ -2338,7 +2338,7 @@ In DMR mode, either in the VFO or the Channel screen:
 
 To return to normal Talkgroup operation, there are 3 methods:
 
-1. Press **Function** + **Red** menu key.
+1. Press **SK2** + **Red** menu key.
 2. Press the **Left** or **Right** arrow key which will load the next TG in the TG list assigned to the VFO or the Channel.
 3. Press the **Hash** (**#**) key, then enter a TG number and press the **Green** menu key.
 
@@ -2366,7 +2366,7 @@ The caller's ID or Name is shown *e.g.*:
 
 ![private call screen](media/private-call.png)
 
-Once the Private Call is complete, you can return to the *Talkgroup* you were on prior to accepting the Private Call, by pressing **Function** + **Red** menu key. (or by any of the methods described in the section on making a **Private Call**).
+Once the Private Call is complete, you can return to the *Talkgroup* you were on prior to accepting the Private Call, by pressing **SK2** + **Red** menu key. (or by any of the methods described in the section on making a **Private Call**).
 
 
 <div style="page-break-after: always; break-after: page;"></div>
