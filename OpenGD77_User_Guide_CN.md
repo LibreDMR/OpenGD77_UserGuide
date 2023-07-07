@@ -2,7 +2,7 @@
 
 # OpenGD77 用户指南
 
-## 适用于 OpenGD77 / OpenGD77S / OpenDM1801\* / OpenDM1801A\* / OpenRD5R / MD-9600 (RT-90) / MD-UV380 (RT-3S) / MD-UV390
+## 适用于 OpenGD77 / OpenGD77S / OpenDM1801\* / OpenDM1801A\* / OpenRD5R / MD-9600 (RT-90) / MD-UV380 (RT-3S) / MD-UV390 / DM-1701 / RT-84
 
 翻译：BH4ESK BH4FTP  
 校对：BG5IPF BG7XTQ
@@ -16,211 +16,220 @@
 ## 目录
 
 - [OpenGD77 用户指南](#opengd77-用户指南)
-  - [适用于 OpenGD77 / OpenGD77S / OpenDM1801\* / OpenDM1801A\* / OpenRD5R / MD-9600 (RT-90) / MD-UV380 (RT-3S) / MD-UV390](#适用于-opengd77--opengd77s--opendm1801--opendm1801a--openrd5r--md-9600-rt-90--md-uv380-rt-3s--md-uv390)
+  - [适用于 OpenGD77 / OpenGD77S / OpenDM1801\* / OpenDM1801A\* / OpenRD5R / MD-9600 (RT-90) / MD-UV380 (RT-3S) / MD-UV390 / DM-1701 / RT-84](#适用于-opengd77--opengd77s--opendm1801--opendm1801a--openrd5r--md-9600-rt-90--md-uv380-rt-3s--md-uv390--dm-1701--rt-84)
   - [目录](#目录)
-  - [简介](#简介)
-    - [下载链接与其他资源](#下载链接与其他资源)
-  - [安装](#安装)
-    - [将数据传输到电台](#将数据传输到电台)
-  - [电台配置文件（Codeplug）兼容性](#电台配置文件codeplug兼容性)
-  - [不同电台之间的固件差异](#不同电台之间的固件差异)
-  - [主屏幕（频率与信道界面）](#主屏幕频率与信道界面)
-    - [在模拟与数字模式之间切换](#在模拟与数字模式之间切换)
-    - [在 DMR 模式下切换时隙](#在-dmr-模式下切换时隙)
-    - [在 FM 模式下更改带宽](#在-fm-模式下更改带宽)
-    - [控制发射功率](#控制发射功率)
-    - [信号强度条（S 表）](#信号强度条s-表)
-    - [信道界面的特殊功能](#信道界面的特殊功能)
-      - [在当前区域内切换信道](#在当前区域内切换信道)
-      - [改变区域](#改变区域)
-      - [显示信道频率](#显示信道频率)
-      - [显示 FM 模式具体信道信息](#显示-fm-模式具体信道信息)
-      - [中继倒频功能](#中继倒频功能)
-      - [信道界面快捷菜单](#信道界面快捷菜单)
-        - [复制一个信道配置至 VFO（Channel --\> VFO）](#复制一个信道配置至-vfochannel----vfo)
-        - [将 VFO 信息写入当前信道（VFO --\> Channel）](#将-vfo-信息写入当前信道vfo----channel)
+  - [简介（Introduction）](#简介introduction)
+    - [下载链接与其他资源（Download links and other resources）](#下载链接与其他资源download-links-and-other-resources)
+  - [安装（Installation）](#安装installation)
+    - [将数据传输到电台（Transferring data to Radio）](#将数据传输到电台transferring-data-to-radio)
+  - [电台配置文件兼容性（Codeplug compatibility）](#电台配置文件兼容性codeplug-compatibility)
+  - [不同电台之间的固件差异（Variations between different supported radios）](#不同电台之间的固件差异variations-between-different-supported-radios)
+  - [主屏幕（频率与信道界面）（Main screens (VFO and Channel modes)）](#主屏幕频率与信道界面main-screens-vfo-and-channel-modes)
+    - [在模拟与数字模式之间切换（Changing between FM mode and DMR mode）](#在模拟与数字模式之间切换changing-between-fm-mode-and-dmr-mode)
+    - [在 DMR 模式下切换时隙（Changing Timeslot in DMR mode）](#在-dmr-模式下切换时隙changing-timeslot-in-dmr-mode)
+    - [在 FM 模式下更改带宽（Changing bandwidth in FM mode）](#在-fm-模式下更改带宽changing-bandwidth-in-fm-mode)
+    - [控制发射功率（Controlling Tx power）](#控制发射功率controlling-tx-power)
+    - [信号强度条（S 表）（Signal strength bar graph）](#信号强度条s-表signal-strength-bar-graph)
+    - [信道界面的特殊功能（Channel screen specific functionality）](#信道界面的特殊功能channel-screen-specific-functionality)
+      - [在当前区域内切换信道（Changing channels within the current zone）](#在当前区域内切换信道changing-channels-within-the-current-zone)
+      - [改变区域（Changing zones）](#改变区域changing-zones)
+      - [显示信道频率）（Displaying the channel Frequency）](#显示信道频率displaying-the-channel-frequency)
+      - [显示 FM 模式具体信道信息（Displaying FM specific channel information）](#显示-fm-模式具体信道信息displaying-fm-specific-channel-information)
+      - [中继倒频功能（Reverse repeater operation）](#中继倒频功能reverse-repeater-operation)
+      - [信道界面快捷菜单（Channel Quick Menu）](#信道界面快捷菜单channel-quick-menu)
+        - [复制一个信道配置至 VFO（Channel --\> VFO）（Copying a channel to VFO）](#复制一个信道配置至-vfochannel----vfocopying-a-channel-to-vfo)
+        - [将 VFO 信息写入当前信道（VFO --\> Channel）（Read the VFO into the current channel）](#将-vfo-信息写入当前信道vfo----channelread-the-vfo-into-the-current-channel)
         - [过滤器设置（Filter）](#过滤器设置filter)
-      - [频率界面快捷菜单](#频率界面快捷菜单)
-        - [选择 VFO A/B](#选择-vfo-ab)
-        - [交换接收与发射频率（Tx \<--\> Rx）](#交换接收与发射频率tx----rx)
-        - [将接收频率复制到发射频率（Rx --\> Tx）](#将接收频率复制到发射频率rx----tx)
-        - [将发射频率复制到接收频率（Tx --\> Rx）](#将发射频率复制到接收频率tx----rx)
+      - [频率界面快捷菜单（VFO Quick Menu）](#频率界面快捷菜单vfo-quick-menu)
+        - [选择 VFO A/B（VFO selection A or B）](#选择-vfo-abvfo-selection-a-or-b)
+        - [交换接收与发射频率（Tx \<--\> Rx）（Exchange the TX and RX frequencies）](#交换接收与发射频率tx----rxexchange-the-tx-and-rx-frequencies)
+        - [将接收频率复制到发射频率（Rx --\> Tx）（Copy the RX frequency to the TX frequency）](#将接收频率复制到发射频率rx----txcopy-the-rx-frequency-to-the-tx-frequency)
+        - [将发射频率复制到接收频率（Tx --\> Rx）（Copy Tx frequency to the Rx frequency）](#将发射频率复制到接收频率tx----rxcopy-tx-frequency-to-the-rx-frequency)
         - [过滤器（Filter）（_仅限 DMR 模式_）](#过滤器filter仅限-dmr-模式)
-        - [存储 VFO 配置至新建信道（VFO --\> New Chan）](#存储-vfo-配置至新建信道vfo----new-chan)
-        - [哑音扫描（Tone Scan）（仅限 FM 模式）](#哑音扫描tone-scan仅限-fm-模式)
-    - [与 DMR 有关的一些设置](#与-dmr-有关的一些设置)
-      - [时隙选择](#时隙选择)
-      - [DMR ID、呼号与姓名显示](#dmr-id呼号与姓名显示)
-      - [主叫别名显示](#主叫别名显示)
-      - [从接收组列表中选择通话组](#从接收组列表中选择通话组)
-      - [为联系人或通话组指定时隙](#为联系人或通话组指定时隙)
-      - [通话组反色显示](#通话组反色显示)
-      - [手动输入通话组代码](#手动输入通话组代码)
-      - [输入单呼号码](#输入单呼号码)
-      - [选择联系人](#选择联系人)
-      - [临时修改您的 DMR ID](#临时修改您的-dmr-id)
-    - [与 FM 有关的一些设置](#与-fm-有关的一些设置)
-      - [FM 和窄带 FM](#fm-和窄带-fm)
-      - [哑音设置](#哑音设置)
-      - [静噪](#静噪)
-      - [1750Hz 中继操作音](#1750hz-中继操作音)
-      - [双音多频（DTMF）发射](#双音多频dtmf发射)
-      - [双音多频（DTMF）序列输入与传输](#双音多频dtmf序列输入与传输)
-    - [与 VFO 有关的一些设置](#与-vfo-有关的一些设置)
-      - [频率步进](#频率步进)
-      - [使用数字键输入频率](#使用数字键输入频率)
-      - [单独调整发射频率](#单独调整发射频率)
-      - [频谱扫描](#频谱扫描)
-      - [VFO 双守](#vfo-双守)
-      - [快速切换 VFO A 或 VFO B](#快速切换-vfo-a-或-vfo-b)
-  - [监听模式](#监听模式)
-  - [发射](#发射)
+        - [存储 VFO 配置至新建信道（VFO to New Channel）](#存储-vfo-配置至新建信道vfo-to-new-channel)
+        - [FM 模式哑音扫描（Tone Scan for CTCSS or DCS tone in FM）](#fm-模式哑音扫描tone-scan-for-ctcss-or-dcs-tone-in-fm)
+    - [与 DMR 有关的一些设置（DMR specific functionality (_VFO and Channel screens_)）](#与-dmr-有关的一些设置dmr-specific-functionality-vfo-and-channel-screens)
+      - [时隙选择（Timeslot selection）](#时隙选择timeslot-selection)
+      - [DMR ID、呼号与姓名显示（DMR ID callsign and name display）](#dmr-id呼号与姓名显示dmr-id-callsign-and-name-display)
+      - [主叫别名显示（Talker Alias display）](#主叫别名显示talker-alias-display)
+      - [从通话组列表中选择通话组（Talkgroup selection from the TG list）](#从通话组列表中选择通话组talkgroup-selection-from-the-tg-list)
+      - [为联系人或通话组指定时隙（Assignment of Timeslot to Digital Contact TalkGroup）](#为联系人或通话组指定时隙assignment-of-timeslot-to-digital-contact-talkgroup)
+      - [通话组反色显示（TalkGroup displayed in inverse video）](#通话组反色显示talkgroup-displayed-in-inverse-video)
+      - [手动输入通话组代码（Manual TalkGroup number entry）](#手动输入通话组代码manual-talkgroup-number-entry)
+      - [输入单呼号码（Private Call number entry）](#输入单呼号码private-call-number-entry)
+      - [选择联系人（Digital Contact selection）](#选择联系人digital-contact-selection)
+      - [临时修改您的 DMR ID（Station DMR ID number entry）](#临时修改您的-dmr-idstation-dmr-id-number-entry)
+    - [与 FM 有关的一些设置（FM specific functionality (_VFO and Channel screens_)）](#与-fm-有关的一些设置fm-specific-functionality-vfo-and-channel-screens)
+      - [FM 和窄带 FM（FM and FM Narrow）](#fm-和窄带-fmfm-and-fm-narrow)
+      - [哑音设置（CTCSS Tone or DCS Code）](#哑音设置ctcss-tone-or-dcs-code)
+      - [静噪（Squelch）](#静噪squelch)
+      - [1750Hz 中继操作音（1750Hz Tone for repeater operation）](#1750hz-中继操作音1750hz-tone-for-repeater-operation)
+      - [双音多频发射（DTMF tone transmission）](#双音多频发射dtmf-tone-transmission)
+      - [双音多频序列输入与发射（DTMF sequence entry and transmission）](#双音多频序列输入与发射dtmf-sequence-entry-and-transmission)
+    - [与 VFO 有关的一些设置（VFO specific functionality）](#与-vfo-有关的一些设置vfo-specific-functionality)
+      - [频率步进（Frequency change up/down step）](#频率步进frequency-change-updown-step)
+      - [使用数字键输入频率（Numerical frequency entry）](#使用数字键输入频率numerical-frequency-entry)
+      - [单独调整发射频率（To adjust the TX frequency, independent of the RX frequency）](#单独调整发射频率to-adjust-the-tx-frequency-independent-of-the-rx-frequency)
+      - [频谱扫描（Spectrum sweep scan）](#频谱扫描spectrum-sweep-scan)
+      - [VFO 双守（VFO Dual Watch）](#vfo-双守vfo-dual-watch)
+      - [快速切换 VFO A 或 VFO B（Easily changing from VFO A to VFO B, and vice versa）](#快速切换-vfo-a-或-vfo-beasily-changing-from-vfo-a-to-vfo-b-and-vice-versa)
+  - [监听模式（Monitor mode）](#监听模式monitor-mode)
+  - [发射（Transmitting）](#发射transmitting)
     - [超时警告音（Timeout warning beep）](#超时警告音timeout-warning-beep)
     - [超时定时器（TOT）](#超时定时器tot)
-  - [扫描](#扫描)
-    - [信道扫描](#信道扫描)
-    - [频率扫描](#频率扫描)
-  - [其他界面](#其他界面)
-    - [锁屏界面](#锁屏界面)
-    - [文字输入界面](#文字输入界面)
-  - [控制按键与按钮](#控制按键与按钮)
-  - [菜单系统](#菜单系统)
-  - [快捷键](#快捷键)
-  - [主菜单](#主菜单)
+  - [扫描（Scanning）](#扫描scanning)
+    - [信道扫描（Channel scanning）](#信道扫描channel-scanning)
+    - [频率扫描（VFO scanning）](#频率扫描vfo-scanning)
+  - [其他界面（Other screens）](#其他界面other-screens)
+    - [锁屏界面（Lock screen）](#锁屏界面lock-screen)
+    - [文字输入界面（Text entry）](#文字输入界面text-entry)
+  - [控制按键与按钮（The control keys and buttons）](#控制按键与按钮the-control-keys-and-buttons)
+  - [菜单系统（The Menu System）](#菜单系统the-menu-system)
+  - [快捷键（QuickKeys）](#快捷键quickkeys)
+  - [主菜单（Main Menu）](#主菜单main-menu)
     - [区域（Zone）](#区域zone)
     - [信号强度指示器（RSSI）](#信号强度指示器rssi)
-    - [电台信息](#电台信息)
-      - [电池电压和百分比](#电池电压和百分比)
-      - [时钟](#时钟)
-      - [日期界面](#日期界面)
-      - [位置界面](#位置界面)
-      - [MCU 温度](#mcu-温度)
-      - [电池电压历史](#电池电压历史)
-    - [联系人](#联系人)
-      - [DMR 联系人](#dmr-联系人)
-      - [FM DMTF 联系人](#fm-dmtf-联系人)
-      - [新联系人](#新联系人)
+    - [电台信息（Radio info）](#电台信息radio-info)
+      - [电池电压和百分比（Battery voltage and percentage）](#电池电压和百分比battery-voltage-and-percentage)
+      - [时钟（Time clock）](#时钟time-clock)
+      - [日期界面（Date screen）](#日期界面date-screen)
+      - [位置界面（Location screen）](#位置界面location-screen)
+      - [MCU 温度（CPU temperature）](#mcu-温度cpu-temperature)
+      - [电池电压历史（Battery voltage history）](#电池电压历史battery-voltage-history)
+    - [联系人（Contacts）](#联系人contacts)
+      - [DMR 联系人（DMR Contacts）](#dmr-联系人dmr-contacts)
+      - [FM DTMF 联系人（FM DTMF Contacts）](#fm-dtmf-联系人fm-dtmf-contacts)
+      - [新联系人（New Contact）](#新联系人new-contact)
     - [回溯界面（Last Heard）](#回溯界面last-heard)
-    - [固件信息（Firmware Info）和致谢名单](#固件信息firmware-info和致谢名单)
+    - [固件信息和致谢名单（Firmware Info and credits）](#固件信息和致谢名单firmware-info-and-credits)
     - [选项设置（General Options）](#选项设置general-options)
       - [按键长按时间（Key long）](#按键长按时间key-long)
       - [按键重复速度（Key rpt）](#按键重复速度key-rpt)
       - [热点模式（Hotspot）](#热点模式hotspot)
-      - [温度校准](#温度校准)
-      - [电池校准](#电池校准)
-      - [时间校准](#时间校准)
-      - [省电等级](#省电等级)
-      - [睡眠](#睡眠)
-      - [安全开机](#安全开机)
-      - [自动关机（APO）](#自动关机apo)
-      - [带有射频的自动关机](#带有射频的自动关机)
-      - [卫星跟随模式](#卫星跟随模式)
-    - [无线电选项](#无线电选项)
-      - [频段限制](#频段限制)
-      - [过滤器保持时间](#过滤器保持时间)
-      - [扫描延迟](#扫描延迟)
-      - [扫描驻留](#扫描驻留)
-      - [扫描模式](#扫描模式)
-      - [开机扫描](#开机扫描)
-      - [UHF 静噪](#uhf-静噪)
-      - [220 静噪](#220-静噪)
-      - [VHF 静噪](#vhf-静噪)
-      - [PTT 保持](#ptt-保持)
-      - [主叫别名发射](#主叫别名发射)
-      - [允许单呼](#允许单呼)
-      - [用户功率](#用户功率)
-      - [DMR crc](#dmr-crc)
+      - [温度校准（Temp Cal）](#温度校准temp-cal)
+      - [电池校准（Batt Cal）](#电池校准batt-cal)
+      - [时间校准（Time Cal）](#时间校准time-cal)
+      - [省电等级（Eco Level）](#省电等级eco-level)
+      - [睡眠（Suspend）](#睡眠suspend)
+      - [安全开机（Safe Power On）](#安全开机safe-power-on)
+      - [自动关机（Auto Power Off）](#自动关机auto-power-off)
+      - [带有射频的自动关机（APO with RF）](#带有射频的自动关机apo-with-rf)
+      - [卫星跟随模式（Satellite follow mode）](#卫星跟随模式satellite-follow-mode)
+      - [全球定位系统（GPS）](#全球定位系统gps)
+    - [无线电选项（Radio Options）](#无线电选项radio-options)
+      - [频段限制（Band Limits）](#频段限制band-limits)
+      - [过滤器保持时间（Filter time）](#过滤器保持时间filter-time)
+      - [扫描延迟（Scan delay）](#扫描延迟scan-delay)
+      - [扫描驻留（Scan dwell）](#扫描驻留scan-dwell)
+      - [扫描模式（Scan mode）](#扫描模式scan-mode)
+      - [开机扫描（Scan on Boot）](#开机扫描scan-on-boot)
+      - [_xxx_ 静噪（_xxx_ Squelch）](#xxx-静噪xxx-squelch)
+      - [PTT 保持（PTT Latch）](#ptt-保持ptt-latch)
+      - [允许单呼（Allow PC）](#允许单呼allow-pc)
+      - [用户功率（User Power）](#用户功率user-power)
+      - [DMR 循环冗余检查（DMR crc）](#dmr-循环冗余检查dmr-crc)
     - [显示设置（Display Options）](#显示设置display-options)
       - [背光亮度（Brightness）](#背光亮度brightness)
       - [待机亮度（Min Bright）](#待机亮度min-bright)
       - [对比度（Contrast）](#对比度contrast)
-      - [背光模式（Display mode）](#背光模式display-mode)
+      - [背光模式（Mode）](#背光模式mode)
       - [背光延时（Timeout）](#背光延时timeout)
-      - [显示颜色模式（Colour mode）](#显示颜色模式colour-mode)
+      - [显示颜色模式（Screen）](#显示颜色模式screen)
       - [联系人显示顺序（Order）](#联系人显示顺序order)
       - [联系人显示方式（Contact）](#联系人显示方式contact)
-      - [电量单位](#电量单位)
-      - [信息](#信息)
-      - [LED 灯](#led-灯)
-      - [时区](#时区)
-      - [时间显示格式](#时间显示格式)
+      - [电量（单位）](#电量单位)
+      - [信息（Info）](#信息info)
+      - [LED 灯（LEDs）](#led-灯leds)
+      - [时区（Timezone）](#时区timezone)
+      - [时间显示格式（Time (display format)）](#时间显示格式time-display-format)
     - [声音设置（Sound Options）](#声音设置sound-options)
       - [超时警告（Timeout beep）](#超时警告timeout-beep)
       - [警告音量（Beep volume）](#警告音量beep-volume)
       - [DMR 提示音（DMR Beep）](#dmr-提示音dmr-beep)
-      - [接收提示音](#接收提示音)
-      - [通话者](#通话者)
+      - [接收提示音（RX Beep）](#接收提示音rx-beep)
+      - [通话者（Talker）](#通话者talker)
       - [DMR 麦克风增益（DMR mic）](#dmr-麦克风增益dmr-mic)
       - [FM 麦克风增益（FM mic）](#fm-麦克风增益fm-mic)
       - [VOX 阈值（VOX threshold）](#vox-阈值vox-threshold)
       - [VOX 延迟（VOX Tail）](#vox-延迟vox-tail)
-      - [提示音](#提示音)
-      - [DMR 接收自动增益控制](#dmr-接收自动增益控制)
-      - [咔嗒声抑制](#咔嗒声抑制)
-    - [校准界面](#校准界面)
-      - [频率校准](#频率校准)
-      - [功率校准](#功率校准)
-      - [功率调整](#功率调整)
-      - [频率调整](#频率调整)
-      - [工厂校准](#工厂校准)
-      - [校准步骤](#校准步骤)
+      - [提示音（Prompt）](#提示音prompt)
+      - [DMR 接收自动增益控制（DMR Rx AGC）](#dmr-接收自动增益控制dmr-rx-agc)
+      - [咔嗒声抑制（Click suppr）](#咔嗒声抑制click-suppr)
+    - [校准界面（Calibration screen）](#校准界面calibration-screen)
+      - [频率校准（Cal Freq）](#频率校准cal-freq)
+      - [功率校准（Cal Power）](#功率校准cal-power)
+      - [功率调整（Power Adjust）](#功率调整power-adjust)
+      - [频率调整（Freq Adjust）](#频率调整freq-adjust)
+      - [工厂校准（Factory Cal）](#工厂校准factory-cal)
+      - [校准步骤（Calibration Procedure）](#校准步骤calibration-procedure)
+    - [主题选项（Theme Options）](#主题选项theme-options)
+      - [颜色选择器（Colour Picker）](#颜色选择器colour-picker)
+      - [可用主题项目（Here is the detailed list of the theme items）](#可用主题项目here-is-the-detailed-list-of-the-theme-items)
     - [信道详细设置（Channel Details）](#信道详细设置channel-details)
-      - [信道名称](#信道名称)
+      - [信道名称（Channel name）](#信道名称channel-name)
       - [接收频率（RX）](#接收频率rx)
       - [发射频率（TX）](#发射频率tx)
       - [模式（Mode）](#模式mode)
       - [DMR ID](#dmr-id)
       - [色码（Color Code）](#色码color-code)
       - [时隙（Timeslot）](#时隙timeslot)
-      - [接收/发射组（Tx/RX Grp）](#接收发射组txrx-grp)
-      - [发射哑音（Tx CTCSS or DCS）](#发射哑音tx-ctcss-or-dcs)
-      - [接收哑音（Rx CTCSS or DCS）](#接收哑音rx-ctcss-or-dcs)
+      - [通话组列表（TG Lst）](#通话组列表tg-lst)
+      - [联系人（Contact）](#联系人contact)
+      - [接收哑音（Rx CSS (CTCSS or DCS)）](#接收哑音rx-css-ctcss-or-dcs)
+      - [发射哑音（Tx CSS (CTCSS or DCS)）](#发射哑音tx-css-ctcss-or-dcs)
       - [带宽（Bandwidth）](#带宽bandwidth)
       - [步进（Step）](#步进step)
       - [超时定时器（TOT）](#超时定时器tot-1)
+      - [仅接收（Rx Only）](#仅接收rx-only)
       - [跳过区域（Zone Skip）](#跳过区域zone-skip)
       - [跳过信道（All Skip）](#跳过信道all-skip)
       - [声控发射（VOX）](#声控发射vox)
-      - [信道功率](#信道功率)
-      - [信道静噪](#信道静噪)
-      - [信道提示音](#信道提示音)
-      - [信道省电](#信道省电)
-      - [保存对信道的更改](#保存对信道的更改)
-    - [语言](#语言)
-    - [卫星界面](#卫星界面)
-    - [GPS 界面](#gps-界面)
-  - [发起或接收单呼](#发起或接收单呼)
-    - [想要发起单呼的话](#想要发起单呼的话)
-    - [当接收到一个单呼时](#当接收到一个单呼时)
+      - [信道功率（Ch Power）](#信道功率ch-power)
+      - [信道静噪（Squelch (Channel)）](#信道静噪squelch-channel)
+      - [信道提示音（Beep (Channel)）](#信道提示音beep-channel)
+      - [信道省电（Eco (Channel)）](#信道省电eco-channel)
+      - [主叫别名发射 时隙*x*（TA Tx TS*x*）](#主叫别名发射-时隙xta-tx-tsx)
+      - [保存对信道的更改（Accepting and saving the changes to the channel）](#保存对信道的更改accepting-and-saving-the-changes-to-the-channel)
+    - [语言界面（Language Screen）](#语言界面language-screen)
+    - [卫星界面（Satellite Screen）](#卫星界面satellite-screen)
+      - [极坐标图（Polar view）](#极坐标图polar-view)
+      - [卫星独立预测界面（Satellite individual predictions screen）](#卫星独立预测界面satellite-individual-predictions-screen)
+      - [卫星实时数据界面（Satellite live data screen）](#卫星实时数据界面satellite-live-data-screen)
+      - [卫星闹钟（Satellite alarm）](#卫星闹钟satellite-alarm)
+      - [CPS 集成（CPS Integration）](#cps-集成cps-integration)
+      - [技术说明（Technical notes）](#技术说明technical-notes)
+    - [GPS 界面（GPS Screen）](#gps-界面gps-screen)
+  - [发起或接收单呼（Making and receiving DMR Private Calls）](#发起或接收单呼making-and-receiving-dmr-private-calls)
+    - [想要发起单呼的话（To make a Private Call）](#想要发起单呼的话to-make-a-private-call)
+    - [当接收到一个单呼时（To Receive a Private Call）](#当接收到一个单呼时to-receive-a-private-call)
   - [热点模式（Hotspot mode）](#热点模式hotspot-mode)
-  - [重设电台各项设置](#重设电台各项设置)
-  - [MD-730 的操作方式](#md-730-的操作方式)
-    - [MD730 信道/通话组模式](#md730-信道通话组模式)
-    - [MD730 扫描模式](#md730-扫描模式)
-    - [MD730 时隙模式](#md730-时隙模式)
-    - [MD730 色码模式](#md730-色码模式)
-    - [MD730 DMR 过滤模式](#md730-dmr-过滤模式)
-    - [MD730 区域模式](#md730-区域模式)
-    - [MD730 功率模式](#md730-功率模式)
-  - [MD9600 RT90 的操作方式](#md9600-rt90-的操作方式)
-  - [客户编程软件（CPS）](#客户编程软件cps)
-    - [概述](#概述)
-      - [新驱动安装](#新驱动安装)
-      - [OpenGD77 菜单](#opengd77-菜单)
-      - [在您做任何其他事情之前备份](#在您做任何其他事情之前备份)
-      - [读写您的电台配置文件](#读写您的电台配置文件)
-      - [写入 DMR ID 用户数据库](#写入-dmr-id-用户数据库)
-      - [开机铃声](#开机铃声)
-        - [莫尔斯电码开机铃声](#莫尔斯电码开机铃声)
-        - [旋律和音符](#旋律和音符)
-      - [开机图像](#开机图像)
-<!-- /TOC -->
+  - [重设电台各项设置（Resetting the Settings）](#重设电台各项设置resetting-the-settings)
+  - [MD-730 的操作方式（GD-77S operation）](#md-730-的操作方式gd-77s-operation)
+    - [MD730 信道/通话组模式（GD77S Channel / TG mode）](#md730-信道通话组模式gd77s-channel--tg-mode)
+    - [MD730 扫描模式（GD77S Scan mode）](#md730-扫描模式gd77s-scan-mode)
+    - [MD730 时隙模式（GD77S Timeslot mode）](#md730-时隙模式gd77s-timeslot-mode)
+    - [MD730 色码模式（GD77S Color Code mode）](#md730-色码模式gd77s-color-code-mode)
+    - [MD730 DMR 过滤模式（GD77S DMR Filter mode）](#md730-dmr-过滤模式gd77s-dmr-filter-mode)
+    - [MD730 区域模式（GD77S Zone mode）](#md730-区域模式gd77s-zone-mode)
+    - [MD730 功率模式（GD77S Power mode）](#md730-功率模式gd77s-power-mode)
+  - [MD9600 和 RT90 的操作方式（MD-9600 and RT-90 specific）](#md9600-和-rt90-的操作方式md-9600-and-rt-90-specific)
+  - [客户编程软件（CPS software）](#客户编程软件cps-software)
+    - [概述（Overview）](#概述overview)
+      - [新驱动安装（New Driver Installation）](#新驱动安装new-driver-installation)
+      - [OpenGD77 菜单（OpenGD77 Menu）](#opengd77-菜单opengd77-menu)
+      - [在您做任何其他事情之前备份（Backup Before You Do Anything Else）](#在您做任何其他事情之前备份backup-before-you-do-anything-else)
+      - [读写您的电台配置文件（Reading and Writing Your Codeplug）](#读写您的电台配置文件reading-and-writing-your-codeplug)
+      - [写入 DMR ID 用户数据库（Writing DMR IDs -- the User Database）](#写入-dmr-id-用户数据库writing-dmr-ids----the-user-database)
+      - [开机铃声（Boot tune）](#开机铃声boot-tune)
+        - [莫尔斯电码开机铃声（Boot Tune in Morse code）](#莫尔斯电码开机铃声boot-tune-in-morse-code)
+        - [旋律和音符（Melodies and Notes）](#旋律和音符melodies-and-notes)
+      - [开机图像（Boot Image）](#开机图像boot-image)
 
 <div style="page-break-after: always; break-after: page;"></div>
 
 ![](media/OpenGD77-logo.png)
 
-## 简介
+## 简介（Introduction）
 
 本用户指南和固件一样正在开发中。
 
@@ -239,24 +248,24 @@ _请注意 :_
 
 - 隐私与加密功能**将永远不会**被支持，因为对于业余电台使用该功能是非法的行为。在某些国家或地区（例如澳大利亚），由于政府与法律要求，开发者被要求在任何加密系统中植入后门，实际上让开发一个含有加密的系统变得违法或者不可能。
 
-### 下载链接与其他资源
+### 下载链接与其他资源（Download links and other resources）
 
 **二进制固件:**
 
-**GD-77/GD-77S/DM-1801/RD-5R**
+**GD-77 | GD-77S | DM-1801 | DM-1801A | RD-5R**
 <https://www.opengd77.com/downloads/GD77/Latest>
 
-**TYT MD-9600 / Retevis RT-90**
+**特易通 MD-9600 | Retevis RT-90**
 <https://www.opengd77.com/downloads/MD9600/Firmware/Latest>
 
-MD-9600 / RT-90 在生产过程中使用了多种不同的 PLL 和 IF 芯片。
-您需要安装与您的硬件版本匹配的版本，该版本写在电台顶部的 PCB 上，尽管有时 TYT 更改硬件而不更改 PCB 上的版本。
+MD-9600 | RT-90 在生产过程中使用了多种不同的 PLL 和 IF 芯片。
+您需要安装与您的硬件版本匹配的版本，该版本写在电台顶部的 PCB 上，尽管有时 特易通 更改硬件而不更改 PCB 上的版本。
 对于硬件版本为 4A 的电台，请使用版本 5 固件。
 对于在 PCB 上写有硬件版本 2 的非常旧的电台，可能需要加载版本 1 固件。
 
 基本上，如果您的电台无法接收或发射，请尝试使用不同的固件硬件版本。
 
-**TYT MD-UV380 / Retevis RT-3S**
+**特易通 MD-UV380 | Retevis RT-3S | 宝锋 DM-1701 | Retevis RT-84**
 <https://www.opengd77.com/downloads/MDUV380/Firmware/Latest>
 
 请注意：名称中带有 JA 的版本是为日本用户本地化的，仅支持日语和英语。
@@ -272,7 +281,7 @@ MD-9600 / RT-90 在生产过程中使用了多种不同的 PLL 和 IF 芯片。
 
 <div style="page-break-after: always; break-after: page;"></div>
 
-## 安装
+## 安装（Installation）
 
 本固件可以被安装在以下几部电台：
 
@@ -281,18 +290,19 @@ MD-9600 / RT-90 在生产过程中使用了多种不同的 PLL 和 IF 芯片。
 - 宝锋 DM-1801（仅限第 1 版硬件） （又名 宝锋 DM-860）
 - 宝锋 DM-1801A（仅限第 1 版硬件）
 - 宝锋 DM-5R Tier II （又名 宝锋 RD-5R）
-- 特易通 MD-9600 / Retevis RT-90
-- 特易通 MD-UV380 / Retevis RT-3S
+- 特易通 MD-9600 | Retevis RT-90
+- 特易通 MD-UV380 | Retevis RT-3S | 宝锋 DM-1701 | Retevis RT-84
 
 固件文件必须使用 OpenGD77 CPS 中的“Extras/Firmware Loader”（“附加/固件加载程序”）菜单安装。原厂提供的固件更新工具不能用于刷入 OpenGD77 固件。
 
-安装本固件的风险由用户自行承担。**请在刷入固件后立即使用 OpenGD77 CPS 对电台进行完整备份**（详见*[备份](#在您做任何其他事情之前备份)*，如果遇到任何问题，原厂固件通常可以被重新刷入。
+安装本固件的风险由用户自行承担。**请在刷入固件后立即使用 OpenGD77 CPS 对电台进行完整备份**（详见*[备份](#在您做任何其他事情之前备份backup-before-you-do-anything-else)*，如果遇到任何问题，原厂固件通常可以被重新刷入。
 
 _请注意 :_
-- *该固件与宝锋 DM-1801 的新 2022 版本或 DM-1801A 不兼容，因为其使用了完全不同的内部硬件和电子设备。*
-- 原厂提供的 CPS 软件与本固件不兼容，请使用 **OpenGD77 CPS**。它可以从本指南的[1.1 章节处](#下载链接与其他资源)下载。包括宝锋、特易通、Retevis 和其他支持的电台必须使用OpenGD77 CPS。
 
-### 将数据传输到电台
+- _该固件与宝锋 DM-1801 的新 2022 版本或 DM-1801A 不兼容，因为其使用了完全不同的内部硬件和电子设备。_
+- 原厂提供的 CPS 软件与本固件不兼容，请使用 **OpenGD77 CPS**。它可以从本指南的[1.1 章节处](#下载链接与其他资源download-links-and-other-resources)下载。包括宝锋、特易通、Retevis 和其他支持的电台必须使用 OpenGD77 CPS。
+
+### 将数据传输到电台（Transferring data to Radio）
 
 为了安装固件、读写电台配置文件、写入卫星数据、语音提示和 DMR ID 数据库，您必须使用 CPS。
 
@@ -314,26 +324,26 @@ _请注意 :_
 
       - 按住橙色 **S1**（Call）和黑色 Fn（**Moni** 或 **S2**）按键（PTT 两侧的按键）。
 
-    - TYT MD-9600 / Retevis RT-90
+    - 特易通 MD-9600 | Retevis RT-90
 
-      - 按住绿色电源按钮和橙色按钮，同时为电台提供 12V 电源。注意：更新 OpenGD77 固件时不需要断开电源并重新连接。
+      - 按住绿色电源按键和橙色按键，同时为电台提供 12V 电源。注意：更新 OpenGD77 固件时不需要断开电源并重新连接。
 
-    - TYT MD-UV380 / Retevis RT-3S
+    - 特易通 MD-UV380 | Retevis RT-3S | 宝锋 DM-1701 | Retevis RT-84
 
-      - 按住电台侧面顶部的 2 个按钮（**S1** 和 PTT）并打开电台。
+      - 按住电台侧面顶部的 2 个按键（**S1** 和 PTT）并打开电台。
 
 ![按键布局](media/PTT-layout.png)<!-- { width=420 } -->
 
 <div style="page-break-after: always; break-after: page;"></div>
 - 此时 LCD 屏幕将不显示任何内容。手持电台的 LED 将亮起或闪烁。
 
-- 对于 GD-77/GD-77S/DM-1801 和 DM-5R，不需要安装驱动程序。
+- 对于 GD-77 | GD-77S | DM-1801 | DM-1801A 和 DM-5R，不需要安装驱动程序。
   对于所有其他电台，需要安装 STM DFUSe 驱动程序。如果 Windows 没有自动安装驱动程序，您可能需要使用 Windows 设备管理器来查找并安装正确的驱动程序。
 
 - 选择电台类型
   ![固件加载器选择电台类型](media/cps_radio_type_menu.png)
 
-- 固件可从 [CPS](#客户编程软件cps) 中的 Extras 菜单轻松刷入。  
+- 固件可从 [CPS](#客户编程软件cps-software) 中的 Extras 菜单轻松刷入。  
   ![固件加载器菜单访问](media/Firmware_loader-01.png)<!-- { width=400 } -->
 
   - 选择您的电台型号。  
@@ -349,14 +359,14 @@ _请注意 :_
 
   - 点击“Select a file & Update”（选择文件并更新）
 
-  - 选择之前下载的 .bin 固件文件。（最新的文件可以在[1.1 章节处](#下载链接与其他资源)给出的下载位置找到）
+  - 选择之前下载的 .bin 固件文件。（最新的文件可以在[1.1 章节处](#下载链接与其他资源download-links-and-other-resources)给出的下载位置找到）
     所选固件文件将使用官方固件中的数据进行修补，然后刷入电台。
 
   - 刷机完成后，如果电台没有自动重启，请关闭电源并重新打开。
 
 **请注意！ 固件不支持除 GD-77 以外的所有电台使用的原版电台配置文件格式，因此您需要使用 CPS 安装 OpenGD77 格式的电台配置文件，然后才能使用电台的其他功能，VFO 除外（它可以手动更改）**
 
-2.  使用 [OpenGD77 CPS](#客户编程软件cps) 更新电台配置文件（Codeplug）。
+1.  使用 [OpenGD77 CPS](#客户编程软件cps-software) 更新电台配置文件（Codeplug）。
 
 - 此步骤使用串口通信，电台需要正常开机且屏幕处于工作状态。
 
@@ -364,11 +374,11 @@ _请注意 :_
 
   - 它使用串口通信，因此必须安装 OpenGD77 驱动程序。在安装 CPS 软件时将会一同安装。
 
-  - 具体细节详见 [CPS 部分](#客户编程软件cps)。
+  - 具体细节详见 [CPS 部分](#客户编程软件cps-software)。
 
 <div style="page-break-after: always; break-after: page;"></div>
 
-## 电台配置文件（Codeplug）兼容性
+## 电台配置文件兼容性（Codeplug compatibility）
 
 本固件所使用的电台配置文件与官方的略有不同。
 
@@ -376,11 +386,11 @@ _请注意 :_
 
 使用该软件可以将原厂专有的电台配置文件导出至 CSV 格式，然后将这些 CSV 文件导入到 Colin 的工具（OpenGD77 版本）中。
 
-电台配置文件只能使用 [OpenGD77 CPS](#客户编程软件cps) 写入到电台。
+电台配置文件只能使用 [OpenGD77 CPS](#客户编程软件cps-software) 写入到电台。
 
-我们还推荐您重新构建您的电台配置文件，删除频率重复但通话组不同的信道。更多信息请参阅本指南末尾的[为本固件写入信道与通话组](#概述)。
+我们还推荐您重新构建您的电台配置文件，删除频率重复但通话组不同的信道。更多信息请参阅本指南末尾的[为本固件写入信道与通话组](#概述overview)。
 
-## 不同电台之间的固件差异
+## 不同电台之间的固件差异（Variations between different supported radios）
 
 不是所有受支持的电台都有相同的按键数或屏幕大小，因此操作这些电台会与操作特易通 MD760 有些不同之处。
 
@@ -388,27 +398,31 @@ _请注意 :_
 
 - 特易通 MD-760（又名 Radioddity GD-77），在 PTT 下方有 2 个按键。**黑色**按键在又称为**SK1**，**蓝色**按键称为**SK2**，在本手册中也称其为**功能**按键。 此电台顶部还有一个**橙色**按键。
 
-- 宝锋 DM-5R / RD-5R 的硬件不支持在电台发射时通过 USB 进行通讯，所以热点模式在这部电台上**无法**使用。
+- 宝锋 DM-5R | RD-5R 的硬件不支持在电台发射时通过 USB 进行通讯，所以热点模式在这部电台上**无法**使用。
 
-- 宝锋 DM-5R / RD-5R 没有左右方向键，由 **A/B** 和 **Band** 按键代替**左**方向键和**右**方向键。
+- 宝锋 DM-5R | RD-5R 没有左右方向键，由 **A/B** 和 **Band** 按键代替**左**方向键和**右**方向键。
 
-- 宝锋 DM-5R / RD-5R 没有橙色按键，该功能由**长按**橙色的 **MR/VFO** 代替。
+- 宝锋 DM-5R | RD-5R 没有橙色按键，该功能由**长按**橙色的 **MR/VFO** 代替。
 
-- 宝锋 DM-5R / RD-5R 有两个侧键，但是其位置与 MD760 和 DM1801 不同，位于 PTT 上方的是 MD760 上的**黑色**按键（或称为 **SK1**），位于 PTT 下方的是 MD760 上的 **蓝色**按键（或称为 **SK2**）。
+- 宝锋 DM-5R | RD-5R 有两个侧键，但是其位置与 MD760 和 DM1801 不同，位于 PTT 上方的是 MD760 上的**黑色**按键（或称为 **SK1**），位于 PTT 下方的是 MD760 上的 **蓝色**按键（或称为 **SK2**）。
 
-- 特易通 MD-730 没有键盘或者屏幕，因此操作方式与其他有屏幕的电台完全不同。（_见附录 [MD-730 的操作方式](#md-730的操作方式)_）
+- 特易通 MD-730 没有键盘或者屏幕，因此操作方式与其他有屏幕的电台完全不同。（_见附录 [MD-730 的操作方式](#md-730-的操作方式gd-77s-operation)_）
 
-- 宝锋 DM-1801 / DM-860 有独立的 **MR/VFO** 按键，可用于切换信道/频率模式，而不需要使用**红色**的菜单键。
+- 宝锋 DM-1801 | DM-860 有独立的 **MR/VFO** 按键，可用于切换信道/频率模式，而不需要使用**红色**的菜单键。
 
-- 宝锋 DM-1801 / DM-860 也有独立的 **A/B** 按键，用于切换 VFO A/B，而不需要使用电台顶部的**橙色**按键进入快捷菜单再切换。
+- 宝锋 DM-1801 | DM-860 也有独立的 **A/B** 按键，用于切换 VFO A/B，而不需要使用电台顶部的**橙色**按键进入快捷菜单再切换。
 
-- 特易通 MD-380UV / Retevis RT-3S 没有左右方向键，但在电台顶部有一个旋钮。在频率和信道界面上，上下方向键的功能类似于 GD-77 上的左右方向键。旋钮的功能类似于 GD-77 上的上下方向键，可用于更改频率或信道。在菜单界面中，上下方向键用于上下移动，旋钮用于控制每个设置的值，与 GD-77 上的左右方向键的作用相同。
+- 特易通 MD-UV380 | Retevis RT-3S 没有左右方向键，但在电台顶部有一个旋钮。在频率和信道界面上，上下方向键的功能类似于 GD-77 上的左右方向键。旋钮的功能类似于 GD-77 上的上下方向键，可用于更改频率或信道。
 
-- 特易通 MD-9600 / Retevis RT-90 是一款移动电台，前面板上有按键和麦克风。有关按键映射的信息，请参阅有关 MD-9600 的部分。
+- 宝锋 DM-1701 | Retevis RT-84 没有左右方向键，P1 用作左方向键，P2 用作右方向键。**橙色**按键位于 PTT 上方。
+
+在菜单界面中，上下方向键用于上下移动，旋钮用于控制每个设置的值，与 GD-77 上的左右方向键的作用相同。
+
+- 特易通 MD-9600 | Retevis RT-90 是一款移动电台，前面板上有按键和麦克风。有关按键映射的信息，请参阅有关 MD-9600 的部分。
 
 <div style="page-break-after: always; break-after: page;"></div>
 
-## 主屏幕（频率与信道界面）
+## 主屏幕（频率与信道界面）（Main screens (VFO and Channel modes)）
 
 本固件有两个主屏幕：频率界面（VFO）与信道界面（Channel）。这与原装固件的界面类似，但拥有了更多功能。
 
@@ -446,21 +460,21 @@ _请注意 :_
 
 - VFO 实际上是一种特殊的信道，因此[信道详情](#信道详细设置channel-details)界面同样适用于频率界面。
 
-### 在模拟与数字模式之间切换
+### 在模拟与数字模式之间切换（Changing between FM mode and DMR mode）
 
 按压**蓝色+星号**组合键可以在 FM 和 DMR 模式之间切换，该操作适用于任意频率或信道界面。
 
-### 在 DMR 模式下切换时隙
+### 在 DMR 模式下切换时隙（Changing Timeslot in DMR mode）
 
 在 DMR 模式下，按压**星号**按键以切换*时隙 1*与*时隙 2*并将其设置为临时时隙。
 
 要清除临时时隙，请长按**星号**按键。
 
-### 在 FM 模式下更改带宽
+### 在 FM 模式下更改带宽（Changing bandwidth in FM mode）
 
 - 在 FM 模式下，按压**星号**按键可在 25kHz 和 12.5kHz 带宽之间切换。
 
-### 控制发射功率
+### 控制发射功率（Controlling Tx power）
 
 固件主要有两种控制输出功率的方法：
 
@@ -512,7 +526,7 @@ _请注意 :_
 
 - 在使用 **50mW** 功率**之前**请确认您的功率输出和发射频谱，因为它可能会造成干扰。
 
-### 信号强度条（S 表）
+### 信号强度条（S 表）（Signal strength bar graph）
 
 在 FM 与 DMR 模式中，接收信号的强度表现为横跨屏幕一个条形图（S 表）。
 
@@ -532,39 +546,39 @@ _请注意 :_
 
 <div style="page-break-after: always; break-after: page;"></div>
 
-### 信道界面的特殊功能
+### 信道界面的特殊功能（Channel screen specific functionality）
 
 信道界面显示了当前信道号码（Channel number）与当前区域（Zone）。
 
 ![信道和区域](media/channel-and-zone.png)
 
-#### 在当前区域内切换信道<!-- linebreak -->
+#### 在当前区域内切换信道（Changing channels within the current zone）<!-- linebreak -->
 
 - 按压**上**或**下**方向键可以在当前区域内改变信道，信道号会显示在区域号旁边。
 
-#### 改变区域<!-- linebreak -->
+#### 改变区域（Changing zones）<!-- linebreak -->
 
 - 按压**蓝色+上**或**蓝色+下**组合键分别可以切换上一个/下一个区域。
 
 ![另一个区域](media/changing-zones.png)
 
-#### 显示信道频率<!-- linebreak -->
+#### 显示信道频率）（Displaying the channel Frequency）<!-- linebreak -->
 
 - 在 FM 与 DMR 模式中，您都可以按住**黑色**侧键以显示接收与发射频率。
 
-#### 显示 FM 模式具体信道信息
+#### 显示 FM 模式具体信道信息（Displaying FM specific channel information）
 
 - 在 FM 模式中，按住**黑色**侧键以显示哑音以及静噪设置。
 
-#### 中继倒频功能
+#### 中继倒频功能（Reverse repeater operation）
 
 - 按住**井号**键，频道的发射和接收频率将被交换。信道名称将以反相显示。
 - 即使信道或区域发生变化，电台仍会保持锁定在中继倒频模式。
-- 要退出反向中继器模式，请按住**井号**键。
+- 要退出中继倒频模式，请按住**井号**键。
 
 <div style="page-break-after: always; break-after: page;"></div>
 
-#### 信道界面快捷菜单<!-- linebreak -->
+#### 信道界面快捷菜单（Channel Quick Menu）<!-- linebreak -->
 
 - 按压机器顶部**橙色**按键可以调出信道界面的快捷菜单。在该菜单下**橙色**按键和**绿色**按键具有相同的功能，都可以确认当前选项。
 
@@ -572,16 +586,16 @@ _请注意 :_
 
 _请注意 :_
 
-- 宝锋 DM-5R 和 MD-380UV 没有顶部的**橙色**按键。
+- 宝锋 DM-5R 和 MD-UV380 没有顶部的**橙色**按键。
 
 宝锋 DM-5R 请长按橙色的 **MR/VFO** 按键以访问该快捷菜单。
-特易通 MD-380UV 请按 **SK1+绿色** 组合键。
+特易通 MD-UV380 请按 **SK1+绿色** 组合键。
 
-##### 复制一个信道配置至 VFO（Channel --> VFO）<!-- linebreak -->
+##### 复制一个信道配置至 VFO（Channel --> VFO）（Copying a channel to VFO）<!-- linebreak -->
 
 - 按压**橙色**按键，或按压**绿色**按键以复制当前信道配置至频率界面。
 
-##### 将 VFO 信息写入当前信道（VFO --> Channel）<!-- linebreak -->
+##### 将 VFO 信息写入当前信道（VFO --> Channel）（Read the VFO into the current channel）<!-- linebreak -->
 
 - 按压**橙色**按键，或按压**绿色**按键以确认，按压**红色**按键以取消。
 
@@ -601,7 +615,7 @@ _请注意 :_
 
     - **Ct**：按电台配置文件中的*单呼联系人*过滤
 
-    - **RxG**：按通话组/接收组列表中的*通话组*过滤组呼
+    - **TGL**：按通话组列表中的*通话组*过滤组呼
 
   启用过滤时，屏幕中间上方的“_DMR_”指示器会反色显示。
 
@@ -633,7 +647,7 @@ _请注意 :_
 
   如果在大约 2.5 秒内接收到的时隙上不存在主叫方 ID ，则算法会检查另一个时隙，并在主叫方 ID 数据出现时切换到该时隙。
 
-#### 频率界面快捷菜单<!-- linebreak -->
+#### 频率界面快捷菜单（VFO Quick Menu）<!-- linebreak -->
 
 - 在频率界面，按压机器顶部的**橙色**按键进入快捷菜单，目前该菜单有五个选项。
 
@@ -643,27 +657,27 @@ _请注意 :_
 
 - 宝锋 DM-5R 没有顶部的**橙色**按键，请长按橙色的 **MR/VFO** 按键以访问该快捷菜单。
 
-##### 选择 VFO A/B<!-- linebreak -->
+##### 选择 VFO A/B（VFO selection A or B）<!-- linebreak -->
 
 - 在频率界面，按压两次**橙色**按键以在 **VFO A** 和 **VFO B** 中快速切换。
 
-- 在宝锋 DM-1801 / DM-860 上，该功能由按压一次 **A/B** 按键实现。
+- 在宝锋 DM-1801 | DM-860 上，该功能由按压一次 **A/B** 按键实现。
 
 - 长按**红色**按键也会从 **VFO A** 更改为 **VFO B**，反之亦然。
 
-##### 交换接收与发射频率（Tx <--> Rx）<!-- linebreak -->
+##### 交换接收与发射频率（Tx <--> Rx）（Exchange the TX and RX frequencies）<!-- linebreak -->
 
 该功能即倒频功能。
 
 - 按压**绿色**或**橙色**按键以确认。
 
-##### 将接收频率复制到发射频率（Rx --> Tx）<!-- linebreak -->
+##### 将接收频率复制到发射频率（Rx --> Tx）（Copy the RX frequency to the TX frequency）<!-- linebreak -->
 
 将接收频率复制到发射频率。
 
 - 按压**绿色**或**橙色**按键以确认。
 
-##### 将发射频率复制到接收频率（Tx --> Rx）<!-- linebreak -->
+##### 将发射频率复制到接收频率（Tx --> Rx）（Copy Tx frequency to the Rx frequency）<!-- linebreak -->
 
 将发射频率复制到接收频率。
 
@@ -673,7 +687,7 @@ _请注意 :_
 
 该功能与[上述](#过滤器设置filter)信道模式操作中描述的过滤器相同。
 
-##### 存储 VFO 配置至新建信道（VFO --> New Chan）<!-- linebreak -->
+##### 存储 VFO 配置至新建信道（VFO to New Channel）<!-- linebreak -->
 
 该选项会将当前 VFO 设置存储至一个新建信道。
 
@@ -681,7 +695,7 @@ _请注意 :_
 
 信道也将被添加到信道界面中的当前选择的区域。如果信道界面设置为 “_All Channels_” 区域，则信道将添加到该区域。
 
-##### 哑音扫描（Tone Scan）（仅限 FM 模式）<!-- linebreak -->
+##### FM 模式哑音扫描（Tone Scan for CTCSS or DCS tone in FM）<!-- linebreak -->
 
 该功能可以扫描 **模拟（CTCSS）** 或 **数字（DCS）** 哑音，找到正确的哑音后设置将被存入当前 VFO。
 
@@ -695,15 +709,15 @@ _请注意 :_
 
 <div style="page-break-after: always; break-after: page;"></div>
 
-### 与 DMR 有关的一些设置
+### 与 DMR 有关的一些设置（DMR specific functionality (_VFO and Channel screens_)）
 
 这些功能在频率界面与信道界面都可以使用。
 
-#### 时隙选择<!-- linebreak -->
+#### 时隙选择（Timeslot selection）<!-- linebreak -->
 
 - 按压**星号**按键可以切换*时隙 1*与*时隙 2*。
 
-#### DMR ID、呼号与姓名显示<!-- linebreak -->
+#### DMR ID、呼号与姓名显示（DMR ID callsign and name display）<!-- linebreak -->
 
 当接收到与您设置的*色码*相同的 DMR 信号时，电台会显示该主叫电台的**通话组**与 **DMR ID**。
 
@@ -713,7 +727,7 @@ _请注意 :_
 
 ![呼号与姓名](media/callsign-and-name.png)
 
-#### 主叫别名显示<!-- linebreak -->
+#### 主叫别名显示（Talker Alias display）<!-- linebreak -->
 
 若收到的信号来自 _Brandmeister_ 网络，且主叫 DMR ID 并未记录在电台的 *DMR ID 数据库*中，则会显示由 _Brandmeister_ 发来的**主叫别名**。
 
@@ -731,7 +745,7 @@ _请注意 :_
 
 - 由于**主叫别名**数据是嵌入在 DMR 语音数据帧中一同传送的，呼号通常会先出现，大约半秒后 DMR ID 与其他文字信息才会被接收到并显示。
 
-#### 从接收组列表中选择通话组<!-- linebreak -->
+#### 从通话组列表中选择通话组（Talkgroup selection from the TG list）<!-- linebreak -->
 
 按压**左**方向键或**右**方向键，可以循环浏览**通话组列表**中的*通话组*。在 CPS 中可以为 VFO 或信道分配不同的**通话组列表**。
 
@@ -741,22 +755,22 @@ _请注意 :_
 
 - 如果信道没有分配*通话组列表*，并且联系人也分配为 **None** 或 **N/A**，电台将默认使用 **TG 9**。\*
 
-> \* 译者注：意味着如果你不给某个信道分配任何联系人固件默认会使用TG9。
+> \* 译者注：意味着如果您不给某个信道分配任何联系人固件默认会使用 TG9。
 
 _请注意 :_
 
 - 宝锋 DM-5R 没有左右方向键，由 **A/B** 和 **Band** 按键代替**左**方向键和**右**方向键。
 
-#### 为联系人或通话组指定时隙<!-- linebreak -->
+#### 为联系人或通话组指定时隙（Assignment of Timeslot to Digital Contact TalkGroup）<!-- linebreak -->
 
 CPS 最近新增的一个功能允许您为每个**联系人**或**通话组**指定一个*时隙*。
 
-默认状态下，**信道时隙指定功能**是关闭的。这意味着如果您在通话组列表中按压**左**方向键或**右**方向键选择*通话组*后时，时隙不会改变，仍然是您原来（_在 CPS 中_）分配给信道的*时隙*或临时使用**星号**按键手动更改的*时隙*。
+默认状态下，**信道时隙指定功能**是关闭的。这意味着如果您在*通话组列表*中按压**左**方向键或**右**方向键选择*通话组*后时，时隙不会改变，仍然是您原来（_在 CPS 中_）分配给信道的*时隙*或临时使用**星号**按键手动更改的*时隙*。
 
 但是，若某个**联系人**被指定了一个特定时隙（例如时隙 1），选中该联系人时，时隙会自动设置。这就是**信道时隙指定功能**。  
 在这种情况下，时隙在信道/频率界面上显示为 **cS**_x_（在此示例中为 cS1）。
 
-#### 通话组反色显示<!-- linebreak -->
+#### 通话组反色显示（TalkGroup displayed in inverse video）<!-- linebreak -->
 
 若*通话组*标识在您接收到 DMR 信号时反色显示，则表明目前的*发送通话组*与接收到的*通话组* **并不相符**，因此当您按下 **PTT** 时，您的信号不会被发射回同一个*通话组*。
 
@@ -766,7 +780,7 @@ CPS 最近新增的一个功能允许您为每个**联系人**或**通话组**�
 
 ![通话组临时设置](media/talkgroup-override.png)
 
-#### 手动输入通话组代码<!-- linebreak -->
+#### 手动输入通话组代码（Manual TalkGroup number entry）<!-- linebreak -->
 
 - 按压数字键盘的**井号**按键输入*临时的*通话组号码，然后按压**绿色**按键确认。
 
@@ -780,7 +794,7 @@ CPS 最近新增的一个功能允许您为每个**联系人**或**通话组**�
 
 ![通话组覆盖](media/talkgroup-manually-entered.png)
 
-#### 输入单呼号码<!-- linebreak -->
+#### 输入单呼号码（Private Call number entry）<!-- linebreak -->
 
 - 按压数字键盘**井号**按键两次，然后手动输入需要单呼的 DMR ID。
 
@@ -788,7 +802,7 @@ CPS 最近新增的一个功能允许您为每个**联系人**或**通话组**�
 
 在所有的数字键盘输入界面中，按压**红色**按键都可以返回上一个频率或信道界面。
 
-#### 选择联系人<!-- linebreak -->
+#### 选择联系人（Digital Contact selection）<!-- linebreak -->
 
 按压数字键盘**井号**按键三次，可以进入联系人选择界面。
 
@@ -804,7 +818,7 @@ CPS 最近新增的一个功能允许您为每个**联系人**或**通话组**�
 
 ![单呼选择](media/private-call-selection.png)
 
-#### 临时修改您的 DMR ID<!-- linebreak -->
+#### 临时修改您的 DMR ID（Station DMR ID number entry）<!-- linebreak -->
 
 - 在**联系人选择界面**，按压**蓝色+井号**组合键，可以为电台输入一个*另一个* **DMR ID** 临时覆盖电台配置文件中的 DMR ID。（_用于测试目的_）
 
@@ -816,13 +830,13 @@ CPS 最近新增的一个功能允许您为每个**联系人**或**通话组**�
 
 <div style="page-break-after: always; break-after: page;"></div>
 
-### 与 FM 有关的一些设置
+### 与 FM 有关的一些设置（FM specific functionality (_VFO and Channel screens_)）
 
-#### FM 和窄带 FM<!-- linebreak -->
+#### FM 和窄带 FM（FM and FM Narrow）<!-- linebreak -->
 
 对于**25kHz 频宽**的 FM 模式，屏幕左上角会显示“**FM**”。对于**12.5kHz 频宽**的窄带 FM 模式，屏幕左上角会显示“**FMN**”。
 
-#### 哑音设置<!-- linebreak -->
+#### 哑音设置（CTCSS Tone or DCS Code）<!-- linebreak -->
 
 信道或 VFO 都可设置哑音。FM 指示旁边显示的“**C**”或“**D**”、“**T**”或“**R**”或“**TR**”代表了不同的哑音设置。
 
@@ -832,7 +846,7 @@ CPS 最近新增的一个功能允许您为每个**联系人**或**通话组**�
 
 可以独立设置发射与接收哑音。
 
-#### 静噪<!-- linebreak -->
+#### 静噪（Squelch）<!-- linebreak -->
 
 - 按压**左**方向键或**右**方向键，可以设置 FM 静噪等级。
 
@@ -852,19 +866,19 @@ _请注意 :_
 
 - 若您设置了接收哑音，则该设置比静噪控制具有更高的优先级，降低静噪等级并不会使您的电台打开静噪。
 
-#### 1750Hz 中继操作音<!-- linebreak -->
+#### 1750Hz 中继操作音（1750Hz Tone for repeater operation）<!-- linebreak -->
 
-- 在 FM 模式发射期间按压**蓝色**按键可以发射1750Hz操作音。\*
+- 在 FM 模式发射期间按压**蓝色**按键可以发射 1750Hz 操作音。\*
 
 > \*译者注：该功能常用于访问欧洲的中继台。
 
-#### 双音多频（DTMF）发射<!-- linebreak -->
+#### 双音多频发射（DTMF tone transmission）<!-- linebreak -->
 
 - 在发射过程中按键盘上的任意键（**绿色**和**红色**菜单键除外）可以发射该键的 DTMF 音。
 
 在 GD-77、RD-5R、DM-1801 和 DM-1801A 上，该声音也同时会从电台扬声器中发出。
 
-在 MD-380UV 和 MD-9600 上，扬声器会播放音调，但这不是传输的 DTMF 音调，因为这些电台上的硬件不支持通过扬声器播放实际的 DTMF 音调。
+在 MD-UV380 和 MD-9600 上，扬声器会播放音调，但这不是发射的 DTMF 音调，因为这些电台上的硬件不支持通过扬声器播放实际的 DTMF 音调。
 
 MD-9600 上的 A B C D 麦克风按钮已用于其他功能，例如 A = ESC/红色按钮，因此需要使用以下按键顺序来输入字母 A、B、C 和 D
 
@@ -878,7 +892,7 @@ SK1 + 下方向键 = D
 
 请注意：目前 MD-9600 版本的固件无法与 DTMF 同时发射 CTCSS 或 DCS 哑音。
 
-#### 双音多频（DTMF）序列输入与传输<!-- linebreak -->
+#### 双音多频序列输入与发射（DTMF sequence entry and transmission）<!-- linebreak -->
 
 - 按压**井号**按键输入 DTMF 序列（按**蓝色+左**组合键，删除一个字符）
 
@@ -894,7 +908,7 @@ SK1 + 下方向键 = D
 
 <div style="page-break-after: always; break-after: page;"></div>
 
-### 与 VFO 有关的一些设置
+### 与 VFO 有关的一些设置（VFO specific functionality）
 
 频率界面在任何时候都会显示发射与接收频率。
 
@@ -902,13 +916,13 @@ SK1 + 下方向键 = D
 
 当您选中的频率为**接收**频率时，“**R**”左侧会显示一个箭头（**>**），此时改变频率会同时改变发射与接收频率。
 
-#### 频率步进<!-- linebreak -->
+#### 频率步进（Frequency change up/down step）<!-- linebreak -->
 
 - 按压**上**方向键或**下**方向键将按照 CPS 中为 VFO 定义的频率步进更改频率。
 
 若要更改频率步进可以按压**蓝色+绿色**组合键进入信道详情界面，选择“**Step**”选项进行调整。
 
-#### 使用数字键输入频率<!-- linebreak -->
+#### 使用数字键输入频率（Numerical frequency entry）<!-- linebreak -->
 
 - 按压**任意数字键**可以直接输入频率。
 
@@ -924,7 +938,7 @@ SK1 + 下方向键 = D
 
 - 按压**左**方向键可以依次删除输入的数字。
 
-#### 单独调整发射频率<!-- linebreak -->
+#### 单独调整发射频率（To adjust the TX frequency, independent of the RX frequency）<!-- linebreak -->
 
 - 按住电台侧边的**蓝色**按键，然后按压**下**方向键。
 
@@ -942,7 +956,7 @@ _请注意 :_
 
 **不会保持频差**的唯一情况是发射频率超出电台硬件支持的频率范围。
 
-#### 频谱扫描<!-- linebreak -->
+#### 频谱扫描（Spectrum sweep scan）<!-- linebreak -->
 
 - 长按**井号**按键进入频谱扫描模式。
 
@@ -963,7 +977,7 @@ _请注意 :_
 
 ![频谱扫描](media/vfo-spectrum-scan.png)
 
-#### VFO 双守
+#### VFO 双守（VFO Dual Watch）
 
 在频率界面快捷菜单中，选择“**Dual Watch**”
 
@@ -983,13 +997,13 @@ VFO A 和 VFO B 具有相同的优先级。
 
 VFO A 和 VFO B 不需要都为 FM 或 DMR 模式。可以是 FM、窄带 FM 或 DMR 模式。
 
-#### 快速切换 VFO A 或 VFO B
+#### 快速切换 VFO A 或 VFO B（Easily changing from VFO A to VFO B, and vice versa）
 
 切换当前 VFO 的另一种方法是长按**红色**按键。
 
 <div style="page-break-after: always; break-after: page;"></div>
 
-## 监听模式
+## 监听模式（Monitor mode）
 
 监听模式使您能够不受 DMR 模式下**通话组**、**时隙**或**色码**过滤器以及 FM 模式下**模拟哑音/数字哑音**过滤器或**静噪**的设置限制，收听信号。
 
@@ -1007,7 +1021,7 @@ VFO A 和 VFO B 不需要都为 FM 或 DMR 模式。可以是 FM、窄带 FM 或
 
 <div style="page-break-after: always; break-after: page;"></div>
 
-## 发射
+## 发射（Transmitting）
 
 在电台发射期间，*通话计时器*将累加或减少，这取决于信道是否设置了超时定时器。
 
@@ -1031,25 +1045,25 @@ VFO A 和 VFO B 不需要都为 FM 或 DMR 模式。可以是 FM、窄带 FM 或
 
 <div style="page-break-after: always; break-after: page;"></div>
 
-## 扫描
+## 扫描（Scanning）
 
 信道界面与频率界面都支持扫描，不过两者操作略有不同。
 
-### 信道扫描
+### 信道扫描（Channel scanning）
 
 - 长按**上**方向键以开始扫描这个区域内的信道。在 MD-9600 上，长按电台前面板上的**上**方向键。
 
-- 按压**左**方向键可反转扫描方向。在 MD-9600 上，长按电台前面板上的**下**方向键。
+- 按压**左**方向键可反转扫描方向。在 MD-UV380 | RT-3S 上，按压**下**方向键。在 MD-9600 | RT-90 上，按压电台前面板上的**下**方向键。
 
-- 按压**右**方向键可以将当前信道暂时踢出扫描列表（nuisance delete）。在 MD-9600 上，长按电台麦克风上的**星号**键。
+- 按压**右**方向键可以将当前信道暂时踢出扫描列表（nuisance delete）。在 MD-UV380 | RT-3S 上，按压**星号**键。在 MD-9600 | RT-90 上，按压电台麦克风上的**星号**键。
 
-- 按压**上**方向键可以将跳过当前信道，继续扫描。在 MD-9600 上，长按电台前面板上的**上**方向键。
+- 按压**上**方向键可以将跳过当前信道，继续扫描。在 MD-9600 上，按压电台前面板上的**上**方向键。
 
 按压任何其他按键以退出扫描。
 
 在扫描过程中，相应的 **DMR** 或 **FM** 模式标志会闪烁。
 
-### 频率扫描
+### 频率扫描（VFO scanning）
 
 频率界面的扫描模式有些特殊，长按**上**方向键以进入 VFO 扫描模式。
 
@@ -1069,19 +1083,19 @@ VFO A 和 VFO B 不需要都为 FM 或 DMR 模式。可以是 FM、窄带 FM 或
 
 不在扫描状态时，按压**上**方向键或**下**方向键可以正常调整 VFO 频率。
 
-- 按压**左**方向键可反转扫描方向。
+- 按压**左**方向键可反转扫描方向。在 MD-UV380 | RT-3S 上，按压**下**方向键。在 MD-9600 | RT-90 上，按压电台前面板上的**下**方向键。
 
 - 按压**上**方向键可跳过当前 VFO 并继续扫描。
 
-- 按压**右**方向键可以将当前频率标记为*干扰*频率，暂时忽略该频率。
+- 按压**右**方向键可以将当前频率暂时踢出扫描列表（nuisance delete）。在 MD-UV380 | RT-3S 上，按压**星号**键。在 MD-9600 | RT-90 上，按压电台麦克风上的**星号**键。
 
 按任何其他按键将停止扫描
 
 - 长按**下**方向键退出扫描模式。
 
-## 其他界面
+## 其他界面（Other screens）
 
-### 锁屏界面
+### 锁屏界面（Lock screen）
 
 该功能可以锁定键盘。
 
@@ -1097,7 +1111,7 @@ VFO A 和 VFO B 不需要都为 FM 或 DMR 模式。可以是 FM、窄带 FM 或
 
 ![键盘和PTT锁定界面](media/keypad-and-ptt-locked.png)
 
-### 文字输入界面
+### 文字输入界面（Text entry）
 
 本固件支持在新建或编辑联系人时输入英文字母或数字。
 
@@ -1111,7 +1125,7 @@ VFO A 和 VFO B 不需要都为 FM 或 DMR 模式。可以是 FM、窄带 FM 或
 
 <div style="page-break-after: always; break-after: page;"></div>
 
-## 控制按键与按钮
+## 控制按键与按钮（The control keys and buttons）
 
 ![GD-77 cheatsheet](media/RadioButtons_CN.jpg)<!-- { width=600 } -->
 
@@ -1119,9 +1133,13 @@ VFO A 和 VFO B 不需要都为 FM 或 DMR 模式。可以是 FM、窄带 FM 或
 
 ![RD-5R cheatsheet](media/RD5R-CheatSheet_CN.png)<!-- { width=600 } -->
 
+![MD-9600 cheatsheet](media/MD9600-CheatSheet.png)<!-- { width=600 } -->
+
+![MD-UV380 cheatsheet](media/MD-UV380-CheatSheet.png)<!-- { width=600 } -->
+
 <div style="page-break-after: always; break-after: page;"></div>
 
-## 菜单系统
+## 菜单系统（The Menu System）
 
 与官方固件相比，本固件使用了一个：针对于业余使用、着重于简单明了、突出常用功能、且经过重大修改的菜单。具体结构请参考下面的菜单图。
 
@@ -1145,7 +1163,7 @@ VFO A 和 VFO B 不需要都为 FM 或 DMR 模式。可以是 FM、窄带 FM 或
 
 <div style="page-break-after: always; break-after: page;"></div>
 
-## 快捷键
+## 快捷键（QuickKeys）
 
 使用快捷键可以快速访问各个菜单界面。
 
@@ -1173,7 +1191,7 @@ _请注意 :_
 
 <div style="page-break-after: always; break-after: page;"></div>
 
-## 主菜单
+## 主菜单（Main Menu）
 
 ![主菜单](media/main-menu.png)
 
@@ -1217,19 +1235,23 @@ _屏幕右上角的数字是由电台硬件直接报告的数值，仅用于开�
 
 <div style="page-break-after: always; break-after: page;"></div>
 
-### 电台信息
+### 电台信息（Radio info）
 
 显示有关电台状态的各种信息。
 
-#### 电池电压和百分比
+#### 电池电压和百分比（Battery voltage and percentage）
 
 显示了电池电压和百分比。
 
 ![电池状态界面](media/battery.png)
 
+长按**SK2**按键可显示*纯*电池电压（非平均值）。
+
+![纯电池电压](media/pure-battery.png)
+
 - 按压**下**方向键显示下一页。
 
-#### 时钟
+#### 时钟（Time clock）
 
 ![实时时钟](media/radioinfo-time.png)
 
@@ -1249,7 +1271,7 @@ _请注意：_
 
 - 按压**下**方向键显示下一页。
 
-#### 日期界面
+#### 日期界面（Date screen）
 
 ![日期](media/radioinfo-date.png)
 
@@ -1261,7 +1283,7 @@ _请注意：_
 
 - 按压**下**方向键显示下一页。
 
-#### 位置界面
+#### 位置界面（Location screen）
 
 ![位置](media/radioinfo-location.png)
 
@@ -1282,7 +1304,7 @@ _请注意：_
 
 在设置位置之前，此界面将显示消息“未设置”并显示问号代替纬度/经度值。
 
-#### MCU 温度
+#### MCU 温度（CPU temperature）
 
 以摄氏度显示 MCU 温度。
 
@@ -1290,7 +1312,7 @@ _请注意：_
 
 - 按压**下**方向键显示下一页。
 
-#### 电池电压历史
+#### 电池电压历史（Battery voltage history）
 
 显示了每小时电池电压的历史记录。
 
@@ -1298,17 +1320,17 @@ _请注意：_
 
 - 按压**下**方向键显示下一页。
 
-### 联系人
+### 联系人（Contacts）
 
-#### DMR 联系人
+#### DMR 联系人（DMR Contacts）
 
 允许选择、编辑或删除 DMR 联系人。
 
-#### FM DMTF 联系人
+#### FM DTMF 联系人（FM DTMF Contacts）
 
 允许选择、编辑或删除 FM DTMF 联系人。
 
-#### 新联系人
+#### 新联系人（New Contact）
 
 允许创建新的 DMR 联系人。
 
@@ -1326,7 +1348,7 @@ _请注意：_
 
 - 长按**井号**按键清除列表。
 
-### 固件信息（Firmware Info）和致谢名单
+### 固件信息和致谢名单（Firmware Info and credits）
 
 ![固件信息界面](media/firmware-info.png)
 
@@ -1354,17 +1376,17 @@ _请注意：_
 
 此选项设置菜单用于更改固件本身的诸多设置。
 
-#### 按键长按时间（Key long）
+#### 按键长按时间（Key long）<!-- linebreak -->
 
 此设置控制按键被视为长按/重复按下的时间（_以秒为单位_）。
 
-#### 按键重复速度（Key rpt）
+#### 按键重复速度（Key rpt）<!-- linebreak -->
 
 本设置控制您按住某个特定按键后该按键的重复速度。
 
-#### 热点模式（Hotspot）
+#### 热点模式（Hotspot）<!-- linebreak -->
 
-- **宝锋 RD-5R / DM-5R 不支持热点模式，因为在发射时，其电台硬件无法保证一个可靠的 USB 通信**
+- **宝锋 RD-5R | DM-5R 不支持热点模式，因为在发射时，其电台硬件无法保证一个可靠的 USB 通信**
 
 本设置控制当连接到 MMDVM 主机时是否进入热点模式，这包括 Pi-Star 或 BlueDV。
 
@@ -1378,7 +1400,7 @@ _请注意：_
 
 在 MD730 上，若想要使用热点模式，请按住**黑色**侧键并打开电源，电台会在 **MMDVM** 与 **BlueDV** 模式之间切换。
 
-#### 温度校准<!-- linebreak -->
+#### 温度校准（Temp Cal）<!-- linebreak -->
 
 此设置允许您校准内部 MCU 温度传感器。
 
@@ -1388,7 +1410,7 @@ _请注意：_
 
 温度值是 MCU 自己测量的值。这不是功放芯片或整个电台的温度。
 
-#### 电池校准<!-- linebreak -->
+#### 电池校准（Batt Cal）<!-- linebreak -->
 
 此设置允许校准电压显示值。范围为 +/- 0.5V。
 
@@ -1398,7 +1420,7 @@ _请注意：_
 
 更改此校准将影响电压和百分比显示。
 
-#### 时间校准<!-- linebreak -->
+#### 时间校准（Time Cal）<!-- linebreak -->
 
 此设置允许对启动电台时运行的时钟进行校准。
 
@@ -1406,7 +1428,7 @@ _请注意：_
 
 时钟目前是一项实验性功能，不能保证准确。
 
-#### 省电等级<!-- linebreak -->
+#### 省电等级（Eco Level）<!-- linebreak -->
 
 此设置控制电台的接收省电工作状态。
 
@@ -1421,13 +1443,13 @@ _请注意：_
 此表显示所有省电等级的值
 
 | 等级 | 进入省电模式延迟（秒） | 最大延迟（毫秒） | 平均消耗电流（毫安) | 大约电池寿命（小时） |
-| ---- | ---------------------- | -------- | --------------- | -------------------- |
-| 0    | 不适用                 | 不适用   | 62              | 32                   |
-| 1    | 10                     | 240      | 41              | 49                   |
-| 2    | 8                      | 330      | 33              | 60                   |
-| 3    | 6                      | 500      | 28              | 72                   |
-| 4    | 4                      | 810      | 24              | 84                   |
-| 5    | 4                      | 1360     | 22              | 93                   |
+| ---- | ---------------------- | ---------------- | ------------------- | -------------------- |
+| 0    | 不适用                 | 不适用           | 62                  | 32                   |
+| 1    | 10                     | 240              | 41                  | 49                   |
+| 2    | 8                      | 330              | 33                  | 60                   |
+| 3    | 6                      | 500              | 28                  | 72                   |
+| 4    | 4                      | 810              | 24                  | 84                   |
+| 5    | 4                      | 1360             | 22                  | 93                   |
 
 当电台空闲且未接收时，较高的省电等级会降低电流消耗并延长电池寿命。
 
@@ -1441,7 +1463,7 @@ _请注意：_
 
 等级 4、5 可能会导致检测信号的能力有所下降，但可用于延长电池寿命。
 
-#### 睡眠<!-- linebreak -->
+#### 睡眠（Suspend）<!-- linebreak -->
 
 ![睡眠选项](media/options-suspend-on.png)
 
@@ -1463,7 +1485,9 @@ _请注意：_
 
 此模式主要用于卫星操作，该操作需要知道准确的时间和日期，以便预测卫星通过并计算卫星多普勒校正频率。
 
-#### 安全开机<!-- linebreak -->
+此设置仅适用于 GD-77 | DM-1801 | DM-1801A。
+
+#### 安全开机（Safe Power On）<!-- linebreak -->
 
 此设置启用后，打开电台前需要按住**黑色**按键，否则将不会开机。此功能可以防止不必要的通电，例如将电台放在背包中时，误开机将会耗尽电池。当启用睡眠模式时，此设置也起作用。
 
@@ -1471,9 +1495,9 @@ _请注意：_
 
 即使宝锋 DM-5R 没有睡眠模式，它也可以使用此功能。
 
-此功能在 MD-9600 / RT-90 上不可用。
+此功能在 MD-9600 | RT-90 上不可用。
 
-#### 自动关机（APO）<!-- linebreak -->
+#### 自动关机（Auto Power Off）<!-- linebreak -->
 
 此设置可以让电台在未使用一段时间后自动关机。
 
@@ -1488,14 +1512,14 @@ _请注意：_
   - 设置了卫星闹钟
   - 工作在热点模式
 - 如果启用了**自动关机**功能，电池信息（_百分比或电压_）将以**粗体**显示。
-- 如果启用了[**带有射频的自动关机**](#带有射频的自动关机)，当接收到有效信号时，定时器会被重置。
+- 如果启用了[**带有射频的自动关机**](#带有射频的自动关机apo-with-rf)，当接收到有效信号时，定时器会被重置。
 - 技术上自动关机功能使用与睡眠模式相同的低功耗模式，因此电台在自动关机后将持续消耗约 16mA，我们目前正在尝试降低此电流，但由于固件无法完全切断所有电台硬件的电源，因此永远不可能像音量/电源旋钮一样完全关闭电台。
 
-#### 带有射频的自动关机<!-- linebreak -->
+#### 带有射频的自动关机（APO with RF）<!-- linebreak -->
 
-如果启用了[**自动关机**](#自动关机)，*自动关机*倒计时器会在收到有效射频信号时重置。
+如果启用了[**自动关机**](#自动关机auto-power-off)，*自动关机*倒计时器会在收到有效射频信号时重置。
 
-#### 卫星跟随模式<!-- linebreak -->
+#### 卫星跟随模式（Satellite follow mode）<!-- linebreak -->
 
 ![卫星选项](media/options-sat-manual.png)
 
@@ -1505,13 +1529,27 @@ _请注意：_
 
 **Auto** 选项可以自动切换到下一个可用卫星。
 
+#### 全球定位系统（GPS）<!-- linebreak -->
+
+此设置仅适用于 特易通 MD-9600 | Retevis RT-90 和 特易通 MD-UV380 | Retevis RT-3S | 宝锋 DM-1701 | Retevis RT-84.
+
+由于 GPS 接收器在使用过程中持续消耗超过 50mA 的电流，因此 GPS 接收器默认不供电。
+
+可选项有：
+
+- **Off**：关闭 GPS 模块电源（特易通 MD-9600 | Retevis RT-90 因技术原因除外）
+- **On**：打开 GPS 模块电源
+- **NMEA**：GPS 模块将所有 NMEA 数据发送到电台的 USB 串行端口
+
+**警告：将 GPS 设置为输出 NMEA 数据将阻止 CPS 与电台通信，并且在使用 CPS 时，应将 GPS 设置设置为“关闭”或“打开”。**
+
 <div style="page-break-after: always; break-after: page;"></div>
 
-### 无线电选项
+### 无线电选项（Radio Options）
 
 此菜单控制特定于无线电/射频功能的各项设置。
 
-#### 频段限制<!-- linebreak -->
+#### 频段限制（Band Limits）<!-- linebreak -->
 
 此设置控制电台可以发射的频段范围。
 
@@ -1531,14 +1569,14 @@ CPS 频段限制**不影响**整体硬件频段限制，因此**不可能**通�
 硬件频段限制为：
 
 - 127MHz - 178MHz,
-- 190MHz - 282MHz,（在 MD-9600 / RT-90 上不可用）
+- 190MHz - 282MHz,（在 MD-9600 | RT-90 上不可用）
 - 380MHz - 564MHz。
 
 这些限制是因为 _AT1846S RF_ 芯片在此范围之外**将无法可靠运行**，而此范围实际上超出了 AT1846S 公布的频率范围 134MHz - 174MHz、200MHz - 260MHz、400MHz - 520MHz。
 
 还应注意，电台**没有** 200MHz 频段的功放或接收部分，**在此范围内工作会产生较高杂散发射，通常在一次谐波/基波上出现**。
 
-#### 过滤器保持时间<!-- linebreak -->
+#### 过滤器保持时间（Filter time）<!-- linebreak -->
 
 此功能在*时隙*过滤被关闭时起作用。
 
@@ -1548,13 +1586,13 @@ CPS 频段限制**不影响**整体硬件频段限制，因此**不可能**通�
 
 当**时隙**过滤**打开**时，此设置无任何效果。
 
-#### 扫描延迟<!-- linebreak -->
+#### 扫描延迟（Scan delay）<!-- linebreak -->
 
 用于设置在扫描模式期间，恢复扫描前电台在收到信号的频率停留的持续时间。
 
 这在选择**暂停**作为扫描模式时有效。
 
-#### 扫描驻留<!-- linebreak -->
+#### 扫描驻留（Scan dwell）<!-- linebreak -->
 
 用于设置在扫描模式期间，接收器在每个频率上驻留并侦听信号的持续时间。
 
@@ -1564,7 +1602,7 @@ CPS 频段限制**不影响**整体硬件频段限制，因此**不可能**通�
 
 较长的值有助于扫描弱信号或淡入淡出的信号，但会减少每秒扫描的频率或信道数。
 
-#### 扫描模式<!-- linebreak -->
+#### 扫描模式（Scan mode）<!-- linebreak -->
 
 用于设置在扫描模式期间，收到信号时电台如何继续。
 
@@ -1572,23 +1610,17 @@ CPS 频段限制**不影响**整体硬件频段限制，因此**不可能**通�
 - **Pause**：在指定的一段时间内接收该信号（_扫描延迟_），然后继续扫描。
 - **Stop**：接收到信号时保持接收，并退出扫描模式。
 
-#### 开机扫描<!-- linebreak -->
+#### 开机扫描（Scan on Boot）<!-- linebreak -->
 
 此设置控制电台是否在开机（启动）时自动开始扫描，默认关闭。
 
-#### UHF 静噪<!-- linebreak -->
+#### _xxx_ 静噪（_xxx_ Squelch）<!-- linebreak -->
 
-当在信道或频率模式中使用模拟模式时，此设置控制 **430MHz** 的静噪强度。 **默认为 45%**。
+**VHF**：当在信道或频率模式中使用模拟模式时，此设置控制 **144MHz** 的静噪强度。**默认为 45%**。
+**220**：当在信道或频率模式中使用模拟模式时，此设置控制 **220MHz** 的静噪强度。**默认为 45%**。
+**UHF**：当在信道或频率模式中使用模拟模式时，此设置控制 **430MHz** 的静噪强度。**默认为 45%**。
 
-#### 220 静噪<!-- linebreak -->
-
-当在信道或频率模式中使用模拟模式时，此设置控制 **220MHz** 的静噪强度。 **默认为 45%**。
-
-#### VHF 静噪<!-- linebreak -->
-
-当在信道或频率模式中使用模拟模式时，此设置控制 **144MHz** 的静噪强度。 **默认为 45%**。
-
-#### PTT 保持<!-- linebreak -->
+#### PTT 保持（PTT Latch）<!-- linebreak -->
 
 启用 **PTT 保持** 后，**PTT** 开关可以用于切换电台发射/接收状态，PTT 不需要在发射时持续按住。
 
@@ -1598,25 +1630,11 @@ _请注意：_
 
 <div style="page-break-after: always; break-after: page;"></div>
 
-#### 主叫别名发射<!-- linebreak -->
-
-启用*主叫别名*数据的**发射**。
-
-_请注意：_
-
-- 主叫别名数据的接收始终可用。不要因为您没有接收到主叫别名数据而启用此功能，它不控制主叫别名数据的接收。
-
-主叫别名可以在 CPS 中 “**Boot Item**” 菜单下 **Line1** 和 **Line2** 设置，电台显示时两行之间是没有空格的。
-
-_请注意：_
-
-- 使用此功能**将导致基于 Motorola 的中继和网络出现问题**，所以只能用于简单网络或 _Brandmeister_ 等其他正确支持主叫别名的网络。
-
-#### 允许单呼<!-- linebreak -->
+#### 允许单呼（Allow PC）<!-- linebreak -->
 
 允许接收**单呼**。
 
-#### 用户功率<!-- linebreak -->
+#### 用户功率（User Power）<!-- linebreak -->
 
 当启用 +W- 功率挡时，此设置控制功放芯片功率电平。此设置的值是发送到功放芯片驱动电路的数模转换器中的内部数值。
 
@@ -1636,7 +1654,7 @@ _请注意：_
 
 因此，设置为 0 并不能完全阻止电台产生射频。
 
-此设置还可用于产生超低功率信号，例如低于 50mW，这在你用本地热点时很有用。
+此设置还可用于产生超低功率信号，例如低于 50mW，这在您用本地热点时很有用。
 
 给定设置值最后产生的功率因电台而异，电池电压和发射频率也会影响最终功率。
 
@@ -1644,7 +1662,7 @@ _请注意：_
 
 功率计是了解每个电台在特定频率、特定用户功率设置和特定电池电压下产生的最终功率输出的唯一方法。
 
-#### DMR crc<!-- linebreak -->
+#### DMR 循环冗余检查（DMR crc）<!-- linebreak -->
 
 此设置禁用 DMR 循环冗余检查，在某些情况下这可能会对收听某些特定网络时有所帮助。
 
@@ -1652,23 +1670,23 @@ _请注意：_
 
 ### 显示设置（Display Options）
 
-![](media/display-options.png)
+![显示设置菜单](media/display-options.png)
 
-#### 背光亮度（Brightness）
+#### 背光亮度（Brightness）<!-- linebreak -->
 
 本固件允许用户控制背光亮度，设置范围可以从 0%\~100%，其中 10%\~100%以 10%步进调整，0%\~10%以 1%步进调整。
 
 按压**左**或**右**方向键以更改设置，默认设置为 100%
 
-#### 待机亮度（Min Bright）
+#### 待机亮度（Min Bright）<!-- linebreak -->
 
 本设置控制电台待机时的屏幕亮度，默认设置为 0%，这意味着在电台待机时屏幕将不会开启背光。
 
-#### 对比度（Contrast）
+#### 对比度（Contrast）<!-- linebreak -->
 
 本固件允许用户修改屏幕对比度，较低的数值意味着更淡的文字显示，较高的数值意味着更黑的文字显示，但同时还会使屏幕背景变得更黑。
 
-#### 背光模式（Display mode）
+#### 背光模式（Mode）<!-- linebreak -->
 
 控制屏幕背光模式
 
@@ -1680,17 +1698,20 @@ _请注意：_
 
 **None** 无，不开启背光。
 
-#### 背光延时（Timeout）
+#### 背光延时（Timeout）<!-- linebreak -->
 
 背光延时计时器，用以控制背光在多久后关闭，默认无，即不会关闭。
 
-#### 显示颜色模式（Colour mode）
+#### 显示颜色模式（Screen）<!-- linebreak -->
 
-本设置允许您将屏幕设置为反色或正常。反色为背景黑色，字母白色；正常为背景白色，字母黑色。
+本设置允许您将屏幕设置为正常或反色。
+
+- **正常** 单色平台上为白色背景黑色像素，彩色平台上为正常主题颜色。
+- **反色** 单色平台上为黑色背景白色像素，彩色平台上为反色主题颜色。
 
 _请注意 :_ 本功能并不能做到和 MD760 黑色液晶版本完全相同的效果，因为黑色液晶版本使用了与普通正常 LCD 不同的屏幕，因此其黑色背景色是原生的。
 
-#### 联系人显示顺序（Order）
+#### 联系人显示顺序（Order）<!-- linebreak -->
 
 本设置决定了联系人数据是按什么顺序查找的
 
@@ -1700,7 +1721,7 @@ _请注意 :_ 本功能并不能做到和 MD760 黑色液晶版本完全相同�
 
 默认顺序为 Cc/Db/TA，意味着当收到一个 DMR ID 时，电台首先会在联系人列表中查找对应联系人，再从写入的 DMR ID 数据库中查找，若都未找到且主叫别名数据存在，则会显示主叫别名。
 
-#### 联系人显示方式（Contact）
+#### 联系人显示方式（Contact）<!-- linebreak -->
 
 本设置控制了 DMR 呼号或姓名等显示在屏幕上的位置。
 可选项有：
@@ -1713,7 +1734,7 @@ _请注意 :_ 本功能并不能做到和 MD760 黑色液晶版本完全相同�
 
 默认设置为**1 Line**
 
-#### 电量单位<!-- linebreak -->
+#### 电量（单位）<!-- linebreak -->
 
 控制电量显示为百分比或电压。
 
@@ -1722,9 +1743,9 @@ _请注意 :_ 本功能并不能做到和 MD760 黑色液晶版本完全相同�
 - **%**：显示电池百分比*例如* **0%** 到 **100%**。
 - **V**：显示电池电压*例如* **8.1V**。
 
-请注意：此功能不适用于 MD-9600 / RT-90，因为它由外部 12V 供电并且显示屏始终显示电压。
+请注意：此功能不适用于 MD-9600 | RT-90，因为它由外部 12V 供电并且显示屏始终显示电压。
 
-#### 信息<!-- linebreak -->
+#### 信息（Info）<!-- linebreak -->
 
 此设置控制电台是否在信道界面的 VFO 上显示附加信息，例如 DMR 时隙或功率文本会以粗体显示。
 
@@ -1734,7 +1755,7 @@ _请注意 :_ 本功能并不能做到和 MD760 黑色液晶版本完全相同�
 
 默认设置为关闭，不会显示任何加粗。
 
-#### LED 灯<!-- linebreak -->
+#### LED 灯（LEDs）<!-- linebreak -->
 
 此设置控制电台顶部的绿色/红色 LED 是否亮起。
 
@@ -1742,21 +1763,17 @@ _请注意 :_ 本功能并不能做到和 MD760 黑色液晶版本完全相同�
 
 如果此设置设置为关闭，则 LED 在发送和接收时都不会亮起。
 
-<div style="page-break-after: always; break-after: page;"></div>
+#### 时区（Timezone）<!-- linebreak -->
 
-#### 时区<!-- linebreak -->
-
-![时区](media/timezone.png)
-
-显示并允许输入本地时区
-
-按**左**方向键以 1 小时为单位减少值。
+此设置允许输入本地时区。
 
 按**右**方向键以 1 小时为单位增加值。
 
+按**左**方向键以 1 小时为单位减少值。
+
 如果您的时区不是以 1 小时为基准，请按压**蓝色**按键 + **左**或**右**方向键以 15 分钟为增量调整时区。
 
-#### 时间显示格式<!-- linebreak -->
+#### 时间显示格式（Time (display format)）<!-- linebreak -->
 
 此设置控制输入和显示的日期时间是*UTC*还是*本地时*。
 
@@ -1770,44 +1787,43 @@ _请注意 :_ 本功能并不能做到和 MD760 黑色液晶版本完全相同�
 
 ### 声音设置（Sound Options）
 
-#### 超时警告（Timeout beep）
+![声音设置菜单](media/sound-options.png)
+
+#### 超时警告（Timeout beep）<!-- linebreak -->
 
 本设置控制电台是否在超时定时器归零，或即将归零时时发出“滴\~”的警告音。
 
-#### 警告音量（Beep volume）
+#### 警告音量（Beep volume）<!-- linebreak -->
 
 本设置控制超时警告与其他提示音的音量。
 
 可以从 -24dB \~ 6dB 以 3dB 为步进调整。
 
-#### DMR 提示音（DMR Beep）
+#### DMR 提示音（DMR Beep）<!-- linebreak -->
 
 本设置控制了接通 DMR 中继或结束发射时的提示音，可选项有：
 
-**Start** 接通，仅当接通中继台时发出提示音
-
-**Stop** 结束，仅当结束发射时发出提示音
-
-**None** 无，不发出任何提示音
-
-**Both** 两者都，接通与结束时都发出提示音
+- **None** 无，不发出任何提示音
+- **Start** 接通，仅当接通中继台时发出提示音
+- **Stop** 结束，仅当结束发射时发出提示音
+- **Both** 两者都，接通与结束时都发出提示音
 
 _请注意 :_ 接通 DMR 中继台时发出的提示音是用于确认您已经成功唤醒了中继台，该提示音只会在您电台的扬声器中播放而不会同时以语音数据发射出去。
 
-#### 接收提示音<!-- linebreak -->
+#### 接收提示音（RX Beep）<!-- linebreak -->
 
 当接收到信号（FM 和 DMR）时，这会根据射频载波和/或通话者（仅限 DMR）来控制特定提示音的播放。
 
 选项是：
 
-- **无**
-- **载波**
-- **通话者**（请参阅下面的 [_通话者_](#通话者) 选项）
-- **两者都**
+- **None** 无
+- **Carrier** 载波
+- **Talker** 通话者（请参阅下面的 [_通话者_](#通话者talker) 选项）
+- **Both** 两者都
 
-_请注意：_ 如果选择了 **通话者**，在 FM 中，提示音将与 DMR 的通话者模式相同，而不是常规的**载波**。
+_请注意：_ 如果选择了**通话者**，在 FM 中，提示音将与 DMR 的通话者模式相同，而不是常规的**载波**。
 
-#### 通话者<!-- linebreak -->
+#### 通话者（Talker）<!-- linebreak -->
 
 这控制 **接收提示音** _通话者_ 选项，可选在通话者结束时发车提示音或在开始和结束时都发出提示音。
 
@@ -1816,7 +1832,7 @@ _请注意：_ 如果选择了 **通话者**，在 FM 中，提示音将与 DMR 
 - **仅结束**
 - **两者都**
 
-#### DMR 麦克风增益（DMR mic）
+#### DMR 麦克风增益（DMR mic）<!-- linebreak -->
 
 本设置控制了 DMR 模式下的麦克风增益，更改本设置不会影响 FM 模式下的麦克风增益。
 
@@ -1824,26 +1840,27 @@ _请注意：_ 如果选择了 **通话者**，在 FM 中，提示音将与 DMR 
 
 默认设置为 0dB，即与原装固件一致。
 
-#### FM 麦克风增益（FM mic）
+#### FM 麦克风增益（FM mic）<!-- linebreak -->
 
 本设置控制了 FM 模式下的麦克风增益。可以从-15 \~ 15 以 1 为步进调整，负值代表比原装固件更少的增益，零代表相同，正值则代表更多。
 
 顺带一提，由于参数的单位暂时无法确认，本设置参数没有单位。
 
-#### VOX 阈值（VOX threshold）
+#### VOX 阈值（VOX threshold）<!-- linebreak -->
 
 本设置决定了当 VOX（声控发射）开启时触发电台发射的阈值。
 
-#### VOX 延迟（VOX Tail）
+#### VOX 延迟（VOX Tail）<!-- linebreak -->
 
 本设置决定了当声音低于 VOX 阈值后多久电台才停止发射。
 
-#### 提示音<!-- linebreak -->
+#### 提示音（Prompt）<!-- linebreak -->
 
 此设置控制按下按键时的**提示音**，并具有以下选项：
 
-- **静音**：电台按下按键时无提示音
-- **哔声**：按下按键时电台会发出哔声。有 2 种不同音高的蜂鸣声。
+- **Silent**：静音 电台按下按键时无提示音
+- **No Keys**：除按键 与**哔声**相同，但不会在按键按下时发出任何蜂鸣声。
+- **Beep**：哔声 按下按键时电台会发出哔声。有 2 种不同音高的蜂鸣声。
 
   在*信道*或*通话组*或*菜单项目*中选择时，当选择列表中的第一项时，会发出**较高音调**的哔声。
 
@@ -1884,7 +1901,7 @@ _请注意：_ 如果选择了 **通话者**，在 FM 中，提示音将与 DMR 
 
   在播放语音提示时按**黑色**按键可以**停止播放语音提示**。
 
-#### DMR 接收自动增益控制<!-- linebreak -->
+#### DMR 接收自动增益控制（DMR Rx AGC）<!-- linebreak -->
 
 此设置控制 DMR 音频音量修平功能。
 
@@ -1908,56 +1925,56 @@ _请注意：_ 如果选择了 **通话者**，在 FM 中，提示音将与 DMR 
 
 在测试过程中，注意到通过网关从其他网络，或使用手机应用的人，以及其他情况等接收到的信号；通常具有更高的音频电平，有时电台中的输出增益控制硬件无法充分衰减信号以确保音频与来自 DMR 中继的信号处于相同水平。
 
-#### 咔嗒声抑制
+#### 咔嗒声抑制（Click suppr）
 
-此设置仅适用于 MD-9600 / RT-90，用于控制咔嗒声抑制功能。
+此设置仅适用于 MD-9600 | RT-90，用于控制咔嗒声抑制功能。
 
-某些型号的 MD-9600 / RT-90 在打开音频放大器时会发出响亮的咔嗒声。为了减少这种情况，可以启用咔嗒声抑制功能，但仍然可以听到轻微的咔嗒声。
+某些型号的 MD-9600 | RT-90 在打开音频放大器时会发出响亮的咔嗒声。为了减少这种情况，可以启用咔嗒声抑制功能，但仍然可以听到轻微的咔嗒声。
 
 要完全消除咔嗒声，用户需要对电台硬件进行修改。
 
-### 校准界面
+### 校准界面（Calibration screen）
 
-此界面目前仅适用于特易通 MD-UV380 / Retevis RT-3S。
+此界面目前仅适用于特易通 MD-UV380 | Retevis RT-3S | 宝锋 DM-1701 | Retevis RT-84。
 
 ![电台校准界面](media/calibration_screen.png)
 
-#### 频率校准<!-- linebreak -->
+#### 频率校准（Cal Freq）<!-- linebreak -->
 
 这个界面可以用来调整当前校准点。这是电台将发射的频率，功率调整设置将改变。VHF 有 5 个校准点，UHF 有 8 个校准点。固件在这些点之间进行插值以计算其他频率所需的校准。
 
 因此如果要校准 2M 频段的功率，必须调整 136.0MHz、145.5MHz 和 155.0MHz 校准点。这是因为 144-148 MHz 跨越多个频点。
 
-#### 功率校准<!-- linebreak -->
+#### 功率校准（Cal Power）<!-- linebreak -->
 
 对于每个校准点，有 4 个功率等级需要校准。250mW、1W、2W 和 4W
 
-#### 功率调整<!-- linebreak -->
+#### 功率调整（Power Adjust）<!-- linebreak -->
 
 该值控制功放芯片驱动量。 这是一个 8 位二进制数，因此范围为 0 到 255，其中 0 是没有功放驱动，255 是最大功放驱动。
 
-#### 频率调整<!-- linebreak -->
+#### 频率调整（Freq Adjust）<!-- linebreak -->
 
 该值调整主频率参考振荡器。这是一个 8 位二进制数，因此范围为 0 到 255。要降低频率，请减小该值；要增加频率，请增大该值。
 
 请注意：VHF 和 UHF 有单独的参考振荡器。因此频率应调整两次。一次使用 VHF 校准点，一次使用 UHF 校准点。每个频段使用的校准点并不重要，只需对每个频段进行一次频率校准。
 
-#### 工厂校准<!-- linebreak -->
+#### 工厂校准（Factory Cal）<!-- linebreak -->
 
 该值允许将校准恢复为出厂默认设置。这通常会显示“否”。
 
-要恢复出厂默认设置，请将其设置为“是”并按绿色按钮。
+要恢复出厂默认设置，请将其设置为“是”并按绿色按键。
 
 应用工厂校准后，此设置将回到“否”。
 
-#### 校准步骤<!-- linebreak -->
+#### 校准步骤（Calibration Procedure）<!-- linebreak -->
 
 1. 要校准电台的发射功率，您需要一个功率计和一个假负载。
 2. 将电台连接到功率计。
 3. 将假负载连接到功率计的天线连接处。
 4. 选择所需的发射校准点。
 5. 选择功率级别（例如 250mW）。
-6. 按 PTT 键调整功率校准值，直到功率表显示250mW。
+6. 按 PTT 键调整功率校准值，直到功率表显示 250mW。
 7. 对所有其他功率级别重复步骤 5 和 6。
 8. 对所有其他校准点重复步骤 4 到 7。
 
@@ -1968,11 +1985,56 @@ _请注意：_ 如果选择了 **通话者**，在 FM 中，提示音将与 DMR 
 
 <div style="page-break-after: always; break-after: page;"></div>
 
+### 主题选项（Theme Options）
+
+此界面目前仅适用于特易通 MD-UV380 | Retevis RT-3S | 宝锋 DM-1701 | Retevis RT-84。
+
+![主题选项界面](media/theme-menu.png)
+
+在这个界面中，您可以调整主题项目的颜色。
+
+- 按压**井号**键编辑选定的项目颜色（参见[_可用主题项目_](#可用主题项目here-is-the-detailed-list-of-the-theme-items)）
+- 按压**绿色**键确认新的主题颜色，**所有更改都是临时的**
+- 按压**SK2+绿色**组合键，使更改永久生效
+- 按压**SK1+绿色**组合键，返回默认主题（黑白色），临时的（只需重新启动即可恢复最新保存的主题）
+- 按压**SK1+SK2+绿色**组合键，将恢复默认主题（黑白色），**永久**（擦除先前存储的主题）
+- 按压**红色**键取消所有更改
+
+#### 颜色选择器（Colour Picker）<!-- linebreak -->
+
+项目颜色编辑。
+
+![颜色选择器](media/colour-picker.png)
+
+在颜色选择器界面中，您可以使用**左**和**右**按键（_或类似 RT-3S 平台的旋转控制_）更改*红色*、*绿色*和*蓝色*颜色通道值。
+
+如果您在更改值时按下**SK2**按键，则步长增加 3 倍。
+
+默认的增量/减量步骤为：
+
+- *红色*和*蓝色*为 8（最大值为 248），
+- *绿色*为 4（最大值为 252）。
+
+_请注意：_
+
+- 所有这些步骤和最大值都与颜色格式（RGB 565）有关。
+- 按**绿色**键确认新的颜色。**红色**键取消更改。
+
+<div style="page-break-after: always; break-after: page;"></div>
+
+#### 可用主题项目（Here is the detailed list of the theme items）<!-- linebreak -->
+
+![主题项目第 1 部分](media/theme-items-1.svg)<!-- linebreak -->
+
+![主题项目第 2 部分](media/theme-items-2.svg)
+
+<div style="page-break-after: always; break-after: page;"></div>
+
 ### 信道详细设置（Channel Details）
 
-![](media/channel-details.png)
+![信道详细设置界面](media/channel-details.png)
 
-#### 信道名称<!-- linebreak -->
+#### 信道名称（Channel name）<!-- linebreak -->
 
 显示或更改信道名称。
 
@@ -1982,15 +2044,15 @@ _请注意：_ 如果选择了 **通话者**，在 FM 中，提示音将与 DMR 
 
 按 **蓝色+左** 组合键，删除一个字符。
 
-#### 接收频率（RX）
+#### 接收频率（RX）<!-- linebreak -->
 
 设置当前接收频率，也可使用数字键盘快速输入。
 
-#### 发射频率（TX）
+#### 发射频率（TX）<!-- linebreak -->
 
 设置当前发射频率，也可使用数字键盘快速输入。
 
-#### 模式（Mode）
+#### 模式（Mode）<!-- linebreak -->
 
 选择 FM（模拟）或 DMR（数字）。
 
@@ -1998,53 +2060,66 @@ _请注意：_ 如果选择了 **通话者**，在 FM 中，提示音将与 DMR 
 
 如果信道模式为 DMR，则可以通过键盘输入信道特定的 DMR ID 号码。
 
-#### 色码（Color Code）
+#### 色码（Color Code）<!-- linebreak -->
 
 设置 DMR 使用的颜色码。
 
-#### 时隙（Timeslot）
+#### 时隙（Timeslot）<!-- linebreak -->
 
 设置 DMR 使用的时隙。
 
-#### 接收/发射组（Tx/RX Grp）
+#### 通话组列表（TG Lst）<!-- linebreak -->
 
-设置当前 DMR 信道指定了哪些接收/发射组。
+设置当前 DMR 信道指定了哪些通话组列表。
 
-#### 发射哑音（Tx CTCSS or DCS）
+*请注意：*只能同时选择 _通话组列表_ **或** _联系人_ 中的一个。
 
-设置当前 FM 信道/VFO 使用的发射哑音。
+#### 联系人（Contact）<!-- linebreak -->
 
-#### 接收哑音（Rx CTCSS or DCS）
+设置当前 DMR 信道指定了哪个联系人。
+
+*请注意：*只能同时选择 _通话组列表_ **或** _联系人_ 中的一个。
+
+#### 接收哑音（Rx CSS (CTCSS or DCS)）<!-- linebreak -->
 
 设置当前 FM 信道/VFO 使用的接收哑音。
 
 _提示 :_ 对于发射与接收哑音，长按**左**或**右**方向键可以连续跳转。按住**蓝色**再按压**左**或**右**方向键可直接跳转到 CTCSS/DCS/DCSN 开头或末尾。
 
-#### 带宽（Bandwidth）
+#### 发射哑音（Tx CSS (CTCSS or DCS)）<!-- linebreak -->
+
+设置当前 FM 信道/VFO 使用的发射哑音。
+
+#### 带宽（Bandwidth）<!-- linebreak -->
 
 设置当前 FM 信道带宽，可选项有：25Khz, 12.5Khz。
 
-#### 步进（Step）
+#### 步进（Step）<!-- linebreak -->
 
 设置信道/VFO 频率步进。
 
-#### 超时定时器（TOT）
+#### 超时定时器（TOT）<!-- linebreak -->
 
 打开或关闭发射超时定时器。
 
-#### 跳过区域（Zone Skip）
+#### 仅接收（Rx Only）<!-- linebreak -->
+
+如果该值为**ON**，则设置信道仅接收。
+当信道设置为仅接收时，按下 PTT 会出现“ERROR Rx Only”消息，无法发射。
+
+#### 跳过区域（Zone Skip）<!-- linebreak -->
 
 设置是否在扫描时跳过该信道所在区域。
 
-#### 跳过信道（All Skip）
+#### 跳过信道（All Skip）<!-- linebreak -->
 
 设置是否在全信道扫描时跳过该信道。
 
-#### 声控发射（VOX）
+#### 声控发射（VOX）<!-- linebreak -->
 
 设置是否打开声控发射。
 
-#### 信道功率<!-- linebreak -->
+#### 信道功率（Ch Power）<!-- linebreak -->
 
 控制分配给信道的自定义功率。
 
@@ -2052,7 +2127,7 @@ _提示 :_ 对于发射与接收哑音，长按**左**或**右**方向键可以�
 
 **默认情况下**，所有信道将使用**主**功率设置，此选项允许在信道上设置**自定义**功率设置，或为信道设置使用**主**功率设置。
 
-#### 信道静噪<!-- linebreak -->
+#### 信道静噪（Squelch (Channel)）<!-- linebreak -->
 
 控制分配给信道的自定义静噪。
 
@@ -2062,19 +2137,36 @@ _提示 :_ 对于发射与接收哑音，长按**左**或**右**方向键可以�
 
 **自定义**静噪设置可以通过按左右箭头键应用于信道。自定义静噪设置以 5% 为步长。
 
-#### 信道提示音<!-- linebreak -->
+#### 信道提示音（Beep (Channel)）<!-- linebreak -->
 
 控制是否在信道上播放提示音。
 
 默认情况下，所有信道都启用提示音，但可以通过将此选项设置为 No 来禁用单个信道上的提示音。
 
-#### 信道省电<!-- linebreak -->
+#### 信道省电（Eco (Channel)）<!-- linebreak -->
 
 控制省电模式是否在此信道上开启。
 
 默认情况下，所有信道都启用省电模式，但可以通过将此选项设置为 No 在某个信道上禁用省电模式。
 
-#### 保存对信道的更改
+#### 主叫别名发射 时隙*x*（TA Tx TS*x*）<!-- linebreak -->
+
+在指定的时隙（TS1/TS2）上启用**发射**主叫别名数据。
+
+可选项有：
+
+- **Off**：关闭 不发送主叫别名。
+- **APRS**：如果在“**电台信息**”界面中定义了位置（或在有 GPS 模块的平台上由 GPS 模块定义），则将其用于此传输。
+- **Text**：文本 使用“**启动项**”CPS 屏幕中**第 1 行**和**第 2 行**的文本进行此传输，**第 1 行**和**第 2 行**数据之间没有空格。
+- **Both**：两者 交替发送上述两种信息。
+
+_请注意 :_
+
+- 主叫别名接收始终可用。如果您没有接收到主叫别名数据，不要启用此功能，因为它不控制主叫别名接收。
+
+- 使用此功能**将导致基于 Motorola 的中继和网络出现问题**，所以只能用于简单网络或 _Brandmeister_ 等其他正确支持主叫别名的网络。
+
+#### 保存对信道的更改（Accepting and saving the changes to the channel）<!-- linebreak -->
 
 按压**绿色**按键以确认更改。
 
@@ -2084,7 +2176,7 @@ _提示 :_ 对于发射与接收哑音，长按**左**或**右**方向键可以�
 
 <div style="page-break-after: always; break-after: page;"></div>
 
-### 语言
+### 语言界面（Language Screen）
 
 此设置允许选择屏幕文本的语言。\*
 
@@ -2098,7 +2190,7 @@ _请注意 :_
 
 <div style="page-break-after: always; break-after: page;"></div>
 
-### 卫星界面
+### 卫星界面（Satellite Screen）
 
 此界面使用您输入的位置、日期和时间预测未来 24 小时内业余无线电卫星的过境时间。
 
@@ -2140,7 +2232,7 @@ _请注意 :_
 
 按 **绿色** 按键选择特定卫星/过境，这会显示该卫星/过境的预测**极坐标图**。
 
-**极坐标图**
+#### 极坐标图（Polar view）<!-- linebreak -->
 
 ![位置](media/satellite-polar-before-AOS.png)
 
@@ -2162,7 +2254,7 @@ _请注意 :_
 
 按**下**方向键进入卫星独立预测界面，或按**上**方向键进入卫星实时数据界面。
 
-**卫星独立预测界面**
+#### 卫星独立预测界面（Satellite individual predictions screen）<!-- linebreak -->
 
 ![位置](media/satellite-individual-passes-1.png)
 
@@ -2174,7 +2266,7 @@ _请注意 :_
 
 按**下**方向键进入卫星实时数据界面，或按**上**方向键进入极坐标图。
 
-**卫星实时数据界面**
+#### 卫星实时数据界面（Satellite live data screen）<!-- linebreak -->
 
 无论选择了哪个过境，此界面都显示所选卫星的当前方位角和仰角。
 
@@ -2198,19 +2290,24 @@ _请注意 :_
 
 例如 IO-86 ，该卫星只经过赤道位置。
 
-**卫星闹钟**
+#### 卫星闹钟（Satellite alarm）<!-- linebreak -->
 
 如果想要设置有关特定卫星过境的闹钟：
 
-距离过境至少 1 分钟前，在任何卫星界面上按蓝色+绿色组合键，然后让电台保持在卫星模式即可。
+- 在距离过境至少 1 分钟前，在任何卫星界面上按压 **SK2+绿色** 组合键，电台将进入睡眠模式以节省电池电量，**除了 MD-9600 | RT-90** 不会。
+- 在卫星出现在地平线上方的 1 分钟前，电台会从睡眠模式恢复，然后发出哔哔声。
+- 按下任意键取消闹钟。
 
-在卫星出现在地平线上方的 1 分钟前，电台会发出哔哔声。
+如果要手动从睡眠模式恢复，请按：
 
-闹钟鸣响后按**绿色**按键取消闹钟，重启电台或进入和退出睡眠模式都可删除现有闹钟。
+- GD-77 | GD-77S | DM-1801 | DM-1801A | RD-5R 上的**橙色**按键（DM-1701 | RT-84 见 [不同电台之间的固件差异](#不同电台之间的固件差异variations-between-different-supported-radios) 部分）
+- MD-UV380 | RT-3S 上的 **SK2+PTT** 按键。
 
-如果 1 分钟后闹钟没有取消，它会自动停止。
+如果闹钟已启动，则按下**绿色**按键即可取消闹钟，或者打开/关闭电台。
 
-**CPS 集成**
+如果卫星过境闹钟（1 分钟）没有取消（使用**绿色**按键），电台将返回睡眠模式，仍然是为了节省电池电量。
+
+#### CPS 集成（CPS Integration）<!-- linebreak -->
 
 CPS 添加了一项额外功能，用于下载 Kep 的数据并将其上传到电台，以及设置电台的日期/时间。
 
@@ -2238,7 +2335,7 @@ CPS 默认从指定的 URL 下载 Kep，如果您想要使用不同的 Kep 数�
 
 CTCSS 和 ArmCTCSS 值是哑音频率乘以 10，例如 67Hz = 670
 
-**技术说明**
+#### 技术说明（Technical notes）<!-- linebreak -->
 
 卫星位置和预测计算由电台固件实时生成，当前选择的卫星数据每秒更新一次。
 
@@ -2253,13 +2350,13 @@ CTCSS 和 ArmCTCSS 值是哑音频率乘以 10，例如 67Hz = 670
 
 <div style="page-break-after: always; break-after: page;"></div>
 
-### GPS 界面
+### GPS 界面（GPS Screen）
 
-GPS 界面目前仅在特易通 MD-UV380/390 / Retevis RT-3S 和特易通 MD-9600 / Retevis RT-90 上可用，适用于装有 GPS 的电台，或者用户已修改的 MD-9600 （电台连接了和内部或外部 GPS 模块）。
+GPS 界面目前仅在特易通 MD-UV380 | MD-UV390 | Retevis RT-3S | 宝锋 DM-1701 | Retevis RT-84 和特易通 MD-9600 | Retevis RT-90 上可用，适用于装有 GPS 的电台，或者用户已修改的 MD-9600 （电台连接了和内部或外部 GPS 模块）。
 
-由于 GPS 接收器在使用过程中会持续消耗 50mA 以上的电流，所以在 MD-UV380/RT-3S 固件中，GPS 接收器默认是不供电的。
+由于 GPS 接收器在使用过程中会持续消耗 50mA 以上的电流，所以在 MD-UV380 | RT-3S | DM-1701 | RT-84 固件中，GPS 接收器默认是不供电的。
 
-要在电台中使用 GPS 接收器，您必须首先在“常规选项”菜单中启用 GPS。
+要在电台中使用 GPS 接收器，您必须首先在[“常规选项”](#全球定位系统gps)菜单中启用 GPS。
 如果电台没有安装 GPS，或者 GPS 似乎没有工作，这个选项将显示值“None”。
 如果电台装有 GPS，此选项的值最初将显示为“Off”。
 要使用 GPS，请将此值更改为“On”或“NMEA”。将 GPS 设置为 NMEA 将启用 GPS 模块并将所有 NMEA 数据从 GPS 模块发送到电台的 USB 串行端口。
@@ -2267,10 +2364,10 @@ GPS 界面目前仅在特易通 MD-UV380/390 / Retevis RT-3S 和特易通 MD-960
 请注意：
 
 1. 设置 GPS 输出 NMEA 数据会阻止 CPS 与电台通信，使用 CPS 时应将 GPS 设置为“Off”或“On”。
-2. UV380 和 MD9600 的 GPS 接收不是很灵敏，需要很长时间才能获取位置，而且这些电台的 GPS 在室内不工作。
+2. MD-UV380 和 MD-9600 的 GPS 接收不是很灵敏，需要很长时间才能获取位置，而且这些电台的 GPS 在室内不工作。
 
 第一次打开 GPS 后，GPS 界面将显示文本“正在获取”。GPS 正在接收的任何卫星的 UV380 信号强度条也将显示。
-在 MD-9600 版本上，第一个 GPS 界面上没有足够的空间来显示信号强度条，因此它们显示在 GPS 界面的第二页上，按向下箭头按钮即可访问
+在 MD-9600 版本上，第一个 GPS 界面上没有足够的空间来显示信号强度条，因此它们显示在 GPS 界面的第二页上，按向下箭头按键即可访问
 
 ![GPS获取](media/GPS_acquiring.png)
 
@@ -2284,13 +2381,13 @@ MD-UV380 和 MD-9600 版本在 GPS 界面中也有一个页面，显示任何检
 
 GPS 会自动更新电台中的实时时钟，且位置用于 DMR APRS 传输。
 
-在 UV380/RT-3S 上，GPS 卫星 RSSI 条形图采用颜色编码。蓝色代表美国 GPS 卫星，红色代表其他卫星系统。
+在 UV380 | RT-3S | DM-1701 | RT-84 上，GPS 卫星 RSSI 条形图采用颜色编码。默认情况下，蓝色代表美国 GPS 卫星，红色代表其他卫星系统。
 
 <div style="page-break-after: always; break-after: page;"></div>
 
-## 发起或接收单呼
+## 发起或接收单呼（Making and receiving DMR Private Calls）
 
-### 想要发起单呼的话
+### 想要发起单呼的话（To make a Private Call）
 
 在任意信道或频率界面：
 
@@ -2318,11 +2415,11 @@ _请注意 :_ 若您在输入 ID 时输错了一位，按压**左**方向键可�
 
 _请注意 :_ 当您处于单呼模式时，通过菜单切换信道或 VFO 都不会使您退出单呼模式。
 
-### 当接收到一个单呼时
+### 当接收到一个单呼时（To Receive a Private Call）<!-- linebreak -->
 
 当您接收到一个单呼时，电台会显示以下界面。
 
-![](media/accept-call.png)
+![接受界面](media/accept-call.png)
 
 屏幕中间会显示主叫呼号与姓名（或 ID）
 
@@ -2330,7 +2427,7 @@ _请注意 :_ 当您处于单呼模式时，通过菜单切换信道或 VFO 都�
 
 若您接收了此次呼叫，则电台会自动切换至单呼模式，同时显示对方的呼号，姓名等信息，等待您发射。界面如下：
 
-![](media/private-call.png)
+![单呼界面](media/private-call.png)
 
 当您的单呼操作结束后，按压**蓝色**+**红色**组合键可以回到之前的通话组。（或上一节描述的三种方法之一种）
 
@@ -2338,7 +2435,7 @@ _请注意 :_ 当您处于单呼模式时，通过菜单切换信道或 VFO 都�
 
 **重要信息**
 
-**热点模式目前不支持宝锋 DM5R，因为在 DM5R 发射时无法保证稳定的 USB 通信**
+**热点模式目前不支持宝锋 DM-5R | RD-5R，因为在 DM5R 发射时无法保证稳定的 USB 通信**
 
 - 在使用热点模式的时候，连接电台与主机的 USB 线**必须**进行适当保护以避免射频干扰，否则在电台发射时可能会造成 USB 连接被重置，进而导致热点模式停止工作。
 
@@ -2356,19 +2453,19 @@ _请注意 :_ 热点模式同时也兼容类似于 BlueDV 这样的软件，但�
 
 想要使用热点模式的话，请先使用写频线连接电台与主机，如图。
 
-![](media/hotspot-connections.jpg)
+![一个热点硬件](media/hotspot-connections.jpg)<!-- { width=600 } -->
 
 热点模式也支持树莓派 Zero/Zero W，不过您可能需要一条 OTG 线缆。
 
 在 PiStar 配置界面，Radio/Modem Type 一栏选择 “OpenGD77 DMR hotspot (USB)”
 
-![](media/pistar-configuration.png)
+![Pi-Star 配置页面](media/pistar-configuration.png)
 
 若您的 PiStar 并没有这个选项，请更新您的 PiStar。
 
 当您正确连接后，按住电台的**黑色**侧键并打开电源。若 PiStar 配置正确，您电台屏幕的顶部会显示 “Hotspot” 以提示您已进入热点模式，同时电池电量、色码、功率和接收频率也都会显示，如图。
 
-![](media/hotspot-mode.jpg)
+![热点界面](media/hotspot-mode.jpg)
 
 若电台没有进入热点模式，重启电台和 PiStar 并重试。
 
@@ -2405,11 +2502,11 @@ _请注意 :_ 在 PiStar 中请不要设置发射/接收频偏，因为您的电
 
 当您的电台接收到一个射频 DMR 信号时，机器顶部的指示灯会亮起绿色，主叫呼号及名称（或 DMR ID，如果没有查询到 ID 对应的呼号数据的话）、通话组、接收频率都会显示在电台屏幕上。
 
-![](media/hotspot-rx.jpg)
+![热点接收界面](media/hotspot-rx.jpg)
 
 当 PiStar 接收到来自网络的信号并触发您的电台进入发射时，机器顶部的指示灯会亮起红色，屏幕上同样会显示主叫呼号及名称/DMR ID，以及发射频率。
 
-## 重设电台各项设置
+## 重设电台各项设置（Resetting the Settings）
 
 按住电台侧边的**蓝色**并打开电台可以恢复各项设置到默认状态。
 
@@ -2417,7 +2514,7 @@ _请注意 :_ 在 PiStar 中请不要设置发射/接收频偏，因为您的电
 
 在 MD730 上，按住电台侧边的**蓝色+橙色**并打开电台可以清除自定义的开机声音。
 
-## MD-730 的操作方式
+## MD-730 的操作方式（GD-77S operation）
 
 若您要配合 MD730 使用本固件，**必须**使用写频软件写入语音提示。若您不写入语音提示，则电台不会发出任何提示音，这样的情况下几乎无法使用 MD730.
 
@@ -2429,32 +2526,32 @@ MD730 除了没有屏幕与键盘区以外，其侧边按键与 MD760 一样，�
 
 本固件对于 MD730 的使用提出了“控制模式”概念。在不同“控制模式”中黑色与蓝色按键各自拥有不同的功能，通过按压机顶**橙色**按键可以在不同模式之间切换。
 
-### MD730 信道/通话组模式
+### MD730 信道/通话组模式（GD77S Channel / TG mode）
 
 本模式的语音提示是 "Channel mode".
 在本模式中，黑色与蓝色按键用于浏览当前信道以及其指定通话组。
 
-### MD730 扫描模式
+### MD730 扫描模式（GD77S Scan mode）
 
 本模式与普通版本固件中的信道扫描一样。按压黑色侧键可以开始或结束扫描。
 
-### MD730 时隙模式
+### MD730 时隙模式（GD77S Timeslot mode）
 
 在本模式下按压黑色或蓝色侧键可以在时隙 1 与时隙 2 之间切换。
 
-### MD730 色码模式
+### MD730 色码模式（GD77S Color Code mode）
 
 在本模式下，按压黑色侧键可以使色码递增，按压蓝色按键可以递减。
 
-### MD730 DMR 过滤模式
+### MD730 DMR 过滤模式（GD77S DMR Filter mode）
 
-在本模式下，按压黑色侧键可以向上更改 DMR 模式的过滤设置，按压蓝色侧键则向下更改。请查看 [DMR 模式的过滤设置](#dmr模式的过滤设置)
+在本模式下，按压黑色侧键可以向上更改 DMR 模式的过滤设置，按压蓝色侧键则向下更改。请查看 [DMR 模式的过滤设置](#过滤器filter仅限-dmr-模式)
 
-### MD730 区域模式
+### MD730 区域模式（GD77S Zone mode）
 
 在本模式下，按压黑色侧键可以选择上一个区域，按压蓝色侧键则选择下一个区域。
 
-### MD730 功率模式
+### MD730 功率模式（GD77S Power mode）
 
 在本模式下，按压黑色侧键可以提高一档功率，按压蓝色侧键可以减少一档功率。
 
@@ -2462,21 +2559,20 @@ _请注意 :_ 与之前所说一致，功率设置数值仅在您校准了功率
 
 <div style="page-break-after: always; break-after: page;"></div>
 
-## MD9600 RT90 的操作方式
+## MD9600 和 RT90 的操作方式（MD-9600 and RT-90 specific）
 
-特易通 MD-9600 / Retevis RT-90 使用以下按键
+特易通 MD-9600 | Retevis RT-90 使用以下按键
 
-![电台校准界面](media/MD9600Controls.jpg)
+![MD-9600 | RT-90 概述](media/MD9600Controls.jpg)<!-- { width=600 } -->
 
-前面板
+<div style="page-break-after: always; break-after: page;"></div>
 
-P1 = **SK2**
+**前面板：**
 
-P2 = **SK1**
-
-P2 =（无功能）
-
-P4 = *（星号）
+- P1 = **SK2**
+- P2 = **SK1**
+- P2 =（无功能）
+- P4 = \*（星号）
 
 旋钮改变信道或频率，以及菜单设置
 
@@ -2488,48 +2584,42 @@ P4 = *（星号）
 
 在扫描过程中按下方向键，反转扫描方向。
 
-在扫描过程中，*（星号）按钮将频道标记为干扰频道。这与手持电台上的右方向键的功能相同。
+在扫描过程中，\*（星号）按钮将频道标记为干扰频道。这与手持电台上的右方向键的功能相同。
 
 无法通过前面板按钮操作 VFO 扫描。
 
-在麦克风键盘上
+**在麦克风键盘上：**
 
-A/B = 绿色
-
-A 键 = 红色
-
-B 键 = 右方向键
-
-C 键 = 左方向键
+- A/B = 绿色
+- A 键 = 红色
+- B 键 = 右方向键
+- C 键 = 左方向键
 
 **长按** D 键切换 **SK2** 保持，因此可以从麦克风控制 SK2 功能
 
-在 FM 上输入或直接发射 DTMF 时，以下按键映射用于发送或输入 A、B、C、D 字符。
+在 FM 上输入或直接发射 DTMF 时，以下按键映射用于发送或输入 A、B、C、D 字符：
 
-上方向键 = A
+- 上方向键 = A
+- SK1 + 上方向键 = B
+- 下方向键 = C
+- SK1 + 下方向键 = D
 
-SK1 + 上方向键 = B
-
-下方向键 = C
-
-SK1 + 下方向键 = D
-
-## 客户编程软件（CPS）
+## 客户编程软件（CPS software）
 
 _请注意 :_
 
-- 您**不能**使用原厂官方的 Radioddity CPS 或 Baofeng CPS 来写入已刷入 OpenGD77 固件的电台。
+- 您**不能**使用原厂官方的 Radioddity CPS 或 宝锋 CPS 来写入已刷入 OpenGD77 固件的电台。
   如果您想使用 Radioddity CPS，电台需要运行 **Radioddity 官方固件**。将带有您的 ID 和呼号的电台配置文件写入电台后，您可以将固件刷入电台，然后它将读取并使用以前官方固件的电台配置文件。
 
-请从 [1.1 节](#下载链接与其他资源) 中给出的位置下载最新的 OpenGD77 CPS
+请从 [1.1 节](#下载链接与其他资源download-links-and-other-resources) 中给出的位置下载最新的 OpenGD77 CPS
 
 有关 OpenGD77 CPS 特定的信息，请参阅下一节。本节其余部分的信息同时适用于官方 Radioddity CPS 和 OpenGD77 CPS。
 
-### 概述
+### 概述（Overview）
 
 该固件简化了通话组的概念，为业余无线电爱好者提供了最大的便利。与大多数商业 DMR 电台不同，它不需要创建多个信道来使用相同的频率与许多不同的传输通话组。更改通话组只需要通过**左**和**右**方向键在您的列表中选择或通过按**井号**键输入*临时*通话组，就是这么简单。
 
-在 DMR 模式下，当使用频率模式或区域和信道模式时，您可以使用左/右方向键滚动并在接收组列表中任意选择一个通话组分配给当前信道或频率。
+在 DMR 模式下，当使用频率模式或区域和信道模式时，您可以使用左/右方向键滚动并在通话组列表中任意选择一个通话组分配给当前信道或频率。
 
 使用 CPS 对电台进行写频时，首先将您认为希望使用的所有**通话组**添加到*联系人*列表中。
 
@@ -2553,9 +2643,9 @@ _请注意 :_
 
 最后，在将电台配置文件写入电台之前，将您的电台配置文件保存到您的计算机上，使用标准的 Radioddity CPS 对电台进行写入，然后再将其刷入 OpenGD77，或者，如果您使用的是 CPS 的特殊 OpenGD77 兼容版本，（详细在下一节中）您可以将电台配置文件直接写入已经刷过的 OpenGD77 电台。
 
-#### 新驱动安装<!-- linebreak -->
+#### 新驱动安装（New Driver Installation）<!-- linebreak -->
 
-CPS 安装程序还将自动安装通信端口驱动程序，但是您也可以通过从 [第 1.1 节](#下载链接与其他资源) 中给出的位置下载文件来手动安装通信端口驱动程序。
+CPS 安装程序还将自动安装通信端口驱动程序，但是您也可以通过从 [第 1.1 节](#下载链接与其他资源download-links-and-other-resources) 中给出的位置下载文件来手动安装通信端口驱动程序。
 
 要安装驱动程序，请下载并解压缩 zip 文件，然后运行 .bat 文件
 
@@ -2563,7 +2653,7 @@ CPS 安装程序还将自动安装通信端口驱动程序，但是您也可以�
 
 ![设备管理器窗口](media/device-manager-ports.png)<!-- { width=280 } -->
 
-#### OpenGD77 菜单<!-- linebreak -->
+#### OpenGD77 菜单（OpenGD77 Menu）<!-- linebreak -->
 
 在 CPS 中，Extras 菜单下有一个新的菜单项，用于打开 OpenGD77 支持窗口。
 
@@ -2581,7 +2671,7 @@ _请注意 :_
 
 <div style="page-break-after: always; break-after: page;"></div>
 
-#### 在您做任何其他事情之前备份<!-- linebreak -->
+#### 在您做任何其他事情之前备份（Backup Before You Do Anything Else）<!-- linebreak -->
 
 在第一次向电台写入电台配置文件之前，您应该**备份 EEPROM 和 Flash**芯片，并将文件保存在**安全的地方**，以防将来出现问题而需要恢复数据。
 
@@ -2591,11 +2681,11 @@ _请注意 :_
 
 ![创建各种备份的按钮](media/Backup-02.png)<!-- { width=550 } -->
 
-#### 读写您的电台配置文件<!-- linebreak -->
+#### 读写您的电台配置文件（Reading and Writing Your Codeplug）<!-- linebreak -->
 
 要读取电台配置文件，请按“Read codeplug”按钮，等待所有 3 个数据部分下载，然后关闭 OpenGD77 支持窗口。要写入电台配置文件，请按“Write codeplug”按钮。
 
-#### 写入 DMR ID 用户数据库<!-- linebreak -->
+#### 写入 DMR ID 用户数据库（Writing DMR IDs -- the User Database）<!-- linebreak -->
 
 固件支持**扩展 DMR ID 信息**，最多 50 个字符，用于呼号、姓名、城市等。
 
@@ -2613,11 +2703,11 @@ _请注意 :_
 
 <div style="page-break-after: always; break-after: page;"></div>
 
-#### 开机铃声<!-- linebreak -->
+#### 开机铃声（Boot tune）<!-- linebreak -->
 
 一个音由一对音高和延迟组成。所以 **38,6** 表示播放 **tone 38** (_932Hz F#_) **6 个时间段**。
 
-##### 莫尔斯电码开机铃声<!-- linebreak -->
+##### 莫尔斯电码开机铃声（Boot Tune in Morse code）<!-- linebreak -->
 
 打开电台时，您可以使用摩尔斯电码播放呼号。国际电联莫尔斯标准具有以下比率：
 
@@ -2642,7 +2732,7 @@ _请注意 :_
 
 - 完成所有操作后删除空格和回车，然后粘贴到 Extras/OpenGD77 support 下的 Boot Tune 部分
 
-##### 旋律和音符<!-- linebreak -->
+##### 旋律和音符（Melodies and Notes）<!-- linebreak -->
 
 作为参考，OpenGD77 中的音调值为：
 
@@ -2661,6 +2751,6 @@ _请注意 :_
 | **11** | G        | 196      |            | 23     | G        | 392      |            | 35     | G        | 784      |            |        |          |          |            |
 | **12** | G#       | 207.6    |            | 24     | G#       | 415.3    |            | 36     | G#       | 830.6    |            |        |          |          |            |
 
-#### 开机图像<!-- linebreak -->
+#### 开机图像（Boot Image）<!-- linebreak -->
 
 开机图像需要是 **128 像素宽 x 64 像素高**。它需要是 **1 位 PNG 格式**。 （_一些现代绘画程序不支持的索引图像格式_）。
