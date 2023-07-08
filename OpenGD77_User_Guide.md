@@ -135,7 +135,7 @@ For the latest information and discussions, please refer to the development and 
           * [Mode](#mode)
           * [Timeout](#timeout)
           * [Screen](#screen)
-          * [Auto theme](#auto-theme)
+          * [Auto night](#auto-night)
           * [Order](#order)
           * [Contact](#contact)
           * [Battery (units)](#battery-units)
@@ -1647,7 +1647,7 @@ This option allows for Normal or inverse colour display.
 
 - This does not completely replicate the GD-77 “*Black*” display hardware version, because that radio uses a different LCD panel which physically has a black background, whereas the normal GD-77 has an LCD panel with a white background.
 
-#### Auto theme<!-- linebreak -->
+#### Auto night<!-- linebreak -->
 
 This option allows the firmware to automatically change the theme between Day and Night, according to daytime.
 
@@ -1930,7 +1930,7 @@ This screen currently only applies to the TYT MD-UV380 | Retevis RT-3S | Baofeng
 
 ![theme daytime selection](media/theme-daytime.png)
 
-In this screen, you can select the Day or Night theme (see Display [Auto theme](#auto-theme) option).
+In this screen, you can select the Day or Night theme (see Display [Auto night](#auto-night) option).
 
 Press **Green** to enter the theme options screen (see below).
 
