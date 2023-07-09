@@ -27,6 +27,7 @@
   - [主屏幕（频率与信道界面）（Main screens (VFO and Channel modes)）](#主屏幕频率与信道界面main-screens-vfo-and-channel-modes)
     - [在模拟与数字模式之间切换（Changing between FM mode and DMR mode）](#在模拟与数字模式之间切换changing-between-fm-mode-and-dmr-mode)
     - [在 DMR 模式下切换时隙（Changing Timeslot in DMR mode）](#在-dmr-模式下切换时隙changing-timeslot-in-dmr-mode)
+    - [在 DMR 模式下自动设置通话组、单呼和时隙（Automatic setting of Talkgroup/PrivateCall and Timeslot in DMR mode）](#在-dmr-模式下自动设置通话组单呼和时隙automatic-setting-of-talkgroupprivatecall-and-timeslot-in-dmr-mode)
     - [在 FM 模式下更改带宽（Changing bandwidth in FM mode）](#在-fm-模式下更改带宽changing-bandwidth-in-fm-mode)
     - [控制发射功率（Controlling Tx power）](#控制发射功率controlling-tx-power)
     - [信号强度条（S 表）（Signal strength bar graph）](#信号强度条s-表signal-strength-bar-graph)
@@ -135,6 +136,7 @@
       - [背光模式（Mode）](#背光模式mode)
       - [背光延时（Timeout）](#背光延时timeout)
       - [显示颜色模式（Screen）](#显示颜色模式screen)
+      - [自动夜间模式（Auto night）](#自动夜间模式auto-night)
       - [联系人显示顺序（Order）](#联系人显示顺序order)
       - [联系人显示方式（Contact）](#联系人显示方式contact)
       - [电量（单位）](#电量单位)
@@ -163,6 +165,8 @@
       - [工厂校准（Factory Cal）](#工厂校准factory-cal)
       - [校准步骤（Calibration Procedure）](#校准步骤calibration-procedure)
     - [主题选项（Theme Options）](#主题选项theme-options)
+      - [主题选择器（Theme Chooser）](#主题选择器theme-chooser)
+      - [主题选项（Theme Options）](#主题选项theme-options-1)
       - [颜色选择器（Colour Picker）](#颜色选择器colour-picker)
       - [可用主题项目（Here is the detailed list of the theme items）](#可用主题项目here-is-the-detailed-list-of-the-theme-items)
     - [信道详细设置（Channel Details）](#信道详细设置channel-details)
@@ -177,7 +181,7 @@
       - [联系人（Contact）](#联系人contact)
       - [接收哑音（Rx CSS (CTCSS or DCS)）](#接收哑音rx-css-ctcss-or-dcs)
       - [发射哑音（Tx CSS (CTCSS or DCS)）](#发射哑音tx-css-ctcss-or-dcs)
-      - [带宽（Bandwidth）](#带宽bandwidth)
+      - [带宽（BW）](#带宽bw)
       - [步进（Step）](#步进step)
       - [超时定时器（TOT）](#超时定时器tot-1)
       - [仅接收（Rx Only）](#仅接收rx-only)
@@ -470,6 +474,18 @@ _请注意 :_
 
 要清除临时时隙，请长按**星号**按键。
 
+### 在 DMR 模式下自动设置通话组、单呼和时隙（Automatic setting of Talkgroup/PrivateCall and Timeslot in DMR mode）
+
+在 DMR 模式下，如果 DMR 过滤器被关闭，即使通话组**不在**通话组列表中或未定义为信道的联系人，也可以在接收时自动将电台设置为正确的通话组：
+
+- 在接收时，按压 SK2 按键一次，电台会自动设置通话组覆盖。
+
+_请注意 :_
+
+- 如果时隙过滤器处于关闭状态，它也会被覆盖。
+
+要清除覆盖，参见[在 DMR 模式下切换时隙](#在-dmr-模式下切换时隙changing-timeslot-in-dmr-mode)和[手动输入通话组号码](#手动输入通话组代码manual-talkgroup-number-entry)部分。
+
 ### 在 FM 模式下更改带宽（Changing bandwidth in FM mode）
 
 - 在 FM 模式下，按压**星号**按键可在 25kHz 和 12.5kHz 带宽之间切换。
@@ -478,9 +494,9 @@ _请注意 :_
 
 固件主要有两种控制输出功率的方法：
 
-1.  **主**功率控制，控制两个 VFO 以及所有信道的功率。
+1. **主**功率控制，控制两个 VFO 以及所有信道的功率。
 
-2.  **信道**自定义功率。
+2. **信道**自定义功率。
 
 默认情况下，所有信道使用**主**功率设定，但是可以在 CPS（以及**信道详情**界面）中更改此设置，以使各个信道有自己的功率设置。
 
@@ -572,7 +588,8 @@ _请注意 :_
 
 #### 中继倒频功能（Reverse repeater operation）
 
-- 按住**井号**键，频道的发射和接收频率将被交换。信道名称将以反相显示。
+- 信道模式：按住**井号**键，频道的发射和接收频率将被交换。信道名称将以反相显示。
+- 频率模式：按住 **SK1** 和 **SK2** 键，频率的发射和接收频率将被交换。
 - 即使信道或区域发生变化，电台仍会保持锁定在中继倒频模式。
 - 要退出中继倒频模式，请按住**井号**键。
 
@@ -1706,10 +1723,25 @@ _请注意：_
 
 本设置允许您将屏幕设置为正常或反色。
 
-- **正常** 单色平台上为白色背景黑色像素，彩色平台上为正常主题颜色。
-- **反色** 单色平台上为黑色背景白色像素，彩色平台上为反色主题颜色。
+- **Normal**：正常 单色平台上为白色背景黑色像素，彩色平台上为正常主题颜色。
+- **Inverted**：反色 单色平台上为黑色背景白色像素，彩色平台上为反色主题颜色。
 
 _请注意 :_ 本功能并不能做到和 MD760 黑色液晶版本完全相同的效果，因为黑色液晶版本使用了与普通正常 LCD 不同的屏幕，因此其黑色背景色是原生的。
+
+#### 自动夜间模式（Auto night）<!-- linebreak -->
+
+本设置允许固件根据白天或黑夜自动切换主题。
+
+**请注意：** 为了使其正常工作，必须定义位置、日期和时间。这些值可以手动定义（在[电台信息](#电台信息radio-info)屏幕中）或使用具有内置 GPS 的电台上的 GPS 自动定义。
+
+固件会计算太阳位置，并在日出/日落时间到来时切换到正确的主题。
+
+- 在彩色平台上，您可以使用[主题选项](#主题选项theme-options)或 CPS 编辑两个主题。
+- 在单色平台上，固件在白天切换到非反色屏幕，晚上切换到反色屏幕。如果[显示颜色模式](#显示颜色模式screen)设置为**反色**，则白天/夜间显示反转（白天为**反色**，夜间为**正常**）。
+
+用户可以在通道或 VFO 屏幕上按下 **SK1** + **红色**以覆盖当前的日间主题。
+
+一旦覆盖了日间主题，自动主题切换将被禁用。长按 **SK1** + **红色**清除此覆盖（或重新启动电台）。
 
 #### 联系人显示顺序（Order）<!-- linebreak -->
 
@@ -1859,7 +1891,6 @@ _请注意：_ 如果选择了**通话者**，在 FM 中，提示音将与 DMR �
 此设置控制按下按键时的**提示音**，并具有以下选项：
 
 - **Silent**：静音 电台按下按键时无提示音
-- **No Keys**：除按键 与**哔声**相同，但不会在按键按下时发出任何蜂鸣声。
 - **Beep**：哔声 按下按键时电台会发出哔声。有 2 种不同音高的蜂鸣声。
 
   在*信道*或*通话组*或*菜单项目*中选择时，当选择列表中的第一项时，会发出**较高音调**的哔声。
@@ -1870,6 +1901,7 @@ _请注意：_ 如果选择了**通话者**，在 FM 中，提示音将与 DMR �
 
   更改功率时，选择**最低功率级别**时会发出**较高音调**的哔声。
 
+- **No Keys**：除按键 与**哔声**相同，但不会在按键按下时发出任何蜂鸣声。
 - 除了哔声，**如果通过 CPS 加载语音提示文件**，固件还支持语音提示。
 
   有 3 级语音提示：
@@ -1989,6 +2021,16 @@ _请注意：_ 如果选择了**通话者**，在 FM 中，提示音将与 DMR �
 
 此界面目前仅适用于特易通 MD-UV380 | Retevis RT-3S | 宝锋 DM-1701 | Retevis RT-84。
 
+#### 主题选择器（Theme Chooser）<!-- linebreak -->
+
+![日间主题选择](media/theme-daytime.png)
+
+在这个界面中，您可以选择日间或夜间主题（参见显示[自动夜间模式](#自动夜间模式auto-night)）。
+
+按压**绿色**键进入主题选项界面（见下文）。
+
+#### 主题选项（Theme Options）<!-- linebreak -->
+
 ![主题选项界面](media/theme-menu.png)
 
 在这个界面中，您可以调整主题项目的颜色。
@@ -2090,7 +2132,7 @@ _提示 :_ 对于发射与接收哑音，长按**左**或**右**方向键可以�
 
 设置当前 FM 信道/VFO 使用的发射哑音。
 
-#### 带宽（Bandwidth）<!-- linebreak -->
+#### 带宽（BW）<!-- linebreak -->
 
 设置当前 FM 信道带宽，可选项有：25Khz, 12.5Khz。
 
