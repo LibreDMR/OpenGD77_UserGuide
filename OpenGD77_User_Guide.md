@@ -1465,7 +1465,7 @@ Default is **Manual**, and the currently selected satellite does not change. "Au
 
 #### GPS<!-- linebreak -->
 
-This setting is only available on the TYT MD-9600 | Retevis RT-90 and TYT MD-UV380 | Retevis RT-3S | Baofeng DM-1701 | Retevis RT-84.
+This setting is only available on radios which have a GPS receiver, this includes the TYT MD-9600 | Retevis RT-90 and TYT MD-UV380 | Retevis RT-3S when they have the optional GPS receiver fitted, or when people have modified the radio to add an internal or external GPS
 
 Because the GPS receiver consumes over 50mA constantly when in use, the GPS receiver is not powered by default.
 
