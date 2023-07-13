@@ -130,6 +130,7 @@ For the latest information and discussions, please refer to the development and 
           * [DMR crc](#dmr-crc)
         * [Display Options](#display-options)
           * [Brightness](#brightness)
+          * [Nite Bright](#nite-bright)
           * [Min Bright](#min-bright)
           * [Contrast](#contrast)
           * [Mode](#mode)
@@ -1608,6 +1609,10 @@ The firmware allows the display backlight brightness to be controlled from **100
 - Use the **Right** and **Left** arrow keys to adjust the brightness.
 
 The default backlight brightness (**default 100%**).
+
+#### Nite Bright<!-- linebreak -->
+
+This setting is identical to [Brightness](#brightness) above, except it is used when Night theme is active (see [Auto night](#auto-night)).
 
 #### Min Bright<!-- linebreak -->
 
