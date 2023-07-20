@@ -2319,6 +2319,8 @@ The GPS screen is currently only available on the TYT MD-UV380 | MD-UV390 | Rete
 Because the GPS receiver consumes over 50mA constantly when in use, the GPS receiver is not powered by default in the MD-UV380 | RT-3S | DM-1701 | RT-84 firmware.
 GPS power state could be changed in this screen using **Green** + **SK2** and **Red** + **SK2** (available value are the same than in **General Options**).
 
+On the MD-9600, it's possible to enable the GPS power (but not to enable the NMEA output) by long pressing **Green** key (**ENT** on the front panel and **A/B** on the mic).
+
 To use the GPS receiver in the radio, you must first enable the GPS in the [**General Options**](#gps) menu.
 If the radio is not fitted with GPS, or the GPS does not appear to function, this option will show the value "None".
 If the radio is fitted with a GPS, the value of this option will initially display "Off"
@@ -2575,10 +2577,12 @@ The TYT MD-9600 | Retevis RT-90 uses the following keys and buttons
 
 **Front panel:**
 
-  - P1 = **SK2**
-  - P2 = **SK1**
-  - P2 = (NO FUNCTION)
-  - P4 = * (STAR)
+| **Key** | **Function** |
+| --- | --- |
+| P1 | **SK2** |
+| P2 | **SK1** |
+| P2 | (*NO FUNCTION*) |
+| P4 | **Star** (*) |
 
 
 Rotary control changes channel or frequency, and menu settings.
@@ -2597,10 +2601,12 @@ VFO scanning can not be operated from the front panel buttons.
 
 **On the mic keypad:**
 
-  - A/B = Green
-  - A key = Red
-  - B key = Right Arrow
-  - C key = Left Arrow
+| **Key** | **Function** |
+| --- | --- |
+| A/B | **Green** |
+| A | **Red** |
+| B | **Right** |
+| C | **Left** |
 
 
 **Long press** of D key toggles **SK2** latch, so SK2 functions can be controlled from the mic.
@@ -2609,10 +2615,12 @@ VFO scanning can not be operated from the front panel buttons.
 
 When entering or directly transmitting DTMF on FM, the following key mappings are used to send or enter the A, B, C and D characters:
 
-- **Up arrow** = A
-- **SK1 + Up arrow** = B
-- **Down arrow** = C
-- **SK1 + Down arrow** = D
+| **Key(s)** | **DTMF** |
+| --- | --- |
+| **Up** | A |
+| **SK1** + **Up** | B |
+| **Down** | C |
+| **SK1** + **Down** | D |
 
 
 
