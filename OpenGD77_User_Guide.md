@@ -193,6 +193,7 @@ For the latest information and discussions, please refer to the development and 
       * [Polar view](#polar-view)
       * [Satellite individual predictions screen](#satellite-individual-predictions-screen)
       * [Satellite live data screen](#satellite-live-data-screen)
+      * [Squelch and Power settings](#squelch-and-power-settings)
       * [Satellite alarm](#satellite-alarm)
       * [CPS Integratione](#cps-integration)
       * [Technical notes](#technical-notes)
@@ -2252,6 +2253,17 @@ On the Polar, Live and Individual satellite predictions screens. Press SK2 + **U
 If a satellite has no passes over the current location, the radio will display "Pass: None" or "Empty List" depending on the screen currently selected.
 e.g. IO-86 only passes over equatorial locations.
 
+#### Squelch and Power settings<!-- linebreak -->
+
+In all Satellite screens, **except** the [Satellite individual predictions](#satellite-individual-predictions-screen) one, it's possible to adjust the Squelch and output Power settings using the following keys:
+
+- Squelch:
+  - on **GD-77 | DM-1801 | DM-1801A | RD-5R | TYT MD-9600 | Retevis RT-90 | Baofeng DM-1701 | Retevis RT-84**, use the **Left** and **Right** keys.
+  - on **TYT MD-UV380 | Retevis RT-3S | Baofeng DM-1701 | Retevis RT-84**, use the rotary knob.
+- Power:
+  - on **GD-77 | DM-1801 | DM-1801A | RD-5R | TYT MD-9600 | Retevis RT-90 | Baofeng DM-1701 | Retevis RT-84**, use the **SK2** + **Left** and **SK2** + **Right** keys.
+  - on **TYT MD-UV380 | Retevis RT-3S | Baofeng DM-1701 | Retevis RT-84**, use **SK2** + rotary knob.
+  - **except on the TYT MD-UV380 | Retevis RT-3S** for technical reasons, you can access the **+W-** power setting using **SK2** + **Long press** **Right** keys. 
 
 #### Satellite alarm<!-- linebreak -->
 
