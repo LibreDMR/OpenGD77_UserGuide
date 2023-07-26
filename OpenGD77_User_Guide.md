@@ -1666,7 +1666,9 @@ The firmware calculates the sun position and switch to the correct theme when th
 
 The user can override the current daytime theme, pressing **SK1** + **Red**, in the Channel or VFO screens **only**.
 
-Once the daytime theme is override, the automatic theme switching is disabled. Long press on **SK1** + **Red** clears this override (or power cycle the radio).
+- Once the daytime theme is override, the automatic theme switching is disabled.
+- if **Auto night** is set to **Off** and an override is set, it will be restored on transceiver power-up.
+- Long press on **SK1** + **Red** clears this override.
 
 #### Order<!-- linebreak -->
 
