@@ -2349,17 +2349,53 @@ Initially after turning on the GPS, the GPS screen will show the text "Acquiring
 On the MD-9600 version, there is not enough room on the first GPS screen to show the signal strength bars, so they are shown on a second page to the GPS screen, which is accessed by pressing the Down arrow button
 
 
-![GPS_acquiring](media/GPS_acquiring.png)
+![MD-UV380 GPS Acquiring](media/MD-UV380-GPS_Acquiring.png)
+
+![MD-9600 GPS Acquiring](media/MD9600-GPS_Acquiring.png)
 
 Both the MD-UV380 and MD-9600 versions also have a page in the GPS screen, which shows the polar positions of any detected GPS satellites, however this screen is not functional until the GPS position is known.
 
-Once the GPS position has been acquired, the position will be displayed, including Latitude, Longitude, Altitude and accuracy.
+Once the GPS position has been acquired, the position will be displayed, including Latitude, Longitude, Locator and position accuracy.
 
-![GPS_1](media/GPS1.png)
+![MD-UV390 GPS Acquired](media/MD-UV380-GPS_Acquired.png)
 
-![GPS_2](media/GPS2.png)
+![MD-9600 GPS Acquired](media/MD9600-GPS_Acquired.png)
 
-The GPS automatically updates the Real Time clock in the radio, and the position is used for DMR APRS transmissions.
+![MD-9600 GPS RSSI](media/MD9600-GPS_RSSI.png)
+
+Polar view
+
+![MD-UV390 GPS Polar view](media/MD-UV380-GPS_Polar.png)
+
+![MD-9600 GPS Polar view](media/MD9600-GPS_Polar.png)
+
+<div style="page-break-after: always; break-after: page;"></div>
+
+More position information and direction
+
+![MD-9600 Position view](media/MD9600-GPS_Pos_2.png)
+
+![MD-UV380 Direction view](media/MD-UV380-GPS_Direction.png)
+
+![MD-9600 Direction view](media/MD9600-GPS_Direction.png)
+
+*Note:*
+
+The heading information (compass arrow, degrees and cardinals) are only displayed when the speed is greater than zero.
+
+<div style="page-break-after: always; break-after: page;"></div>
+
+**The center of the heading compass is displaying the Fix quality:**
+
+| **Symbol** | **Fix Quality** |
+| --- | --- |
+| ![No Fix](media/GPS_No_Fix.png) | No Fix |
+| ![Low Q Fix](media/GPS_Low_Q_Fix.png) | Low |
+| ![2D Fix](media/GPS_2D_Fix.png) | 2D |
+| ![3D Fix](media/GPS_3D_Fix.png) | 3D |
+
+
+**The GPS automatically updates the Real Time clock in the radio, and the position is used for DMR APRS transmissions.**
 
 On the UV380 | RT-3S | DM-1701 RT-84 the GPS satellite RSSI bar graphs are colour coded. By default, Blue is for USA GPS Satellites and Red is for other satellite systems.
 
@@ -2475,17 +2511,20 @@ Instead, the firmware will use the current (Channel or VFO) power setting, which
 If the power setting in the Pi-Star MMDVMHost Expert settings is any other value *e.g.* **50%**, the hotspot will use that power setting closest to the chosen value.
 So **50%** of *5W* is **2.5W**, and the closest power setting to this is *2W*.
 
-Power | Pi-Star RFLevel
---- | ---
-50mW  | 1
-250mW  | 5
-500mW  |10
-750mW  |15
-1W  |  20
-2W  | 40
-4W  | 80
-5W  | 99
-+W- | N/A
+**Power matching table:**
+
+| **Power** | **Pi-Star RFLevel** |
+| --- | --- |
+| 50mW | 1 |
+| 250mW | 5 |
+| 500mW | 10 |
+| 750mW | 15 |
+| 1W | 20 |
+| 2W | 40 |
+| 4W | 80 |
+| 5W | 99 |
+| +W- | N/A |
+
 
 The receive frequency specified by Pi-Star will be displayed at the bottom of the screen.
 
