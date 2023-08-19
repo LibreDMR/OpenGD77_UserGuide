@@ -1871,7 +1871,9 @@ This setting controls the **audible feedback** to button and key presses etc. an
 
 - **No Keys**: Identical as **Beep** (see above), except it doesn't emit any beep on button and key presses.
 - In addition to the beep, the firmware also supports voice prompts **if a voice prompt file is loaded via the CPS**.
-  There are 3 levels of voice prompt,
+
+There are 3 levels of voice prompt:
+
   - "**Voice**",
   - "**Voice L2**" and
   - "**Voice L3**", in the latter two cases the L indicates the "Level"
