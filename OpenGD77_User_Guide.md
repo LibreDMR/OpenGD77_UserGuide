@@ -189,6 +189,7 @@ For the latest information and discussions, please refer to the development and 
       * [Eco](#eco-channel)
       * [TA Tx TS1](#ta-tx-tsx)
       * [TA Tx TS2](#ta-tx-tsx)
+	  * [APRS](#aprs-channel)
       * [Accepting and saving the changes to the channel](#accepting-and-saving-the-changes-to-the-channel)
     * [Satellite Screen](#satellite-screen)
       * [Polar view](#polar-view)
@@ -2135,6 +2136,15 @@ Options are:
 - Talker Alias reception is always operational. Do not enable this feature because you are not receiving TA data, as it does not control TA Rx.
 
 - Use of this feature **will cause problems on Motorola based repeaters and networks**, and should only be used for simplex and possibly on *Brandmeister* and other networks which correctly support Talker Alias. -->
+
+
+#### APRS (channel)<!-- linebreak -->
+
+Sets the FM APRS Tx configation to be used on this VFO / Channel
+
+The default setting is None
+
+
 
 #### Accepting and saving the changes to the channel<!-- linebreak -->
 
