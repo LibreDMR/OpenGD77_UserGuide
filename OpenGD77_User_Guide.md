@@ -167,6 +167,7 @@ For the latest information and discussions, please refer to the development and 
       * [Channel name](#channel-name)
       * [RX](#rx)
       * [TX](#tx)
+        * [Repeater Shifts](#repeater-shifts)
       * [Mode](#mode)
       * [DMR ID](#dmr-id)
       * [Color Code](#color-code)
@@ -2009,7 +2010,18 @@ Enter the frequency via the keypad.
 
 Tx frequency.
 
-Enter the frequency via the keypad.
+Enter the frequency via the keypad (or use [**Repeater Shifts**](#repeater-shifts)).
+
+##### Repeater Shifts<!-- linebreak -->
+Most of the standard repeater shifts are supported by the firmware.
+
+When the Tx or Rx frequency has the focus, **Left** or **Right** buttons (*or rotary control on platforms like the RT-3S*) will apply a shift on the Rx frequency to set the Tx one.
+
+The supported values are:
+
+ - 0.0*MHz*, &#177;600*kHz*, &#177;1.0*MHz*, &#177;1.5*MHz*, &#177;1.6*MHz*, &#177;4.6*MHz*, &#177;5.0*MHz*, &#177;7.0*MHz*, &#177;7.6*MHz*, &#177;9.0*MHz* and &#177;9.4*MHz*.
+
+![](media/repeater_shift.png)
 
 #### Mode<!-- linebreak -->
 
