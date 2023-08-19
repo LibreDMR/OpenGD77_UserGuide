@@ -63,6 +63,7 @@ For the latest information and discussions, please refer to the development and 
       * [1750Hz Tone for repeater operation](#1750hz-tone-for-repeater-operation)
       * [DTMF tone transmission](#dtmf-tone-transmission)
       * [DTMF sequence entry and transmission](#dtmf-sequence-entry-and-transmission)
+	  * [FM APRS location transmission](#APRS-location-transmission)
     * [VFO specific functionality](#vfo-specific-functionality)
       * [Frequency change up/down step](#frequency-change-updown-step)
       * [Numerical frequency entry](#numerical-frequency-entry)
@@ -886,6 +887,31 @@ Note. Currently the MD-9600 version of the firmware can not transmit CTCSS or DC
 
 - Press **Green** key to transmit that sequence.
 - Any key press will stop the current sequence transmission.
+
+#### FM APRS location transmission<!-- linebreak -->
+
+The firmware can transmit FM Automatic Packet Reporting System data (APRS), as an FM AFSK 1200 baud transmission, using the location entered into the radio, or using the GPS location for radios with GPS fitted.
+
+See 
+https://en.wikipedia.org/wiki/Automatic_Packet_Reporting_System
+
+To transmit APRS, at least one APRS configuration must be defined using the CPS, and the current channel or VFO must have a APRS configuration selected in its APRS setting. (See channel details APRS settings)
+Also the operator's callsign must be entered into the CPS, and the radio location must be valid, either by manual entry of the location, or by using the GPS in the radio, if fitted.
+
+Then during FM transmission, holding the **PTT** and pressing **SK1** will cause the APRS data to be transmitted
+In some radios there is audio feedback through the speaker to indicate that the packet is being set, but this is not currently supported on all radios, specifically not on the MD-9600 or DM-1701 due to hardware limitations.
+
+If the location data is not valid, the word "Location??" will be displayed on the screen and the data will not be transmitted.
+
+The CPS allows up to 8 APRS configurations to be defined. With multiple parameters including specifying the Icon to be displayed on sites like https://aprs.fi and also the Comment text.
+Currently the MD-9600/ RT-90 will not trasmit the Comment text due to limitations in the tone generation hardware.
+
+*Note*
+
+Currently only APRS Tx is supported. It is currently unknown whether the hardware in the supported radios can be used to receive APRS or other AX25 packet transmissions.
+The APRS packet data format only allows for up to 6 character callsigns. This is a limitation of the specification not the firmware.
+Satellites have specific APRS parameters which need to be used, so default APRS parameters are defined in the satellites data uploaded from the CPS. To override these parameters, define an APRS config with the same name as the satellite, and set the appropriate custom parameters you wish to use with that satellite
+
 
 <div style="page-break-after: always; break-after: page;"></div>
 
