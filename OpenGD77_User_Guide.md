@@ -2180,7 +2180,8 @@ Also, the satellite orbital data Keps' **MUST** be uploaded using the CPS.
 
 If the operator has not entered the date / time or location, they will be prompted to do this.
 
-For example, after power cycling the radio, the date and time will be cleared, and they need to be re-entered
+For example, after power cycling radios, that do not have real time clocks in them, the date and time will be cleared, and they need to be re-entered.
+At the time of writing only the MD-9600/RT-90, UV380/RT-3S and DM-1701 have real time clock hardware.
 
 Uploading the latest Keps' from the CPS also sets the date and time, so in practice it's often easier to upload the Keps' than to set the date / time manually
 
@@ -2188,6 +2189,7 @@ When using the satellite functionality the operator does **not** need to set the
 To change the satellite frequencies or upload different satellites, the satellites.txt installed as part of the CPS can be modified.
 
 For satellites like SO-50, which have an "Arming" CTCSS tone. Press SK1 during transmission to transmit the "Arm" CTCSS tone.
+For more details on Amateur Radio satellite operation, see the AMSAT website   https://www.amsat.org 
 
 
 The first screen displayed is the master predictions list. This lists the prediction of all passes for all satellites in the next 24 hours, displayed chronologically.
@@ -2208,6 +2210,7 @@ Use the **Down** / **Up** arrows to scroll down / up through the list.
 *Note:*
 
 Some satellites, e.g. SO-86 are on an equatorial orbit and only pass over equatorial locations, hence passes for that satellite will not appear in the predictions list for locations outside this geographic area.
+For current satellite operation status information see the AMSAT status page  https://www.amsat.org/status/
 
 
 Pressing **Green** to select a specific satellite / pass displays the predicted **Polar view** for that satellite / pass.
@@ -2221,7 +2224,7 @@ The polar view graphic shows the path of the satellite shown as a plan view from
 When the satellite is currently below the horizon, a large dot is show where the satellite will appear on the horizon.
 If the satellite is above the horizon, the dot shows the current position of the satellite.
 
-When the satellite is below the horizon, the time to the next pass is shown in the top left of the screen in either HH:MM:SS or MM:SS or SS s depending on how long it is until the pass
+When the satellite is below the horizon, the time to the next pass is shown in the top left of the screen in either -HH:MM:SS or -MM:SS or -SS s depending on how long it is until the pass
 When the satellite is below the horizon, the maximum elevation is shown in the bottom left of the screen.
 
 When the satellite is above the horizon, the current Azimuth is shown the top left corner of the screen, the current elevation is shown in the bottom left of the screen, and the satellite position is shown on the polar plot.
@@ -2261,6 +2264,21 @@ This screen shows the current Azimuth and Elevation of the selected satellite, r
 It also shows the current Transmit and Receive, the power level, and the battery voltage.
 
 Negative elevation values indicate that the current satellite is below the horizon
+
+The firmware and CPS support 3 different Tx/Rx frequencies for each satellite, these are 
+
+1. FM Voice  Tx/Rx frequency
+2. APRS Tx/Rx frequency
+3. Beacon  Rx only frequency.
+
+The frequency type is shown on the right side of the screen.
+If the satellite does not have an APRS or beacon frequency, then no frequency values are displayed, and as beacons by their nature are Rx only the Tx frequency is not displayed
+
+Attempting to transmit on a frequency where Tx is not supported, e.g. the beacon frequency, the firmware will not allow transmission and will pay the warning beep sound instead
+
+To select the Voice, APRS or Beacon fequency, press the keys 1, 2 or 3 respectively.
+*Note* 
+Keys 1, 2 and 3 currently only operate on this screen and not the Polar or other satellite screens.
 
 ![location](media/satellite-live-before-AOS.png)
 
