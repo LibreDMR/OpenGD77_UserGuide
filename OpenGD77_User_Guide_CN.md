@@ -1483,8 +1483,6 @@ _请注意：_
 
 #### 睡眠（Suspend）<!-- linebreak -->
 
-![睡眠选项](media/options-suspend-on.png)
-
 此设置控制关闭电台的电源/音量旋钮时电台的工作情况。
 
 为了使时钟持续运行，电台现在有一个“睡眠”模式，可以让 MCU 在所有其他系统关闭的情况下保持低速运行。
@@ -1538,8 +1536,6 @@ _请注意：_
 如果启用了[**自动关机**](#自动关机auto-power-off)，*自动关机*倒计时器会在收到有效射频信号时重置。
 
 #### 卫星跟随模式（Satellite follow mode）<!-- linebreak -->
-
-![卫星选项](media/options-sat-manual.png)
 
 此设置用于控制在卫星模式下、极坐标图或实时屏幕上，在当前卫星经过并低于地平线后，电台是否自动切换到下一个可用卫星。
 
@@ -1688,8 +1684,6 @@ _请注意：_
 
 ### 显示设置（Display Options）
 
-![显示设置菜单](media/display-options.png)
-
 #### 背光亮度（Brightness）<!-- linebreak -->
 
 本固件允许用户控制背光亮度，设置范围可以从 0%\~100%，其中 10%\~100%以 10%步进调整，0%\~10%以 1%步进调整。
@@ -1698,7 +1692,7 @@ _请注意：_
 
 #### 夜间亮度（Nite Bright）<!-- linebreak -->
 
-此设置与上述[背光亮度]（#brightness）相同，仅在夜间主题处于活动状态时使用（请参阅自动夜间模式（Auto night））。
+此设置与上述 [背光亮度](#背光亮度brightness) 相同，仅在夜间主题处于活动状态时使用（请参阅 [自动夜间模式](#自动夜间模式auto-night) ）。
 
 #### 待机亮度（Min Bright）<!-- linebreak -->
 
@@ -1823,8 +1817,6 @@ _请注意 :_ 本功能并不能做到和 MD760 黑色液晶版本完全相同�
 <div style="page-break-after: always; break-after: page;"></div>
 
 ### 声音设置（Sound Options）
-
-![声音设置菜单](media/sound-options.png)
 
 #### 超时警告（Timeout beep）<!-- linebreak -->
 
@@ -1974,8 +1966,6 @@ _请注意：_ 如果选择了**通话者**，在 FM 中，提示音将与 DMR �
 
 此界面目前仅适用于特易通 MD-UV380 | Retevis RT-3S | 宝锋 DM-1701 | Retevis RT-84。
 
-![电台校准界面](media/calibration_screen.png)
-
 #### 频率校准（Cal Freq）<!-- linebreak -->
 
 这个界面可以用来调整当前校准点。这是电台将发射的频率，功率调整设置将改变。VHF 有 5 个校准点，UHF 有 8 个校准点。固件在这些点之间进行插值以计算其他频率所需的校准。
@@ -2027,8 +2017,6 @@ _请注意：_ 如果选择了**通话者**，在 FM 中，提示音将与 DMR �
 此界面目前仅适用于特易通 MD-UV380 | Retevis RT-3S | 宝锋 DM-1701 | Retevis RT-84。
 
 #### 主题选择器（Theme Chooser）<!-- linebreak -->
-
-![日间主题选择](media/theme-daytime.png)
 
 在这个界面中，您可以选择日间或夜间主题（参见显示[自动夜间模式](#自动夜间模式auto-night)）。
 
@@ -2403,10 +2391,13 @@ GPS 界面目前仅在特易通 MD-UV380 | MD-UV390 | Retevis RT-3S | 宝锋 DM-
 
 由于 GPS 接收器在使用过程中会持续消耗 50mA 以上的电流，所以在 MD-UV380 | RT-3S | DM-1701 | RT-84 固件中，GPS 接收器默认是不供电的。
 
-要在电台中使用 GPS 接收器，您必须首先在[“常规选项”](#全球定位系统gps)菜单中启用 GPS。
-如果电台没有安装 GPS，或者 GPS 似乎没有工作，这个选项将显示值“None”。
-如果电台装有 GPS，此选项的值最初将显示为“Off”。
-要使用 GPS，请将此值更改为“On”或“NMEA”。将 GPS 设置为 NMEA 将启用 GPS 模块并将所有 NMEA 数据从 GPS 模块发送到电台的 USB 串行端口。
+在此屏幕中使用 绿色 + SK2 和 红色 + SK2 组合键切换 GPS 电源状态（与 [“常规选项”](#全球定位系统gps) 功能相同）。
+在MD-9600上，可以通过长按 绿色 键 (面板上的 ENT 键，手咪上的 A/B 键）来启用GPS电源（但不能启用NMEA输出）
+
+要在电台中使用 GPS 接收器，您必须首先在 [“常规选项”](#全球定位系统gps) 启用 GPS。
+如果电台没有安装 GPS，或者 GPS 似乎没有工作，这个选项将显示值 “None”。
+如果电台装有 GPS，此选项的值最初将显示为 “Off”。
+要使用 GPS，请将此值更改为 “On” 或 “NMEA” 。将 GPS 设置为 NMEA 将启用 GPS 模块并将所有 NMEA 数据从 GPS 模块发送到电台的 USB 串行端口。
 
 请注意：
 
@@ -2416,15 +2407,51 @@ GPS 界面目前仅在特易通 MD-UV380 | MD-UV390 | Retevis RT-3S | 宝锋 DM-
 第一次打开 GPS 后，GPS 界面将显示文本“正在获取”。GPS 正在接收的任何卫星的 UV380 信号强度条也将显示。
 在 MD-9600 版本上，第一个 GPS 界面上没有足够的空间来显示信号强度条，因此它们显示在 GPS 界面的第二页上，按向下箭头按键即可访问
 
-![GPS获取](media/GPS_acquiring.png)
+![GPS获取](media/MD-UV380-GPS_Acquiring.png)
+
+![GPS获取](media/MD9600-GPS_Acquiring.png)
 
 MD-UV380 和 MD-9600 版本在 GPS 界面中也有一个页面，显示任何检测到的 GPS 卫星的极坐标位置，但是在知道 GPS 位置之前此界面不起作用。
 
 获取 GPS 位置后，将显示位置，包括纬度、经度、高度和精度。
 
-![GPS_1](media/GPS1.png)
+![GPS_1](media/MD-UV380-GPS_Acquired.png)
 
-![GPS_2](media/GPS2.png)
+![GPS_2](media/MD9600-GPS_Acquired.png)
+
+![GPS_3](media/MD9600-GPS_RSSI.png)
+
+极坐标图
+
+![GPS_UV380_Polar](media/MD-UV380-GPS_Polar.png)
+
+![GPS_MD9600_Polar](media/MD9600-GPS_Polar.png)
+
+<div style="page-break-after: always; break-after: page;"></div>
+
+更多位置信息和方向
+
+![MD-9600 Position view](media/MD9600-GPS_Pos_2.png)
+
+![MD-UV380 Direction view](media/MD-UV380-GPS_Direction.png)
+
+![MD-9600 Direction view](media/MD9600-GPS_Direction.png)
+
+*请注意：:*
+
+- 航向信息（罗盘箭头、度数和基数）仅在速度大于零时显示。
+
+<div style="page-break-after: always; break-after: page;"></div>
+
+**航向信息中心图标表示定位精度**
+
+| **图标** | **定位精度** |
+| --- | --- |
+| ![No Fix](media/GPS_No_Fix.png) | 未定位 |
+| ![Low Q Fix](media/GPS_Low_Q_Fix.png) | 低 |
+| ![2D Fix](media/GPS_2D_Fix.png) | 2D |
+| ![3D Fix](media/GPS_3D_Fix.png) | 3D |
+
 
 GPS 会自动更新电台中的实时时钟，且位置用于 DMR APRS 传输。
 
