@@ -131,6 +131,7 @@
       - [DMR 循环冗余检查（DMR crc）](#dmr-循环冗余检查dmr-crc)
     - [显示设置（Display Options）](#显示设置display-options)
       - [背光亮度（Brightness）](#背光亮度brightness)
+      - [夜间亮度（Nite Bright）](#夜间亮度nite-bright)
       - [待机亮度（Min Bright）](#待机亮度min-bright)
       - [对比度（Contrast）](#对比度contrast)
       - [背光模式（Mode）](#背光模式mode)
@@ -1548,7 +1549,7 @@ _请注意：_
 
 #### 全球定位系统（GPS）<!-- linebreak -->
 
-此设置仅适用于 特易通 MD-9600 | Retevis RT-90 和 特易通 MD-UV380 | Retevis RT-3S | 宝锋 DM-1701 | Retevis RT-84.
+此设置仅在 特易通 MD-9600 | Retevis RT-90 和 特易通 MD-UV380 | Retevis RT-3S 可用，适用于安装了 GPS 接收器的电台，或者用户已为这些电台添加了内部或外部 GPS 时适用
 
 由于 GPS 接收器在使用过程中持续消耗超过 50mA 的电流，因此 GPS 接收器默认不供电。
 
@@ -1694,6 +1695,10 @@ _请注意：_
 本固件允许用户控制背光亮度，设置范围可以从 0%\~100%，其中 10%\~100%以 10%步进调整，0%\~10%以 1%步进调整。
 
 按压**左**或**右**方向键以更改设置，默认设置为 100%
+
+#### 夜间亮度（Nite Bright）<!-- linebreak -->
+
+此设置与上述[背光亮度]（#brightness）相同，仅在夜间主题处于活动状态时使用（请参阅自动夜间模式（Auto night））。
 
 #### 待机亮度（Min Bright）<!-- linebreak -->
 
