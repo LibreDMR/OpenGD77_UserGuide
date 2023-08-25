@@ -67,7 +67,7 @@
       - [1750Hz 中继操作音（1750Hz Tone for repeater operation）](#1750hz-中继操作音1750hz-tone-for-repeater-operation)
       - [双音多频发射（DTMF tone transmission）](#双音多频发射dtmf-tone-transmission)
       - [双音多频序列输入与发射（DTMF sequence entry and transmission）](#双音多频序列输入与发射dtmf-sequence-entry-and-transmission)
-      - [FM APRS 位置发射（FM APRS location transmission）](#FM-APRS-位置发射APRS-location-transmission)
+      - [FM APRS 位置发射（FM APRS location transmission）](#fm-aprs-位置发射fm-aprs-location-transmission)
     - [与 VFO 有关的一些设置（VFO specific functionality）](#与-vfo-有关的一些设置vfo-specific-functionality)
       - [频率步进（Frequency change up/down step）](#频率步进frequency-change-updown-step)
       - [使用数字键输入频率（Numerical frequency entry）](#使用数字键输入频率numerical-frequency-entry)
@@ -950,7 +950,9 @@ SK1 + 下方向键 = D
 *注意*
 
 由于尚不清楚支持的无线电中的硬件是否可用于接收 APRS 或其他 AX25 数据包，因此目前仅支持 APRS 发射。  
+
 APRS 数据包最多允许 6 个字符的呼号，这是规范的限制，不是固件的限制。  
+
 向卫星发射 APRS 数据包，需要使用的特定 APRS 参数，默认的 APRS 参数在从 CPS 上传的卫星数据中定义。要覆盖这些参数，请定义与卫星同名的 APRS 配置，并设置要用于该卫星的相应自定义参数。
 
 <div style="page-break-after: always; break-after: page;"></div>
