@@ -203,7 +203,7 @@
       - [极坐标图（Polar view）](#极坐标图polar-view)
       - [卫星独立预测界面（Satellite individual predictions screen）](#卫星独立预测界面satellite-individual-predictions-screen)
       - [卫星实时数据界面（Satellite live data screen）](#卫星实时数据界面satellite-live-data-screen)
-      - [禁噪和功率设置（Squelch and Power settings）](#禁噪和电源设置squelch-and-power-settings)
+      - [静噪和功率设置（Squelch and Power settings）](#静噪和电源设置squelch-and-power-settings)
       - [卫星闹钟（Satellite alarm）](#卫星闹钟satellite-alarm)
       - [CPS 集成（CPS Integration）](#cps-集成cps-integration)
       - [技术说明（Technical notes）](#技术说明technical-notes)
@@ -2400,11 +2400,11 @@ _请注意 :_
 
 例如 IO-86 ，该卫星只经过赤道位置。
 
-#### 禁噪和功率设置（Squelch and Power settings）<!-- linebreak -->
+#### 静噪和功率设置（Squelch and Power settings）<!-- linebreak -->
 
 在所有卫星屏幕中，**除了**[卫星独立预测界面](#卫星独立预测界面satellite-individual-predictions-screen)之外，可以使用以下键调整静噪和输出功率设置：
 
-- 禁噪:
+- 静噪:
   - **GD-77 | DM-1801 | DM-1801A | RD-5R | TYT MD-9600 | Retevis RT-90 | Baofeng DM-1701 | Retevis RT-84**, 使用 **左**、**右** 按键.
   - **TYT MD-UV380 | Retevis RT-3S | Baofeng DM-1701 | Retevis RT-84**, 使用旋钮.
 
