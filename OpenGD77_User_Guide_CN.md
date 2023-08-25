@@ -67,7 +67,7 @@
       - [1750Hz 中继操作音（1750Hz Tone for repeater operation）](#1750hz-中继操作音1750hz-tone-for-repeater-operation)
       - [双音多频发射（DTMF tone transmission）](#双音多频发射dtmf-tone-transmission)
       - [双音多频序列输入与发射（DTMF sequence entry and transmission）](#双音多频序列输入与发射dtmf-sequence-entry-and-transmission)
-      - [FM APRS 位置发射（FM APRS location transmission）](#FM-APRS-位置发射APRS-location-transmission)
+      - [FM APRS 位置发射（FM APRS location transmission）](#fm-aprs-位置发射fm-aprs-location-transmission)
     - [与 VFO 有关的一些设置（VFO specific functionality）](#与-vfo-有关的一些设置vfo-specific-functionality)
       - [频率步进（Frequency change up/down step）](#频率步进frequency-change-updown-step)
       - [使用数字键输入频率（Numerical frequency entry）](#使用数字键输入频率numerical-frequency-entry)
