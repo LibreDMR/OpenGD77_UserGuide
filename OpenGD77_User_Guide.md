@@ -271,7 +271,7 @@ For very old radios with hardware version 2 written on the PCB, may need to be l
 Basically if your radio does not receive or transmit, try a different firmware hardware version.
 
 **TYT MD-UV380 | Retevis RT-3S | Baofeng DM-1701 | Retevis RT-84**
-<https://www.opengd77.com/downloads/MDUV380/Firmware/Latest>
+<https://www.opengd77.com/downloads/MDUV380_DM1701/Firmware/Latest/>
 
 *Note*:
 

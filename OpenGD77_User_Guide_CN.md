@@ -4,7 +4,7 @@
 
 ## 适用于 OpenGD77 / OpenGD77S / OpenDM1801\* / OpenDM1801A\* / OpenRD5R / MD-9600 (RT-90) / MD-UV380 (RT-3S) / MD-UV390 / DM-1701 / RT-84
 
-翻译：BH4ESK BH4FTP  
+翻译：BH4ESK BH4FTP BI8DHC  
 校对：BG5IPF BG7XTQ
 
 获取最新消息或与我们讨论，请到我们的官方论坛 <https://opengd77.com>
@@ -34,7 +34,7 @@
     - [信道界面的特殊功能（Channel screen specific functionality）](#信道界面的特殊功能channel-screen-specific-functionality)
       - [在当前区域内切换信道（Changing channels within the current zone）](#在当前区域内切换信道changing-channels-within-the-current-zone)
       - [改变区域（Changing zones）](#改变区域changing-zones)
-      - [显示信道频率）（Displaying the channel Frequency）](#显示信道频率displaying-the-channel-frequency)
+      - [显示信道频率（Displaying the channel Frequency）](#显示信道频率displaying-the-channel-frequency)
       - [显示 FM 模式具体信道信息（Displaying FM specific channel information）](#显示-fm-模式具体信道信息displaying-fm-specific-channel-information)
       - [中继倒频功能（Reverse repeater operation）](#中继倒频功能reverse-repeater-operation)
       - [信道界面快捷菜单（Channel Quick Menu）](#信道界面快捷菜单channel-quick-menu)
@@ -67,6 +67,7 @@
       - [1750Hz 中继操作音（1750Hz Tone for repeater operation）](#1750hz-中继操作音1750hz-tone-for-repeater-operation)
       - [双音多频发射（DTMF tone transmission）](#双音多频发射dtmf-tone-transmission)
       - [双音多频序列输入与发射（DTMF sequence entry and transmission）](#双音多频序列输入与发射dtmf-sequence-entry-and-transmission)
+      - [FM APRS 位置发射（FM APRS location transmission）](#fm-aprs-位置发射fm-aprs-location-transmission)
     - [与 VFO 有关的一些设置（VFO specific functionality）](#与-vfo-有关的一些设置vfo-specific-functionality)
       - [频率步进（Frequency change up/down step）](#频率步进frequency-change-updown-step)
       - [使用数字键输入频率（Numerical frequency entry）](#使用数字键输入频率numerical-frequency-entry)
@@ -131,6 +132,7 @@
       - [DMR 循环冗余检查（DMR crc）](#dmr-循环冗余检查dmr-crc)
     - [显示设置（Display Options）](#显示设置display-options)
       - [背光亮度（Brightness）](#背光亮度brightness)
+      - [夜间亮度（Nite Bright）](#夜间亮度nite-bright)
       - [待机亮度（Min Bright）](#待机亮度min-bright)
       - [对比度（Contrast）](#对比度contrast)
       - [背光模式（Mode）](#背光模式mode)
@@ -173,6 +175,7 @@
       - [信道名称（Channel name）](#信道名称channel-name)
       - [接收频率（RX）](#接收频率rx)
       - [发射频率（TX）](#发射频率tx)
+      - [中继偏移（Repeater Shifts）](#中继偏移repeater_shifts)
       - [模式（Mode）](#模式mode)
       - [DMR ID](#dmr-id)
       - [色码（Color Code）](#色码color-code)
@@ -193,12 +196,14 @@
       - [信道提示音（Beep (Channel)）](#信道提示音beep-channel)
       - [信道省电（Eco (Channel)）](#信道省电eco-channel)
       - [主叫别名发射 时隙*x*（TA Tx TS*x*）](#主叫别名发射-时隙xta-tx-tsx)
+      - [APRS（APRS Channel）](#aprs-channel)
       - [保存对信道的更改（Accepting and saving the changes to the channel）](#保存对信道的更改accepting-and-saving-the-changes-to-the-channel)
     - [语言界面（Language Screen）](#语言界面language-screen)
     - [卫星界面（Satellite Screen）](#卫星界面satellite-screen)
       - [极坐标图（Polar view）](#极坐标图polar-view)
       - [卫星独立预测界面（Satellite individual predictions screen）](#卫星独立预测界面satellite-individual-predictions-screen)
       - [卫星实时数据界面（Satellite live data screen）](#卫星实时数据界面satellite-live-data-screen)
+      - [静噪和功率设置（Squelch and Power settings）](#静噪和功率设置squelch-and-power-settings)
       - [卫星闹钟（Satellite alarm）](#卫星闹钟satellite-alarm)
       - [CPS 集成（CPS Integration）](#cps-集成cps-integration)
       - [技术说明（Technical notes）](#技术说明technical-notes)
@@ -270,7 +275,7 @@ MD-9600 | RT-90 在生产过程中使用了多种不同的 PLL 和 IF 芯片。
 基本上，如果您的电台无法接收或发射，请尝试使用不同的固件硬件版本。
 
 **特易通 MD-UV380 | Retevis RT-3S | 宝锋 DM-1701 | Retevis RT-84**
-<https://www.opengd77.com/downloads/MDUV380/Firmware/Latest>
+<https://www.opengd77.com/downloads/MDUV380_DM1701/Firmware/Latest/>
 
 请注意：名称中带有 JA 的版本是为日本用户本地化的，仅支持日语和英语。
 
@@ -578,7 +583,7 @@ _请注意 :_
 
 ![另一个区域](media/changing-zones.png)
 
-#### 显示信道频率）（Displaying the channel Frequency）<!-- linebreak -->
+#### 显示信道频率（Displaying the channel Frequency）<!-- linebreak -->
 
 - 在 FM 与 DMR 模式中，您都可以按住**黑色**侧键以显示接收与发射频率。
 
@@ -922,6 +927,33 @@ SK1 + 下方向键 = D
 - 按压**绿色**按键发送该序列。
 
 - 按压任何按键都将停止当前序列的发送。
+
+#### FM APRS 位置发射（FM APRS location transmission）<!-- linebreak -->
+
+固件可以使用 FM AFSK 1200 baud 发射保存在电台内部的位置或 GPS 位置（需要电台安装有 GPS ）的 APRS 数据。
+
+关于 APRS 的相关信息可以通过访问 https://en.wikipedia.org/wiki/Automatic_Packet_Reporting_System 获取。
+
+要发射 APRS 数据包，需满足以下条件
+
+- 需要在 CPS 中输入操作员的呼号
+- 使用 CPS 定义至少一个 APRS 配置
+- 当前 **通道** 或 **VFO** 必须在其 APRS 设置中选择 APRS 配置。（请参阅 [APRS](#aprs-channel) 设置）
+- 无线电位置必须有效，可以通过手动输入位置（请参阅 [位置界面](#位置界面location-screen) 设置）或使用电台的 GPS 位置（如果安装）。  
+
+在 **通道** 或 **VFO** 界面下按住 **PTT** 的同时按下 **SK1** 将会发射 APRS 数据， 部分电台可以通过扬声器提供音频反馈以指示正在发射 APRS 数据包，由于硬件限制 MD-9600 和 DM-1701 不支持音频反馈。
+
+发射 APRS 数据包时如果位置数据无效，屏幕上将显示 “Location??”，并且不会发送 APRS 数据包。
+
+通过 CPS 最多可以定义 8 个 APRS 配置，每个 APRS 配置都可以指定不同的参数，包括指定要在 https://aprs.fi 等网站上显示的图标以及注释文本。由于硬件的限制，MD-9600 / RT-90 不会传输注释文本。
+
+*注意*
+
+由于尚不清楚支持的无线电中的硬件是否可用于接收 APRS 或其他 AX25 数据包，因此目前仅支持 APRS 发射。  
+
+APRS 数据包最多允许 6 个字符的呼号，这是规范的限制，不是固件的限制。  
+
+向卫星发射 APRS 数据包，需要使用的特定 APRS 参数，默认的 APRS 参数在从 CPS 上传的卫星数据中定义。要覆盖这些参数，请定义与卫星同名的 APRS 配置，并设置要用于该卫星的相应自定义参数。
 
 <div style="page-break-after: always; break-after: page;"></div>
 
@@ -1482,8 +1514,6 @@ _请注意：_
 
 #### 睡眠（Suspend）<!-- linebreak -->
 
-![睡眠选项](media/options-suspend-on.png)
-
 此设置控制关闭电台的电源/音量旋钮时电台的工作情况。
 
 为了使时钟持续运行，电台现在有一个“睡眠”模式，可以让 MCU 在所有其他系统关闭的情况下保持低速运行。
@@ -1538,8 +1568,6 @@ _请注意：_
 
 #### 卫星跟随模式（Satellite follow mode）<!-- linebreak -->
 
-![卫星选项](media/options-sat-manual.png)
-
 此设置用于控制在卫星模式下、极坐标图或实时屏幕上，在当前卫星经过并低于地平线后，电台是否自动切换到下一个可用卫星。
 
 默认选项为 **Manual**，当前选择的卫星不会改变。
@@ -1548,7 +1576,7 @@ _请注意：_
 
 #### 全球定位系统（GPS）<!-- linebreak -->
 
-此设置仅适用于 特易通 MD-9600 | Retevis RT-90 和 特易通 MD-UV380 | Retevis RT-3S | 宝锋 DM-1701 | Retevis RT-84.
+此设置仅在 特易通 MD-9600 | Retevis RT-90 和 特易通 MD-UV380 | Retevis RT-3S 可用，适用于安装了 GPS 接收器的电台，或者用户已为这些电台添加了内部或外部 GPS 时适用
 
 由于 GPS 接收器在使用过程中持续消耗超过 50mA 的电流，因此 GPS 接收器默认不供电。
 
@@ -1687,13 +1715,15 @@ _请注意：_
 
 ### 显示设置（Display Options）
 
-![显示设置菜单](media/display-options.png)
-
 #### 背光亮度（Brightness）<!-- linebreak -->
 
 本固件允许用户控制背光亮度，设置范围可以从 0%\~100%，其中 10%\~100%以 10%步进调整，0%\~10%以 1%步进调整。
 
 按压**左**或**右**方向键以更改设置，默认设置为 100%
+
+#### 夜间亮度（Nite Bright）<!-- linebreak -->
+
+此设置与上述 [背光亮度](#背光亮度brightness) 相同，仅在夜间主题处于活动状态时使用（请参阅 [自动夜间模式](#自动夜间模式auto-night) ）。
 
 #### 待机亮度（Min Bright）<!-- linebreak -->
 
@@ -1741,7 +1771,9 @@ _请注意 :_ 本功能并不能做到和 MD760 黑色液晶版本完全相同�
 
 用户可以在通道或 VFO 屏幕上按下 **SK1** + **红色**以覆盖当前的日间主题。
 
-一旦覆盖了日间主题，自动主题切换将被禁用。长按 **SK1** + **红色**清除此覆盖（或重新启动电台）。
+- 一旦覆盖了日间主题，自动主题切换将被禁用。
+- 如果**自动夜间模式**设置为 **OFF** 并且覆盖被设置，重新启动电台将恢复
+- 长按 **SK1** + **红色** 清除此覆盖。
 
 #### 联系人显示顺序（Order）<!-- linebreak -->
 
@@ -1818,8 +1850,6 @@ _请注意 :_ 本功能并不能做到和 MD760 黑色液晶版本完全相同�
 <div style="page-break-after: always; break-after: page;"></div>
 
 ### 声音设置（Sound Options）
-
-![声音设置菜单](media/sound-options.png)
 
 #### 超时警告（Timeout beep）<!-- linebreak -->
 
@@ -1906,10 +1936,10 @@ _请注意：_ 如果选择了**通话者**，在 FM 中，提示音将与 DMR �
 
   有 3 级语音提示：
 
-  - “**语音**”，
-  - “**语音 L2**”
-  - “**语音 L3**”
-    在后两种情况下，L 表示“级别”
+  - "**Voice**"
+  - "**Voice L2**"
+  - "**Voice L3**"
+    在后两种情况下，L 表示 "Level"
 
   语音级别用于控制是否立即播放语音提示，或者是否需要按压黑色按键来播放对电台的最后一次更改的描述。
 
@@ -1969,8 +1999,6 @@ _请注意：_ 如果选择了**通话者**，在 FM 中，提示音将与 DMR �
 
 此界面目前仅适用于特易通 MD-UV380 | Retevis RT-3S | 宝锋 DM-1701 | Retevis RT-84。
 
-![电台校准界面](media/calibration_screen.png)
-
 #### 频率校准（Cal Freq）<!-- linebreak -->
 
 这个界面可以用来调整当前校准点。这是电台将发射的频率，功率调整设置将改变。VHF 有 5 个校准点，UHF 有 8 个校准点。固件在这些点之间进行插值以计算其他频率所需的校准。
@@ -2022,8 +2050,6 @@ _请注意：_ 如果选择了**通话者**，在 FM 中，提示音将与 DMR �
 此界面目前仅适用于特易通 MD-UV380 | Retevis RT-3S | 宝锋 DM-1701 | Retevis RT-84。
 
 #### 主题选择器（Theme Chooser）<!-- linebreak -->
-
-![日间主题选择](media/theme-daytime.png)
 
 在这个界面中，您可以选择日间或夜间主题（参见显示[自动夜间模式](#自动夜间模式auto-night)）。
 
@@ -2088,11 +2114,23 @@ _请注意：_
 
 #### 接收频率（RX）<!-- linebreak -->
 
-设置当前接收频率，也可使用数字键盘快速输入。
+设置当前接收频率，可使用数字键盘快速输入。
 
 #### 发射频率（TX）<!-- linebreak -->
 
-设置当前发射频率，也可使用数字键盘快速输入。
+设置当前发射频率，可使用数字键盘快速输入（或者使用[**中继偏移**](#中继偏移repeater_shifts)）。
+
+#### 中继偏移（Repeater Shifts）<!-- linebreak -->
+
+固件支持大多数标准中继器移位。
+
+当 Tx 或 Rx 频率具有焦点时，**左** 或 **右** 按钮（*或 RT-3S* 等平台上的旋转控制）将对 Rx 频率应用偏移以设置 Tx 频率。
+
+支持的值包括：
+
+- 0.0*MHz*, &#177;600*kHz*, &#177;1.0*MHz*, &#177;1.5*MHz*, &#177;1.6*MHz*, &#177;4.6*MHz*, &#177;5.0*MHz*, &#177;7.0*MHz*, &#177;7.6*MHz*, &#177;9.0*MHz* and &#177;9.4*MHz*.
+
+![](media/repeater_shift.png)
 
 #### 模式（Mode）<!-- linebreak -->
 
@@ -2114,13 +2152,13 @@ _请注意：_
 
 设置当前 DMR 信道指定了哪些通话组列表。
 
-*请注意：*只能同时选择 _通话组列表_ **或** _联系人_ 中的一个。
+*请注意：* 只能同时选择 _通话组列表_ **或** _联系人_ 中的一个。
 
 #### 联系人（Contact）<!-- linebreak -->
 
 设置当前 DMR 信道指定了哪个联系人。
 
-*请注意：*只能同时选择 _通话组列表_ **或** _联系人_ 中的一个。
+*请注意：* 只能同时选择 _通话组列表_ **或** _联系人_ 中的一个。
 
 #### 接收哑音（Rx CSS (CTCSS or DCS)）<!-- linebreak -->
 
@@ -2208,6 +2246,12 @@ _请注意 :_
 
 - 使用此功能**将导致基于 Motorola 的中继和网络出现问题**，所以只能用于简单网络或 _Brandmeister_ 等其他正确支持主叫别名的网络。
 
+#### APRS (Channel)<!-- linebreak -->
+
+在信道 / VFO 设置中可以设置 FM ARPS Tx 配置
+
+默认设置是：None
+
 #### 保存对信道的更改（Accepting and saving the changes to the channel）<!-- linebreak -->
 
 按压**绿色**按键以确认更改。
@@ -2244,7 +2288,9 @@ _请注意 :_
 
 如果您没有设置日期/时间或地点，电台会提示您输入。
 
-电台重启后，日期和时间将被清除，需要重新输入。
+没有实时时钟硬件的电台重启后，日期和时间将被清除，并且需要重新输入。
+
+在撰写本文时，只有MD-9600 / RT-90，UV380 / RT-3S 和 DM-1701 具有实时时钟硬件
 
 从 CPS 上传最新的 Keps 也会自动设置日期和时间，因此上传 Keps 比手动设置日期/时间更简单容易。
 
@@ -2253,6 +2299,8 @@ _请注意 :_
 要更改卫星频率或访问不同的卫星，可以修改 CPS 安装目录下的 satellites.txt。
 
 对于像 SO-50 这样的卫星，有转发器启动哑音。在发射过程中按黑色按键，可以发射该启动哑音。
+
+有关业余无线电卫星操作的更多详细信息，请参阅 AMSAT 网站 https://www.amsat.org
 
 显示的第一个界面是主预测列表。这列出了未来 24 小时内所有卫星的所有过境的预测，按时间顺序显示。
 
@@ -2271,6 +2319,8 @@ _请注意 :_
 _请注意 :_
 
 一些卫星，例如 SO-86 在赤道轨道上，仅经过赤道位置，因此该卫星过境不会出现在该地理区域以外的预测列表中。
+
+有关当前卫星运行状态信息，请参阅 AMSAT 状态页面 https://www.amsat.org/status/
 
 按 **绿色** 按键选择特定卫星/过境，这会显示该卫星/过境的预测**极坐标图**。
 
@@ -2316,6 +2366,24 @@ _请注意 :_
 
 负仰角表示当前卫星在地平线以下。
 
+对于每颗卫星 **固件**和**CPS** 支持以下 3 种不同的 Tx/Rx 频率：
+
+- FM Voice Tx/Rx 频率  
+- APRS Tx/Rx 频率  
+- Beacon Rx 频率
+
+频率类型显示在屏幕右侧。  
+
+如果卫星没有 APRS 或信标频率，则不显示频率值，由于信标实际上仅能接收，因此不显示 Tx 频率
+
+尝试在不支持 Tx 的频率（例如信标频率）上发射，固件将不允许发射并发出蜂鸣警告音
+
+要选择 Voice、 APRS、 Beacon 频率，请分别按 1、 2、 3 数字键。
+
+*注意*  
+
+按键  1、 2、 3 仅在卫星实时数据界面可用，不适用于其他卫星界面。
+
 ![位置](media/satellite-live-before-AOS.png)
 
 信息每秒更新一次。
@@ -2331,6 +2399,19 @@ _请注意 :_
 如果卫星没有经过当前位置，电台将根据当前选择的界面显示“Pass: None”或“Empty List”。
 
 例如 IO-86 ，该卫星只经过赤道位置。
+
+#### 静噪和功率设置（Squelch and Power settings）<!-- linebreak -->
+
+在所有卫星屏幕中，**除了**[卫星独立预测界面](#卫星独立预测界面satellite-individual-predictions-screen)之外，可以使用以下键调整静噪和输出功率设置：
+
+- 静噪:
+  - **GD-77 | DM-1801 | DM-1801A | RD-5R | TYT MD-9600 | Retevis RT-90 | Baofeng DM-1701 | Retevis RT-84**, 使用 **左**、**右** 按键.
+  - **TYT MD-UV380 | Retevis RT-3S | Baofeng DM-1701 | Retevis RT-84**, 使用旋钮.
+
+- 功率:
+  - **GD-77 | DM-1801 | DM-1801A | RD-5R | TYT MD-9600 | Retevis RT-90 | Baofeng DM-1701 | Retevis RT-84**, 使用 **SK2** + **左**、**SK2** + **右** 按键。
+  - **TYT MD-UV380 | Retevis RT-3S | Baofeng DM-1701 | Retevis RT-84**, 使用 **SK2** + 旋钮。
+  - **TYT MD-UV380 | Retevis RT-3S** 由于技术原因，按下 **SK2** 的同时 **长按** **右** 键可以调整功率到 **+W-**。
 
 #### 卫星闹钟（Satellite alarm）<!-- linebreak -->
 
@@ -2398,10 +2479,13 @@ GPS 界面目前仅在特易通 MD-UV380 | MD-UV390 | Retevis RT-3S | 宝锋 DM-
 
 由于 GPS 接收器在使用过程中会持续消耗 50mA 以上的电流，所以在 MD-UV380 | RT-3S | DM-1701 | RT-84 固件中，GPS 接收器默认是不供电的。
 
-要在电台中使用 GPS 接收器，您必须首先在[“常规选项”](#全球定位系统gps)菜单中启用 GPS。
-如果电台没有安装 GPS，或者 GPS 似乎没有工作，这个选项将显示值“None”。
-如果电台装有 GPS，此选项的值最初将显示为“Off”。
-要使用 GPS，请将此值更改为“On”或“NMEA”。将 GPS 设置为 NMEA 将启用 GPS 模块并将所有 NMEA 数据从 GPS 模块发送到电台的 USB 串行端口。
+在此屏幕中使用 绿色 + SK2 和 红色 + SK2 组合键切换 GPS 电源状态（与 [“常规选项”](#全球定位系统gps) 功能相同）。
+在MD-9600上，可以通过长按 绿色 键 (面板上的 ENT 键，手咪上的 A/B 键）来启用GPS电源（但不能启用NMEA输出）
+
+要在电台中使用 GPS 接收器，您必须首先在 [“常规选项”](#全球定位系统gps) 启用 GPS。
+如果电台没有安装 GPS，或者 GPS 似乎没有工作，这个选项将显示值 “None”。
+如果电台装有 GPS，此选项的值最初将显示为 “Off”。
+要使用 GPS，请将此值更改为 “On” 或 “NMEA” 。将 GPS 设置为 NMEA 将启用 GPS 模块并将所有 NMEA 数据从 GPS 模块发送到电台的 USB 串行端口。
 
 请注意：
 
@@ -2411,17 +2495,53 @@ GPS 界面目前仅在特易通 MD-UV380 | MD-UV390 | Retevis RT-3S | 宝锋 DM-
 第一次打开 GPS 后，GPS 界面将显示文本“正在获取”。GPS 正在接收的任何卫星的 UV380 信号强度条也将显示。
 在 MD-9600 版本上，第一个 GPS 界面上没有足够的空间来显示信号强度条，因此它们显示在 GPS 界面的第二页上，按向下箭头按键即可访问
 
-![GPS获取](media/GPS_acquiring.png)
+![MD-UV380 GPS 获取](media/MD-UV380-GPS_Acquiring.png)
+
+![MD-9600 GPS 获取](media/MD9600-GPS_Acquiring.png)
 
 MD-UV380 和 MD-9600 版本在 GPS 界面中也有一个页面，显示任何检测到的 GPS 卫星的极坐标位置，但是在知道 GPS 位置之前此界面不起作用。
 
 获取 GPS 位置后，将显示位置，包括纬度、经度、高度和精度。
 
-![GPS_1](media/GPS1.png)
+![MD-UV380 GPS 已获取](media/MD-UV380-GPS_Acquired.png)
 
-![GPS_2](media/GPS2.png)
+![MD-9600 GPS 已获取](media/MD9600-GPS_Acquired.png)
 
-GPS 会自动更新电台中的实时时钟，且位置用于 DMR APRS 传输。
+![MD-9600 GPS RSSI](media/MD9600-GPS_RSSI.png)
+
+极坐标图
+
+![GPS UV380 Polar View](media/MD-UV380-GPS_Polar.png)
+
+![GPS MD9600 Polar View](media/MD9600-GPS_Polar.png)
+
+<div style="page-break-after: always; break-after: page;"></div>
+
+更多位置信息和方向
+
+![MD-9600 Position view](media/MD9600-GPS_Pos_2.png)
+
+![MD-UV380 Direction view](media/MD-UV380-GPS_Direction.png)
+
+![MD-9600 Direction view](media/MD9600-GPS_Direction.png)
+
+*请注意：*
+
+- 航向信息（罗盘箭头、度数和基数）仅在速度大于零时显示。
+
+<div style="page-break-after: always; break-after: page;"></div>
+
+**航向信息中心图标表示定位精度**
+
+| **图标** | **定位精度** |
+| --- | --- |
+| ![No Fix](media/GPS_No_Fix.png) | 未定位 |
+| ![Low Q Fix](media/GPS_Low_Q_Fix.png) | 低 |
+| ![2D Fix](media/GPS_2D_Fix.png) | 2D |
+| ![3D Fix](media/GPS_3D_Fix.png) | 3D |
+
+
+**GPS 会自动更新电台中的实时时钟，且位置用于 DMR APRS 传输。**
 
 在 UV380 | RT-3S | DM-1701 | RT-84 上，GPS 卫星 RSSI 条形图采用颜色编码。默认情况下，蓝色代表美国 GPS 卫星，红色代表其他卫星系统。
 
@@ -2526,17 +2646,19 @@ _请注意 :_ 默认情况下 PiStar 会将电台功率配置为“100”，您�
 若 PiStar 向本固件汇报了任何其他功率设置（例如“50”），则固件会选择对应最接近的功率进行发射。
 以“50”为例，即 5W 的 50%，等于 2.5W，最接近这个值的功率设置是 4W，因此电台会以 4W 进行发射。
 
-| 电台发射功率 | PiStar RFLevel |
-| ------------ | -------------- |
-| 50mW         | 1              |
-| 250mW        | 5              |
-| 500mW        | 10             |
-| 750mW        | 15             |
-| 1W           | 20             |
-| 2W           | 40             |
-| 4W           | 80             |
-| 5W           | 99             |
-| 5W++         | 不可用         |
+**功率匹配表**
+
+| **电台发射功率** | **PiStar RFLevel** |
+|------------|--------------------|
+| 50mW       | 1                  |
+| 250mW      | 5                  |
+| 500mW      | 10                 |
+| 750mW      | 15                 |
+| 1W         | 20                 |
+| 2W         | 40                 |
+| 4W         | 80                 |
+| 5W         | 99                 |
+| +W-        | 不可用                |
 
 由 PiStar 指定的接收频率会显示在屏幕底部。
 
