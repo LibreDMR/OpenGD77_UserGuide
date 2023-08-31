@@ -1060,7 +1060,7 @@ Both the Channel and VFO screens support scanning, but their operation is slight
 
 - Press and hold (**Long press**) the **Up** arrow to start scanning the channels in the zone. On the MD-9600 press and hold the **Up arrow** on the front panel of the radio.
 - Press the **Left** arrow to reverse the direction of scan. Press the **Down arrow** on a MD-UV380 | RT-3S, or the one on the front panel for a MD-9600 | RT-90, to reverse the scan direction.
-- Press the **Right** arrow to mark the channel as a *nuisance* channel which will be removed from the current scan. Press the **Star key** on a MD-UV380 | RT-3S, or the one on the microphone for a MD-9600 | RT-90.
+- Press the **Right** arrow to mark the channel as a *nuisance* channel which will be removed from the current scan (or **B** on the microphone for a MD-9600 | RT-90). Press the **Star key** on a MD-UV380 | RT-3S.
 - Press the **Up** arrow to skip over the current channel, and continue the scan. On the MD-9600 press and hold the **Up arrow** on the front panel of the radio.
 
 Pressing any other button stops the scan.
@@ -1085,7 +1085,7 @@ When not actively scanning, pressing the **Up** or **Down** arrows performs the 
 
 - Press the **Left** arrow key to reverse the scan direction. Press the **Down arrow** on a MD-UV380 | RT-3S, or the one on the front panel for a MD-9600 | RT-90, to reverse the scan direction.
 - Press the **Up** arrow to skip over the current frequency and continue the scan.
-- Press the **Right** arrow to mark the current frequency as a *nuisance* frequency, which will be omitted by the scan. Press the **Star key** on a MD-UV380 | RT-3S, or the one on the microphone for a MD-9600 | RT-90.
+- Press the **Right** arrow to mark the current frequency as a *nuisance* frequency, which will be omitted by the scan (or **B** on the microphone for a MD-9600 | RT-90). Press the **Star key** on a MD-UV380 | RT-3S.
 
 Pressing any other button will stop the scan
 
@@ -2729,14 +2729,14 @@ The TYT MD-9600 | Retevis RT-90 uses the following keys and buttons
 
 Rotary control changes channel or frequency, and menu settings.
 
-On the VFO and Channel screens, the Up and Down arrow map to the Right and Left button functionality on the handheld radios. e.g. On FM, increase and descrease squelch.
-In menu screens, the Up and Down buttons move up or down within the menu's.
+On the VFO and Channel screens, the **Up** and **Down** arrow map to the **Right** and **Left** button functionality on the handheld radios. e.g. On FM, increase and decrease squelch.
+In menu screens, the **Up** and **Down** buttons move up or down within the menu's.
 
-On the Channel screen, **Long press** of the Up arrow button , starts scanning.
+On the Channel screen, **Long press** of the **Up** arrow button , starts scanning.
 
-During scanning pressing the Down arrow button, reverses the direction of scan.
+During scanning pressing the **Down** arrow button, reverses the direction of scan.
 
-During scanning the * (Star) button marks the channel as a nuisance channel. This is the same functionality as the Right button on the handheld radios.
+During scanning the **B** button on the mic, or the front panel **Up** arrow, marks the channel as a nuisance channel. This is the same functionality as the **Right** button on the handheld radios.
 
 VFO scanning can not be operated from the front panel buttons.
 
@@ -2749,7 +2749,7 @@ VFO scanning can not be operated from the front panel buttons.
 | B | **Right** |
 | C | **Left** |
 
-**Long press** of D key toggles **SK2** latch, so SK2 functions can be controlled from the mic.
+**Long press** of **D** key toggles **SK2** latch, so SK2 functions can be controlled from the mic.
 
 When entering or directly transmitting DTMF on FM, the following key mappings are used to send or enter the A, B, C and D characters:
 
