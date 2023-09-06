@@ -404,9 +404,9 @@ Also, not all radios support all the functionalities.
 - The Radioddity GD-77S does not have a keypad or screen, hence its operation is completely different from the other supported radios that have a screen (*see the appendix on [GD-77S operation](#gd-77s-operation)*).
 - The Baofeng DM-1801 | DM-860 has a dedicated **MR/VFO** button, which is used to change between Channel and VFO mode, in place of pressing the **Red** menu key.
 - The Baofeng DM-1801 | DM-860 has a dedicated **A/B** button, which is used to change between VFO A and B, in place of pressing the quick menu via the **Orange** button on the top of the radio.
-- The TYT MD-UV380 | Retevis RT-3S does not have Right and Left arrow buttons, but has a rotary control on top of the radio. On the VFO and Channel screens, the Up and Down buttons function like the Right and Left button on the GD-77. The rotary control operates functions like the Up and Down buttons on the GD-77 and can be used to change channel or VFO frequency.
+- The TYT MD-UV380 | Retevis RT-3S does not have Right and Left arrow buttons, but has a rotary control on top of the radio. On the VFO and Channel screens, the **Up** and **Down** buttons function like the Right and Left button on the GD-77. The rotary control operates functions like the **Up** and **Down** buttons on the GD-77 and can be used to change channel or VFO frequency.
 - The Baofeng DM-1701 | Retevis RT-84 does not have the Right and Left array buttons, P1 is used as Left button, P2 is used as Right button. The **Orange** button is located above the PTT.
-In menu screens the Up and Down buttons move up and down and the rotary control is used to control the value of each setting, in the same way that the Left and Right buttons do on the GD-77
+In menu screens the **Up** and **Down** buttons move up and down and the rotary control is used to control the value of each setting, in the same way that the Left and Right buttons do on the GD-77
 - The TYT MD-9600 | Retevis RT-90 is a mobile radio with buttons on the front panel and the microphone. See the section about the MD-9600 for information about key and button mappings.
 
 
@@ -430,7 +430,7 @@ The current Tx power is shown in the middle of the top of the screen (*e.g.* 750
 
 On the **VFO** screen, the TX and RX frequencies are shown, as well as the TalkGroup when in DMR mode.
 
-The arrow to the left of the **R** (receive frequency) indicates that the keypad up and down arrows and number entry keys will control the RX frequency.
+The arrow to the left of the **R** (receive frequency) indicates that the keypad **Up** and **Down** arrows and number entry keys will control the RX frequency.
 
 The channel screen displays the same information in the top row, but displays the **Channel name** (in this example __*Lee Hill*__) as well as the **Zone** (__*Home DMR*__).
 
@@ -898,26 +898,31 @@ The MD-9600 microphone buttons for A, B, C and D are already used for other func
 
 #### FM APRS location transmission<!-- linebreak -->
 
-The firmware can transmit FM Automatic Packet Reporting System data (APRS), as an FM AFSK 1200 baud transmission, using the location entered into the radio, or using the GPS location for radios with GPS fitted.
+The firmware can transmit FM Automatic Packet Reporting System data (APRS), as an FM AFSK 1200 baud or 300 baud transmission, using the location entered into the radio, or using the GPS location for radios with GPS fitted.
 
 See [https://en.wikipedia.org/wiki/Automatic_Packet_Reporting_System](https://en.wikipedia.org/wiki/Automatic_Packet_Reporting_System)
 
-To transmit APRS, at least one APRS configuration must be defined using the CPS, and the current channel or VFO must have a APRS configuration selected in its APRS setting. (See channel details APRS settings)
+To transmit APRS, at least one APRS configuration must be defined using the CPS, and the current channel or VFO must have an APRS configuration selected in its APRS setting. (See channel details APRS settings)
 Also the operator's callsign must be entered into the CPS, and the radio location must be valid, either by manual entry of the location, or by using the GPS in the radio, if fitted.
 
-Then during FM transmission, holding the **PTT** and pressing **SK1** will cause the APRS data to be transmitted
+Pressing PTT on a channel with and APRS configuration selected, will immediately transmit the APRS data packet. The transmission will be automatically ended as soon as the APRS data has been transmitted, even if the PTT is held or PTT Toggle is enabled.
+
 In some radios there is audio feedback through the speaker to indicate that the packet is being set, but this is not currently supported on all radios, specifically not on the MD-9600 or DM-1701 due to hardware limitations.
 
 If the location data is not valid, the word "Location??" will be displayed on the screen and the data will not be transmitted.
 
 The CPS allows up to 8 APRS configurations to be defined. With multiple parameters including specifying the Icon to be displayed on sites like https://aprs.fi and also the Comment text.
-Currently the MD-9600/ RT-90 will not trasmit the Comment text due to limitations in the tone generation hardware.
+
+
 
 *Notes:*
 
-- Currently only APRS Tx is supported. It is currently unknown whether the hardware in the supported radios can be used to receive APRS or other AX25 packet transmissions.
+- Currently only APRS Tx is supported. It is currently unknown whether the hardware in any of the supported radios can be used to receive APRS or other AX25 packet transmissions.
+- Voice communication is not possible on a channel or VFO which has an APRS configuation selected.
 - The APRS packet data format only allows for up to 6 character callsigns. This is a limitation of the specification not the firmware.
 - Satellites have specific APRS parameters which need to be used, so default APRS parameters are defined in the satellites data uploaded from the CPS. To override these parameters, define an APRS config with the same name as the satellite, and set the appropriate custom parameters you wish to use with that satellite
+- Most VHF and UHF APRS systems use 1200 baud
+
 
 
 <div style="page-break-after: always; break-after: page;"></div>
@@ -1058,10 +1063,10 @@ Both the Channel and VFO screens support scanning, but their operation is slight
 
 ### Channel scanning
 
-- Press and hold (**Long press**) the **Up** arrow to start scanning the channels in the zone. On the MD-9600 press and hold the **Up arrow** on the front panel of the radio.
-- Press the **Left** arrow to reverse the direction of scan. Press the **Down arrow** on a MD-UV380 | RT-3S, or the one on the front panel for a MD-9600 | RT-90, to reverse the scan direction.
-- Press the **Right** arrow to mark the channel as a *nuisance* channel which will be removed from the current scan. Press the **Star key** on a MD-UV380 | RT-3S, or the one on the microphone for a MD-9600 | RT-90.
-- Press the **Up** arrow to skip over the current channel, and continue the scan. On the MD-9600 press and hold the **Up arrow** on the front panel of the radio.
+- Press and hold (**Long press**) the **Up** arrow to start scanning the channels in the zone. On the MD-9600 press and hold the **Up** arrow on the front panel of the radio.
+- Press the **Left** arrow to reverse the direction of scan. Press the **Down** arrow on a MD-UV380 | RT-3S, or the one on the front panel for a MD-9600 | RT-90 (or **C** mic button), to reverse the scan direction.
+- Press the **Right** arrow to mark the channel as a *nuisance* channel which will be removed from the current scan (or **B** on the microphone for a MD-9600 | RT-90). Press the **Star key** on a MD-UV380 | RT-3S.
+- Press the **Up** arrow to skip over the current channel, and continue the scan. On the MD-9600 rotate clockwise the rotary knob on the front panel of the radio, or the **Up** arrow on the mic.
 
 Pressing any other button stops the scan.
 
@@ -1083,13 +1088,13 @@ Scan limits can be changed by manually entering both frequencies *e.g.*
 
 When not actively scanning, pressing the **Up** or **Down** arrows performs the normal function in the VFO of increasing or decreasing the frequency.
 
-- Press the **Left** arrow key to reverse the scan direction. Press the **Down arrow** on a MD-UV380 | RT-3S, or the one on the front panel for a MD-9600 | RT-90, to reverse the scan direction.
-- Press the **Up** arrow to skip over the current frequency and continue the scan.
-- Press the **Right** arrow to mark the current frequency as a *nuisance* frequency, which will be omitted by the scan. Press the **Star key** on a MD-UV380 | RT-3S, or the one on the microphone for a MD-9600 | RT-90.
+- Press the **Left** arrow key to reverse the scan direction. Press the **Down** arrow on a MD-UV380 | RT-3S, or the one on the front panel for a MD-9600 | RT-90 (or **C** mic button), to reverse the scan direction.
+- Press the **Up** arrow to skip over the current frequency and continue the scan. On the MD-9600 rotate clockwise the rotary knob on the front panel of the radio, or the **Up** arrow on the mic.
+- Press the **Right** arrow to mark the current frequency as a *nuisance* frequency, which will be omitted by the scan (or **B** on the microphone for a MD-9600 | RT-90). Press the **Star key** on a MD-UV380 | RT-3S.
 
 Pressing any other button will stop the scan
 
-- Long press on the **Down arrow** arrow exits from scan mode.
+- Long press on the **Down** arrow arrow exits from scan mode.
 
 
 <div style="page-break-after: always; break-after: page;"></div>
@@ -2431,7 +2436,7 @@ To use the GPS, change this value to "On", or "NMEA". Setting the GPS to NMEA wi
 - The GPS receive in both the MD-UV380 and MD-9600 is not very sensitive, and can take a long time to acquire the position, and the GPS in these radios does not work indoors.
 
 Initially after turning on the GPS, the GPS screen will show the text "Acquiring".  On the UV380 signal strength bars for any satellites which the GPS is receiving will also be displayed.
-On the MD-9600 version, there is not enough room on the first GPS screen to show the signal strength bars, so they are shown on a second page to the GPS screen, which is accessed by pressing the Down arrow button
+On the MD-9600 version, there is not enough room on the first GPS screen to show the signal strength bars, so they are shown on a second page to the GPS screen, which is accessed by pressing the **Down** arrow button
 
 
 ![MD-UV380 GPS Acquiring](media/MD-UV380-GPS_Acquiring.png)
@@ -2729,14 +2734,14 @@ The TYT MD-9600 | Retevis RT-90 uses the following keys and buttons
 
 Rotary control changes channel or frequency, and menu settings.
 
-On the VFO and Channel screens, the Up and Down arrow map to the Right and Left button functionality on the handheld radios. e.g. On FM, increase and descrease squelch.
-In menu screens, the Up and Down buttons move up or down within the menu's.
+On the VFO and Channel screens, the **Up** and **Down** arrow map to the **Right** and **Left** button functionality on the handheld radios. e.g. On FM, increase and decrease squelch.
+In menu screens, the **Up** and **Down** buttons move up or down within the menu's.
 
-On the Channel screen, **Long press** of the Up arrow button , starts scanning.
+On the Channel screen, **Long press** of the **Up** arrow button, starts scanning.
 
-During scanning pressing the Down arrow button, reverses the direction of scan.
+During scanning pressing the **Down** arrow button, or **C** button on the mic, reverses the direction of scan.
 
-During scanning the * (Star) button marks the channel as a nuisance channel. This is the same functionality as the Right button on the handheld radios.
+During scanning the **B** button on the mic, or the front panel **Up** arrow, marks the channel as a nuisance channel. This is the same functionality as the **Right** button on the handheld radios.
 
 VFO scanning can not be operated from the front panel buttons.
 
@@ -2749,7 +2754,7 @@ VFO scanning can not be operated from the front panel buttons.
 | B | **Right** |
 | C | **Left** |
 
-**Long press** of D key toggles **SK2** latch, so SK2 functions can be controlled from the mic.
+**Long press** of **D** key toggles **SK2** latch, so SK2 functions can be controlled from the mic.
 
 When entering or directly transmitting DTMF on FM, the following key mappings are used to send or enter the A, B, C and D characters:
 
