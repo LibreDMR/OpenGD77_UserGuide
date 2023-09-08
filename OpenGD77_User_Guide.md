@@ -141,6 +141,7 @@ For the latest information and discussions, please refer to the development and 
           * [Contact](#contact)
           * [Battery (units)](#battery-units)
           * [Info](#info)
+          * [Volume](#volume)
           * [LEDs](#leds)
           * [Timezone](#timezone)
           * [Time](#time-display-format)
@@ -1756,6 +1757,12 @@ If TS or Both setting is selected, the TS value will be shown in bold if an over
 If Pwr or Both setting is selected the power value will be shown in bold if a channel specific power override is being applied to the normal power setting.
 
 The default setting is Off, and no overrides will be shown.
+
+##### Volume<!-- linebreak -->
+
+**This setting is only available on the TYT MD-UV380 | Retevis RT-3S | Baofeng DM-1701 | Retevis RT-84.**
+
+This setting enables the visual volume bar graph notification when rotating the volume knob.
 
 ##### LEDs<!-- linebreak -->
 
