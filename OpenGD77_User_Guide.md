@@ -330,7 +330,7 @@ The CPS must be used to install the firmware and also to read and write the code
       * Baofeng RD-5R or DM-5R Tier2:
         * The Orange **S1** (Call) and Black Fn (**Moni** or **S2**) buttons (either side of the PTT).
       * TYT MD-9600 | Retevis RT-90
-        * Hold the green power button and the orange button, while applying 12V power to the radio. Note updating the OpenGD77 firmware to a newer version does not require the power to be removed and reconnected
+        * Hold buttons P1 and orange button, while applying 12V power to the radio. Note updating the OpenGD77 firmware to a newer version does not require the power to be removed and reconnected, just turn on the radio using the green / power button whilst holding P1 and orange will enter firmware update mode.
       * TYT MD-UV380 | Retevis RT-3S | Baofeng DM-1701 | Retevis RT-84
         * Hold the top 2 buttons on the side of the radio (**S1** and PTT) and turn the radio on.
 
