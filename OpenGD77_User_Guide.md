@@ -199,7 +199,7 @@ For the latest information and discussions, please refer to the development and 
       * [Satellite live data screen](#satellite-live-data-screen)
       * [Squelch and Power settings](#squelch-and-power-settings)
       * [Satellite alarm](#satellite-alarm)
-      * [CPS Integratione](#cps-integration)
+      * [CPS Integration](#cps-integration)
       * [Technical notes](#technical-notes)
     * [GPS Screen](#gps-screen)
   * [Making and receiving DMR Private Calls](#making-and-receiving-dmr-private-calls)
@@ -279,7 +279,7 @@ Basically if your radio does not receive or transmit, try a different firmware h
 - Versions with JA in the name are localised for Japanese users and only support Japanese and English languages
 
 - **OpenGD77 CPS**
-<https://www.opengd77.com/downloads/CPS/Latest>
+<https://www.opengd77.com/viewforum.php?f=12>
 
 
 - **Latest Source code for fully released firmware:**
