@@ -374,7 +374,6 @@ The CPS must be used to install the firmware and also to read and write the code
 
       ![firmware loader window](media/Firmware_loader-03.png)<!-- { width=420 } -->
 
-
     - For Software licensing reasons the first time that you use the firmware loader you must click 'Select official firmware (donor) file' and then select the donor file you previoulsy downloaded.
 
       It is only necessary to do this once. If you do not do this then it is only possible to use the radio in FM mode.
