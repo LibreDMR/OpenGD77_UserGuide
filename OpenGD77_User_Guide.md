@@ -255,12 +255,10 @@ This firmware is specifically designed for **Amateur Radio** use, and has featur
 
 ### Download links and other resources
 
-**Donor File**
+For software licensing reasons the OpenGD77 firmware needs to include parts of the original manufacturer's firmware to provide support for AMBE voice encoding and decoding. 
+Depending on your radio type you will need to download and extract one of the following two 'Donor' files, store it on your computer and make a note of its location. 
 
-For software licencing reasons the OpenGD77 firmware needs to combine parts of the original manufacturer's firmware to provide support for DMR. 
-Depending on your radio type you will need to download and extract one of the following two files, store it on your computer and make a note of its location. 
-
-**GD-77 | GD-77S | DM-1801 | DM-1801A | RD-5R**
+**Donor File for GD-77 | GD-77S | DM-1801 | DM-1801A | RD-5R**
 
 <https://radioddity.s3.amazonaws.com/2021-01-26%20GD-77%20CPS%20%26%20Firmware%20Changelog%20-%20Ham%20Version.zip>
 
@@ -268,7 +266,7 @@ Unzip the donor firmware zip file, extract the 'GD-77_V4.3.6.sgl' file from the 
 
 Note, this file is the same for all of the radio types above.
 
-**TYT MD-9600 | Retevis RT-90 | TYT MD-UV380 | Retevis RT-3S | Baofeng DM-1701 | Retevis RT-84**
+**Donor File for TYT MD-9600 | Retevis RT-90 | TYT MD-UV380 | Retevis RT-3S | Baofeng DM-1701 | Retevis RT-84**
 
 <https://www.passion-radio.com/index.php?controller=attachment&id_attachment=760>
 
@@ -290,7 +288,8 @@ The version is written on the PCB inside the top of the radio, except sometimes 
 For radios with hardware version 4A use Version 5 firmware
 For very old radios with hardware version 2 written on the PCB, may need to be loaded with Version 1 firmware.
 
-Basically if your radio does not receive or transmit, try a different firmware hardware version.
+No harm will be done if you load the wrong firmware version. However the radio will not receive or transmit. 
+So basically if your radio does not receive or transmit, try a different firmware hardware version.
 
 **TYT MD-UV380 | Retevis RT-3S | Baofeng DM-1701 | Retevis RT-84**
 <https://www.opengd77.com/downloads/MDUV380_DM1701/Firmware/Latest/>
