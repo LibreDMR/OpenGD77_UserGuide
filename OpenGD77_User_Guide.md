@@ -279,7 +279,7 @@ Note, this file is the same for all of the radio types above.
 **Firmware binaries:**
 
 **GD-77 | GD-77S | DM-1801 | DM-1801A | RD-5R**
-<https://www.opengd77.com/downloads/GD77/Latest>
+<https://www.opengd77.com/downloads/GD77/Firmware/Latest>
 
 **TYT MD-9600 | Retevis RT-90**
 <https://www.opengd77.com/downloads/MD9600/Firmware/Latest>
