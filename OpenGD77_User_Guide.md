@@ -258,7 +258,7 @@ This firmware is specifically designed for **Amateur Radio** use, and has featur
 **Donor File**
 
 For software licencing reasons the OpenGD77 firmware needs to combine parts of the original manufacturer's firmware to provide support for DMR. 
-You will need to download one of the following files, store it on your computer and make a note of its location. 
+Depending on your radio type you will need to download and extract one of the following two files, store it on your computer and make a note of its location. 
 
 **GD-77 | GD-77S | DM-1801 | DM-1801A | RD-5R**
 
@@ -266,14 +266,15 @@ You will need to download one of the following files, store it on your computer 
 
 Unzip the donor firmware zip file, extract the 'GD-77_V4.3.6.sgl' file from the "Firmware software V4.3.6" folder and save it to your computer.
 
-Note. This file is the same for all the above radio types.
+Note, this file is the same for all of the radio types above.
 
 **TYT MD-9600 | Retevis RT-90 | TYT MD-UV380 | Retevis RT-3S | Baofeng DM-1701 | Retevis RT-84**
 
 <https://www.passion-radio.com/index.php?controller=attachment&id_attachment=760>
 
 Unzip the donor firmware zip file, extract the donor file 'MD9600-CSV(2571V5)-V26.45.bin' and save it to your computer.
-Note. This file is the same for all the above radio types.
+
+Note, this file is the same for all of the radio types above. 
 
 **Firmware binaries:**
 
