@@ -401,13 +401,13 @@ The CPS must be used to install the firmware and also to read and write the code
 
 The official firmware for each of these radios use slightly different codeplug formats.
 
-Users of radios other than the GD-77 will need to convert their codeplug using the tools written by Colin G4EML (see <http://www.gb3gf.co.uk/downloads.html>).
+To make the best use of the features of OpenGD77 we recommend that you write a new codeplug for the radio using the OpenGD77 CPS. 
 
-Specifically export their existing codeplug to CSV format, and then import those CSV files into the OpenGD77 version of Colin's tools.
+The OpenGD77 CPS also has the ability to import an existing codeplug from .CSV files. 
 
 The codeplug can only be uploaded to the firmware using the [OpenGD77CPS](#cps-software).
 
-It's also recommended that you restructure your codeplug to remove any duplicate channels which are the same frequency but use different TalkGroup. See the section about [*Programming Channels and Talkgroups for use with the firmware*](#overview) at the end of this User Guide.
+It's also recommended that you structure your codeplug to remove any duplicate channels which are the same frequency but use different TalkGroup. See the section about [*Programming Channels and Talkgroups for use with the firmware*](#overview) at the end of this User Guide.
 
 <div style="page-break-after: always; break-after: page;"></div>
 
