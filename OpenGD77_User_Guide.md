@@ -372,6 +372,9 @@ The CPS must be used to install the firmware and also to read and write the code
     - Choose your radio model.  
       ![firmware loader window](media/Firmware_loader-02.png)<!-- { width=420 } -->
 
+      ![firmware loader window](media/Firmware_loader-03.png)<!-- { width=420 } -->
+
+
     - For Software licensing reasons the first time that you use the firmware loader you must click 'Select official firmware (donor) file' and then select the donor file you previoulsy downloaded.
 
       It is only necessary to do this once. If you do not do this then it is only possible to use the radio in FM mode.
@@ -380,9 +383,10 @@ The CPS must be used to install the firmware and also to read and write the code
 
       Once you have successfully completed this procedure the Title bar of the Firmware Loader will display [+DMR]
 
-    - Click 'Select Open firmware file & Update'
+    - The firmware can optionally support an additional language. Select this in the 'Additional Language' dropdown menu if you need it.
+    - Click 'Select Open firmware file & Update' or 'Select a File and Update'
     - Select a previously downloaded .zip firmware file. (The most recent file can be found at the download location given in [section 1.1](#download-links-and-other-resources))
-      The Selected Firmware file will be patched with data from the official firmware and then downloaded to the radio.
+      The Selected Firmware file will be patched with data from the official firmware and then downloaded to the radio along with the additional language if selected.
     - When the download is complete, if the radio does not automatically reboot, turn the power off and on again.
 	
  **Note! The codeplug format used in all radios except the GD-77 is not supported by the firmware, so you will need to install an OpenGD77 format codeplug using the CPS before you can any functions of the radio, except the VFO - which can be changed manually**
