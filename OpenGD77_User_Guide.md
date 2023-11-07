@@ -352,7 +352,7 @@ The CPS must be used to install the firmware and also to read and write the code
     - Choose your radio model.  
       ![firmware loader window](media/Firmware_loader-02.png)<!-- { width=420 } -->
 
-    - For Software licensing reasons the first time that you use the firmware loader you must click 'Firmware Installation Instructions' and follow the procedure described.
+    - For Software licensing reasons the first time that you use the firmware loader you must click 'Select official firmware (donor) file' and then select the donor file you previoulsy downloaded.
 
       It is only necessary to do this once. If you do not do this then it is only possible to use the radio in FM mode.
 
@@ -360,8 +360,8 @@ The CPS must be used to install the firmware and also to read and write the code
 
       Once you have successfully completed this procedure the Title bar of the Firmware Loader will display [+DMR]
 
-    - Click 'Select a file & Update'
-    - Select a previously downloaded .bin firmware file. (The most recent file can be found at the download location given in [section 1.1](#download-links-and-other-resources))
+    - Click 'Select Open firmware file & Update'
+    - Select a previously downloaded .zip firmware file. (The most recent file can be found at the download location given in [section 1.1](#download-links-and-other-resources))
       The Selected Firmware file will be patched with data from the official firmware and then downloaded to the radio.
     - When the download is complete, if the radio does not automatically reboot, turn the power off and on again.
 	
