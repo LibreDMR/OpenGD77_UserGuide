@@ -1430,7 +1430,7 @@ This setting controls the speed of key repetitions when a key is held.
 
 ##### Auto lock<!-- linebreak -->
 
-This settings enabled keypad/PTT auto-locking.
+This setting enables keypad/PTT auto-locking.
 
 While in Channel or VFO screen **only**, and no user action has been made by the operator withing the selected amount of time, the **PTT** and **keypad** keys will be locked (see [Lock screen](#lock-screen) to unlock).
 
