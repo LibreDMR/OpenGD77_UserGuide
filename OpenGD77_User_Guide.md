@@ -2239,7 +2239,7 @@ Value in 10&deg;/speed: from **1** up to **255**, default is **26**.
 
 The minimum time interval between beacons when you are continuously changing direction.
 
-Value in seconds: from **5** to to **180**, default is **60**.
+Value in seconds: from **5** up to **180**, default is **60**.
 
 
 <div style="page-break-after: always; break-after: page;"></div>
