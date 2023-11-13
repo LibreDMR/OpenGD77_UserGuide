@@ -99,10 +99,11 @@ For the latest information and discussions, please refer to the development and 
       * [New Contact](#new-contact)
     * [Last Heard](#last-heard)
     * [Firmware Info and credits](#firmware-info-and-credits)
-    * [Options **(contains the 7 following options screens)**](#options)
+    * [Options **(contains the 8 following options screens)**](#options)
         * [General Options](#general-options)
           * [Key long](#key-long)
           * [Key rpt](#key-rpt)
+          * [Auto lock](#auto-lock)
           * [Hotspot](#hotspot)
           * [Temp Cal](#temp-cal)
           * [Batt Cal](#batt-cal)
@@ -165,6 +166,20 @@ For the latest information and discussions, please refer to the development and 
           * [Theme options](#theme-options)
           * [Colour Picker](#colour-picker)
           * [Theme Items](#here-is-the-detailed-list-of-the-theme-items)
+        * [APRS Options](#aprs-options)
+          * [Mode](#beaconing-mode)
+          * [Location](#beaconing-location)
+          * [Interval](#beaconing-initial-interval)
+          * [Decay](#beaconing-decay-algorithm)
+          * [Compress](#beaconing-compression)
+          * [SmartBeaconing&trade;](#smartbeaconing)
+            * [Slow Rate](#slow-rate)
+            * [Fast Rate](#fast-rate)
+            * [Low Speed](#low-speed)
+            * [Hi Speed](#high-speed)
+            * [Turn Angle](#turn-angle)
+            * [Turn Slope](#turn-slope)
+            * [Turn Time](#turn-time)
     * [Channel Details](#channel-details)
       * [Channel name](#channel-name)
       * [RX](#rx)
@@ -255,8 +270,8 @@ This firmware is specifically designed for **Amateur Radio** use, and has featur
 
 ### Download links and other resources
 
-For software licensing reasons the OpenGD77 firmware needs to include parts of the original manufacturer's firmware to provide support for AMBE voice encoding and decoding. 
-Depending on your radio type you will need to download and extract one of the following two 'Donor' files, store it on your computer and make a note of its location. 
+For software licensing reasons the OpenGD77 firmware needs to include parts of the original manufacturer's firmware to provide support for AMBE voice encoding and decoding.
+Depending on your radio type you will need to download and extract one of the following two 'Donor' files, store it on your computer and make a note of its location.
 
 **Donor File for GD-77 | GD-77S | DM-1801 | DM-1801A | RD-5R**
 
@@ -272,7 +287,7 @@ Note, this file is the same for all of the radio types above.
 
 Unzip the donor firmware zip file, extract the donor file 'MD9600-CSV(2571V5)-V26.45.bin' and save it to your computer.
 
-Note, this file is the same for all of the radio types above. 
+Note, this file is the same for all of the radio types above.
 
 **Firmware binaries:**
 
@@ -288,7 +303,7 @@ The version is written on the PCB inside the top of the radio, except sometimes 
 For radios with hardware version 4A use Version 5 firmware
 For very old radios with hardware version 2 written on the PCB, may need to be loaded with Version 1 firmware.
 
-No harm will be done if you load the wrong firmware version. However the radio will not receive or transmit. 
+No harm will be done if you load the wrong firmware version. However the radio will not receive or transmit.
 So basically if your radio does not receive or transmit, try a different firmware hardware version.
 
 **TYT MD-UV380 | Retevis RT-3S | Baofeng DM-1701 | Retevis RT-84**
@@ -370,9 +385,8 @@ The CPS must be used to install the firmware and also to read and write the code
     ![firmware loader menu access](media/Firmware_loader-01.png)<!-- { width=400 } -->
 
     - Choose your radio model.  
-      ![firmware loader window](media/Firmware_loader-02.png)<!-- { width=420 } -->
-
-      ![firmware loader window](media/Firmware_loader-03.png)<!-- { width=420 } -->
+      ![firmware loader window for MK22](media/Firmware_loader-02.png)<!-- { width=420 } -->  
+      ![firmware loader window for STM32](media/Firmware_loader-03.png)<!-- { width=420 } -->
 
     - For Software licensing reasons the first time that you use the firmware loader you must click 'Select official firmware (donor) file' and then select the donor file you previously downloaded.
 
@@ -404,9 +418,9 @@ The CPS must be used to install the firmware and also to read and write the code
 
 The official firmware for each of these radios use slightly different codeplug formats.
 
-To make the best use of the features of OpenGD77 we recommend that you write a new codeplug for the radio using the OpenGD77 CPS. 
+To make the best use of the features of OpenGD77 we recommend that you write a new codeplug for the radio using the OpenGD77 CPS.
 
-The OpenGD77 CPS also has the ability to import an existing codeplug from .CSV files. 
+The OpenGD77 CPS also has the ability to import an existing codeplug from .CSV files.
 
 The codeplug can only be uploaded to the firmware using the [OpenGD77CPS](#cps-software).
 
@@ -929,11 +943,17 @@ See [https://en.wikipedia.org/wiki/Automatic_Packet_Reporting_System](https://en
 To transmit APRS, at least one APRS configuration must be defined using the CPS, and the current channel or VFO must have an APRS configuration selected in its APRS setting. (See channel details APRS settings)
 Also the operator's callsign must be entered into the CPS, and the radio location must be valid, either by manual entry of the location, or by using the GPS in the radio, if fitted.
 
-Pressing PTT on a channel with and APRS configuration selected, will immediately transmit the APRS data packet. The transmission will be automatically ended as soon as the APRS data has been transmitted, even if the PTT is held or PTT Toggle is enabled.
+
+Also, the beaconing mode as to be defined (see the [APRS Options](#aprs-options))
+
+In **Manual** mode is selected, you will have to press **SK1** + **2** key, while in **Channel** in **VFO** screen, to transmit a beacon.
+In **PTT** mode, a beacon is send when releasing the **PTT** key, which permits voice transmission (bear in mind that the **Interval** and **Decay** beaconing settings re honored here too).
+
+When APRS beaconing is used in Satellite screen, and APRS Tx/Rx frequency is selected, pressing the PTT key will immediately send a beacon, regardless of the **Interval** and **Decay** settings.
 
 In some radios there is audio feedback through the speaker to indicate that the packet is being set, but this is not currently supported on all radios, specifically not on the MD-9600 or DM-1701 due to hardware limitations.
 
-If the location data is not valid, the word "Location??" will be displayed on the screen and the data will not be transmitted.
+If the location data is not valid in **Manual** or **PTT** beaconing modes, the word "Location?" will be displayed on the screen and the data will not be transmitted. In automatic modes (**Auto** and **Smart**), no beacon will be transmitted until a valid location is set (in [Location screen](#location-screen) screen or having a GPS fix on featured transceivers). 
 
 The CPS allows up to 8 APRS configurations to be defined. With multiple parameters including specifying the Icon to be displayed on sites like https://aprs.fi and also the Comment text.
 
@@ -1407,6 +1427,17 @@ This setting controls the time (*in seconds*) after which a key is considered to
 ##### Key rpt<!-- linebreak -->
 
 This setting controls the speed of key repetitions when a key is held.
+
+##### Auto lock<!-- linebreak -->
+
+This setting enables keypad/PTT auto-locking.
+
+While in Channel or VFO screen **only**, and no user action has been made by the operator within the selected amount of time, the **PTT** and **keypad** keys will be locked (see [Lock screen](#lock-screen) to unlock).
+
+Possible values: from 0.5 minute up to 15 minutes, with a step of 30 seconds.
+
+*Note:* This doesn't interfere with scanning.
+
 
 ##### Hotspot<!-- linebreak -->
 
@@ -2075,6 +2106,141 @@ If you press the **SK2** button while changing the value, the step is increased 
 
 ![theme items part 2](media/theme-items-2.svg)
 
+<div style="page-break-after: always; break-after: page;"></div>
+
+#### APRS Options
+
+##### Beaconing Mode<!-- linebreak -->
+
+This setting let you select the beaconing mode.
+
+Modes are:
+
+- **Off** No beaconing at all
+- **Manual** Using **SK1** + **2** key, while in the Channel or VFO screen, transmits an APRS beacon.
+- **PTT** A beacon will be send when releasing the **PTT** key, honoring the **Interval** timer (e.g, *Initial* set to *1min*, *Decay* set to *Off*: the interval between two beacons can't be less than one minute).
+- **Auto** A beacon is automatically send at timed intervals (see **Interval** setting below).
+- **Smart** Use the SmartBeaconing&trade; algorithm for automatic beaconing (see below).
+
+*Note*: When in the Channel or VFO screen, the APRS beaconing could be temporary toggled **On** or **Off**, using the **SK1** + **1** key. 
+
+
+##### Beaconing Location<!-- linebreak -->
+
+This setting permits to choose the location source used to report your position.
+
+Available options are:
+
+- **Channel** Uses APRS configuration (see [FM APRS location transmission](#fm-aprs-location-transmission)) or the position entered in the Radio Info's [Location screen](#location-screen).
+- **GPS** Uses the embedded GPS to report your position/speed/direction.
+
+
+##### Beaconing Initial Interval<!-- linebreak -->
+
+This defines the initial interval for automatic beacon transmissions.
+
+This value is used in when **PTT** or **Auto** is selected.
+
+
+##### Beaconing Decay Algorithm<!-- linebreak -->
+
+This setting controls the Decay algorithm which continuouly extends the beacon transmission interval in the case that there is no change in the position information. (see [Interval](#beaconing-initial-interval) above).
+
+When your position does not change, the decay algorythm doubles the interval beaconing time, with a maximum of 32 times the Interval value.
+
+Example:
+
+- Interval is set to 1 minute.
+- The beaconing interval will be (if the position doesn't change meanwhile):  
+  1 minute, 2 minutes, 4 minutes, 8 minutes, 16 minutes, 32 minutes, 32 minutes, 32 minutes...
+
+
+##### Beaconing Compression<!-- linebreak -->
+
+This enables the APRS compression (position/speed/direction). This reduces transmissions time.
+
+
+##### SmartBeaconing&trade;<!-- linebreak -->
+
+SmartBeaconing&trade; is a beaconing algorithm invented by Tony Arnerich KD7TA and Steve Bragg KA9MVA.
+
+This optimizes beacon transmission based on direction and speed.
+
+The firmware also embed some presets, which you could also tweak to match your needs.
+
+Presets are selectable using the keypad key:
+
+| Key | Preset |
+| --- | --- |
+| **0** | Default values |
+| **1** | Car |
+| **2** | e-Bike |
+| **3** | Bike |
+| **4** | Walking |
+| **5** | Sailing |
+| **6** | APRSdroid |
+
+The algorithm is tunable using the following settings (see next sections):
+
+- [Slow Rate](#slow-rate)
+- [Fast Rate](#fast-rate)
+- [Low Speed](#low-speed)
+- [High Speed](#high-speed)
+- [Turn Angle](#turn-angle)
+- [Turn Slope](#turn-slope)
+- [Turn Time](#turn-time)
+
+
+##### Slow Rate<!-- linebreak -->
+
+How often beacons will be send when your speed is equal or below the **Low Speed** value.
+
+Value in minutes: from **1** up to **100**, default is **30**.
+
+
+##### Fast Rate<!-- linebreak -->
+
+How often beacons will be send when your speed is equal or above the **High Speed** value.
+
+Value in seconds: from **10** up to **180**, default is **120**.
+
+
+##### Low Speed<!-- linebreak -->
+
+When your speed is equal or lower than this, beacons are transmitted at the time interval defined in **Low Rate** time interval.
+
+Value in km/h: from **2** up to **30**, default is **5**.
+
+
+##### High Speed<!-- linebreak -->
+
+At this speed or above, beacons will be transmitted at the **Fast Rate** time interval.
+
+Value in km/h: from **2** up to **90**, default is **70**.
+
+
+##### Turn Angle<!-- linebreak -->
+
+The minimum angle by which you must change course before it will trigger a beacon.
+
+Value in degrees: from **5** up to **90**, default is **28**.
+
+
+##### Turn Slope<!-- linebreak -->
+
+This number, when divided by your current speed (in mp/h) will be added to the Turn Angle value in order to increase the turn threshold at lower speeds.
+
+The calculated value will never exceed 120&deg;.
+
+Value in 10&deg;/speed: from **1** up to **255**, default is **26**.
+
+
+##### Turn Time<!-- linebreak -->
+
+The minimum time interval between beacons when you are continuously changing direction.
+
+Value in seconds: from **5** up to **180**, default is **60**.
+
 
 <div style="page-break-after: always; break-after: page;"></div>
 
@@ -2345,9 +2511,9 @@ Negative elevation values indicate that the current satellite is below the horiz
 
 The firmware and CPS support 3 different Tx/Rx frequencies for each satellite, these are 
 
-1. FM Voice  Tx/Rx frequency
+1. FM Voice Tx/Rx frequency
 2. APRS Tx/Rx frequency
-3. Beacon  Rx only frequency.
+3. Beacon Rx only frequency.
 
 The frequency type is shown on the right side of the screen.
 If the satellite does not have an APRS or beacon frequency, then no frequency values are displayed, and as beacons by their nature are Rx only the Tx frequency is not displayed
