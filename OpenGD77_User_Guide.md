@@ -255,10 +255,29 @@ This firmware is specifically designed for **Amateur Radio** use, and has featur
 
 ### Download links and other resources
 
+For software licensing reasons the OpenGD77 firmware needs to include parts of the original manufacturer's firmware to provide support for AMBE voice encoding and decoding. 
+Depending on your radio type you will need to download and extract one of the following two 'Donor' files, store it on your computer and make a note of its location. 
+
+**Donor File for GD-77 | GD-77S | DM-1801 | DM-1801A | RD-5R**
+
+<https://radioddity.s3.amazonaws.com/2021-01-26%20GD-77%20CPS%20%26%20Firmware%20Changelog%20-%20Ham%20Version.zip>
+
+Unzip the donor firmware zip file, extract the 'GD-77_V4.3.6.sgl' file from the "Firmware software V4.3.6" folder and save it to your computer.
+
+Note, this file is the same for all of the radio types above.
+
+**Donor File for TYT MD-9600 | Retevis RT-90 | TYT MD-UV380 | Retevis RT-3S | Baofeng DM-1701 | Retevis RT-84**
+
+<https://www.passion-radio.com/index.php?controller=attachment&id_attachment=760>
+
+Unzip the donor firmware zip file, extract the donor file 'MD9600-CSV(2571V5)-V26.45.bin' and save it to your computer.
+
+Note, this file is the same for all of the radio types above. 
+
 **Firmware binaries:**
 
 **GD-77 | GD-77S | DM-1801 | DM-1801A | RD-5R**
-<https://www.opengd77.com/downloads/GD77/Latest>
+<https://www.opengd77.com/downloads/GD77/Firmware/Latest>
 
 **TYT MD-9600 | Retevis RT-90**
 <https://www.opengd77.com/downloads/MD9600/Firmware/Latest>
@@ -269,7 +288,8 @@ The version is written on the PCB inside the top of the radio, except sometimes 
 For radios with hardware version 4A use Version 5 firmware
 For very old radios with hardware version 2 written on the PCB, may need to be loaded with Version 1 firmware.
 
-Basically if your radio does not receive or transmit, try a different firmware hardware version.
+No harm will be done if you load the wrong firmware version. However the radio will not receive or transmit. 
+So basically if your radio does not receive or transmit, try a different firmware hardware version.
 
 **TYT MD-UV380 | Retevis RT-3S | Baofeng DM-1701 | Retevis RT-84**
 <https://www.opengd77.com/downloads/MDUV380_DM1701/Firmware/Latest/>
@@ -279,7 +299,7 @@ Basically if your radio does not receive or transmit, try a different firmware h
 - Versions with JA in the name are localised for Japanese users and only support Japanese and English languages
 
 - **OpenGD77 CPS**
-<https://www.opengd77.com/viewforum.php?f=12>
+<https://www.opengd77.com/downloads/PC_CPS_20230910/Latest>
 
 
 - **Latest Source code for fully released firmware:**
@@ -352,7 +372,9 @@ The CPS must be used to install the firmware and also to read and write the code
     - Choose your radio model.  
       ![firmware loader window](media/Firmware_loader-02.png)<!-- { width=420 } -->
 
-    - For Software licensing reasons the first time that you use the firmware loader you must click 'Firmware Installation Instructions' and follow the procedure described.
+      ![firmware loader window](media/Firmware_loader-03.png)<!-- { width=420 } -->
+
+    - For Software licensing reasons the first time that you use the firmware loader you must click 'Select official firmware (donor) file' and then select the donor file you previously downloaded.
 
       It is only necessary to do this once. If you do not do this then it is only possible to use the radio in FM mode.
 
@@ -360,9 +382,10 @@ The CPS must be used to install the firmware and also to read and write the code
 
       Once you have successfully completed this procedure the Title bar of the Firmware Loader will display [+DMR]
 
-    - Click 'Select a file & Update'
-    - Select a previously downloaded .bin firmware file. (The most recent file can be found at the download location given in [section 1.1](#download-links-and-other-resources))
-      The Selected Firmware file will be patched with data from the official firmware and then downloaded to the radio.
+    - The firmware can optionally support an additional language. Select this in the 'Additional Language' dropdown menu if you need it.
+    - Click 'Select Open firmware file & Update' or 'Select a File and Update'
+    - Select a previously downloaded .zip firmware file. (The most recent file can be found at the download location given in [section 1.1](#download-links-and-other-resources))
+      The Selected Firmware file will be patched with data from the official firmware and then downloaded to the radio along with the additional language if selected.
     - When the download is complete, if the radio does not automatically reboot, turn the power off and on again.
 	
  **Note! The codeplug format used in all radios except the GD-77 is not supported by the firmware, so you will need to install an OpenGD77 format codeplug using the CPS before you can any functions of the radio, except the VFO - which can be changed manually**
@@ -381,13 +404,13 @@ The CPS must be used to install the firmware and also to read and write the code
 
 The official firmware for each of these radios use slightly different codeplug formats.
 
-Users of radios other than the GD-77 will need to convert their codeplug using the tools written by Colin G4EML (see <http://www.gb3gf.co.uk/downloads.html>).
+To make the best use of the features of OpenGD77 we recommend that you write a new codeplug for the radio using the OpenGD77 CPS. 
 
-Specifically export their existing codeplug to CSV format, and then import those CSV files into the OpenGD77 version of Colin's tools.
+The OpenGD77 CPS also has the ability to import an existing codeplug from .CSV files. 
 
 The codeplug can only be uploaded to the firmware using the [OpenGD77CPS](#cps-software).
 
-It's also recommended that you restructure your codeplug to remove any duplicate channels which are the same frequency but use different TalkGroup. See the section about [*Programming Channels and Talkgroups for use with the firmware*](#overview) at the end of this User Guide.
+It's also recommended that you structure your codeplug to remove any duplicate channels which are the same frequency but use different TalkGroup. See the section about [*Programming Channels and Talkgroups for use with the firmware*](#overview) at the end of this User Guide.
 
 <div style="page-break-after: always; break-after: page;"></div>
 
