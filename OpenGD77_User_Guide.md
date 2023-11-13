@@ -2118,16 +2118,16 @@ Modes are:
 
 - **Off** No beaconing at all
 - **Manual** Using **SK1** + **2** key, while in the Channel or VFO screen, transmits an APRS beacon.
-- **PTT** A beaconing will be send when releasing the **PTT** key, honoring the Interval timer (e.g, *Initial* set to *1min*, *Decay* set to  *Off*: the interval between two beacons can't be less than one minute).
+- **PTT** A beacon will be send when releasing the **PTT** key, honoring the **Interval** timer (e.g, *Initial* set to *1min*, *Decay* set to *Off*: the interval between two beacons can't be less than one minute).
 - **Auto** A beacon is automatically send at timed intervals (see **Interval** setting below).
 - **Smart** Use the SmartBeaconing&trade; algorithm for automatic beaconing (see below).
 
-*Note*: When in the Channel of VFO screen, the APRS beaconing could be temporary toggled **On** or **Off**, using the **SK1** + **1** key. 
+*Note*: When in the Channel or VFO screen, the APRS beaconing could be temporary toggled **On** or **Off**, using the **SK1** + **1** key. 
 
 
 ##### Beaconing Location<!-- linebreak -->
 
-This settings permits to choose the location source used to report you position.
+This setting permits to choose the location source used to report your position.
 
 Available options are:
 
@@ -2137,16 +2137,16 @@ Available options are:
 
 ##### Beaconing Initial Interval<!-- linebreak -->
 
-This defines the initial interval for automatically tranmitted beacons.
+This defines the initial interval for automatic beacon transmissions.
 
 This value is used in when **PTT** or **Auto** is selected.
 
 
 ##### Beaconing Decay Algorithm<!-- linebreak -->
 
-This settings control the Decay algorithm which continuouly extends the beacon transmission interval in the case that there is no change in the position information. (see [Interval](#beaconing-initial-interval) above).
+This setting controls the Decay algorithm which continuouly extends the beacon transmission interval in the case that there is no change in the position information. (see [Interval](#beaconing-initial-interval) above).
 
-When your position does no change, the decay algorythm doubles the interval beaconing time, with a maximum of 32.
+When your position does not change, the decay algorythm doubles the interval beaconing time, with a maximum of 32 times the Interval value.
 
 Example:
 
@@ -2166,7 +2166,7 @@ SmartBeaconing&trade; is a beaconing algorithm invented by Tony Arnerich KD7TA a
 
 This optimizes beacon transmission based on direction and speed.
 
-The firmware also embed few presets, which you could tweak to match your needs.
+The firmware also embed some presets, which you could also tweak to match your needs.
 
 Presets are selectable using the keypad key:
 
@@ -2240,6 +2240,7 @@ Value in 10&deg;/speed: from **1** up to **255**, default is **26**.
 The minimum time interval between beacons when you are continuously changing direction.
 
 Value in seconds: from **5** to to **180**, default is **60**.
+
 
 <div style="page-break-after: always; break-after: page;"></div>
 
