@@ -146,6 +146,7 @@ For the latest information and discussions, please refer to the development and 
           * [LEDs](#leds)
           * [Timezone](#timezone)
           * [Time](#time-display-format)
+          * [Show dist](#show-distance)
         * [Sound Options](#sound-options)
           * [Timeout beep](#timeout-beep)
           * [Beep volume](#beep-volume)
@@ -609,6 +610,10 @@ The Channel screen displays the current Channel number as well as the current zo
 - The radio remains locked in Reverse repeater mode even if the channel or zone is changed.
 - To exit from Reverse repeater mode, press and hold **Hash**
 
+*Note:*
+
+- This is mutually exclusive with Channel's [Talkaround](#talkaround).
+
 
 #### Channel Quick Menu<!-- linebreak -->
 
@@ -676,6 +681,29 @@ On the TYT MD-UV380 press **SK1** and the **Green** button
   - This feature does not actually disable a filter, because the DMR hardware chip, HR-C6000, does not fully support reception of signals on both timeslots at the same time.
   - This feature uses a software algorithm written by Daniel F1RMB, which initially listens for caller ID data on both timeslots, and when valid data occurs on a timeslot, the firmware just listens on that timeslot.
   - If caller ID is not present on the received timeslot for a timeout period of approximately 2.5 seconds, the algorithm checks on the other timeslot and switches to that if caller ID data is on that timeslot.
+
+
+##### Talkaround<!-- linebreak -->
+
+Once enabled, the TX frequency will be set to the RX frequency, hence you will be able to transmit on a repeater's output, in simplex mode.
+
+*Note:*
+
+- This option is only available if the current Channel has a frequency shift.
+- This is mutually exclusive with [Reverse repeater operation](#reverse-repeater-operation).
+
+##### Dist sort<!-- linebreak -->
+
+If the transceiver location is set (Radio Info's [Location screen](#location-screen) or GPS), the current Zone will be sorted in the ascending distance order.
+
+The distance, in kilometers, is displayed on the right of the Zone name.
+
+Of course, for this to work, the repeater locations must be set on the relevant channels, using the CPS.
+
+*Notes*:
+
+- All Channels zone will never be sorted.
+- The distance to repeater can also be displayed without sorting, see **Display option** [Show dist](#show-distance).
 
 
 <div style="page-break-after: always; break-after: page;"></div>
@@ -1436,7 +1464,9 @@ While in Channel or VFO screen **only**, and no user action has been made by the
 
 Possible values: from 0.5 minute up to 15 minutes, with a step of 30 seconds.
 
-*Note:* This doesn't interfere with scanning.
+*Note:*
+
+- This doesn't interfere with scanning.
 
 
 ##### Hotspot<!-- linebreak -->
@@ -1843,6 +1873,13 @@ When this is set to Local, it uses the value set in Radio Information Timezone t
 If "UTC" is selected, all dates and times displayed will have UTC after the value to indicate that UTC is being used.
 If "Local" is selected, dates and times do not show any text to indicate that Local time is use
 
+##### Show dist(ance)<!-- linebreak -->
+
+This setting enables the display of the distance to repeater (in kilometers) to the right of the Zone name, in the Channel screen.
+
+To have it working, Channel's location has to be set (using the CPS), and the transceiver location has to be valid (Radio Info's [Location screen](#location-screen) or GPS).
+
+If both locations aren't set or valid, **"--- km"** will be displayed instead.
 
 <div style="page-break-after: always; break-after: page;"></div>
 
@@ -2277,7 +2314,7 @@ When the Tx or Rx frequency has the focus, **Left** or **Right** buttons (*or ro
 
 The supported values are:
 
- - 0.0*MHz*, &#177;600*kHz*, &#177;1.0*MHz*, &#177;1.5*MHz*, &#177;1.6*MHz*, &#177;4.6*MHz*, &#177;5.0*MHz*, &#177;7.0*MHz*, &#177;7.6*MHz*, &#177;9.0*MHz* and &#177;9.4*MHz*.
+ - 0.0*MHz*, &#177;600*kHz*, &#177;1.0*MHz*, &#177;1.5*MHz*, &#177;1.6*MHz*, &#177;2.0*MHz*, &#177;4.6*MHz*, &#177;5.0*MHz*, &#177;7.0*MHz*, &#177;7.6*MHz*, &#177;9.0*MHz* and &#177;9.4*MHz*.
 
 ![repeater shift popup](media/repeater_shift.png)
 
