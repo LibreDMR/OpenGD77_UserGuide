@@ -2234,12 +2234,16 @@ How often beacons will be send when your speed is equal or below the **Low Speed
 
 Value in minutes: from **1** up to **100**, default is **30**.
 
+- If you press the **SK2** button while changing the value, the step is increased by a factor of 10.
+
 
 ##### Fast Rate<!-- linebreak -->
 
 How often beacons will be send when your speed is equal or above the **High Speed** value.
 
 Value in seconds: from **10** up to **180**, default is **120**.
+
+- If you press the **SK2** button while changing the value, the step is increased by a factor of 10.
 
 
 ##### Low Speed<!-- linebreak -->
@@ -2248,6 +2252,8 @@ When your speed is equal or lower than this, beacons are transmitted at the time
 
 Value in km/h: from **2** up to **30**, default is **5**.
 
+- If you press the **SK2** button while changing the value, the step is increased by a factor of 4.
+
 
 ##### High Speed<!-- linebreak -->
 
@@ -2255,12 +2261,16 @@ At this speed or above, beacons will be transmitted at the **Fast Rate** time in
 
 Value in km/h: from **2** up to **90**, default is **70**.
 
+- If you press the **SK2** button while changing the value, the step is increased by a factor of 10.
+
 
 ##### Turn Angle<!-- linebreak -->
 
 The minimum angle by which you must change course before it will trigger a beacon.
 
 Value in degrees: from **5** up to **90**, default is **28**.
+
+- If you press the **SK2** button while changing the value, the step is increased by a factor of 10.
 
 
 ##### Turn Slope<!-- linebreak -->
@@ -2271,12 +2281,16 @@ The calculated value will never exceed 120&deg;.
 
 Value in 10&deg;/speed: from **1** up to **255**, default is **26**.
 
+- If you press the **SK2** button while changing the value, the step is increased by a factor of 10.
+
 
 ##### Turn Time<!-- linebreak -->
 
 The minimum time interval between beacons when you are continuously changing direction.
 
 Value in seconds: from **5** up to **180**, default is **60**.
+
+- If you press the **SK2** button while changing the value, the step is increased by a factor of 10.
 
 
 <div style="page-break-after: always; break-after: page;"></div>
@@ -2354,7 +2368,8 @@ Selects which *Contact* is assigned to the current channel (**DMR only**).<!-- l
 
 Sets the *receive CTCSS tone or DCS code* when the VFO / Channel is set to **FM**.
 
-For both Tx and Rx CTCSS / DCS.
+For both Tx and Rx CTCSS / DCS:
+
 - **Long press**, **Right** or **Left** arrows, skips forward, or back by 5 entries in the list of possible CTCSS / DCS settings.
 - Pressing **SK2** + **Right** or **SK2** + **Left** skips to the end or beginning of the current CTCSS / DCS items.
 
