@@ -147,7 +147,7 @@
       - [LED 灯（LEDs）](#led-灯leds)
       - [时区（Timezone）](#时区timezone)
       - [时间显示格式（Time (display format)）](#时间显示格式time-display-format)
-      - [距离显示（Show dist）](#距离显示show-distance)
+      - [显示距离（Show dist）](#显示距离show-distance)
     - [声音设置（Sound Options）](#声音设置sound-options)
       - [超时警告（Timeout beep）](#超时警告timeout-beep)
       - [警告音量（Beep volume）](#警告音量beep-volume)
@@ -175,10 +175,10 @@
       - [可用主题项目（Here is the detailed list of the theme items）](#可用主题项目here-is-the-detailed-list-of-the-theme-items)
     - [APRS选项（APRS Options）](#APRS选项aprs-options)
       - [信标模式（Mode）](#信标模式beaconing-mode)
-      - [位置选项（Location）](#位置选项beaconing-location)
+      - [信标来源（Location）](#信标来源beaconing-location)
       - [信标间隔（Interval）](#信标间隔beaconing-initial-interval)
-      - [Decay](#beaconing-decay-algorithm)
-      - [压缩（Compress）](#压缩beaconing-compression)
+      - [信标衰减（Decay）](#信标衰减beaconing-decay-algorithm)
+      - [信标压缩（Compress）](#信标压缩beaconing-compression)
       - [智能信标（SmartBeaconing&trade;）](#智能信标smartbeaconing)
          - [低速速率（Slow Rate）](#低速速率slow-rate)
          - [高速速率（Fast Rate）](#高速速率fast-rate)
@@ -698,7 +698,7 @@ _请注意 :_
 
 启用后，TX 频率将设置为 RX 频率，因此您将能够在单工模式下在中继器的频率输出上进行传输
 
-*Note:*
+*注意:*
 
 - 仅当当前信道有频差设置时，此选项才可用。
 - 此选项与 [中继倒频功能（Reverse repeater operation）](#中继倒频功能reverse-repeater-operation) 互斥。
@@ -2178,14 +2178,13 @@ _请注意：_
 *注意*: 在频道或 VFO 屏幕中，可以使用 **SK1** + **1** 来切换信标 **开启** 或 **关闭**。
 
 
-##### Beaconing Location<!-- linebreak -->
+##### 信标来源（Beaconing Location）<!-- linebreak -->
 
-This settings permits to choose the location source used to report you position.
+此设置选择用于报告您的位置的来源。
 
-Available options are:
-
-- **Channel** Uses APRS configuration (see [FM APRS location transmission](#fm-aprs-location-transmission)) or the position entered in the Radio Info's [Location screen](#location-screen).
-- **GPS** Uses the embedded GPS to report your position/speed/direction.
+可用选项包括：  
+- **Channel** 使用 APRS 配置（请参阅 FM APRS 位置传输）或在 **Radio Info** 的 **Location screen** 中输入的位置。
+- **GPS** 全球定位系统使用嵌入式 GPS 报告您的位置/速度/方向。
 
 
 ##### 信标间隔（Beaconing Initial Interval）<!-- linebreak -->
@@ -2225,15 +2224,15 @@ SmartBeaconing&trade; 是由 Tony Arnerich KD7TA 和 Steve Bragg KA9MVA 发明�
 | **5** | 航行        |
 | **6** | APRSdroid |
 
-该算法可使用以下设置进行调整 (see next sections):
+该算法可使用以下设置进行调整 (参见下一节):
 
-- [Slow Rate](#slow-rate)
-- [Fast Rate](#fast-rate)
-- [Low Speed](#low-speed)
-- [High Speed](#high-speed)
-- [Turn Angle](#turn-angle)
-- [Turn Slope](#turn-slope)
-- [Turn Time](#turn-time)
+- [低速速率（Slow Rate）](#低速速率slow-rate)
+- [高速速率（Fast Rate）](#高速速率fast-rate)
+- [低速设置（Low Speed）](#低速设置low-speed)
+- [高速设置（High Speed）](#高速设置high-speed)
+- [转弯角度设置（Turn Angle）](#转弯角度设置turn-angle)
+- [转弯斜率设置（Turn Slope）](#转弯斜率设置turn-slope)
+- [航向时间设置（Turn Time）](#航向时间设置turn-time)
 
 
 ##### 低速速率（Slow Rate）<!-- linebreak -->
