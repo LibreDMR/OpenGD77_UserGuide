@@ -107,6 +107,7 @@
     - [选项设置（General Options）](#选项设置general-options)
       - [按键长按时间（Key long）](#按键长按时间key-long)
       - [按键重复速度（Key rpt）](#按键重复速度key-rpt)
+      - [自动锁定（Auto lock）](#自动锁定auto-lock)
       - [热点模式（Hotspot）](#热点模式hotspot)
       - [温度校准（Temp Cal）](#温度校准temp-cal)
       - [电池校准（Batt Cal）](#电池校准batt-cal)
@@ -146,6 +147,7 @@
       - [LED 灯（LEDs）](#led-灯leds)
       - [时区（Timezone）](#时区timezone)
       - [时间显示格式（Time (display format)）](#时间显示格式time-display-format)
+      - [距离显示（Show dist）](#距离显示show-distance)
     - [声音设置（Sound Options）](#声音设置sound-options)
       - [超时警告（Timeout beep）](#超时警告timeout-beep)
       - [警告音量（Beep volume）](#警告音量beep-volume)
@@ -171,6 +173,20 @@
       - [主题选项（Theme Options）](#主题选项theme-options-1)
       - [颜色选择器（Colour Picker）](#颜色选择器colour-picker)
       - [可用主题项目（Here is the detailed list of the theme items）](#可用主题项目here-is-the-detailed-list-of-the-theme-items)
+    - [APRS选项（APRS Options）](#APRS选项aprs-options)
+      - [信标模式（Mode）](#信标模式beaconing-mode)
+      - [位置选项（Location）](#位置选项beaconing-location)
+      - [信标间隔（Interval）](#信标间隔beaconing-initial-interval)
+      - [Decay](#beaconing-decay-algorithm)
+      - [压缩（Compress）](#压缩beaconing-compression)
+      - [智能信标（SmartBeaconing&trade;）](#智能信标smartbeaconing)
+         - [低速速率（Slow Rate）](#低速速率slow-rate)
+         - [高速速率（Fast Rate）](#高速速率fast-rate)
+         - [低速设置（Low Speed）](#低速设置low-speed)
+         - [高速设置（Hi Speed）](#高速设置high-speed)
+         - [转弯角度设置（Turn Angle）](#转弯角度设置turn-angle)
+         - [转弯斜率设置（Turn Slope）](#转弯斜率设置turn-slope)
+         - [航向时间设置（Turn Time）](#航向时间设置turn-time)
     - [信道详细设置（Channel Details）](#信道详细设置channel-details)
       - [信道名称（Channel name）](#信道名称channel-name)
       - [接收频率（RX）](#接收频率rx)
@@ -205,7 +221,7 @@
       - [卫星实时数据界面（Satellite live data screen）](#卫星实时数据界面satellite-live-data-screen)
       - [静噪和功率设置（Squelch and Power settings）](#静噪和功率设置squelch-and-power-settings)
       - [卫星闹钟（Satellite alarm）](#卫星闹钟satellite-alarm)
-      - [CPS 集成（CPS Integration）](#cps-集成cps-integration)
+      - [CPS 集成（CPS Integratione）](#cps-集成cps-integratione)
       - [技术说明（Technical notes）](#技术说明technical-notes)
     - [GPS 界面（GPS Screen）](#gps-界面gps-screen)
   - [发起或接收单呼（Making and receiving DMR Private Calls）](#发起或接收单呼making-and-receiving-dmr-private-calls)
@@ -259,10 +275,24 @@ _请注意 :_
 
 ### 下载链接与其他资源（Download links and other resources）
 
+**Donor File**
+
+由于软件许可的原因，OpenGD77固件需要结合原始制造商固件的部分，以提供对 AMBE 编码的支持。根据电台型号您需要下载以下两个文件之一，将其存储在计算机上，并记下其位置。
+
+**GD-77 | GD-77S | DM-1801 | DM-1801A | RD-5R**
+<https://radioddity.s3.amazonaws.com/2021-01-26%20GD-77%20CPS%20%26%20Firmware%20Changelog%20-%20Ham%20Version.zip>
+
+解压缩固件 Zip 文件，从“firmware software V4.3.6”文件夹中提取 GD-77_V4.3.6.sgl 文件，并将其保存到您的计算机中。  
+
+**TYT MD-9600 | Retevis RT-90 | TYT MD-UV380 | Retevis RT-3S | Baofeng DM-1701 | Retevis RT-84**
+<https://www.passion-radio.com/index.php?controller=attachment&id_attachment=760>
+
+解压缩固件 Zip 文件，提取文件 MD9600-CSV（2571V5）-V26.45.bin 并将其保存到您的计算机中。
+
 **二进制固件:**
 
 **GD-77 | GD-77S | DM-1801 | DM-1801A | RD-5R**
-<https://www.opengd77.com/downloads/GD77/Latest>
+<https://www.opengd77.com/downloads/GD77/Firmware/Latest>
 
 **特易通 MD-9600 | Retevis RT-90**
 <https://www.opengd77.com/downloads/MD9600/Firmware/Latest>
@@ -272,7 +302,8 @@ MD-9600 | RT-90 在生产过程中使用了多种不同的 PLL 和 IF 芯片。
 对于硬件版本为 4A 的电台，请使用版本 5 固件。
 对于在 PCB 上写有硬件版本 2 的非常旧的电台，可能需要加载版本 1 固件。
 
-基本上，如果您的电台无法接收或发射，请尝试使用不同的固件硬件版本。
+如果您加载了错误的固件版本，并不会对电台造成任何伤害。但是，电台将无法接收或发送。
+因此，如果您的电台无法接收或发射，请尝试使用不同的固件硬件版本。
 
 **特易通 MD-UV380 | Retevis RT-3S | 宝锋 DM-1701 | Retevis RT-84**
 <https://www.opengd77.com/downloads/MDUV380_DM1701/Firmware/Latest/>
@@ -280,7 +311,7 @@ MD-9600 | RT-90 在生产过程中使用了多种不同的 PLL 和 IF 芯片。
 请注意：名称中带有 JA 的版本是为日本用户本地化的，仅支持日语和英语。
 
 - **OpenGD77 客户编程软件（CPS 即写频软件）:**
-  <https://www.opengd77.com/downloads/CPS/Latest>
+  <https://www.opengd77.com/downloads/PC_CPS_20230910/Latest>
 
 - **已发布的固件的最新源代码：**
   <https://www.opengd77.com/downloads/releases>
@@ -302,7 +333,7 @@ MD-9600 | RT-90 在生产过程中使用了多种不同的 PLL 和 IF 芯片。
 - 特易通 MD-9600 | Retevis RT-90
 - 特易通 MD-UV380 | Retevis RT-3S | 宝锋 DM-1701 | Retevis RT-84
 
-固件文件必须使用 OpenGD77 CPS 中的“Extras/Firmware Loader”（“附加/固件加载程序”）菜单安装。原厂提供的固件更新工具不能用于刷入 OpenGD77 固件。
+固件文件必须使用 OpenGD77 CPS 中的 “Extras/Firmware Loader”（“附加/固件加载程序”）菜单安装。原厂提供的固件更新工具不能用于刷入 OpenGD77 固件。
 
 安装本固件的风险由用户自行承担。**请在刷入固件后立即使用 OpenGD77 CPS 对电台进行完整备份**（详见*[备份](#在您做任何其他事情之前备份backup-before-you-do-anything-else)*，如果遇到任何问题，原厂固件通常可以被重新刷入。
 
@@ -320,25 +351,15 @@ _请注意 :_
 - 通过以下方式使电台进入固件更新模式：
 
   - 按住如下所示的两个按键（**S1**,**Fn**）并打开电台。
-
     - 特易通 MD-760、MD-730 或 Radioddity GD-77、GD-77s：
-
       - 按住 PTT 按键旁边的**两个小按键**。
-
     - 宝锋 DM-1801 或 DM-1801A 或 DM-860：
-
       - 按住 PTT 按键下方的**两个小按键**。
-
     - 宝锋 DM-5R Tier II 或 RD-5R：
-
       - 按住橙色 **S1**（Call）和黑色 Fn（**Moni** 或 **S2**）按键（PTT 两侧的按键）。
-
     - 特易通 MD-9600 | Retevis RT-90
-
-      - 按住绿色电源按键和橙色按键，同时为电台提供 12V 电源。注意：更新 OpenGD77 固件时不需要断开电源并重新连接。
-
+      - 按住 **P1** 和橙色按键，同时为电台提供 12V 电源。注意：更新 OpenGD77 固件时不需要断开电源并重新连接，只需在按住 **P1** 和橙色按键的同时，使用 **绿色/电源** 键开机即可进入固件更新模式。
     - 特易通 MD-UV380 | Retevis RT-3S | 宝锋 DM-1701 | Retevis RT-84
-
       - 按住电台侧面顶部的 2 个按键（**S1** 和 PTT）并打开电台。
 
 ![按键布局](media/PTT-layout.png)<!-- { width=420 } -->
@@ -349,27 +370,27 @@ _请注意 :_
 - 对于 GD-77 | GD-77S | DM-1801 | DM-1801A 和 DM-5R，不需要安装驱动程序。
   对于所有其他电台，需要安装 STM DFUSe 驱动程序。如果 Windows 没有自动安装驱动程序，您可能需要使用 Windows 设备管理器来查找并安装正确的驱动程序。
 
-- 选择电台类型
+- 选择电台类型  
   ![固件加载器选择电台类型](media/cps_radio_type_menu.png)
 
 - 固件可从 [CPS](#客户编程软件cps-software) 中的 Extras 菜单轻松刷入。  
   ![固件加载器菜单访问](media/Firmware_loader-01.png)<!-- { width=400 } -->
 
   - 选择您的电台型号。  
-    ![固件加载器窗口](media/Firmware_loader-02.png)<!-- { width=420 } -->
+    ![固件加载器窗口-MK22](media/Firmware_loader-02.png)<!-- { width=420 } -->  
+    ![固件加载器窗口-STM32](media/Firmware_loader-03.png)<!-- { width=420 } -->
 
-  - 出于软件许可的原因，首次使用固件加载器时，您必须点击“Firmware Installation Instructions”（固件安装说明）并按提示进行操作。
+  - 出于软件许可的原因，首次使用固件加载器时，您必须点击 “Select official firmware (donor) file” 并按提示进行操作。
 
     该操作只需执行一次。如果您不这样做就只能在模拟模式下使用电台。
 
     **请注意！不要尝试将原厂固件刷入电台，CPS 只需要用它给本固件增加 DMR 功能。**
 
     成功完成此过程后，固件加载程序的标题栏将显示 \[+DMR]
-
-  - 点击“Select a file & Update”（选择文件并更新）
-
-  - 选择之前下载的 .bin 固件文件。（最新的文件可以在[1.1 章节处](#下载链接与其他资源download-links-and-other-resources)给出的下载位置找到）
-    所选固件文件将使用官方固件中的数据进行修补，然后刷入电台。
+  - 固件可以选择性地支持附加语言。如果需要，请在 “Additional Language” 下拉菜单中选择
+  - 点击 “Select Open firmware file & Update” 或 “Select a File and Update”
+  - 选择之前下载的 .zip 固件文件。（最新的文件可以在[1.1 章节处](#下载链接与其他资源download-links-and-other-resources)给出的下载位置找到）
+    所选固件文件将使用官方固件中的数据进行修补，然后与所选的附加语言一起刷入电台。
 
   - 刷机完成后，如果电台没有自动重启，请关闭电源并重新打开。
 
@@ -391,9 +412,11 @@ _请注意 :_
 
 本固件所使用的电台配置文件与官方的略有不同。
 
+为了能完整使用 OpenGD77 的功能，我们建议您使用 OpenGD77 CPS 为无线电编写一个新的配置文件
+
 除了 MD760 以外，所有电台用户需要使用 Colin G4EML 编写的工具转换原厂的配置文件格式。（参见 <http://www.gb3gf.co.uk/downloads.html>）
 
-使用该软件可以将原厂专有的电台配置文件导出至 CSV 格式，然后将这些 CSV 文件导入到 Colin 的工具（OpenGD77 版本）中。
+OpenGD77 CPS 可以导入已经存在的 CSV 格式配置文件。
 
 电台配置文件只能使用 [OpenGD77 CPS](#客户编程软件cps-software) 写入到电台。
 
@@ -593,10 +616,12 @@ _请注意 :_
 
 #### 中继倒频功能（Reverse repeater operation）
 
-- 信道模式：按住**井号**键，频道的发射和接收频率将被交换。信道名称将以反相显示。
+- 信道模式：按住 **#** 键，频道的发射和接收频率将被交换。信道名称将以反相显示。
 - 频率模式：按住 **SK1** 和 **SK2** 键，频率的发射和接收频率将被交换。
 - 即使信道或区域发生变化，电台仍会保持锁定在中继倒频模式。
-- 要退出中继倒频模式，请按住**井号**键。
+- 要退出中继倒频模式，请按住 **#** 键。  
+
+**注意：** 此功能与信道的 [脱网功能（Talkaround）](#脱网功能Talkaround) 相互排斥
 
 <div style="page-break-after: always; break-after: page;"></div>
 
@@ -668,6 +693,26 @@ _请注意 :_
   此功能使用 Daniel F1RMB 编写的软件算法，该算法最初在两个时隙上同时监听主叫 ID 数据，当一个时隙上出现有效数据时，固件就在该时隙上监听。
 
   如果在大约 2.5 秒内接收到的时隙上不存在主叫方 ID ，则算法会检查另一个时隙，并在主叫方 ID 数据出现时切换到该时隙。
+
+##### 脱网功能（Talkaround）<!-- linebreak -->
+
+启用后，TX 频率将设置为 RX 频率，因此您将能够在单工模式下在中继器的频率输出上进行传输
+
+*Note:*
+
+- 仅当当前信道有频差设置时，此选项才可用。
+- 此选项与 [中继倒频功能（Reverse repeater operation）](#中继倒频功能reverse-repeater-operation) 互斥。
+
+##### 距离排序（Dist sort）<!-- linebreak -->
+
+如果设置了电台位置 ([位置屏幕](#位置屏幕location-screen) 或 安装了 GPS)， 则当前区域将按距离升序排序。 距离（以公里为单位）显示在区域名称的右侧。
+当然，要做到这一点，必须使用 CPS 在相关信道上设置中继位置信息。
+
+*注意*:
+- All Channels zone 不会排序.
+- 可以显示与中继的距离但不排序, 参照 **Display option** [显示距离（Show dist）](#显示距离show-distance).
+
+<div style="page-break-after: always; break-after: page;"></div>
 
 #### 频率界面快捷菜单（VFO Quick Menu）<!-- linebreak -->
 
@@ -941,9 +986,15 @@ SK1 + 下方向键 = D
 - 当前 **信道** 或 **VFO** 必须在其 APRS 设置中选择 APRS 配置。（请参阅 [APRS](#aprs-channel) 设置）
 - 无线电位置必须有效，可以通过手动输入位置（请参阅 [位置界面](#位置界面location-screen) 设置）或使用电台的 GPS 位置（如果安装）。  
 
+APRS 信标模式（请参阅 [APRS选项（APRS Options）](#APRS选项aprs_options)）
+
+在 **Manual** 模式下，在 VFO 和 信道模式中，您需按 **SK1** + **2** 键传输信标。
+在 **PTT** 模式下，释放 PTT 键时会发送信标，这允许语音传输（请记住，此处也支持**间隔**和**衰减**信标设置）。  
+当在卫星屏幕中使用 APRS 信标时，并选择了 APRS Tx/Rx 频率，无论**间隔**和**衰减**设置如何，按 PTT 键都会立即发送信标。
+
 在选择了 APRS 配置的信道按下 PTT 将立即发送 APRS 数据，当 APRS 数据发送完成后发射将自动结束（即使启用了 PTT 保持）， 部分电台可以通过扬声器提供音频反馈以指示正在发射 APRS 数据包，由于硬件限制 MD-9600 和 DM-1701 不支持音频反馈。
 
-发射 APRS 数据包时如果位置数据无效，屏幕上将显示 “Location??”，并且不会发送 APRS 数据包。
+如果位置数据在 **手动** 或 **PTT** 信标模式下无效，屏幕上将显示 “Location??”，并且不会发送 APRS 数据包。在自动模式（**自动** 和 **智能**）下，在设置有效位置（在 [位置界面](#位置界面location-screen) 屏幕中设置或已安装 GPS）之前，不会发送信标。
 
 通过 CPS 最多可以定义 8 个 APRS 配置，每个 APRS 配置都可以指定不同的参数，包括指定要在 https://aprs.fi 等网站上显示的图标以及注释文本。由于硬件的限制，MD-9600 / RT-90 不会传输注释文本。
 
@@ -1433,6 +1484,15 @@ _请注意：_
 
 本设置控制您按住某个特定按键后该按键的重复速度。
 
+##### 自动锁定（Auto lock）<!-- linebreak -->
+
+本设置用于启用 **键盘**/**PTT** 自动锁定功能
+
+当在Channel（频道）或VFO（VFO）屏幕中时，且操作员在所选时间内未进行任何用户操作，***PTT**和**键盘**键将被锁定（请参阅[锁定屏幕]（#锁定屏幕）解锁）。
+有效值：从 0.5 分钟到 15 分钟，步长为 30 秒。
+
+*注意:* 本设置不会影响扫描
+
 #### 热点模式（Hotspot）<!-- linebreak -->
 
 - **宝锋 RD-5R | DM-5R 不支持热点模式，因为在发射时，其电台硬件无法保证一个可靠的 USB 通信**
@@ -1839,15 +1899,18 @@ _请注意 :_ 本功能并不能做到和 MD760 黑色液晶版本完全相同�
 
 #### 时间显示格式（Time (display format)）<!-- linebreak -->
 
-此设置控制输入和显示的日期时间是*UTC*还是*本地时*。
-
-若设置为*本地时*，将使用电台时区设置中的值来计算时钟日期和卫星通过的时间。
-
-若设置为*UTC*，则显示的所有日期和时间后面都会有 “UTC” 标识，以表明正在使用 UTC 时间。
-
-如果选择*本地时*，则日期和时间后面不显示任何文本以指示正在使用本地时间。
+此设置控制输入和显示的日期时间是*UTC*还是*本地时*。  
+若设置为*本地时*，将使用电台时区设置中的值来计算时钟日期和卫星通过的时间。  
+若设置为*UTC*，则显示的所有日期和时间后面都会有 “UTC” 标识，以表明正在使用 UTC 时间。  
+如果选择*本地时*，则日期和时间后面不显示任何文本以指示正在使用本地时间。  
 
 <div style="page-break-after: always; break-after: page;"></div>
+
+##### 显示距离（Show dist(ance)）<!-- linebreak -->
+
+此设置允许在频道屏幕中显示区域名称右侧到中继器的距离（以公里为单位）。  
+要使其正常工作，必须设置电台的位置（使用 CPS），并且电台位置必须有效 (Radio Info's [Location screen](#location-screen) or GPS).  
+如果两个位置均未设置或无效，则会显示 *"--- km"*。
 
 ### 声音设置（Sound Options）
 
@@ -2098,6 +2161,127 @@ _请注意：_
 
 <div style="page-break-after: always; break-after: page;"></div>
 
+#### APRS选项（APRS Options）
+
+##### 信标模式（Beaconing Mode）<!-- linebreak -->
+
+此设置允许您选择信标模式。
+
+支持的模式：
+
+- **Off**：关闭
+- **Manual**：同时按下 **SK1** + **2** 键, 在频道或 VFO 屏幕中， 传输 APRS 信标。
+- **PTT**：释放 PTT 键时将发送信标，遵循间隔计时器（例如, *Initial* 设置为 *1min*, *Decay* 设置为 *Off*: 两个信标之间的间隔不能小于一分钟）。
+- **Auto**：信标按定时间隔自动发送（请参阅 **Interval** 设置）。
+- **Smart**：使用 SmartBeaconing™ 算法进行自动信标。
+
+*注意*: 在频道或 VFO 屏幕中，可以使用 **SK1** + **1** 来切换信标 **开启** 或 **关闭**。
+
+
+##### Beaconing Location<!-- linebreak -->
+
+This settings permits to choose the location source used to report you position.
+
+Available options are:
+
+- **Channel** Uses APRS configuration (see [FM APRS location transmission](#fm-aprs-location-transmission)) or the position entered in the Radio Info's [Location screen](#location-screen).
+- **GPS** Uses the embedded GPS to report your position/speed/direction.
+
+
+##### 信标间隔（Beaconing Initial Interval）<!-- linebreak -->
+
+这定义了自动信标传输的初始间隔。  
+当信标模式设置为 **PTT** 或 **Auto** 时，本设置生效。
+
+##### 信标衰减（Beaconing Decay Algorithm）<!-- linebreak -->
+
+此设置控制衰减算法，该算法在位置信息没有变化的情况下不断延长信标传输间隔。（请参阅上面的 [信标间隔（Beaconing Initial Interval）](#信标间隔beaconing_initial_interval）)）。 
+当您的位置不变时，衰减算法会使间隔信标时间加倍，最大为间隔值的 32 倍。
+
+例：
+- 间隔设置为 1 分钟。
+- 信标间隔为（如果位置同时没有变化）：
+  1 分钟、2 分钟、4 分钟、8 分钟、16 分钟、32 分钟、32 分钟、32 分钟...
+
+
+##### 信标压缩（Beaconing Compression）<!-- linebreak -->
+
+这将启用 APRS 压缩（位置/速度/方向）。这将减少传输时间。
+
+
+##### 智能信标（SmartBeaconing&trade;）<!-- linebreak -->
+
+SmartBeaconing&trade; 是由 Tony Arnerich KD7TA 和 Steve Bragg KA9MVA 发明的信标算法.   
+这优化了基于方向和速度的信标传输.   
+固件还嵌入了一些预设，您也可以对其进行调整以满足您的需求。  
+
+| 值     | 含义        |
+|-------|-----------|
+| **0** | 默认值       |
+| **1** | 汽车        |
+| **2** | 电动自行车     |
+| **3** | 自行车       |
+| **4** | 步行        |
+| **5** | 航行        |
+| **6** | APRSdroid |
+
+该算法可使用以下设置进行调整 (see next sections):
+
+- [Slow Rate](#slow-rate)
+- [Fast Rate](#fast-rate)
+- [Low Speed](#low-speed)
+- [High Speed](#high-speed)
+- [Turn Angle](#turn-angle)
+- [Turn Slope](#turn-slope)
+- [Turn Time](#turn-time)
+
+
+##### 低速速率（Slow Rate）<!-- linebreak -->
+
+当您的速度等于或低于低速值时发送信标的频率.  
+值（以分钟为单位）：从 **1** 到 **100**，默认值为 **30**。
+- 如果在更改值时按下 **SK2** 按钮，步长将增加 10 倍。
+
+##### 高速速率（Fast Rate）<!-- linebreak -->
+
+当您的速度等于或高于高速值时发送信标的频率.   
+值（以秒为单位）：从 **10** 到 **180**，默认值为 **120**。
+- 如果在更改值时按下 **SK2** 按钮，步长将增加 10 倍。
+
+##### 低速设置（Low Speed）<!-- linebreak -->
+
+当您的速度等于或低于此值时， 信标将按 **低速速率** 中定义的时间间隔传输信标。  
+值（以 km/h 为单位）：从 **2** 到 **30**，默认值为 **5**。
+- 如果在更改值时按下 **SK2** 按钮，步长将增加 4 倍。
+
+##### 高速设置（High Speed）<!-- linebreak -->
+
+在此速度或更高速度下， 信标将以 **高速速率** 中定义的时间间隔传输信标。   
+值（以 km/h 为单位）：从 **2** 到 **90**，默认值为 **70**。
+- 如果在更改值时按下 **SK2** 按钮，步长将增加 10 倍。
+
+##### 转弯角度设置（Turn Angle）<!-- linebreak -->
+
+触发信标时航向改变的最小角度。  
+值：从 **5** 到 **90**，默认值为 **28**。
+- 如果在更改值时按下 **SK2** 按钮，步长将增加 10 倍。
+
+##### 转弯斜率设置（Turn Slope）<!-- linebreak -->
+
+将设置中的值除以当前的速度（以 mp/h 为单位），将该值将添加到转弯角度设置中，以增加较低速度下的转弯阈值。
+计算值永远不会超过 120°。
+
+值（以 10°/速度 为单位）：从 **1** 到 **255**，默认值为 **26**。
+
+- 如果在更改值时按下 **SK2** 按钮，步长将增加 10 倍。
+
+##### 航向时间设置（Turn Time）<!-- linebreak -->
+
+不断改变方向时发送信标之间的最小时间间隔。  
+值（以秒为单位）：从 5 到 180，默认值为 60。
+
+<div style="page-break-after: always; break-after: page;"></div>
+
 ### 信道详细设置（Channel Details）
 
 ![信道详细设置界面](media/channel-details.png)
@@ -2128,9 +2312,9 @@ _请注意：_
 
 支持的值包括：
 
-- 0.0*MHz*, &#177;600*kHz*, &#177;1.0*MHz*, &#177;1.5*MHz*, &#177;1.6*MHz*, &#177;4.6*MHz*, &#177;5.0*MHz*, &#177;7.0*MHz*, &#177;7.6*MHz*, &#177;9.0*MHz* and &#177;9.4*MHz*.
+- 0.0*MHz*, &#177;600*kHz*, &#177;1.0*MHz*, &#177;1.5*MHz*, &#177;1.6*MHz*, &#177;2.0*MHz*, &#177;4.6*MHz*, &#177;5.0*MHz*, &#177;7.0*MHz*, &#177;7.6*MHz*, &#177;9.0*MHz* and &#177;9.4*MHz*.
 
-![](media/repeater_shift.png)
+![repeater shift popup](media/repeater_shift.png)
 
 #### 模式（Mode）<!-- linebreak -->
 
@@ -2430,7 +2614,7 @@ _请注意 :_
 
 如果卫星过境闹钟（1 分钟）没有取消（使用**绿色**按键），电台将返回睡眠模式，仍然是为了节省电池电量。
 
-#### CPS 集成（CPS Integration）<!-- linebreak -->
+#### CPS 集成（CPS Integratione）<!-- linebreak -->
 
 CPS 添加了一项额外功能，用于下载 Kep 的数据并将其上传到电台，以及设置电台的日期/时间。
 
