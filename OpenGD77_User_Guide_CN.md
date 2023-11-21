@@ -1234,7 +1234,7 @@ VFO A 和 VFO B 不需要都为 FM 或 DMR 模式。可以是 FM、窄带 FM 或
 
 ![MD-9600 cheatsheet](media/MD9600-CheatSheet.png)<!-- { width=600 } -->
 
-![MD-UV380 cheatsheet](media/MD-UV380-CheatSheet.png)<!-- { width=600 } -->
+![MD-UV380 cheatsheet](media/MD-UV380-CheatSheet-CN.png)<!-- { width=600 } -->
 
 <div style="page-break-after: always; break-after: page;"></div>
 
