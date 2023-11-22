@@ -276,22 +276,22 @@
 
 由于软件许可的原因，OpenGD77固件需要结合原始制造商固件的部分，以提供对 AMBE 编码的支持。根据电台型号您需要下载以下两个文件之一，将其存储在计算机上，并记下其位置。
 
-**GD-77 | GD-77S | DM-1801 | DM-1801A | RD-5R**
+**GD-77 | GD-77S | DM-1801 | DM-1801A | RD-5R**  
 <https://radioddity.s3.amazonaws.com/2021-01-26%20GD-77%20CPS%20%26%20Firmware%20Changelog%20-%20Ham%20Version.zip>
 
 解压缩固件 Zip 文件，从“firmware software V4.3.6”文件夹中提取 GD-77_V4.3.6.sgl 文件，并将其保存到您的计算机中。  
 
-**TYT MD-9600 | Retevis RT-90 | TYT MD-UV380 | Retevis RT-3S | Baofeng DM-1701 | Retevis RT-84**
+**TYT MD-9600 | Retevis RT-90 | TYT MD-UV380 | Retevis RT-3S | Baofeng DM-1701 | Retevis RT-84**  
 <https://www.passion-radio.com/index.php?controller=attachment&id_attachment=760>
 
 解压缩固件 Zip 文件，提取文件 MD9600-CSV（2571V5）-V26.45.bin 并将其保存到您的计算机中。
 
 **二进制固件:**
 
-**GD-77 | GD-77S | DM-1801 | DM-1801A | RD-5R**
+**GD-77 | GD-77S | DM-1801 | DM-1801A | RD-5R**  
 <https://www.opengd77.com/downloads/GD77/Firmware/Latest>
 
-**特易通 MD-9600 | Retevis RT-90**
+**特易通 MD-9600 | Retevis RT-90**  
 <https://www.opengd77.com/downloads/MD9600/Firmware/Latest>
 
 MD-9600 | RT-90 在生产过程中使用了多种不同的 PLL 和 IF 芯片。
@@ -302,18 +302,20 @@ MD-9600 | RT-90 在生产过程中使用了多种不同的 PLL 和 IF 芯片。
 如果您加载了错误的固件版本，并不会对电台造成任何伤害。但是，电台将无法接收或发送。
 因此，如果您的电台无法接收或发射，请尝试使用不同的固件硬件版本。
 
-**特易通 MD-UV380 | Retevis RT-3S | 宝锋 DM-1701 | Retevis RT-84**
+**特易通 MD-UV380 | Retevis RT-3S | 宝锋 DM-1701 | Retevis RT-84**  
 <https://www.opengd77.com/downloads/MDUV380_DM1701/Firmware/Latest/>
 
 请注意：名称中带有 JA 的版本是为日本用户本地化的，仅支持日语和英语。
 
-- **OpenGD77 客户编程软件（CPS 即写频软件）:**
+- **OpenGD77 客户编程软件（CPS 即写频软件）:**  \*
   <https://www.opengd77.com/downloads/PC_CPS_20230910/Latest>
+> \* 译者注：CPS 软件增加了密码，密码为文件名中从 R 开始的部分包括 R  
+> 例：文件名为：OpenGD77CPSInstaller_R2023.09.21.01.exe 则密码是 R2023.09.21.01
 
-- **已发布的固件的最新源代码：**
+- **已发布的固件的最新源代码：**  
   <https://www.opengd77.com/downloads/releases>
 
-- **OpenGD77 论坛:**
+- **OpenGD77 论坛:**  
   <https://www.opengd77.com/>
 
 <div style="page-break-after: always; break-after: page;"></div>
@@ -332,12 +334,13 @@ MD-9600 | RT-90 在生产过程中使用了多种不同的 PLL 和 IF 芯片。
 
 固件文件必须使用 OpenGD77 CPS 中的 “Extras/Firmware Loader”（“附加/固件加载程序”）菜单安装。原厂提供的固件更新工具不能用于刷入 OpenGD77 固件。
 
-安装本固件的风险由用户自行承担。**请在刷入固件后立即使用 OpenGD77 CPS 对电台进行完整备份**（详见[备份](#在您做任何其他事情之前备份backup-before-you-do-anything-else)），如果遇到任何问题，原厂固件通常可以被重新刷入。
+安装本固件的风险由用户自行承担。**请在刷入固件后立即使用 OpenGD77 CPS 对电台进行完整备份**（详见 [备份](#在您做任何其他事情之前备份backup-before-you-do-anything-else)），如果遇到任何问题，原厂固件通常可以被重新刷入。\*
+> \* 译者注：新版 CPS 的备份界面已有改变，英文版手册未作相应修改，因此中文版也未进行修改
 
 *请注意：*
 
 - *该固件与宝锋 DM-1801 的新 2022 版本或 DM-1801A 不兼容，因为其使用了完全不同的内部硬件和电子设备。*
-- 原厂提供的 CPS 软件与本固件不兼容，请使用 **OpenGD77 CPS**。它可以从本指南的[1.1 章节处](#下载链接与其他资源download-links-and-other-resources)下载。包括宝锋、特易通、Retevis 和其他支持的电台必须使用 OpenGD77 CPS。
+- 原厂提供的 CPS 软件与本固件不兼容，请使用 **OpenGD77 CPS**。它可以从本指南的 [1.1 章节处](#下载链接与其他资源download-links-and-other-resources) 下载。包括宝锋、特易通、Retevis 和其他支持的电台必须使用 OpenGD77 CPS。
 
 ### 将数据传输到电台（Transferring data to Radio）
 
@@ -511,7 +514,7 @@ OpenGD77 CPS 可以导入已经存在的 CSV 格式配置文件。
 
 在有自定义功率的信道上增加或减少功率是临时的，此更改不会保存到配置文件。因此，更换信道后临时功率设置会丢失。
 
-要对信道自定义功率进行**永久**更改，您必须打开 **[信道详情（Channel Details）](#信道详细设置channel-details)** 界面，然后按压**蓝色+绿色**组合键。
+要对信道自定义功率进行**永久**更改，您必须打开 **[信道详情（Channel Details）](#信道详细设置channel-details)** 界面，然后按压 **蓝色** + **绿色** 组合键。
 
 在一个使用 **Main** 功率设置的信道上更改功率，会使得其他使用主信道功率的 **All Channel** 和 **VFO** 都改变其功率。
 
@@ -677,7 +680,7 @@ S 表指示在**最右端**时大约为 **S9+40dB**。
 
 ##### 距离排序（Dist sort）<!-- linebreak -->
 
-如果设置了电台位置 ([位置屏幕](#位置屏幕location-screen) 或 安装了 GPS)， 则当前区域将按距离升序排序。 距离（以公里为单位）显示在区域名称的右侧。
+如果设置了电台位置（[位置屏幕](#位置屏幕location-screen) 或 安装了 GPS）， 则当前区域将按距离升序排序。 距离（以公里为单位）显示在区域名称的右侧。
 当然，要做到这一点，必须使用 CPS 在相关信道上设置中继位置信息。
 
 *请注意：*
@@ -728,15 +731,15 @@ S 表指示在**最右端**时大约为 **S9+40dB**。
 
 该选项会将当前 VFO 设置存储至一个新建信道。
 
-新建信道名称将遵循 "**New channel** *NNN*" 格式，其中 “*NNN*” 代表 “*All Channels*” 区域中下一个可用的信道号码。
+新建信道名称将遵循 "**New channel** *NNN*" 格式，其中 "*NNN*" 代表 "*All Channels*" 区域中下一个可用的信道号码。
 
-信道也将被添加到信道界面中的当前选择的区域。如果信道界面设置为 “*All Channels*” 区域，则信道将添加到该区域。
+信道也将被添加到信道界面中的当前选择的区域。如果信道界面设置为 "*All Channels*" 区域，则信道将添加到该区域。
 
 ##### FM 模式哑音扫描（Tone Scan for CTCSS or DCS tone in FM）<!-- linebreak -->
 
 该功能可以扫描 **模拟（CTCSS）** 或 **数字（DCS）** 哑音，找到正确的哑音后设置将被存入当前 VFO。
 
-本功能默认会扫描 **CTCSS 和 DCS** ，但如果您只想扫描 **CTCSS** 或者 **DCS**，按压 **右** 方向键或 **左** 方向键以选择对应哑音。
+本功能默认会扫描 **CTCSS** 和 **DCS** ，但如果您只想扫描 **CTCSS** 或者 **DCS**，按压 **右** 方向键或 **左** 方向键以选择对应哑音。
 
 - 按压 **橙色** 或 **绿色** 按键以确认存入，或按压 **红色** 按键以取消。
 
@@ -874,7 +877,7 @@ CPS 最近新增的一个功能允许您为每个**联系人**或**通话组**�
 
 #### 哑音设置（CTCSS Tone or DCS Code）<!-- linebreak -->
 
-信道或 VFO 都可设置哑音。FM 指示旁边显示的“**C**”或“**D**”、“**T**”或“**R**”或“**TR**”代表了不同的哑音设置。
+信道或 VFO 都可设置哑音。FM 指示旁边显示的 "**C**" 或 "**D**"、"**T**" 或 "**R**" 或 "**TR**"代表了不同的哑音设置。
 
 ![CSS 状态](media/ctcss-tone.png)
 
@@ -1345,8 +1348,8 @@ VFO A 和 VFO B 不需要都为 FM 或 DMR 模式。可以是 FM、窄带 FM 或
 
 以 DD.DDD DDD.DDD 格式输入完整的纬度/经度 \*
 
-> \* 译者注：经纬度以角度值表示，但是有按时分秒书写与按秒分数书写两种方法。  
-> 例如 39°54′15″N 116°24′27″E 为时分秒，39.90403N 116.40753E 为秒分数。本固件仅支持后一种表达方式，精确到小数点后三位。
+> \* 译者注：经纬度以角度值表示，但是有按度书写(DDD)与按度分秒(DMS)书写两种方法。  
+> 例如 39°54′15″N 116°24′27″E 为 DMS，39.90403N 116.40753E 为 DDD。本固件仅支持使用 ***DDD*** 方式。
 
 要更改南/北半球，请按 **下** / **上** 方向键。
 
@@ -1401,9 +1404,8 @@ VFO A 和 VFO B 不需要都为 FM 或 DMR 模式。可以是 FM、窄带 FM 或
 
 显示固件编译的时间与日期，方括号内是 GitHub 的 commit code。
 
-要查看 GitHub 上的详细信息，请将代码附加到 <https://github.com/rogerclarkmelbourne/OpenGD77/commit/> \*
-
-例如 <https://github.com/rogerclarkmelbourne/OpenGD77/commit/a0ebbc7>
+~~要查看 GitHub 上的详细信息，请将代码附加到 <https://github.com/rogerclarkmelbourne/OpenGD77/commit/>~~ \*  
+~~例如 <https://github.com/rogerclarkmelbourne/OpenGD77/commit/a0ebbc7>~~
 
 > \*译者注：已失效
 
@@ -1666,9 +1668,9 @@ CPS 频段限制**不影响**整体硬件频段限制，因此**不可能**通�
 
 #### *xxx* 静噪（*xxx* Squelch）<!-- linebreak -->
 
-**VHF**：当在信道或频率模式中使用模拟模式时，此设置控制 **144MHz** 的静噪强度。**默认为 45%**。
-**220**：当在信道或频率模式中使用模拟模式时，此设置控制 **220MHz** 的静噪强度。**默认为 45%**。
-**UHF**：当在信道或频率模式中使用模拟模式时，此设置控制 **430MHz** 的静噪强度。**默认为 45%**。
+**VHF**：当在信道或频率模式中使用模拟模式时，此设置控制 **144MHz** 的静噪强度。**默认为 45%**。  
+**220**：当在信道或频率模式中使用模拟模式时，此设置控制 **220MHz** 的静噪强度。**默认为 45%**。  
+**UHF**：当在信道或频率模式中使用模拟模式时，此设置控制 **430MHz** 的静噪强度。**默认为 45%**。  
 
 #### PTT 保持（PTT Latch）<!-- linebreak -->
 
@@ -2961,7 +2963,8 @@ CPS 安装程序还将自动安装通信端口驱动程序，但是您也可以�
 
 ![访问 OpenGD77 支持窗口的菜单项](media/Backup-01.png)
 
-备份**EEPROM**、**闪存**、**校准数据**、**MCU ROM**和**电台配置文件**。
+备份**EEPROM**、**闪存**、**校准数据**、**MCU ROM**和**电台配置文件**。\*  
+> \* 译者注：新版 CPS 的备份界面已有改变，英文版手册未作相应修改，因此中文版也未进行修改
 
 ![创建各种备份的按钮](media/Backup-02.png)<!-- { width=550 } -->
 
