@@ -2852,19 +2852,36 @@ Instead, the firmware will use the current (Channel or VFO) power setting, which
 If the power setting in the Pi-Star MMDVMHost Expert settings is any other value *e.g.* **50%**, the hotspot will use that power setting closest to the chosen value.
 So **50%** of *5W* is **2.5W**, and the closest power setting to this is *2W*.
 
-**Power matching table:**
+**Power matching tables:**
 
-| **Power** | **Pi-Star RFLevel** |
-| --- | --- |
-| 50mW | 1 |
-| 250mW | 5 |
-| 500mW | 10 |
-| 750mW | 15 |
-| 1W | 20 |
-| 2W | 40 |
-| 4W | 80 |
-| 5W | 99 |
-| +W- | N/A |
+- **5W Handhelds**
+
+  | **Power** | **Pi-Star RFLevel** |
+  | --- | --- |
+  | 50mW | 1 |
+  | 250mW | 5 |
+  | 500mW | 10 |
+  | 750mW | 15 |
+  | 1W | 20 |
+  | 2W | 40 |
+  | 4W | 80 |
+  | 5W | 99 |
+  | +W- | N/A |
+
+- **MD-9600**
+
+  | **Power** | **Pi-Star RFLevel** |
+  | --- | --- |
+  | 100mW | 1 |
+  | 250mW | 5 |
+  | 500mW | 10 |
+  | 750mW | 15 |
+  | 1W | 20 |
+  | 5W | 40 |
+  | 10W | 60 |
+  | 25W | 80 |
+  | 40W | 99 |
+  | +W- | N/A |
 
 
 The receive frequency specified by Pi-Star will be displayed at the bottom of the screen.
