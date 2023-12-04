@@ -1414,8 +1414,8 @@ Displays a record of the last 32 DMR stations that the radio has received.
 
 - Pressing the **Up** or **Down** arrows cycles through the list to show stations which have been heard.
 - Hold **SK2** button to view details like TalkGroup and time elapsed.
-- Pressing the **Green** key will set the selected station DMR ID as the new PC / TG contact.
-- Pressing the **Green** key, while **SK2** button is held down, will set the selected talkgroup as the new TG.
+- Pressing the **Green** key will set the selected talkgroup as the new TG.
+- Pressing the **Green** key, while **SK2** button is held down, will set the selected station DMR ID as the new PC / TG contact.
 - Long press the **Hash** (**#**) key clears the list.
 
 ### Firmware Info and credits
