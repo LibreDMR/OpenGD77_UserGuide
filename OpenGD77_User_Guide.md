@@ -566,8 +566,6 @@ In both FM and DMR modes, the signal strength of the received signal is shown as
 
 **100%** bar graph is approximately **S9 +40dB**.
 
-In DMR mode the signal meter **will only be active** when the DMR hardware detects a DMR signal.
-
 In FM mode the signal meter should operate all the time.
 
 ![signal meter](media/signal-meter.png)
