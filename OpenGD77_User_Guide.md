@@ -566,8 +566,6 @@ In both FM and DMR modes, the signal strength of the received signal is shown as
 
 **100%** bar graph is approximately **S9 +40dB**.
 
-In DMR mode the signal meter **will only be active** when the DMR hardware detects a DMR signal.
-
 In FM mode the signal meter should operate all the time.
 
 ![signal meter](media/signal-meter.png)
@@ -1413,8 +1411,9 @@ Allows a new DMR Contact to be created
 Displays a record of the last 32 DMR stations that the radio has received.
 
 - Pressing the **Up** or **Down** arrows cycles through the list to show stations which have been heard.
-- Pressing the **Green** key will set the selected station DMR ID as the new PC / TG contact.
 - Hold **SK2** button to view details like TalkGroup and time elapsed.
+- Pressing the **Green** key will set the selected talkgroup as the new TG.
+- Pressing the **Green** key, while **SK2** button is held down, will set the selected station DMR ID as the new PC / TG contact.
 - Long press the **Hash** (**#**) key clears the list.
 
 ### Firmware Info and credits
