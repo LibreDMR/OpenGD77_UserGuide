@@ -2631,18 +2631,24 @@ The CPS defaults to downloading the Keps from a specific web URL, however if the
 The satellites which are imported and uploaded to the radio are defined in the file satellites.txt which is installed with the CPS into its installation directory.
 This file is a standard format CSV file, and contains the satellite catalog number, as well as the display name in the radio, and the Tx, Rx frequencies and Tx CTCSS as well as the "Arming" CTCSS for satellites which use an "Arming" tone.
 The operator can edit this file to add or remove satellites as required.
-The maximum number of satellites which can be loaded into the radio is 15, but currently there are 8 AMSAT satellites in this data
+The maximum number of satellites which can be loaded into the radio is 25, but currently there are 8 AMSAT satellites in this data
 
-| Catalogue # | Display name | Rx | Tx | CTCSS | ArmCTCSS |
-| --- | --- | --- | --- | --- | --- |
-| 22825U | AO27 | 436795000 | 145850000 | 0 | 0 |
-| 43017U | AO91 | 145960000 | 435250000 | 670 | 0 |
-| 43137U | AO92 | 145880000 | 435350000 | 670 | 0 |
-| 40908U | CAS3H | 437200000 | 144350000 | 0 | 0 |
-| 40931U | IO86 | 435880000 | 145880000 | 885 | 0 |
-| 43678U | PO101 | 145900000 | 437500000 | 1413 | 0 |
-| 25544U | ISS | 437800000 | 145990000 | 670 | 0 |
-| 27607U | SO50 | 436795000 | 145850000 | 670 | 744 |
+|Cat  # | Name     |     Rx1 |     Tx1 |  CTCSS |  ArmCTCSS |     Rx2 |     Tx2 |     Rx3 |     Tx3 | APRS Config
+| ----- | -------- | ------- | ------- | ------ | --------- | ------- | ------- | ------- | ------- |
+|22825U | AO27     | 436.795 | 145.850 |       0 |        0 |       0 |       0 |       0 |       0 | 
+|43017U | AO91     | 145.960 | 435.250 |      67 |        0 |       0 |       0 |       0 |       0 | 
+|40908U | CAS3H    | 437.200 | 144.350 |       0 |        0 |       0 |       0 | 437.200 |       0 | 
+|40931U | IO86     | 435.880 | 145.880 |    88.5 |        0 |       0 |       0 |       0 |       0 | 
+|43678U | PO101    | 145.900 | 437.500 |   141.3 |        0 | 145.900 | 437.500 |       0 |       0 | 
+|25544U | ISS      | 437.800 | 145.990 |      67 |        0 | 145.825 | 145.825 |       0 |       0 | ARISS 0WIDE2 1
+|27607U | SO50     | 436.795 | 145.850 |      67 |     74.4 |       0 |       0 |       0 |       0 | 
+|54684U | FO118    | 435.600 | 145.925 |      67 |        0 | 435.650 |       0 | 435.570 |       0 | 
+|51069U | TEVEL2   | 436.400 | 145.970 |       0 |        0 |       0 |       0 | 436.400 |       0 | 
+|0988U | TEVEL3   | 436.400 | 145.970 |       0 |        0 |       0 |       0 | 436.400 |       0 | 
+|51063U | TEVEL4   | 436.400 | 145.970 |       0 |        0 |       0 |       0 | 436.400 |       0 | 
+|50998U | TEVEL5   | 436.400 | 145.970 |       0 |        0 |       0 |       0 | 436.400 |       0 | 
+|50999U | TEVEL6   | 436.400 | 145.970 |       0 |        0 |       0 |       0 | 436.400 |       0 | 
+|51062U | TEVEL7   | 436.400 | 145.970 |       0 |        0 |       0 |       0 | 436.400 |       0 | 
 
 
 CTCSS and ArmCTCSS values are the tone frequency time 10 e.g. 67Hz = 670
