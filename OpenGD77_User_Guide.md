@@ -2651,9 +2651,6 @@ The maximum number of satellites which can be loaded into the radio is 25, but c
 | 51062U | TEVEL7 | 436.400 | 145.970 | 0 | 0 | 0 | 0 | 436.400 | 0 ||
 
 
-CTCSS and ArmCTCSS values are the tone frequency time 10, e.g. 67Hz = 670
-
-
 #### Technical notes<!-- linebreak -->
 
 The satellite position and prediction calculations are generated in real time by the firmware in the radio, and the currently selected satellite data is updated once per second.
