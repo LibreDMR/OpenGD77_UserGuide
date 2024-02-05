@@ -490,7 +490,7 @@ On both the VFO and Channel screens:
 
 ### Changing between FM mode and DMR mode
 
-- Press the **SK1** + **Star** keys to toggle between FM and DMR mode, on either the **VFO** or **Channel** screens.
+- Press the **SK2** + **Star** keys to toggle between FM and DMR mode, on either the **VFO** or **Channel** screens.
 
 ### Changing Timeslot in DMR mode
 
