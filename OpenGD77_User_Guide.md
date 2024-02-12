@@ -2905,7 +2905,7 @@ The LED on the top of the radio also turns red to indicate the radio is transmit
 
 ## Resetting the Settings
 
-The radio can also be set to the default settings by holding the **SK2** key while turning on the radio.
+The radio can also be set to the default settings by holding the **SK2** key (**P3** on the MD-9600 | RT-90) while turning on the radio.
 
 Additionally, holding the **SK2** button as well as the **Up** and **Down** arrow keys, resets **any** custom boot melody and custom boot image that has been uploaded using the OpenGD77 CPS.
 
