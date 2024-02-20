@@ -2907,7 +2907,13 @@ The LED on the top of the radio also turns red to indicate the radio is transmit
 
 The radio can also be set to the default settings by holding the **SK2** key (**P3** on the MD-9600 | RT-90) while turning on the radio.
 
-Additionally, holding the **SK2** button as well as the **Up** and **Down** arrow keys, resets **any** custom boot melody and custom boot image that has been uploaded using the OpenGD77 CPS.
+Additionally, holding the:
+
+- **SK2** button as well as the **Up** and **Down** arrow keys on the GD-77 | DM-1801 | DM-1801A | RD-5R,
+- **SK2** button as well as the **Down** arrow key on the MD-UV380 | RT-3S | DM-1701 | RT-84 | MD-2017 | RT-82,
+- **P3** button as well as the **Down** front panel arrow key on the MD-9600 | RT-90,
+
+resets **any** custom boot melody, custom boot image and themes on colours platforms, that has been uploaded using the OpenGD77 CPS.
 
 On the GD-77S, which does not have a keypad, holding **SK2** and **Orange** resets **any** custom boot melody.
 
