@@ -308,7 +308,7 @@ MD-9600 | RT-90 在生产过程中使用了多种不同的 PLL 和 IF 芯片。
 请注意：名称中带有 JA 的版本是为日本用户本地化的，仅支持日语和英语。
 
 - **OpenGD77 客户编程软件（CPS 即写频软件）:**  \*
-  <https://www.opengd77.com/downloads/PC_CPS_20230910/Latest>
+  <https://www.opengd77.com/viewtopic.php?f=12&t=3877>
 > \* 译者注：CPS 软件增加了密码，密码为文件名中从 R 开始的部分包括 R  
 > 例：文件名为：OpenGD77CPSInstaller_R2023.09.21.01.exe 则密码是 R2023.09.21.01
 
