@@ -207,7 +207,8 @@ For the latest information and discussions, please refer to the development and 
       * [Eco](#eco-channel)
       * [TA Tx TS1](#ta-tx-tsx)
       * [TA Tx TS2](#ta-tx-tsx)
-	  * [APRS](#aprs-channel)
+      * [APRS](#aprs-channel)
+      * [Force DMO](#force-dmo)
       * [Accepting and saving the changes to the channel](#accepting-and-saving-the-changes-to-the-channel)
     * [Satellite Screen](#satellite-screen)
       * [Polar view](#polar-view)
@@ -1760,6 +1761,7 @@ Controls the display backlight operation
 - **Auto** Display backlight will turn on automatically when triggered by various events *e.g.* Rx of signal, or pressing a key or button.
 - **Squelch** Display backlight remains illuminated while the FM squelch is open or there is a valid DMR signal, and also remains illuminated for the specified backlight timeout after the squelch has closed. The minimum timeout period in this mode is 5 seconds.
 - **Manual** Display backlight is toggled on and off by pressing the **Black** button (**SK1**).
+- **Buttons** Display backlight will illuminate for the specified backlight timeout on every button press event.
 - **None** Display backlight will not illuminate under any condition.
 
 ##### Timeout<!-- linebreak -->
@@ -2454,6 +2456,11 @@ Options are:
 Sets the FM APRS Tx configation to be used on this VFO / Channel
 
 The default setting is None
+
+
+#### Force DMO<!-- linebreak -->
+
+This sets a channel to operate in simplex / DMO even when the Tx and Rx frequencies are different.
 
 
 #### Accepting and saving the changes to the channel<!-- linebreak -->
