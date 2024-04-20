@@ -33,18 +33,20 @@ For the latest information and discussions, please refer to the development and 
       * [Displaying the channel Frequency](#displaying-the-channel-frequency)
       * [Displaying FM specific channel information](#displaying-fm-specific-channel-information)
       * [Reverse repeater operation](#reverse-repeater-operation)
-      * [Channel Quick Menu](#channel-quick-menu)
-        * [Copying a channel to VFO](#copying-a-channel-to-vfo)
-        * [Read the VFO into the current channel](#read-the-vfo-into-the-current-channel)
-        * [Filter](#filter)
-      * [VFO Quick Menu](#vfo-quick-menu)
-        * [VFO selection A or B](#vfo-selection-a-or-b)
-        * [Exchange the TX and RX frequencies](#exchange-the-tx-and-rx-frequencies)
-        * [Copy the RX frequency to the TX frequency](#copy-the-rx-frequency-to-the-tx-frequency)
-        * [Copy TX frequency to the RX frequency](#copy-tx-frequency-to-the-rx-frequency)
-        * [Filter](#filter)
-        * [VFO to New Channel](#vfo-to-new-channel)
-        * [Tone Scan for CTCSS or DCS tone in FM](#tone-scan-for-ctcss-or-dcs-tone-in-fm)
+    * [Channel Quick Menu](#channel-quick-menu)
+      * [Copying a channel to VFO](#copying-a-channel-to-vfo)
+      * [Read the VFO into the current channel](#read-the-vfo-into-the-current-channel)
+      * [Filter](#filter)
+      * [Talkaround](#talkaround)
+      * [Dist sort](#dist-sort)
+    * [VFO Quick Menu](#vfo-quick-menu)
+      * [VFO selection A or B](#vfo-selection-a-or-b)
+      * [Exchange the TX and RX frequencies](#exchange-the-tx-and-rx-frequencies)
+      * [Copy the RX frequency to the TX frequency](#copy-the-rx-frequency-to-the-tx-frequency)
+      * [Copy TX frequency to the RX frequency](#copy-tx-frequency-to-the-rx-frequency)
+      * [Filter](#filter)
+      * [VFO to New Channel](#vfo-to-new-channel)
+      * [Tone Scan for CTCSS or DCS tone in FM](#tone-scan-for-ctcss-or-dcs-tone-in-fm)
     * [DMR specific functionality (VFO and Channel screens)](#dmr-specific-functionality-vfo-and-channel-screens)
       * [Timeslot selection](#timeslot-selection)
       * [DMR ID callsign and name display](#dmr-id-callsign-and-name-display)
@@ -207,7 +209,8 @@ For the latest information and discussions, please refer to the development and 
       * [Eco](#eco-channel)
       * [TA Tx TS1](#ta-tx-tsx)
       * [TA Tx TS2](#ta-tx-tsx)
-	  * [APRS](#aprs-channel)
+      * [APRS](#aprs-channel)
+      * [Force DMO](#force-dmo)
       * [Accepting and saving the changes to the channel](#accepting-and-saving-the-changes-to-the-channel)
     * [Satellite Screen](#satellite-screen)
       * [Polar view](#polar-view)
@@ -613,7 +616,7 @@ The Channel screen displays the current Channel number as well as the current zo
 - This is mutually exclusive with Channel's [Talkaround](#talkaround).
 
 
-#### Channel Quick Menu<!-- linebreak -->
+### Channel Quick Menu<!-- linebreak -->
 
 - Pressing the **Orange** button on the top of the radio in Channel mode displays the Quick Menu for the Channel screen. Note that in Quick Menu, the **Orange** button has the same function as the **Green** key, which confirms your current selection.
 
@@ -626,18 +629,18 @@ The Channel screen displays the current Channel number as well as the current zo
 On the Baofeng RD-5R press and hold the orange coloured **MR/VFO** button to enter the Quick menu.
 On the TYT MD-UV380 press **SK1** and the **Green** button
 
-##### Copying a channel to VFO<!-- linebreak -->
+#### Copying a channel to VFO<!-- linebreak -->
 
 - Press the **Orange** button or **Green** key to copy the content of the current channel to the VFO.
 
-##### Read the VFO into the current channel<!-- linebreak -->
+#### Read the VFO into the current channel<!-- linebreak -->
 
 - Press the **Orange** button or **Green** key to confirm and save the updated channel to the codeplug memory. **Red** key to cancel.
 
 
 <div style="page-break-after: always; break-after: page;"></div>
 
-##### Filter<!-- linebreak -->
+#### Filter<!-- linebreak -->
 
 - **Filter** in FM Mode
 
@@ -681,7 +684,7 @@ On the TYT MD-UV380 press **SK1** and the **Green** button
   - If caller ID is not present on the received timeslot for a timeout period of approximately 2.5 seconds, the algorithm checks on the other timeslot and switches to that if caller ID data is on that timeslot.
 
 
-##### Talkaround<!-- linebreak -->
+#### Talkaround<!-- linebreak -->
 
 Once enabled, the TX frequency will be set to the RX frequency, hence you will be able to transmit on a repeater's output, in simplex mode.
 
@@ -690,7 +693,7 @@ Once enabled, the TX frequency will be set to the RX frequency, hence you will b
 - This option is only available if the current Channel has a frequency shift.
 - This is mutually exclusive with [Reverse repeater operation](#reverse-repeater-operation).
 
-##### Dist sort<!-- linebreak -->
+#### Dist sort<!-- linebreak -->
 
 If the transceiver location is set (Radio Info's [Location screen](#location-screen) or GPS), the current Zone will be sorted in the ascending distance order.
 
@@ -706,7 +709,7 @@ Of course, for this to work, the repeater locations must be set on the relevant 
 
 <div style="page-break-after: always; break-after: page;"></div>
 
-#### VFO Quick Menu<!-- linebreak -->
+### VFO Quick Menu<!-- linebreak -->
 
 - Pressing the **Orange** button on the top of the radio in VFO mode displays the Quick menu for the VFO screen. Currently, this has five options.
 
@@ -716,35 +719,35 @@ Of course, for this to work, the repeater locations must be set on the relevant 
 
 - The Baofeng RD-5R does not have an **Orange** button. On this radio press and hold the orange coloured **MR/VFO** button to enter the Quick menu
 
-##### VFO selection A or B<!-- linebreak -->
+#### VFO selection A or B<!-- linebreak -->
 
 - Pressing the **Orange** button twice while in VFO mode quickly toggles between **VFO A** and **VFO B**.
 - On the Baofeng DM-1801 | DM-860, this function is controlled using the **A/B** button.
 - **Long Press** of the **Red** button also changes from VFO A to VFO B, or vice versa.
 
-##### Exchange the TX and RX frequencies<!-- linebreak -->
+#### Exchange the TX and RX frequencies<!-- linebreak -->
 
 This function essentially reverses the TX and RX frequencies.
 
 - Press **Green** key or **Orange** button to confirm.
 
-##### Copy the RX frequency to the TX frequency<!-- linebreak -->
+#### Copy the RX frequency to the TX frequency<!-- linebreak -->
 
 Copies the Rx frequency to the Tx frequency.
 
 - Press **Green** key or **Orange** button to confirm.
 
-##### Copy Tx frequency to the Rx frequency<!-- linebreak -->
+#### Copy Tx frequency to the Rx frequency<!-- linebreak -->
 
 Copies the Tx frequency to the Rx frequency.
 
 - Press **Green** key or **Orange** button to confirm.
 
-##### Filter (*DMR mode only*)<!-- linebreak -->
+#### Filter (*DMR mode only*)<!-- linebreak -->
 
 This function is identical to the Filter described for Channel mode operation ([above](#filter))
 
-##### VFO to New Channel<!-- linebreak -->
+#### VFO to New Channel<!-- linebreak -->
 
 The **VFO --> New Chan** option, creates a new channel using the current VFO settings.
 
@@ -752,7 +755,7 @@ The name of the new channel uses the format "**New channel** *NNN*", where *NNN*
 
 The Channel will also be added to the currently active Zone in the Channel screen. If the Channel screen is set to the *All Channels* zone, the channel will be added to that zone.
 
-##### Tone Scan for CTCSS or DCS tone in FM<!-- linebreak -->
+#### Tone Scan for CTCSS or DCS tone in FM<!-- linebreak -->
 
 This scans for any **CTCSS** or **DCS** tones, and sets the VFO to these parameters.
 
@@ -1760,6 +1763,7 @@ Controls the display backlight operation
 - **Auto** Display backlight will turn on automatically when triggered by various events *e.g.* Rx of signal, or pressing a key or button.
 - **Squelch** Display backlight remains illuminated while the FM squelch is open or there is a valid DMR signal, and also remains illuminated for the specified backlight timeout after the squelch has closed. The minimum timeout period in this mode is 5 seconds.
 - **Manual** Display backlight is toggled on and off by pressing the **Black** button (**SK1**).
+- **Buttons** Display backlight will illuminate for the specified backlight timeout on every button press event.
 - **None** Display backlight will not illuminate under any condition.
 
 ##### Timeout<!-- linebreak -->
@@ -2454,6 +2458,11 @@ Options are:
 Sets the FM APRS Tx configation to be used on this VFO / Channel
 
 The default setting is None
+
+
+#### Force DMO<!-- linebreak -->
+
+This sets a channel to operate in simplex / DMO even when the Tx and Rx frequencies are different.
 
 
 #### Accepting and saving the changes to the channel<!-- linebreak -->
