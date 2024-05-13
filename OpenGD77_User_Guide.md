@@ -131,6 +131,7 @@ For the latest information and discussions, please refer to the development and 
           * [Allow PC](#allow-pc)
           * [User Power](#user-power)
           * [DMR crc](#dmr-crc)
+          * [Mode](#mode)
         * [Display Options](#display-options)
           * [Brightness](#brightness)
           * [Nite Bright](#nite-bright)
@@ -225,7 +226,8 @@ For the latest information and discussions, please refer to the development and 
     * [To make a Private Call](#to-make-a-private-call)
     * [To Receive a Private Call](#to-receive-a-private-call)
   * [Hotspot mode](#hotspot-mode)
-  * [Resetting the Settings](#resetting-the-settings)
+  * [Resetting the Settings](#boot-key-combinations)
+  * [Boot key combinations](#boot-key-combinations)
   * [GD-77S operation](#gd-77s-operation)
     * [GD77S Channel / TG mode](#gd77s-channel--tg-mode)
     * [GD77S Scan mode](#gd77s-scan-mode)
@@ -1560,7 +1562,7 @@ If suspend mode is not enabled, holding **SK2** while the power / volume control
 
 ##### Safe Power On<!-- linebreak -->
 
-This setting requires SK1 to be pressed when powering up the transceiver, preventing unwanted power-ups, such as when the radio is in a backpack, which can drain the battery. This parameter is also operational when suspend mode is enabled.
+This setting requires **SK1** to be pressed when powering up the transceiver, preventing unwanted power-ups, such as when the radio is in a backpack, which can drain the battery. This parameter is also operational when suspend mode is enabled.
 
 *Note:*
 
@@ -1726,6 +1728,17 @@ A power meter is the only way to know what power output each individual radio wi
 ##### DMR crc<!-- linebreak -->
 
 This settings disables the DMR CRC checking, which could be helpful in some cases while listening some specific networks.
+
+
+##### Mode<!-- linebreak -->
+
+**This setting is only available on the TYT MD-UV380 (non Plus 10W).**
+
+If you have a MD-UV380 10W radio (non Plus version that requires a special firmware version), this option permits to display the power values using the 10W scale (50mw, 250mW, 500mW, 750mW, 1W, 2W, 3W, 5W and 10W) in the user interface.
+
+*Note:*
+
+- It has no impact of the effective power output, so turning this option to **On** on a 5W radio is meaningless.
 
 
 <div style="page-break-after: always; break-after: page;"></div>
@@ -2912,19 +2925,25 @@ The LED on the top of the radio also turns red to indicate the radio is transmit
 
 <div style="page-break-after: always; break-after: page;"></div>
 
-## Resetting the Settings
+## Boot key combinations
 
-The radio can also be set to the default settings by holding the **SK2** key (**P3** on the MD-9600 | RT-90) while turning on the radio.
+The following lists the available functions when holding down the key combinations when powering on the tranceiver:
 
-Additionally, holding the:
+|   **Function**                                    |      **GD77S**         |    **Other MK22 <br>based HTs**    |    **STM32 <br>based HTs**    |         **MD-9600**           |
+| :---                                              |        :---:           |             :---:              |           :---:           |            :---:              |
+| Settings reset                                    |       **SK2**          |            **SK2**             |          **SK2**          |            **P3**             |
+| Clear boot melody/image and themes *(see Note 1)* | **SK2** + **Orange**   |  **SK2** + **Up** + **Down**   |     **SK2** + **Down**    | **P3** + **Front Panel Down** |
+| Safe Boot                                         |     *unavailable*      |         **SK1** + **0**        |      **SK1** + **0**      |         **P3** + **0**        |
+| Enable Voice Prompt L3                            |     *unavailable*      |             **#**              |           **#**           |             **#**             |
+| Booting when [Safe Pwr-On](#safe-power-on) is On  |     *unavailable*      |            **SK1**             |          **SK1**          |         *unavailable*         |
+| Clearning NMEA logs                               |     *unavailable*      | **SK1** + **5** *(see Note 2)* |       **SK1** + **5**     |  **Front Panel Down** + **5** |
+| Band limits (On/Off toggle)                       |   **SK1** + **PTT**    |         *unavailable*          |        *unavailable*      |         *unavailable*         |
+| Hotspot (MMDVM/BlueDV toggle)                     |        **SK1**         |         *unavailable*          |        *unavailable*      |         *unavailable*         |
 
-- **SK2** button as well as the **Up** and **Down** arrow keys on the GD-77 | DM-1801 | DM-1801A | RD-5R,
-- **SK2** button as well as the **Down** arrow key on the MD-UV380 | RT-3S | DM-1701 | RT-84 | MD-2017 | RT-82,
-- **P3** button as well as the **Down** front panel arrow key on the MD-9600 | RT-90,
+*Notes:*
 
-resets **any** custom boot melody, custom boot image and themes on colours platforms, that has been uploaded using the OpenGD77 CPS.
-
-On the GD-77S, which does not have a keypad, holding **SK2** and **Orange** resets **any** custom boot melody.
+1. Resets themes on colours platforms.
+2. NMEA log clearing is optional on MK22 platforms, as it needs the installation of a special firmware build which enables NMEA logging.
 
 
 <div style="page-break-after: always; break-after: page;"></div>
