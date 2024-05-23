@@ -709,6 +709,9 @@ Of course, for this to work, the repeater locations must be set on the relevant 
 
 - All Channels zone will never be sorted.
 - The distance to repeater can also be displayed without sorting, see **Display option** [Show dist](#show-distance).
+- When the distance sorting is enabled, the zone area will be displayed:
+  - in inverse video on monochrom platforms,
+  - surrounded by a frame on coloured platforms.
 
 
 <div style="page-break-after: always; break-after: page;"></div>
