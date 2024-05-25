@@ -648,6 +648,8 @@ On the TYT MD-UV380 press **SK1** and the **Green** button
 
   - Use the **Right** or **Left** arrows to enable or disable CTCSS / DCS filtering.
 
+  When this filter is disabled, and any Rx or Tx Tone/Code is set for the Channel/VFO, the [CTCSS Tone or DCS Code](#ctcss-tone-or-dcs-code) indication at the top of the screen is displayed in inverse video.
+
 - **Filter** in DMR mode
 
   - Use the **Right** or **Left** arrows to select:
@@ -707,6 +709,9 @@ Of course, for this to work, the repeater locations must be set on the relevant 
 
 - All Channels zone will never be sorted.
 - The distance to repeater can also be displayed without sorting, see **Display option** [Show dist](#show-distance).
+- When the distance sorting is enabled, the zone area will be displayed:
+  - in inverse video on monochrom platforms,
+  - surrounded by a frame on coloured platforms.
 
 
 <div style="page-break-after: always; break-after: page;"></div>
@@ -1215,6 +1220,10 @@ The keypad entry follows the same functionality as stock GD77 firmware.
 ![MD-9600 cheatsheet](media/MD9600-CheatSheet.png)<!-- { width=600 } -->
 
 ![MD-UV380 cheatsheet](media/MD-UV380-CheatSheet.png)<!-- { width=600 } -->
+
+![DM-1701 cheatsheet](media/DM-1701-CheatSheet.svg)<!-- { width=600 } -->
+
+![MD-2017 cheatsheet](media/MD-2017-CheatSheet.svg)<!-- { width=600 } -->
 
 
 <div style="page-break-after: always; break-after: page;"></div>
