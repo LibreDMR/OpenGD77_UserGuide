@@ -1221,6 +1221,8 @@ The keypad entry follows the same functionality as stock GD77 firmware.
 
 ![MD-UV380 cheatsheet](media/MD-UV380-CheatSheet.png)<!-- { width=600 } -->
 
+![MD-2017 cheatsheet](media/MD-2017-CheatSheet.svg)<!-- { width=600 } -->
+
 
 <div style="page-break-after: always; break-after: page;"></div>
 
