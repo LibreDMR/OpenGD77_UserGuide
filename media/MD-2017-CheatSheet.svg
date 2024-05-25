@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="1.5055415"
-     inkscape:cx="369.63445"
-     inkscape:cy="164.72479"
+     inkscape:zoom="1.374695"
+     inkscape:cx="563.76141"
+     inkscape:cy="476.10561"
      inkscape:window-width="1920"
      inkscape:window-height="1055"
      inkscape:window-x="0"
@@ -2048,18 +2048,22 @@
        d="m 140.98635,155.27376 v -8.61685 h -20.41904"
        id="path7" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.167284;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-       d="M 188.93904,237.80202 H 155.72536"
+       style="fill:none;stroke:#000000;stroke-width:0.119621;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="M 188.93904,236.21451 H 171.95588"
        id="path4-5" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.1277;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="M 139.9224,236.21451 H 120.56761"
+       id="path4-5-1" />
     <text
        id="text1354-3-2"
-       y="244.99011"
+       y="232.59409"
        x="186.81972"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.73295px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.483309"
        xml:space="preserve"
        transform="scale(1.0185419,0.98179565)"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.73295px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.483309"
-         y="244.99011"
+         y="232.59409"
          x="186.81972"
          id="tspan1352-6-9"
          sodipodi:role="line">SK1</tspan></text>
@@ -2078,5 +2082,34 @@
          x="55.794014"
          sodipodi:role="line"
          id="tspan19">TYT MD-2017</tspan></text>
+    <text
+       id="text1354-3-1"
+       y="242.72774"
+       x="101.81064"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.73295px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.483309"
+       xml:space="preserve"
+       transform="scale(1.0185419,0.98179565)"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.73295px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.483309"
+         y="242.72774"
+         x="101.81064"
+         id="tspan1352-6-29"
+         sodipodi:role="line">Left</tspan></text>
+    <text
+       id="text1354-3-1-4"
+       y="242.72774"
+       x="186.57051"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.73295px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.483309"
+       xml:space="preserve"
+       transform="scale(1.0185419,0.98179565)"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.73295px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.483309"
+         y="242.72774"
+         x="186.57051"
+         id="tspan1352-6-29-7"
+         sodipodi:role="line">Right</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 155.78615,237.71206 21.20796,-11.69931 h 11.94493"
+       id="path2"
+       sodipodi:nodetypes="ccc" />
   </g>
 </svg>
