@@ -143,12 +143,13 @@ For the latest information and discussions, please refer to the development and 
           * [Auto night](#auto-night)
           * [Order](#order)
           * [Contact](#contact)
+          * [Time](#time-in-header)
           * [Battery (units)](#battery-units)
           * [Info](#info)
           * [Volume](#volume)
           * [LEDs](#leds)
           * [Timezone](#timezone)
-          * [Time](#time-display-format)
+          * [UTC](#utclocal-time-display-format)
           * [Show dist](#show-distance)
         * [Sound Options](#sound-options)
           * [Timeout beep](#timeout-beep)
@@ -229,7 +230,7 @@ For the latest information and discussions, please refer to the development and 
   * [Resetting the Settings](#boot-key-combinations)
   * [Boot key combinations](#boot-key-combinations)
   * [GD-77S operation](#gd-77s-operation)
-    * [GD77S Channel / TG mode](#gd77s-channel--tg-mode)
+    * [GD77S Channel/TG mode](#gd77s-channeltg-mode)
     * [GD77S Scan mode](#gd77s-scan-mode)
     * [GD77S Timeslot mode](#gd77s-timeslot-mode)
     * [GD77S Color Code mode](#gd77s-color-code-mode)
@@ -1844,6 +1845,17 @@ Options are:
 
 The default is **1 Line**.
 
+##### Time (in header)<!-- linebreak -->
+
+**This setting is only available on coloured platforms.**
+
+When this setting is enabled, the time (*hh:mm* format) is displayed on the right of the header bar, instead of the battery level.
+It's still possible to temporary display the battery level by pressing the **SK1** button.
+
+*Note:*
+
+- When the battery level reaches its critical level, the battery level is displayed, regardless of this setting.
+
 ##### Battery (units)<!-- linebreak -->
 
 Controls whether the battery is show as a percentage or as voltage.
@@ -1889,14 +1901,14 @@ Press the **Left** arrow to increase the value in steps of 1 hour.
 
 If your timezone is not on a 1-hour boundary, press **SK2** and **Right** or **Left** to adjust the timezone in 15 minute increments.
 
-##### Time (display format)<!-- linebreak -->
+##### UTC/Local Time (display format)<!-- linebreak -->
 
 This setting controls whether the value of time and date that is entered and displayed is "UTC" or "Local"
 
-When this is set to Local, it uses the value set in Radio Information Timezone to calculate the date and time for the clock date and satellite passes
+When this is set to **No**, it uses the value set in Radio Information Timezone to calculate the date and time for the clock date and satellite passes
 
-If "UTC" is selected, all dates and times displayed will have UTC after the value to indicate that UTC is being used.
-If "Local" is selected, dates and times do not show any text to indicate that Local time is use
+If **Yes** is selected, all dates and times displayed will have UTC after the value to indicate that UTC is being used.
+If **No** is selected, dates and times do not show any text to indicate that Local time is use.
 
 ##### Show dist(ance)<!-- linebreak -->
 
@@ -2979,7 +2991,7 @@ In each mode, buttons **SK1** and **SK2** perform a different function, the oper
 
 The **Control modes**, and the function of buttons **SK1** and **SK2** in each mode is as follows:
 
-### GD77S Channel / TG mode
+### GD77S Channel/TG mode
 
 This mode is announced as "**Channel mode**".
 In this mode, button **SK1** and **SK2** are used to cycle through the *Talkgroups* / *Contacts* assigned to the current channels
