@@ -113,7 +113,7 @@ For the latest information and discussions, please refer to the development and 
           * [Eco Level](#eco-level)
           * [Suspend](#suspend)
           * [Safe Pwr-On](#safe-power-on)
-          * [Auto Pwr-Off](#auto-power-off)
+          * [APO](#apo-auto-power-off)
           * [APO with RF](#apo-with-rf)
           * [Sat (Satellite follow mode)](#sat-satellite-follow-mode)
           * [GPS](#gps)
@@ -1580,25 +1580,25 @@ This setting requires **SK1** to be pressed when powering up the transceiver, pr
 
 **This setting is not available on the MD-9600 | RT-90.**
 
-##### Auto Power Off<!-- linebreak -->
+##### APO (Auto Power Off)<!-- linebreak -->
 
-This setting (*APO*) enables the transceiver to switch off, if the radio is not used in the selected amount of time (30, 60, 90, 120 and 180 minutes); i.e. No keys or buttons, including PTT no keys are pressed.
+This setting enables the transceiver to switch off, if the radio is not used in the selected amount of time; i.e. No keys or buttons, including PTT no keys are pressed.
 
-One minute before the transceiver switches off, an "**Auto Pwr-Off**" message is displayed and notification beep tones are played.
+One minute before the transceiver switches off, an "**APO**" message is displayed and notification beep tones are played.
 
 *Notes:*
 
- - The **Auto Pwr-Off** function does not work:
+ - The **APO** function does not work:
    * if the transceiver is scanning.
    * if a Satellite alarm is set.
    * while in hotspot mode.
- - If **Auto Pwr-Off** function is enabled, the battery information (*percentage or voltage*) will be displayed in **bold font**.
+ - If **APO** function is enabled, the battery information (*percentage or voltage*) will be displayed in **bold font**.
  - If [**APO with RF**](#apo-with-rf) is enabled, the timer will also get reset if a valid signal is received.
  - Technically; the APO function uses the same low power functionality as Suspend mode, so the radio will continue to consume about 16mA when in Auto Power Off, we are currently trying to reduce this current, but because the firmware can't completely cut off power to all the radio hardware, it will never be possible to completely turn off the radio in the same way as the volume / power knob does.
 
 ##### APO with RF<!-- linebreak -->
 
-If [**Auto Pwr-Off**](#auto-power-off) is enabled, the *APO* timer will also be reset when receiving a valid signal.
+If [**APO**](#apo-auto-power-off) is enabled, the *APO* timer will also be reset when receiving a valid signal.
 
 ##### Sat (Satellite follow mode)<!-- linebreak -->
 
