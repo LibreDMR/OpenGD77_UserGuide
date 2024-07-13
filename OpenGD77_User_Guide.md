@@ -119,6 +119,7 @@ For the latest information and discussions, please refer to the development and 
           * [GPS](#gps)
         * [Radio Options](#radio-options)
           * [Band Limits](#band-limits)
+          * [TX Inhibit](#tx-inhibit)
           * [Filter time](#filter-time)
           * [Scan delay](#scan-delay)
           * [Scan dwell](#scan-dwell)
@@ -1653,6 +1654,19 @@ The hardware band limits are:
 These limits are because the *AT1846S RF* chip **will not operate reliably** outside this range, and this range is actually beyond the published specification of the AT1846S, which is technically 134MHz - 174MHz, 200MHz - 260MHz, 400MHz - 520MHz.
 
 It should also be noted that the radio does **not** have a PA or Rx section for the 200MHz band, **so operating in this range has high spurious emissions, usually on the 1<sup>st</sup> harmonic of the frequency in use**.
+
+##### TX Inhibit<!-- linebreak -->
+
+You can inhibit the transmission to prevent unauthorized individuals from transmitting, or to eliminate accidental transmissions while carrying the transceiver.
+
+Options are:
+
+- ***OFF***: transmission is enabled.
+- ***ON***: transmission is disabled.
+
+*Note:*
+
+- When TX is inhibited; APRS beaconing, VOX triggering and Satellite transmissions are also disabled.
 
 ##### Filter time<!-- linebreak -->
 
