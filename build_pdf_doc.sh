@@ -12,7 +12,7 @@ pandoc \
     -V fontsize="12pt" \
     --columns=16 \
     -V pagestyle=empty \
-    --self-contained \
+    --embed-resources --standalone \
     -t latex -i OpenGD77_User_Guide-workingcopy.md -o OpenGD77_User_Guide.pdf
 rm -f OpenGD77_User_Guide-workingcopy.md
 
