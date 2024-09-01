@@ -36,7 +36,7 @@ For the latest information and discussions, please refer to the development and 
     * [Channel Quick Menu](#channel-quick-menu)
       * [Copying a channel to VFO](#copying-a-channel-to-vfo)
       * [Read the VFO into the current channel](#read-the-vfo-into-the-current-channel)
-      * [Filter](#filter)
+      * [Filters (Channel)](#filters-channel)
       * [Talkaround](#talkaround)
       * [Dist sort](#dist-sort)
     * [VFO Quick Menu](#vfo-quick-menu)
@@ -44,9 +44,11 @@ For the latest information and discussions, please refer to the development and 
       * [Exchange the TX and RX frequencies](#exchange-the-tx-and-rx-frequencies)
       * [Copy the RX frequency to the TX frequency](#copy-the-rx-frequency-to-the-tx-frequency)
       * [Copy TX frequency to the RX frequency](#copy-tx-frequency-to-the-rx-frequency)
-      * [Filter](#filter)
+      * [Filters (VFO)](#filters-vfo)
       * [VFO to New Channel](#vfo-to-new-channel)
       * [Tone Scan for CTCSS or DCS tone in FM](#tone-scan-for-ctcss-or-dcs-tone-in-fm)
+      * [Dual Watch](#dual-watch)
+      * [Freq Bind](#freq-bind)
     * [DMR specific functionality (VFO and Channel screens)](#dmr-specific-functionality-vfo-and-channel-screens)
       * [Timeslot selection](#timeslot-selection)
       * [DMR ID callsign and name display](#dmr-id-callsign-and-name-display)
@@ -642,7 +644,7 @@ On the TYT MD-UV380 press **SK1** and the **Green** button
 
 <div style="page-break-after: always; break-after: page;"></div>
 
-#### Filter<!-- linebreak -->
+#### Filters (Channel)<!-- linebreak -->
 
 - **Filter** in FM Mode
 
@@ -750,9 +752,9 @@ Copies the Tx frequency to the Rx frequency.
 
 - Press **Green** key or **Orange** button to confirm.
 
-#### Filter (*DMR mode only*)<!-- linebreak -->
+#### Filters (VFO)<!-- linebreak -->
 
-This function is identical to the Filter described for Channel mode operation ([above](#filter))
+This function is identical to the Filter described for [Channel mode operation](#filters-channel).
 
 #### VFO to New Channel<!-- linebreak -->
 
@@ -773,6 +775,14 @@ The default is to scan **All** tones (CTCSS and DCS). To scan for CTCSS or DCS o
 Canceling the scan restores the Rx CTCSS / DCS to its value prior to the scan being started.
 
 If a tone is detected; both the Rx and Tx CTCSS / DCS values are set to the tone which was detected by the scan.
+
+#### Dual Watch<!-- linebreak -->
+
+See the [VFO Dual Watch](#vfo-dual-watch) section.
+
+#### Freq Bind<!-- linebreak -->
+
+When this option is turned on, the receiving and transmitting shift value is preserved.
 
 
 <div style="page-break-after: always; break-after: page;"></div>
@@ -1073,7 +1083,7 @@ Monitor mode (long press on **SK2**) suspends the scan and open the receiver to 
 
 #### VFO Dual Watch<!-- linebreak -->
 
-In the VFO Quick Menu, select Dual Watch
+In the VFO Quick Menu, select [Dual Watch](#dual-watch)
 
 In this mode, the radio will scan the VFO A and VFO B frequencies.
 In this mode rather than displaying the Rx and Tx frequency of an individual VFO, the Rx frequency of VFO A and VFO B is displayed.
