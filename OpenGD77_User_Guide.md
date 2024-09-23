@@ -33,18 +33,22 @@ For the latest information and discussions, please refer to the development and 
       * [Displaying the channel Frequency](#displaying-the-channel-frequency)
       * [Displaying FM specific channel information](#displaying-fm-specific-channel-information)
       * [Reverse repeater operation](#reverse-repeater-operation)
-      * [Channel Quick Menu](#channel-quick-menu)
-        * [Copying a channel to VFO](#copying-a-channel-to-vfo)
-        * [Read the VFO into the current channel](#read-the-vfo-into-the-current-channel)
-        * [Filter](#filter)
-      * [VFO Quick Menu](#vfo-quick-menu)
-        * [VFO selection A or B](#vfo-selection-a-or-b)
-        * [Exchange the TX and RX frequencies](#exchange-the-tx-and-rx-frequencies)
-        * [Copy the RX frequency to the TX frequency](#copy-the-rx-frequency-to-the-tx-frequency)
-        * [Copy TX frequency to the RX frequency](#copy-tx-frequency-to-the-rx-frequency)
-        * [Filter](#filter)
-        * [VFO to New Channel](#vfo-to-new-channel)
-        * [Tone Scan for CTCSS or DCS tone in FM](#tone-scan-for-ctcss-or-dcs-tone-in-fm)
+    * [Channel Quick Menu](#channel-quick-menu)
+      * [Copying a channel to VFO](#copying-a-channel-to-vfo)
+      * [Read the VFO into the current channel](#read-the-vfo-into-the-current-channel)
+      * [Filters (Channel)](#filters-channel)
+      * [Talkaround](#talkaround)
+      * [Dist sort](#dist-sort)
+    * [VFO Quick Menu](#vfo-quick-menu)
+      * [VFO selection A or B](#vfo-selection-a-or-b)
+      * [Exchange the TX and RX frequencies](#exchange-the-tx-and-rx-frequencies)
+      * [Copy the RX frequency to the TX frequency](#copy-the-rx-frequency-to-the-tx-frequency)
+      * [Copy TX frequency to the RX frequency](#copy-tx-frequency-to-the-rx-frequency)
+      * [Filters (VFO)](#filters-vfo)
+      * [VFO to New Channel](#vfo-to-new-channel)
+      * [Tone Scan for CTCSS or DCS tone in FM](#tone-scan-for-ctcss-or-dcs-tone-in-fm)
+      * [Dual Watch](#dual-watch)
+      * [Freq Bind](#freq-bind)
     * [DMR specific functionality (VFO and Channel screens)](#dmr-specific-functionality-vfo-and-channel-screens)
       * [Timeslot selection](#timeslot-selection)
       * [DMR ID callsign and name display](#dmr-id-callsign-and-name-display)
@@ -129,6 +133,7 @@ For the latest information and discussions, please refer to the development and 
           * [Allow PC](#allow-pc)
           * [User Power](#user-power)
           * [DMR crc](#dmr-crc)
+          * [Mode](#mode)
         * [Display Options](#display-options)
           * [Brightness](#brightness)
           * [Nite Bright](#nite-bright)
@@ -207,7 +212,8 @@ For the latest information and discussions, please refer to the development and 
       * [Eco](#eco-channel)
       * [TA Tx TS1](#ta-tx-tsx)
       * [TA Tx TS2](#ta-tx-tsx)
-	  * [APRS](#aprs-channel)
+      * [APRS](#aprs-channel)
+      * [Force DMO](#force-dmo)
       * [Accepting and saving the changes to the channel](#accepting-and-saving-the-changes-to-the-channel)
     * [Satellite Screen](#satellite-screen)
       * [Polar view](#polar-view)
@@ -222,7 +228,8 @@ For the latest information and discussions, please refer to the development and 
     * [To make a Private Call](#to-make-a-private-call)
     * [To Receive a Private Call](#to-receive-a-private-call)
   * [Hotspot mode](#hotspot-mode)
-  * [Resetting the Settings](#resetting-the-settings)
+  * [Resetting the Settings](#boot-key-combinations)
+  * [Boot key combinations](#boot-key-combinations)
   * [GD-77S operation](#gd-77s-operation)
     * [GD77S Channel / TG mode](#gd77s-channel--tg-mode)
     * [GD77S Scan mode](#gd77s-scan-mode)
@@ -613,7 +620,7 @@ The Channel screen displays the current Channel number as well as the current zo
 - This is mutually exclusive with Channel's [Talkaround](#talkaround).
 
 
-#### Channel Quick Menu<!-- linebreak -->
+### Channel Quick Menu<!-- linebreak -->
 
 - Pressing the **Orange** button on the top of the radio in Channel mode displays the Quick Menu for the Channel screen. Note that in Quick Menu, the **Orange** button has the same function as the **Green** key, which confirms your current selection.
 
@@ -626,22 +633,24 @@ The Channel screen displays the current Channel number as well as the current zo
 On the Baofeng RD-5R press and hold the orange coloured **MR/VFO** button to enter the Quick menu.
 On the TYT MD-UV380 press **SK1** and the **Green** button
 
-##### Copying a channel to VFO<!-- linebreak -->
+#### Copying a channel to VFO<!-- linebreak -->
 
 - Press the **Orange** button or **Green** key to copy the content of the current channel to the VFO.
 
-##### Read the VFO into the current channel<!-- linebreak -->
+#### Read the VFO into the current channel<!-- linebreak -->
 
 - Press the **Orange** button or **Green** key to confirm and save the updated channel to the codeplug memory. **Red** key to cancel.
 
 
 <div style="page-break-after: always; break-after: page;"></div>
 
-##### Filter<!-- linebreak -->
+#### Filters (Channel)<!-- linebreak -->
 
 - **Filter** in FM Mode
 
   - Use the **Right** or **Left** arrows to enable or disable CTCSS / DCS filtering.
+
+  When this filter is disabled, and any Rx or Tx Tone/Code is set for the Channel/VFO, the [CTCSS Tone or DCS Code](#ctcss-tone-or-dcs-code) indication at the top of the screen is displayed in inverse video.
 
 - **Filter** in DMR mode
 
@@ -681,7 +690,7 @@ On the TYT MD-UV380 press **SK1** and the **Green** button
   - If caller ID is not present on the received timeslot for a timeout period of approximately 2.5 seconds, the algorithm checks on the other timeslot and switches to that if caller ID data is on that timeslot.
 
 
-##### Talkaround<!-- linebreak -->
+#### Talkaround<!-- linebreak -->
 
 Once enabled, the TX frequency will be set to the RX frequency, hence you will be able to transmit on a repeater's output, in simplex mode.
 
@@ -690,7 +699,7 @@ Once enabled, the TX frequency will be set to the RX frequency, hence you will b
 - This option is only available if the current Channel has a frequency shift.
 - This is mutually exclusive with [Reverse repeater operation](#reverse-repeater-operation).
 
-##### Dist sort<!-- linebreak -->
+#### Dist sort<!-- linebreak -->
 
 If the transceiver location is set (Radio Info's [Location screen](#location-screen) or GPS), the current Zone will be sorted in the ascending distance order.
 
@@ -702,11 +711,14 @@ Of course, for this to work, the repeater locations must be set on the relevant 
 
 - All Channels zone will never be sorted.
 - The distance to repeater can also be displayed without sorting, see **Display option** [Show dist](#show-distance).
+- When the distance sorting is enabled, the zone area will be displayed:
+  - in inverse video on monochrom platforms,
+  - surrounded by a frame on coloured platforms.
 
 
 <div style="page-break-after: always; break-after: page;"></div>
 
-#### VFO Quick Menu<!-- linebreak -->
+### VFO Quick Menu<!-- linebreak -->
 
 - Pressing the **Orange** button on the top of the radio in VFO mode displays the Quick menu for the VFO screen. Currently, this has five options.
 
@@ -716,35 +728,35 @@ Of course, for this to work, the repeater locations must be set on the relevant 
 
 - The Baofeng RD-5R does not have an **Orange** button. On this radio press and hold the orange coloured **MR/VFO** button to enter the Quick menu
 
-##### VFO selection A or B<!-- linebreak -->
+#### VFO selection A or B<!-- linebreak -->
 
 - Pressing the **Orange** button twice while in VFO mode quickly toggles between **VFO A** and **VFO B**.
 - On the Baofeng DM-1801 | DM-860, this function is controlled using the **A/B** button.
 - **Long Press** of the **Red** button also changes from VFO A to VFO B, or vice versa.
 
-##### Exchange the TX and RX frequencies<!-- linebreak -->
+#### Exchange the TX and RX frequencies<!-- linebreak -->
 
 This function essentially reverses the TX and RX frequencies.
 
 - Press **Green** key or **Orange** button to confirm.
 
-##### Copy the RX frequency to the TX frequency<!-- linebreak -->
+#### Copy the RX frequency to the TX frequency<!-- linebreak -->
 
 Copies the Rx frequency to the Tx frequency.
 
 - Press **Green** key or **Orange** button to confirm.
 
-##### Copy Tx frequency to the Rx frequency<!-- linebreak -->
+#### Copy Tx frequency to the Rx frequency<!-- linebreak -->
 
 Copies the Tx frequency to the Rx frequency.
 
 - Press **Green** key or **Orange** button to confirm.
 
-##### Filter (*DMR mode only*)<!-- linebreak -->
+#### Filters (VFO)<!-- linebreak -->
 
-This function is identical to the Filter described for Channel mode operation ([above](#filter))
+This function is identical to the Filter described for [Channel mode operation](#filters-channel).
 
-##### VFO to New Channel<!-- linebreak -->
+#### VFO to New Channel<!-- linebreak -->
 
 The **VFO --> New Chan** option, creates a new channel using the current VFO settings.
 
@@ -752,7 +764,7 @@ The name of the new channel uses the format "**New channel** *NNN*", where *NNN*
 
 The Channel will also be added to the currently active Zone in the Channel screen. If the Channel screen is set to the *All Channels* zone, the channel will be added to that zone.
 
-##### Tone Scan for CTCSS or DCS tone in FM<!-- linebreak -->
+#### Tone Scan for CTCSS or DCS tone in FM<!-- linebreak -->
 
 This scans for any **CTCSS** or **DCS** tones, and sets the VFO to these parameters.
 
@@ -763,6 +775,14 @@ The default is to scan **All** tones (CTCSS and DCS). To scan for CTCSS or DCS o
 Canceling the scan restores the Rx CTCSS / DCS to its value prior to the scan being started.
 
 If a tone is detected; both the Rx and Tx CTCSS / DCS values are set to the tone which was detected by the scan.
+
+#### Dual Watch<!-- linebreak -->
+
+See the [VFO Dual Watch](#vfo-dual-watch) section.
+
+#### Freq Bind<!-- linebreak -->
+
+When this option is turned on, the receiving and transmitting shift value is preserved.
 
 
 <div style="page-break-after: always; break-after: page;"></div>
@@ -1063,7 +1083,7 @@ Monitor mode (long press on **SK2**) suspends the scan and open the receiver to 
 
 #### VFO Dual Watch<!-- linebreak -->
 
-In the VFO Quick Menu, select Dual Watch
+In the VFO Quick Menu, select [Dual Watch](#dual-watch)
 
 In this mode, the radio will scan the VFO A and VFO B frequencies.
 In this mode rather than displaying the Rx and Tx frequency of an individual VFO, the Rx frequency of VFO A and VFO B is displayed.
@@ -1210,6 +1230,10 @@ The keypad entry follows the same functionality as stock GD77 firmware.
 ![MD-9600 cheatsheet](media/MD9600-CheatSheet.png)<!-- { width=600 } -->
 
 ![MD-UV380 cheatsheet](media/MD-UV380-CheatSheet.png)<!-- { width=600 } -->
+
+![DM-1701 cheatsheet](media/DM-1701-CheatSheet.svg)<!-- { width=600 } -->
+
+![MD-2017 cheatsheet](media/MD-2017-CheatSheet.svg)<!-- { width=600 } -->
 
 
 <div style="page-break-after: always; break-after: page;"></div>
@@ -1557,7 +1581,7 @@ If suspend mode is not enabled, holding **SK2** while the power / volume control
 
 ##### Safe Power On<!-- linebreak -->
 
-This setting requires SK1 to be pressed when powering up the transceiver, preventing unwanted power-ups, such as when the radio is in a backpack, which can drain the battery. This parameter is also operational when suspend mode is enabled.
+This setting requires **SK1** to be pressed when powering up the transceiver, preventing unwanted power-ups, such as when the radio is in a backpack, which can drain the battery. This parameter is also operational when suspend mode is enabled.
 
 *Note:*
 
@@ -1725,6 +1749,17 @@ A power meter is the only way to know what power output each individual radio wi
 This settings disables the DMR CRC checking, which could be helpful in some cases while listening some specific networks.
 
 
+##### Mode<!-- linebreak -->
+
+**This setting is only available on the TYT MD-UV380 (non Plus 10W).**
+
+If you have a MD-UV380 10W radio (non Plus version that requires a special firmware version), this option permits to display the power values using the 10W scale (50mw, 250mW, 500mW, 750mW, 1W, 2W, 3W, 5W and 10W) in the user interface.
+
+*Note:*
+
+- It has no impact of the effective power output, so turning this option to **On** on a 5W radio is meaningless.
+
+
 <div style="page-break-after: always; break-after: page;"></div>
 
 #### Display Options
@@ -1760,6 +1795,7 @@ Controls the display backlight operation
 - **Auto** Display backlight will turn on automatically when triggered by various events *e.g.* Rx of signal, or pressing a key or button.
 - **Squelch** Display backlight remains illuminated while the FM squelch is open or there is a valid DMR signal, and also remains illuminated for the specified backlight timeout after the squelch has closed. The minimum timeout period in this mode is 5 seconds.
 - **Manual** Display backlight is toggled on and off by pressing the **Black** button (**SK1**).
+- **Buttons** Display backlight will illuminate for the specified backlight timeout on every button press event.
 - **None** Display backlight will not illuminate under any condition.
 
 ##### Timeout<!-- linebreak -->
@@ -2446,7 +2482,7 @@ Options are:
 *Notes:*
 
 - Talker Alias reception is always operational. Do not enable this feature because you are not receiving TA data, as it does not control TA Rx.
-- Use of this feature **will cause problems on Motorola based repeaters and networks**, and should only be used for simplex and possibly on *Brandmeister* and other networks which correctly support Talker Alias. -->
+- Use of this feature **will cause problems on Motorola based repeaters and networks**, and should only be used for simplex and possibly on *Brandmeister* and other networks which correctly support Talker Alias.
 
 
 #### APRS (channel)<!-- linebreak -->
@@ -2454,6 +2490,11 @@ Options are:
 Sets the FM APRS Tx configation to be used on this VFO / Channel
 
 The default setting is None
+
+
+#### Force DMO<!-- linebreak -->
+
+This sets a channel to operate in simplex / DMO even when the Tx and Rx frequencies are different.
 
 
 #### Accepting and saving the changes to the channel<!-- linebreak -->
@@ -2903,19 +2944,25 @@ The LED on the top of the radio also turns red to indicate the radio is transmit
 
 <div style="page-break-after: always; break-after: page;"></div>
 
-## Resetting the Settings
+## Boot key combinations
 
-The radio can also be set to the default settings by holding the **SK2** key (**P3** on the MD-9600 | RT-90) while turning on the radio.
+The following lists the available functions when holding down the key combinations when powering on the tranceiver:
 
-Additionally, holding the:
+|   **Function**                                    |      **GD77S**         |    **Other MK22 <br>based HTs**    |    **STM32 <br>based HTs**    |         **MD-9600**           |
+| :---                                              |        :---:           |             :---:              |           :---:           |            :---:              |
+| Settings reset                                    |       **SK2**          |            **SK2**             |          **SK2**          |            **P3**             |
+| Clear boot melody/image and themes *(see Note 1)* | **SK2** + **Orange**   |  **SK2** + **Up** + **Down**   |     **SK2** + **Down**    | **P3** + **Front Panel Down** |
+| Safe Boot                                         |     *unavailable*      |         **SK1** + **0**        |      **SK1** + **0**      |         **P3** + **0**        |
+| Enable Voice Prompt L3                            |     *unavailable*      |             **#**              |           **#**           |             **#**             |
+| Booting when [Safe Pwr-On](#safe-power-on) is On  |     *unavailable*      |            **SK1**             |          **SK1**          |         *unavailable*         |
+| Clearing NMEA logs                                |     *unavailable*      | **SK1** + **5** *(see Note 2)* |       **SK1** + **5**     |  **Front Panel Down** + **5** |
+| Band limits (On/Off toggle)                       |   **SK1** + **PTT**    |         *unavailable*          |        *unavailable*      |         *unavailable*         |
+| Hotspot (MMDVM/BlueDV toggle)                     |        **SK1**         |         *unavailable*          |        *unavailable*      |         *unavailable*         |
 
-- **SK2** button as well as the **Up** and **Down** arrow keys on the GD-77 | DM-1801 | DM-1801A | RD-5R,
-- **SK2** button as well as the **Down** arrow key on the MD-UV380 | RT-3S | DM-1701 | RT-84 | MD-2017 | RT-82,
-- **P3** button as well as the **Down** front panel arrow key on the MD-9600 | RT-90,
+*Notes:*
 
-resets **any** custom boot melody, custom boot image and themes on colours platforms, that has been uploaded using the OpenGD77 CPS.
-
-On the GD-77S, which does not have a keypad, holding **SK2** and **Orange** resets **any** custom boot melody.
+1. Resets themes on colours platforms.
+2. NMEA log clearing is optional on MK22 platforms, as it needs the installation of a special firmware build which enables NMEA logging.
 
 
 <div style="page-break-after: always; break-after: page;"></div>
