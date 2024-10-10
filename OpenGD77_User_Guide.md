@@ -1871,7 +1871,7 @@ The default is **1 Line**.
 
 ##### Time (in header)<!-- linebreak -->
 
-**This setting is only available on coloured platforms.**
+**This setting is only available on coloured platforms and the MD-9600.**
 
 When this setting is enabled, the time (*hh:mm* format) is displayed on the right of the header bar, instead of the battery level.
 It's still possible to temporary display the battery level by pressing the **SK1** button.
