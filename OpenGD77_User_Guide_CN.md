@@ -213,6 +213,7 @@
       - [信道省电（Eco (Channel)）](#信道省电eco-channel)
       - [主叫别名发射 时隙*x*（TA Tx TS*x*）](#主叫别名发射-时隙xta-tx-tsx)
       - [APRS（APRS Channel）](#aprs-channel)
+      - [Force DMO](#force-dmo)
       - [保存对信道的更改（Accepting and saving the changes to the channel）](#保存对信道的更改accepting-and-saving-the-changes-to-the-channel)
     - [语言界面（Language Screen）](#语言界面language-screen)
     - [卫星界面（Satellite Screen）](#卫星界面satellite-screen)
@@ -228,7 +229,7 @@
     - [想要发起单呼的话（To make a Private Call）](#想要发起单呼的话to-make-a-private-call)
     - [当接收到一个单呼时（To Receive a Private Call）](#当接收到一个单呼时to-receive-a-private-call)
   - [热点模式（Hotspot mode）](#热点模式hotspot-mode)
-  - [重设电台各项设置（Resetting the Settings）](#重设电台各项设置resetting-the-settings)
+  - [开机组合键（Boot key combinations）](#开机组合键boot-key-combinations)
   - [MD-730 的操作方式（GD-77S operation）](#md-730-的操作方式gd-77s-operation)
     - [MD730 信道/通话组模式（GD77S Channel / TG mode）](#md730-信道通话组模式gd77s-channel--tg-mode)
     - [MD730 扫描模式（GD77S Scan mode）](#md730-扫描模式gd77s-scan-mode)
@@ -624,6 +625,8 @@ S 表指示在**最右端**时大约为 **S9+40dB**。
 
   - 使用 **右** 方向键或者 **左** 方向键以开启或关闭哑音
 
+    当此过滤器被禁用，并且为通道/VFO 设置了任何 Rx 或 Tx 音调/代码时，屏幕顶部的 CTCSS 或 DCS 指示将以反色显示
+
 - DMR 模式的**过滤器**设置
 
   - 使用 **右** 方向键或者 **左** 方向键以选择：
@@ -683,6 +686,10 @@ S 表指示在**最右端**时大约为 **S9+40dB**。
 *请注意：*
 - All Channels zone 不会排序.
 - 可以显示与中继的距离但不排序, 参照 **Display option** [显示距离（Show dist）](#显示距离show-distance).
+- 启用距离排序时，会显示区域名会以以下方式显示
+  - 单色屏幕上反色显示
+  - 彩色屏幕上显示框线
+
 
 <div style="page-break-after: always; break-after: page;"></div>
 
@@ -1193,6 +1200,10 @@ VFO A 和 VFO B 不需要都为 FM 或 DMR 模式。可以是 FM、窄带 FM 或
 
 ![MD-UV380 cheatsheet](media/MD-UV380-CheatSheet-CN.png)<!-- { width=600 } -->
 
+![DM-1701 cheatsheet](media/DM-1701-CheatSheet.svg)<!-- { width=600 } -->
+
+![MD-2017 cheatsheet](media/MD-2017-CheatSheet.svg)<!-- { width=600 } -->
+
 <div style="page-break-after: always; break-after: page;"></div>
 
 ## 菜单系统（The Menu System）
@@ -1541,7 +1552,7 @@ VFO A 和 VFO B 不需要都为 FM 或 DMR 模式。可以是 FM、窄带 FM 或
 
 #### 安全开机（Safe Power On）<!-- linebreak -->
 
-此设置启用后，打开电台前需要按住 **黑色** (**SK1**) 按键，否则将不会开机。此功能可以防止不必要的通电，例如将电台放在背包中时，误开机将会耗尽电池。当启用睡眠模式时，此设置也起作用。
+此设置启用后，打开电台前需要按住 **SK1** 按键，否则将不会开机。此功能可以防止不必要的通电，例如将电台放在背包中时，误开机将会耗尽电池。当启用睡眠模式时，此设置也起作用。
 
 *请注意：*
 
@@ -1712,9 +1723,17 @@ CPS 频段限制**不影响**整体硬件频段限制，因此**不可能**通�
 
 功率计是了解每个电台在特定频率、特定用户功率设置和特定电池电压下产生的最终功率输出的唯一方法。
 
-#### DMR 循环冗余检查（DMR crc）<!-- linebreak -->
+#### DMR 循环冗余检查（DMR CRC）<!-- linebreak -->
 
 此设置禁用 DMR 循环冗余检查，在某些情况下这可能会对收听某些特定网络时有所帮助。
+
+#### Mode <!-- linebreak -->
+**此设置仅适用于 TYT MD-UV380（非 Plus 10W）**
+
+如果您有 MD-UV380 10W 无线电（需要特殊固件版本的非 Plus 版本），此选项允许使用 10W 刻度显示功率值（50mw、250mW、500mW、750mW、1W、2W、3W、5W 和10W）在用户界面中。
+
+*注意*
+- 它对有效功率输出没有影响，因此在 5W 收音机上将此选项设置为 **On** 没有意义
 
 <div style="page-break-after: always; break-after: page;"></div>
 
@@ -1748,7 +1767,9 @@ CPS 频段限制**不影响**整体硬件频段限制，因此**不可能**通�
 
 **Manual** 手动，由用户开启或关闭背光。按压 **黑色**（**SK1**） 侧键以打开或关闭背光。
 
-**None** 无，不开启背光。
+**Buttons** 每次按下按钮事件时，显示屏背光将在指定的背光超时时间内点亮。
+
+**None** 显示屏背光在任何情况下都不会亮起。
 
 #### 背光延时（Timeout）<!-- linebreak -->
 
@@ -2380,6 +2401,10 @@ SmartBeaconing&trade; 是由 Tony Arnerich KD7TA 和 Steve Bragg KA9MVA 发明�
 
 默认设置是：None
 
+#### Force DMO<!-- linebreak -->
+
+启用时，即使 Tx 和 Rx 频率不同，通道也将以单工/DMO 运行
+
 #### 保存对信道的更改（Accepting and saving the changes to the channel）<!-- linebreak -->
 
 按压 **绿色** 按键以确认更改。
@@ -2815,15 +2840,24 @@ MD-UV380 和 MD-9600 版本在 GPS 界面中也有一个页面，显示任何检
 
 当 PiStar 接收到来自网络的信号并触发您的电台进入发射时，机器顶部的指示灯会亮起红色，屏幕上同样会显示主叫呼号及名称/DMR ID，以及发射频率。
 
-## 重设电台各项设置（Resetting the Settings）
+## 开机组合键（Boot key combinations）
 
-按住电台侧边的 **蓝色**（**SK2**）( ＭＤ-9600 和 RT-90 上是 **P3**  ) 并打开电台可以恢复各项设置到默认状态。
+下面列出了收发器开机时按住组合键时可用的功能
 
-按以下操作可以清除在 OpenGD77 CPS 上传的自定义的开机画面和开机声音。
+|   **Function**                                    |      **GD77S**         |    **Other MK22 <br>based HTs**    |    **STM32 <br>based HTs**    |         **MD-9600**           |
+| :---                                              |        :---:           |             :---:              |           :---:           |            :---:              |
+| 重置设置                    |       **SK2**          |            **SK2**             |          **SK2**          |            **P3**             |
+| 清除开机旋律/图像和主题 ^(1)^ | **SK2** + **Orange**   | **SK2** + **上** + **下** |     **SK2** + **下**    | **P3** + **下**(前面板) |
+| 安全启动                                     |     *不可用*      |         **SK1** + **0**        |      **SK1** + **0**      |         **P3** + **0**        |
+| 启用语音提示 L3                     |     *不可用*   |             **#**              |           **#**           |             **#**             |
+| 当 [安全开机](#安全开机safe-power-on) 启用时开机 |     *不可用*   |            **SK1**             |          **SK1**          |         *不可用*         |
+| 清除 NMEA 日志                             |     *不可用*   | **SK1** + **5** ^(2)^ |       **SK1** + **5**     | **下**(前面板) + **5** |
+| 频带限制 (开/关 切换)              |   **SK1** + **PTT**    |         *不可用*       |     *不可用*      |         *不可用*         |
+| 热点 (MMDVM/BlueDV 切换)                 |        **SK1**         |         *不可用*       |     *不可用*      |         *不可用*         |
 
-- **GD-77|DM-1801|DM-1801 A|RD-5R：** 按下 **SK2** 的同时，按压 **上** 和 **下** 键
-- **MD-UV380|RT-3S|DM-1701|RT-84|MD-2017|RT-82：** 按下 **SK2** 的同时，按压 **下** 键
-- **MD-9600|RT-90：** 按下 **P3** 的同时，按压 **下** 键
+*注意*
+1.重设彩屏设备上的主题
+2.NMEA 日志清除在 MK22 平台上是可选的，因为它需要安装特殊的固件版本来启用 NMEA 日志记录
 
 ## MD-730 的操作方式（GD-77S operation）
 
@@ -3062,6 +3096,7 @@ CPS 安装程序还将自动安装通信端口驱动程序，但是您也可以�
 | **10** | F#       | 185      |            | 22     | F#       | 370      |            | 34     | F#       | 740      |            |        |          |          |            |
 | **11** | G        | 196      |            | 23     | G        | 392      |            | 35     | G        | 784      |            |        |          |          |            |
 | **12** | G#       | 207.6    |            | 24     | G#       | 415.3    |            | 36     | G#       | 830.6    |            |        |          |          |            |
+
 
 #### 开机图像（Boot Image）<!-- linebreak -->
 

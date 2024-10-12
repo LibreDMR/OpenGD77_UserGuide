@@ -114,12 +114,13 @@ For the latest information and discussions, please refer to the development and 
           * [Eco Level](#eco-level)
           * [Suspend](#suspend)
           * [Safe Pwr-On](#safe-power-on)
-          * [Auto Pwr-Off](#auto-power-off)
+          * [APO](#apo-auto-power-off)
           * [APO with RF](#apo-with-rf)
           * [Sat (Satellite follow mode)](#sat-satellite-follow-mode)
           * [GPS](#gps)
         * [Radio Options](#radio-options)
           * [Band Limits](#band-limits)
+          * [TX Inhibit](#tx-inhibit)
           * [Filter time](#filter-time)
           * [Scan delay](#scan-delay)
           * [Scan dwell](#scan-dwell)
@@ -144,12 +145,13 @@ For the latest information and discussions, please refer to the development and 
           * [Auto night](#auto-night)
           * [Order](#order)
           * [Contact](#contact)
+          * [Time](#time-in-header)
           * [Battery (units)](#battery-units)
           * [Info](#info)
           * [Volume](#volume)
           * [LEDs](#leds)
           * [Timezone](#timezone)
-          * [Time](#time-display-format)
+          * [UTC](#utclocal-time-display-format)
           * [Show dist](#show-distance)
         * [Sound Options](#sound-options)
           * [Timeout beep](#timeout-beep)
@@ -230,7 +232,7 @@ For the latest information and discussions, please refer to the development and 
   * [Resetting the Settings](#boot-key-combinations)
   * [Boot key combinations](#boot-key-combinations)
   * [GD-77S operation](#gd-77s-operation)
-    * [GD77S Channel / TG mode](#gd77s-channel--tg-mode)
+    * [GD77S Channel/TG mode](#gd77s-channeltg-mode)
     * [GD77S Scan mode](#gd77s-scan-mode)
     * [GD77S Timeslot mode](#gd77s-timeslot-mode)
     * [GD77S Color Code mode](#gd77s-color-code-mode)
@@ -1587,25 +1589,25 @@ This setting requires **SK1** to be pressed when powering up the transceiver, pr
 
 **This setting is not available on the MD-9600 | RT-90.**
 
-##### Auto Power Off<!-- linebreak -->
+##### APO (Auto Power Off)<!-- linebreak -->
 
-This setting (*APO*) enables the transceiver to switch off, if the radio is not used in the selected amount of time (30, 60, 90, 120 and 180 minutes); i.e. No keys or buttons, including PTT no keys are pressed.
+This setting enables the transceiver to switch off, if the radio is not used in the selected amount of time; i.e. No keys or buttons, including PTT no keys are pressed.
 
-One minute before the transceiver switches off, an "**Auto Pwr-Off**" message is displayed and notification beep tones are played.
+One minute before the transceiver switches off, an "**APO**" message is displayed and notification beep tones are played.
 
 *Notes:*
 
- - The **Auto Pwr-Off** function does not work:
+ - The **APO** function does not work:
    * if the transceiver is scanning.
    * if a Satellite alarm is set.
    * while in hotspot mode.
- - If **Auto Pwr-Off** function is enabled, the battery information (*percentage or voltage*) will be displayed in **bold font**.
+ - If **APO** function is enabled, the battery information (*percentage or voltage*) will be displayed in **bold font**.
  - If [**APO with RF**](#apo-with-rf) is enabled, the timer will also get reset if a valid signal is received.
  - Technically; the APO function uses the same low power functionality as Suspend mode, so the radio will continue to consume about 16mA when in Auto Power Off, we are currently trying to reduce this current, but because the firmware can't completely cut off power to all the radio hardware, it will never be possible to completely turn off the radio in the same way as the volume / power knob does.
 
 ##### APO with RF<!-- linebreak -->
 
-If [**Auto Pwr-Off**](#auto-power-off) is enabled, the *APO* timer will also be reset when receiving a valid signal.
+If [**APO**](#apo-auto-power-off) is enabled, the *APO* timer will also be reset when receiving a valid signal.
 
 ##### Sat (Satellite follow mode)<!-- linebreak -->
 
@@ -1660,6 +1662,19 @@ The hardware band limits are:
 These limits are because the *AT1846S RF* chip **will not operate reliably** outside this range, and this range is actually beyond the published specification of the AT1846S, which is technically 134MHz - 174MHz, 200MHz - 260MHz, 400MHz - 520MHz.
 
 It should also be noted that the radio does **not** have a PA or Rx section for the 200MHz band, **so operating in this range has high spurious emissions, usually on the 1<sup>st</sup> harmonic of the frequency in use**.
+
+##### TX Inhibit<!-- linebreak -->
+
+You can inhibit the transmission to prevent unauthorized individuals from transmitting, or to eliminate accidental transmissions while carrying the transceiver.
+
+Options are:
+
+- ***OFF***: transmission is enabled.
+- ***ON***: transmission is disabled.
+
+*Note:*
+
+- When TX is inhibited; APRS beaconing, VOX triggering and Satellite transmissions are also disabled.
 
 ##### Filter time<!-- linebreak -->
 
@@ -1852,6 +1867,17 @@ Options are:
 
 The default is **1 Line**.
 
+##### Time (in header)<!-- linebreak -->
+
+**This setting is only available on coloured platforms and the MD-9600.**
+
+When this setting is enabled, the time (*hh:mm* format) is displayed on the right of the header bar, instead of the battery level.
+It's still possible to temporary display the battery level by pressing the **SK1** button.
+
+*Note:*
+
+- When the battery level reaches its critical level, the battery level is displayed, regardless of this setting.
+
 ##### Battery (units)<!-- linebreak -->
 
 Controls whether the battery is show as a percentage or as voltage.
@@ -1897,14 +1923,14 @@ Press the **Left** arrow to increase the value in steps of 1 hour.
 
 If your timezone is not on a 1-hour boundary, press **SK2** and **Right** or **Left** to adjust the timezone in 15 minute increments.
 
-##### Time (display format)<!-- linebreak -->
+##### UTC/Local Time (display format)<!-- linebreak -->
 
 This setting controls whether the value of time and date that is entered and displayed is "UTC" or "Local"
 
-When this is set to Local, it uses the value set in Radio Information Timezone to calculate the date and time for the clock date and satellite passes
+When this is set to **No**, it uses the value set in Radio Information Timezone to calculate the date and time for the clock date and satellite passes
 
-If "UTC" is selected, all dates and times displayed will have UTC after the value to indicate that UTC is being used.
-If "Local" is selected, dates and times do not show any text to indicate that Local time is use
+If **Yes** is selected, all dates and times displayed will have UTC after the value to indicate that UTC is being used.
+If **No** is selected, dates and times do not show any text to indicate that Local time is use.
 
 ##### Show dist(ance)<!-- linebreak -->
 
@@ -2987,7 +3013,7 @@ In each mode, buttons **SK1** and **SK2** perform a different function, the oper
 
 The **Control modes**, and the function of buttons **SK1** and **SK2** in each mode is as follows:
 
-### GD77S Channel / TG mode
+### GD77S Channel/TG mode
 
 This mode is announced as "**Channel mode**".
 In this mode, button **SK1** and **SK2** are used to cycle through the *Talkgroups* / *Contacts* assigned to the current channels
