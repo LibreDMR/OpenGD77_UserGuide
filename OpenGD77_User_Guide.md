@@ -111,7 +111,6 @@ For the latest information and discussions, please refer to the development and 
           * [Hotspot](#hotspot)
           * [Temp Cal](#temp-cal)
           * [Batt Cal](#batt-cal)
-          * [Time Cal](#time-cal)
           * [Eco Level](#eco-level)
           * [Suspend](#suspend)
           * [Safe Pwr-On](#safe-power-on)
@@ -1370,7 +1369,6 @@ If using Local time. **You MUST set the Timezone before setting the time**
 
 - The clock only keeps time when the radio is turned on, or in Suspend Mode.
 - The time accuracy varies from radio to radio, but can be accurate to approximately 5 second per day.
-- Problems with time accuracy can be partially corrected by using the Time Cal: setting in the Options menu
 
 &rarr; Press the **Down** key to display the next page.
 
@@ -1531,13 +1529,6 @@ The range is +/- 0.5V.
 
 - The battery voltage measurement is taken by the CPU from the internal battery voltage rail, and can differ from the value measured on the external charging terminals of the battery, especially when the radio is transmitting.
 - Changing this calibration will affect both the voltage and percentage display.
-
-##### Time Cal<!-- linebreak -->
-
-This setting allows some calibration of the time clock which is maintained while the radio is turned on.
-The range is +/- 7, the units are x / 10000, so a value of 1 results in a change of 1 second in 10,000 seconds.
-
-The clock is currently an experimental feature and is not guaranteed to be accurate.
 
 ##### Eco Level<!-- linebreak -->
 
