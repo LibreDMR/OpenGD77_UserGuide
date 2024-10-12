@@ -38,7 +38,7 @@ For the latest information and discussions, please refer to the development and 
       * [Read the VFO into the current channel](#read-the-vfo-into-the-current-channel)
       * [Filters (Channel)](#filters-channel)
       * [Talkaround](#talkaround)
-      * [Dist sort](#dist-sort)
+      * [Roaming](#roaming)
     * [VFO Quick Menu](#vfo-quick-menu)
       * [VFO selection A or B](#vfo-selection-a-or-b)
       * [Exchange the TX and RX frequencies](#exchange-the-tx-and-rx-frequencies)
@@ -699,17 +699,24 @@ Once enabled, the TX frequency will be set to the RX frequency, hence you will b
 - This option is only available if the current Channel has a frequency shift.
 - This is mutually exclusive with [Reverse repeater operation](#reverse-repeater-operation).
 
-#### Dist sort<!-- linebreak -->
+#### Roaming<!-- linebreak -->
 
-If the transceiver location is set (Radio Info's [Location screen](#location-screen) or GPS), the current Zone will be sorted in the ascending distance order.
+If the transceiver location is set (Radio Info's [Location screen](#location-screen) or GPS), the current Zone will be sorted in the ascending distance order, and the first channel in the zone will be selected.
+Options are: Off, Manual, 5km, 10km and 20km
+
+- Off: The zone is not sorted
+- Manual: The zone is sorted in the ascending distance order when this option is selected, or it is reselected.
+- 5km, 10km and 20km: When the radio's location has changed by this distance, the zone will be re-sorted in the ascending distance order, and the first channel in the zone will be selected. If following the sorting, the first channel in the zone has changed, an alert beep will be played and the screen backlight will be turned on.
 
 The distance, in kilometers, is displayed on the right of the Zone name.
 
-Of course, for this to work, the repeater locations must be set on the relevant channels, using the CPS.
+Of course, for this to work, the repeater locations must be set on the relevant channels, using the CPS, and the Use Location checkbox must be ticked.
 
 *Notes*:
 
 - All Channels zone will never be sorted.
+- The zone will not be sorted while transmitting, but will be sorted during Rx even if the radio is receiving a signal
+- Roaming is disabled while scanning.
 - The distance to repeater can also be displayed without sorting, see **Display option** [Show dist](#show-distance).
 - When the distance sorting is enabled, the zone area will be displayed:
   - in inverse video on monochrom platforms,
