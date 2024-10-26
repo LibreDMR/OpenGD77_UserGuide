@@ -193,6 +193,9 @@ For the latest information and discussions, please refer to the development and 
       * [TX](#tx)
         * [Repeater Shifts](#repeater-shifts)
       * [Mode](#mode)
+      * [Location](#location)
+      * [Lat](#lat)
+      * [Lon](#lon)
       * [DMR ID](#dmr-id)
       * [Color Code](#color-code)
       * [Timeslot](#timeslot)
@@ -1163,7 +1166,7 @@ Both the Channel and VFO screens support scanning, but their operation is slight
 
 - Press and hold (**Long press**) the **Up** arrow to start scanning the channels in the zone. On the MD-9600 press and hold the **Up** arrow on the front panel of the radio.
 - Press the **Left** arrow to reverse the direction of scan. Press the **Down** arrow on a MD-UV380 | RT-3S, or the one on the front panel for a MD-9600 | RT-90 (or **C** mic button), to reverse the scan direction.
-- Press the **Right** arrow to mark the channel as a *nuisance* channel which will be removed from the current scan (or **B** on the microphone for a MD-9600 | RT-90). Press the **Star key** on a MD-UV380 | RT-3S.
+- Press the **Right** arrow to mark the channel as a *nuisance* channel which will be removed from the current scan (or **B** on the microphone for a MD-9600 | RT-90). Press the **Star** key on a MD-UV380 | RT-3S.
 - Press the **Up** arrow to skip over the current channel, and continue the scan. On the MD-9600 rotate clockwise the rotary knob on the front panel of the radio, or the **Up** arrow on the mic.
 
 Pressing any other button stops the scan.
@@ -1188,7 +1191,7 @@ When not actively scanning, pressing the **Up** or **Down** arrows performs the 
 
 - Press the **Left** arrow key to reverse the scan direction. Press the **Down** arrow on a MD-UV380 | RT-3S, or the one on the front panel for a MD-9600 | RT-90 (or **C** mic button), to reverse the scan direction.
 - Press the **Up** arrow to skip over the current frequency and continue the scan. On the MD-9600 rotate clockwise the rotary knob on the front panel of the radio, or the **Up** arrow on the mic.
-- Press the **Right** arrow to mark the current frequency as a *nuisance* frequency, which will be omitted by the scan (or **B** on the microphone for a MD-9600 | RT-90). Press the **Star key** on a MD-UV380 | RT-3S.
+- Press the **Right** arrow to mark the current frequency as a *nuisance* frequency, which will be omitted by the scan (or **B** on the microphone for a MD-9600 | RT-90). Press the **Star** key on a MD-UV380 | RT-3S.
 
 Pressing any other button will stop the scan
 
@@ -2394,6 +2397,39 @@ The supported values are:
 #### Mode<!-- linebreak -->
 
 *FM* or *DMR*.
+
+#### Location<!-- linebreak -->
+
+Enables or disables the use of channel coordinates in the [Roaming](#roaming) function.
+See [Lat](#lat) and [Lon](#lon) settings to define the coordinates.
+
+#### Lat<!-- linebreak -->
+
+Sets the Latitude coordinate of the channel.
+
+- To change the southern / northern hemisphere, press **Down** / **Up**.
+- Enter the numerical value, in degrees (DD.DDDD format).
+- Press **Left** button to delete the latest entered digit.
+
+*Note:*
+
+- You must change the southern / northern before entering the latest digit(s).
+- You can press **Green** button at any time, the remaining digits will be set to '0' (zero).
+- When the GPS has a fix, long pressing the **Star** key, when **NOT** entering the coordinate, updates the channel location coordinates to the current position.
+
+#### Lon<!-- linebreak -->
+
+Sets the Longitude coordinate of the channel.
+
+- To change the western / eastern hemisphere, press **Down** / **Up**.
+- Enter the numerical value, in degrees (DDD.DDDD format).
+- Press **Left** button to delete the latest entered digit.
+
+*Note:*
+
+- You must change the western / eastern before entering the latest digit(s).
+- You can press **Green** button at any time, the remaining digits will be set to '0' (zero).
+- When the GPS has a fix, long pressing the **Star** key, when **NOT** entering the coordinate, updates the channel location coordinates to the current position.
 
 #### DMR ID<!-- linebreak -->
 
