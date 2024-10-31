@@ -118,6 +118,7 @@ For the latest information and discussions, please refer to the development and 
           * [APO with RF](#apo-with-rf)
           * [Sat (Satellite follow mode)](#sat-satellite-follow-mode)
           * [GPS](#gps)
+          * [Locked](#locked)
         * [Radio Options](#radio-options)
           * [Band Limits](#band-limits)
           * [TX Inhibit](#tx-inhibit)
@@ -1632,6 +1633,13 @@ Options are:
 
 **WARNING: Setting the GPS to output NMEA data will prevent the CPS communicating with the radio, and the GPS setting should be set to "Off" or "On", when using the CPS.**
 
+##### Locked<!-- linebreak -->
+
+This setting allows to protect the channel configuration, making any permanent change impossible (in the non-volatile storage, see [Channel Details](#channel-details) and [Read the VFO into the current channel](#read-the-vfo-into-the-current-channel) sections).
+
+*Note:*
+
+- This has no impact on the VFOs, Contacts, etc.
 
 <div style="page-break-after: always; break-after: page;"></div>
 
