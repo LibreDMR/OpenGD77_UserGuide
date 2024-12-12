@@ -1429,7 +1429,11 @@ This shows the history of battery voltage on an hourly basis.
 
 #### DMR Contacts<!-- linebreak -->
 
-Allows selection, Editing or Deletion of DMR Contacts
+Allows selection, Editing or Deletion of DMR Contacts.
+
+*Note*:
+
+- Press the **Hash** (**#**) key to switch between Group Call / Private Call / All Call lists.
 
 #### FM DTMF Contacts<!-- linebreak -->
 
