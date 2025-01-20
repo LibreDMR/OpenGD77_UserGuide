@@ -136,6 +136,7 @@ For the latest information and discussions, please refer to the development and 
           * [DMR crc](#dmr-crc)
           * [Mode](#mode)
         * [Display Options](#display-options)
+          * [Text size](#text-size)
           * [Brightness](#brightness)
           * [Nite Bright](#nite-bright)
           * [Min Bright](#min-bright)
@@ -154,6 +155,7 @@ For the latest information and discussions, please refer to the development and 
           * [Timezone](#timezone)
           * [UTC](#utclocal-time-display-format)
           * [Show dist](#show-distance)
+          * [Last talker](#last-talker)
         * [Sound Options](#sound-options)
           * [Timeout beep](#timeout-beep)
           * [Beep volume](#beep-volume)
@@ -999,6 +1001,7 @@ The firmware can transmit FM Automatic Packet Reporting System data (APRS), as a
 See [https://en.wikipedia.org/wiki/Automatic_Packet_Reporting_System](https://en.wikipedia.org/wiki/Automatic_Packet_Reporting_System)
 
 To transmit APRS, at least one APRS configuration must be defined using the CPS, and the current channel or VFO must have an APRS configuration selected in its APRS setting. (See channel details APRS settings)
+
 Also the operator's callsign must be entered into the CPS, and the radio location must be valid, either by manual entry of the location, or by using the GPS in the radio, if fitted.
 
 
@@ -1015,12 +1018,21 @@ If the location data is not valid in **Manual** or **PTT** beaconing modes, the 
 
 The CPS allows up to 8 APRS configurations to be defined. With multiple parameters including specifying the Icon to be displayed on sites like https://aprs.fi and also the Comment text.
 
+If the APRS configuration (in CPS) has a TX Frequency defined, the transceiver will transmit the APRS beacon on that frequency (**NOTE**: this is not enabled while in Satellite mode).
+
+If the TX frequency is not defined, the APRS beacon will be transmitted on the current Channel/VFO frequency (in analogue mode only, see the **Notes** below for digital case).
+
+It the APRS configuration (in CPS) has the "Transmit QSY" ticked, a QSY information is added to the beacon (the format is *"FFF.FFFMHz Toff +000"*).
+A receiving station of this information can change frequency, or QSY, over to the reported voice frequency to begin voice communication.
 
 
 *Notes:*
 
+- A digital channel/VFO could have an APRS configuration defined, but the TX frequency of that APRS configuration **must** be set.
+- When a channel has an APRS configuration set, a **"a"** letter is displayed next to the current mode (FM/FMN/DMR), in the header of the Channel and VFO screens.
+  - when the beaconing is enabled, the font used for this marker is in bold,
+  - when it's disabled, it uses the regular font.
 - Currently only APRS Tx is supported. It is currently unknown whether the hardware in any of the supported radios can be used to receive APRS or other AX25 packet transmissions.
-- Voice communication is not possible on a channel or VFO which has an APRS configuation selected.
 - The APRS packet data format only allows for up to 6 character callsigns. This is a limitation of the specification not the firmware.
 - Satellites have specific APRS parameters which need to be used, so default APRS parameters are defined in the satellites data uploaded from the CPS. To override these parameters, define an APRS config with the same name as the satellite, and set the appropriate custom parameters you wish to use with that satellite
 - Most VHF and UHF APRS systems use 1200 baud
@@ -1792,6 +1804,15 @@ If you have a MD-UV380 10W radio (non Plus version that requires a special firmw
 
 #### Display Options
 
+##### Text size<!-- linebreak -->
+
+**This setting is only available on coloured platforms.**
+
+When the selected size is equal to **1** (default), the fonts are used in their normal height.
+
+If the selected size is equal to **2**, some of the used fonts are displayed using double height.
+
+
 ##### Brightness<!-- linebreak -->
 
 The firmware allows the display backlight brightness to be controlled from **100%** to **0%**, in **10% steps** between *10%* and *100%*, and below *10%* the brightness is controlled in **1% steps**.
@@ -1954,6 +1975,10 @@ This setting enables the display of the distance to repeater (in kilometers) to 
 To have it working, Channel's location has to be set (using the CPS), and the transceiver location has to be valid (Radio Info's [Location screen](#location-screen) or GPS).
 
 If both locations aren't set or valid, **"--- km"** will be displayed instead.
+
+##### Last talker<!-- linebreak -->
+
+This option allows you to display alternately, in digital mode, the channel contact, and the last station received. The display time of each contact can range from 1 to 30 seconds.
 
 <div style="page-break-after: always; break-after: page;"></div>
 
