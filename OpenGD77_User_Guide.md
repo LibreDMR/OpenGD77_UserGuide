@@ -1018,11 +1018,11 @@ If the location data is not valid in **Manual** or **PTT** beaconing modes, the 
 
 The CPS allows up to 8 APRS configurations to be defined. With multiple parameters including specifying the Icon to be displayed on sites like https://aprs.fi and also the Comment text.
 
-If the APRS configuration (in CPS) has a TX Frequency defined, the transceiver will transmit the APRS beacon on that frequency (**NOTE**: this is not enabled while in Satellite mode).
+If the APRS configuration (in CPS) has a TX Frequency defined, the transceiver will transmit the APRS beacon on that frequency (**Please note** that this is not enabled while in Satellite mode). Also, this has no effect when **PTT** APRS mode is selected.
 
 If the TX frequency is not defined, the APRS beacon will be transmitted on the current Channel/VFO frequency (in analogue mode only, see the **Notes** below for digital case).
 
-It the APRS configuration (in CPS) has the "Transmit QSY" ticked, a QSY information is added to the beacon (the format is *"FFF.FFFMHz Toff +000"*).
+It the APRS configuration (in CPS) has the **Transmit QSY** ticked, a QSY information is added to the beacon (the format is *"FFF.FFFMHz Toff +000"*).
 A receiving station of this information can change frequency, or QSY, over to the reported voice frequency to begin voice communication.
 
 
