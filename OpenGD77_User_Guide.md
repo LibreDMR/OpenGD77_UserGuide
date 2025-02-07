@@ -1647,6 +1647,10 @@ Options are:
   - **On**: turn on GPS module power,
   - **NMEA**: the GPS module sends all NMEA data to the USB serial port of the radio.
 
+*Note*:
+
+- if the displayed value is '**None**', it means that the firmware could not detect a GPS module (as on radios that do not integrate this hardware option).
+
 **WARNING: Setting the GPS to output NMEA data will prevent the CPS communicating with the radio, and the GPS setting should be set to "Off" or "On", when using the CPS.**
 
 ##### Locked<!-- linebreak -->
@@ -2437,7 +2441,8 @@ The supported values are:
 
 #### Location<!-- linebreak -->
 
-Enables or disables the use of channel coordinates in the [Roaming](#roaming) function.
+Enables or disables the use of channel coordinates in the [Roaming](#roaming) function.  
+This also gives access to a notification that displays the orientation and distance to this repeater, by long pressing the **8** key.  
 See [Lat](#lat) and [Lon](#lon) settings to define the coordinates.
 
 #### Lat<!-- linebreak -->
