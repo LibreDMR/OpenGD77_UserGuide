@@ -164,7 +164,7 @@ For the latest information and discussions, please refer to the development and 
           * [Talker](#talker)
           * [DMR mic](#dmr-mic)
           * [FM mic](#fm-mic)
-          * [VOX threshold](#vox-threshold)
+          * [VOX Threshold](#vox-threshold)
           * [VOX Tail](#vox-tail)
           * [Prompt](#prompt)
           * [DMR Rx AGC](#dmr-rx-agc)
@@ -178,6 +178,7 @@ For the latest information and discussions, please refer to the development and 
           * [Theme Items](#here-is-the-detailed-list-of-the-theme-items)
         * [APRS Options](#aprs-options)
           * [Mode](#beaconing-mode)
+          * [Ch Power](#beaconing-ch-power)
           * [Location](#beaconing-location)
           * [Interval](#beaconing-initial-interval)
           * [Decay](#beaconing-decay-algorithm)
@@ -2052,13 +2053,17 @@ This controls the audio gain of the FM microphone input system, **relative to th
 
 The units of this control in the baseband IC (*AT1846S*) **are not known**.
 
-##### VOX threshold<!-- linebreak -->
+##### VOX Threshold<!-- linebreak -->
 
 Threshold value which controls the mic level which **triggers** the radio to transmit when VOX is enabled.
 
 ##### VOX Tail<!-- linebreak -->
 
 Controls the length of time **after** the operator stops speaking, before the transmission is ended.
+
+*Note:*
+
+- the VOX Tail zero value is available for special use cases, like voice modem software. It's not intended to be used with human voice.
 
 ##### Prompt<!-- linebreak -->
 
@@ -2263,6 +2268,15 @@ Modes are:
 - **Smart** Use the SmartBeaconing&trade; algorithm for automatic beaconing (see below).
 
 *Note*: When in the Channel or VFO screen, the APRS beaconing could be temporary toggled **On** or **Off**, using the **SK1** + **1** key. 
+
+
+#### Beaconing Ch Power<!-- linebreak -->
+
+Controls the custom power assigned to the APRS beaconing.
+
+See also the section about [controlling the Tx power](#controlling-tx-power).
+
+**By default**, the APRS beaconing will use the **Master** power setting, and this option allows a **custom** power setting to be set instead.
 
 
 ##### Beaconing Location<!-- linebreak -->
@@ -2547,7 +2561,7 @@ Controls whether VOX (Voice Operated Switch) is enabled or disabled.
 
 Controls the custom / individual power assigned to the channel.
 
-See also the section in about controlling power.
+See also the section about [controlling the Tx power](#controlling-tx-power).
 
 **By default**, all channels will use the **Master** power setting, and this option allows a **custom** power setting to be set on a channel, or for the channel set to use the **Master** power setting.
 
@@ -2555,7 +2569,7 @@ See also the section in about controlling power.
 
 Controls the custom / individual squelch assigned to the channel.
 
-See also the section in about controlling power.
+See also the section about [controlling the Tx power](#controlling-tx-power).
 
 **By default**, all channels will use the **Master** squelch setting. This is the squelch value defined in the Options squelch setting for the band of the channel.
 A **custom** squelch setting can be applied to the channel by pressing the right and left arrow keys. Custom squelch settings are in 5% steps.
