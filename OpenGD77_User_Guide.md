@@ -39,6 +39,7 @@ For the latest information and discussions, please refer to the development and 
       * [Filters (Channel)](#filters-channel)
       * [Talkaround](#talkaround)
       * [Roaming](#roaming)
+      * [Mute](#mute)
     * [VFO Quick Menu](#vfo-quick-menu)
       * [VFO selection A or B](#vfo-selection-a-or-b)
       * [Exchange the TX and RX frequencies](#exchange-the-tx-and-rx-frequencies)
@@ -49,6 +50,7 @@ For the latest information and discussions, please refer to the development and 
       * [Tone Scan for CTCSS or DCS tone in FM](#tone-scan-for-ctcss-or-dcs-tone-in-fm)
       * [Dual Watch](#dual-watch)
       * [Freq Bind](#freq-bind)
+      * [Mute](#mute)
     * [DMR specific functionality (VFO and Channel screens)](#dmr-specific-functionality-vfo-and-channel-screens)
       * [Timeslot selection](#timeslot-selection)
       * [DMR ID callsign and name display](#dmr-id-callsign-and-name-display)
@@ -729,6 +731,11 @@ Of course, for this to work, the repeater locations must be set on the relevant 
 - When the distance sorting is enabled, the zone area will be displayed:
   - in inverse video on monochrom platforms,
   - surrounded by a frame on coloured platforms.
+
+#### Mute<!-- linebreak -->
+
+When **Mute** is set to **Yes**, the transceiver won't emit any sound. Also, the radio mode will be displayed as ~~DMR~~, ~~FM~~, ~~FMN~~ or ~~[DW]~~.  
+Mute can be toggled by long pressing the **0** key.
 
 
 <div style="page-break-after: always; break-after: page;"></div>
