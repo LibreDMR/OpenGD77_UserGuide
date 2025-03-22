@@ -1415,8 +1415,7 @@ This displays and allows the entry of the location in Latitude / Longitude
 
 ![location](media/radioinfo-location.png)
 
-This screen is currently only used for the Satellite functionality.
-But may be used in the future to send APRS data.
+This screen is used for the Satellite functionality and to send APRS data.
 
 Enter the full Latitude / Longitude in DD.DDD DDD.DDD format (D degrees)
 
