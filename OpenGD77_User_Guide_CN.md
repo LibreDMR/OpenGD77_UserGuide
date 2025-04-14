@@ -41,14 +41,20 @@
         - [复制一个信道配置至 VFO（Channel --\> VFO）（Copying a channel to VFO）](#复制一个信道配置至-vfochannel----vfocopying-a-channel-to-vfo)
         - [将 VFO 信息写入当前信道（VFO --\> Channel）（Read the VFO into the current channel）](#将-vfo-信息写入当前信道vfo----channelread-the-vfo-into-the-current-channel)
         - [过滤器设置（Filter）](#过滤器设置filter)
+        - [脱网功能（Talkaround）](#脱网功能talkaround)
+        - [漫游功能（Roaming）](#漫游功能roaming)
+        - [静音（Mute）](#静音mute)
       - [频率界面快捷菜单（VFO Quick Menu）](#频率界面快捷菜单vfo-quick-menu)
         - [选择 VFO A/B（VFO selection A or B）](#选择-vfo-abvfo-selection-a-or-b)
         - [交换接收与发射频率（Tx \<--\> Rx）（Exchange the TX and RX frequencies）](#交换接收与发射频率tx----rxexchange-the-tx-and-rx-frequencies)
         - [将接收频率复制到发射频率（Rx --\> Tx）（Copy the RX frequency to the TX frequency）](#将接收频率复制到发射频率rx----txcopy-the-rx-frequency-to-the-tx-frequency)
         - [将发射频率复制到接收频率（Tx --\> Rx）（Copy Tx frequency to the Rx frequency）](#将发射频率复制到接收频率tx----rxcopy-tx-frequency-to-the-rx-frequency)
-        - [过滤器（Filter）（*仅限 DMR 模式*）](#过滤器filter仅限-dmr-模式)
+        - [过滤器（Filter VFO）](#过滤器filter-vfo)
         - [存储 VFO 配置至新建信道（VFO to New Channel）](#存储-vfo-配置至新建信道vfo-to-new-channel)
         - [FM 模式哑音扫描（Tone Scan for CTCSS or DCS tone in FM）](#fm-模式哑音扫描tone-scan-for-ctcss-or-dcs-tone-in-fm)
+        - [双监听模式](#双监听模式dual-watch)  
+        - [频率绑定](#频率绑定freq-bind)
+        - [静音（Mute）](#静音mute)
     - [与 DMR 有关的一些设置（DMR specific functionality (*VFO and Channel screens*)）](#与-dmr-有关的一些设置dmr-specific-functionality-vfo-and-channel-screens)
       - [时隙选择（Timeslot selection）](#时隙选择timeslot-selection)
       - [DMR ID、呼号与姓名显示（DMR ID callsign and name display）](#dmr-id呼号与姓名显示dmr-id-callsign-and-name-display)
@@ -111,7 +117,6 @@
       - [热点模式（Hotspot）](#热点模式hotspot)
       - [温度校准（Temp Cal）](#温度校准temp-cal)
       - [电池校准（Batt Cal）](#电池校准batt-cal)
-      - [时间校准（Time Cal）](#时间校准time-cal)
       - [省电等级（Eco Level）](#省电等级eco-level)
       - [睡眠（Suspend）](#睡眠suspend)
       - [安全开机（Safe Power On）](#安全开机safe-power-on)
@@ -119,8 +124,10 @@
       - [带有射频的自动关机（APO with RF）](#带有射频的自动关机apo-with-rf)
       - [卫星跟随模式（Satellite follow mode）](#卫星跟随模式satellite-follow-mode)
       - [全球定位系统（GPS）](#全球定位系统gps)
+      - [锁定](#锁定)
     - [无线电选项（Radio Options）](#无线电选项radio-options)
       - [频段限制（Band Limits）](#频段限制band-limits)
+      - [发射禁止（TX Inhibit）](#发射禁止tx-inhibit)
       - [过滤器保持时间（Filter time）](#过滤器保持时间filter-time)
       - [扫描延迟（Scan delay）](#扫描延迟scan-delay)
       - [扫描驻留（Scan dwell）](#扫描驻留scan-dwell)
@@ -132,6 +139,7 @@
       - [用户功率（User Power）](#用户功率user-power)
       - [DMR 循环冗余检查（DMR crc）](#dmr-循环冗余检查dmr-crc)
     - [显示设置（Display Options）](#显示设置display-options)
+      - [文字大小](#文字大小)
       - [背光亮度（Brightness）](#背光亮度brightness)
       - [夜间亮度（Nite Bright）](#夜间亮度nite-bright)
       - [待机亮度（Min Bright）](#待机亮度min-bright)
@@ -142,12 +150,14 @@
       - [自动夜间模式（Auto night）](#自动夜间模式auto-night)
       - [联系人显示顺序（Order）](#联系人显示顺序order)
       - [联系人显示方式（Contact）](#联系人显示方式contact)
+      - [时间显示（In Header）](#时间显示位于顶部状态栏)
       - [电量（单位）](#电量单位)
       - [信息（Info）](#信息info)
       - [LED 灯（LEDs）](#led-灯leds)
       - [时区（Timezone）](#时区timezone)
-      - [时间显示格式（Time (display format)）](#时间显示格式time-display-format)
+      - [时间显示格式（UTC）](#时间显示格式utc)
       - [显示距离（Show dist）](#显示距离show-distance)
+      - [最后通话 (Last Talker)](#最后通话last-talker)
     - [声音设置（Sound Options）](#声音设置sound-options)
       - [超时警告（Timeout beep）](#超时警告timeout-beep)
       - [警告音量（Beep volume）](#警告音量beep-volume)
@@ -175,6 +185,7 @@
       - [可用主题项目（Here is the detailed list of the theme items）](#可用主题项目here-is-the-detailed-list-of-the-theme-items)
     - [APRS选项（APRS Options）](#APRS选项aprs-options)
       - [信标模式（Mode）](#信标模式beaconing-mode)
+      - [信标信道功率](#beaconing-ch-power)
       - [信标来源（Location）](#信标来源beaconing-location)
       - [信标间隔（Interval）](#信标间隔beaconing-initial-interval)
       - [信标衰减（Decay）](#信标衰减beaconing-decay-algorithm)
@@ -193,6 +204,9 @@
       - [发射频率（TX）](#发射频率tx)
       - [中继频差（Repeater Shifts）](#中继频差repeater-shifts)
       - [模式（Mode）](#模式mode)
+      - [位置设置](#位置设置)  
+      - [纬度设置](#纬度设置)  
+      - [经度设置](#经度设置)
       - [DMR ID](#dmr-id)
       - [色码（Color Code）](#色码color-code)
       - [时隙（Timeslot）](#时隙timeslot)
@@ -231,7 +245,7 @@
   - [热点模式（Hotspot mode）](#热点模式hotspot-mode)
   - [开机组合键（Boot key combinations）](#开机组合键boot-key-combinations)
   - [MD-730 的操作方式（GD-77S operation）](#md-730-的操作方式gd-77s-operation)
-    - [MD730 信道/通话组模式（GD77S Channel / TG mode）](#md730-信道通话组模式gd77s-channel--tg-mode)
+    - [MD730 信道/通话组模式（GD77S Channel/TG mode）](#md730-信道通话组模式gd77s-channel-tg-mode)
     - [MD730 扫描模式（GD77S Scan mode）](#md730-扫描模式gd77s-scan-mode)
     - [MD730 时隙模式（GD77S Timeslot mode）](#md730-时隙模式gd77s-timeslot-mode)
     - [MD730 色码模式（GD77S Color Code mode）](#md730-色码模式gd77s-color-code-mode)
@@ -678,18 +692,34 @@ S 表指示在**最右端**时大约为 **S9+40dB**。
 - 仅当当前信道有频差设置时，此选项才可用。
 - 此选项与 [中继倒频功能（Reverse repeater operation）](#中继倒频功能reverse-repeater-operation) 互斥。
 
-##### 距离排序（Dist sort）<!-- linebreak -->
+##### 漫游功能（Roaming） <!-- linebreak -->
 
-如果设置了电台位置（[位置屏幕](#位置屏幕location-screen) 或 安装了 GPS）， 则当前区域将按距离升序排序。 距离（以公里为单位）显示在区域名称的右侧。
-当然，要做到这一点，必须使用 CPS 在相关信道上设置中继位置信息。
+若收发信机位置已设置（通过[位置设置界面](#location-screen)或GPS定位），当前通信区域(Zone)将按距离升序排序，并自动选择该区域第一个信道。
 
-*请注意：*
-- All Channels zone 不会排序.
-- 可以显示与中继的距离但不排序, 参照 **Display option** [显示距离（Show dist）](#显示距离show-distance).
-- 启用距离排序时，会显示区域名会以以下方式显示
-  - 单色屏幕上反色显示
-  - 彩色屏幕上显示框线
+**选项：**  
+关闭 | 手动 | 5公里 | 10公里 | 20公里
 
+- **关闭**：不进行区域排序  
+- **手动**：选择此选项时立即按距离升序排序区域  
+- **5公里/10公里/20公里**：当设备移动超过设定距离时，区域将重新按距离升序排序，并选择第一个信道。若排序后区域的首选信道发生变化，将播放提示音并点亮屏幕背光。  
+移动距离（公里）将显示在区域名称右侧。  
+注意：需通过写频软件(CPS)在中继信道上设置位置信息，并勾选"使用位置"选项。
+
+*注意事项：*  
+- "所有信道"区域(All Channels zone)不会排序  
+- 发射时不排序，但接收时（即使正在接收信号）仍会排序  
+- 扫描时禁用[漫游功能](#roaming)  
+- 可不启用排序仅显示中继距离（参见**显示选项**中的[显示距离](#显示距离show-distance)）  
+- 启用距离排序时，区域名称显示方式：  
+  - 单色屏设备：反白显示
+  - 彩色屏设备：带边框
+
+
+#### 静音（Mute）<!-- linebreak -->
+
+当**静音**设置为**Yes**时，收发信机将不会发出任何声音。同时，无线电模式将显示为~~DMR~~、~~FM~~、~~FMN~~或~~[DW]~~。
+
+可通过长按**0**键切换静音状态。
 
 <div style="page-break-after: always; break-after: page;"></div>
 
@@ -727,9 +757,9 @@ S 表指示在**最右端**时大约为 **S9+40dB**。
 
 - 按压 **绿色** 或 **橙色** 按键以确认。
 
-##### 过滤器（Filter）（*仅限 DMR 模式*）<!-- linebreak -->
+##### 过滤器（Filter VFO）<!-- linebreak -->
 
-该功能与[上述](#过滤器设置filter)信道模式操作中描述的过滤器相同。
+该功能与[信道模式](#过滤器设置filter)信道模式操作中描述的过滤器相同。
 
 ##### 存储 VFO 配置至新建信道（VFO to New Channel）<!-- linebreak -->
 
@@ -750,6 +780,14 @@ S 表指示在**最右端**时大约为 **S9+40dB**。
 取消哑音扫描后，接收频率的哑音设置会回到之前的设置。
 
 若扫描到对应的哑音，接收与发射频率都会被设置为扫描到的哑音。
+
+#### 双守模式<!-- linebreak -->
+
+详见[VFO 双守](#VFO-双守vfo-dual-watch)章节说明。
+
+#### 频率绑定<!-- linebreak -->
+
+启用此选项时，收发频差值将被保留。
 
 <div style="page-break-after: always; break-after: page;"></div>
 
@@ -973,10 +1011,22 @@ APRS 信标模式（请参阅 [APRS选项（APRS Options）](#APRS选项aprs_opt
 
 通过 CPS 最多可以定义 8 个 APRS 配置，每个 APRS 配置都可以指定不同的参数，包括指定要在 https://aprs.fi 等网站上显示的图标以及注释文本。由于硬件的限制，MD-9600 / RT-90 不会传输注释文本。
 
-*请注意：*
+如果 APRS 配置（在 CPS 中）定义了发射频率，则对讲机将在该频率上发射 APRS 信标（**注意**：卫星模式下此功能不可用）。
 
+如果未定义发射频率，则 APRS 信标将以当前信道/VFO 频率发射（仅限模拟模式，数字模式下请参见下方的**注意事项**）。
+
+如果 APRS 配置（在 CPS 中）勾选了“发射 QSY”，则会将 QSY 信息添加到信标中（格式为“FFF.FFFMHz Toff +000”）。
+
+接收此信息的电台可以将频率或 QSY 更改为报告的语音频率，以开始语音通信。
+
+
+*注意事项*
+
+- 数字信道/VFO 可以定义 APRS 配置，但**必须**设置该 APRS 配置的发射频率。
+- 当信道设置了 APRS 配置时，在信道和 VFO 屏幕标题栏中，当前模式 (FM/FMN/DMR) 旁边会显示一个**"a"**字母。
+  - 启用信标功能时，此标记使用的字体为粗体；
+  - 禁用信标功能时，使用常规字体。
 - 由于尚不清楚支持的电台中的硬件是否可用于接收 APRS 或其他 AX25 数据包，因此目前仅支持 APRS 发射。
-- 如果信道或 VFO 选择了 APRS 配置语音通信将不被允许。
 - APRS 数据包最多允许 6 个字符的呼号，这是规范的限制，不是固件的限制。
 - 向卫星发射 APRS 数据包，需要使用的特定 APRS 参数，默认的 APRS 参数在从 CPS 上传的卫星数据中定义。要覆盖这些参数，请定义与卫星同名的 APRS 配置，并设置要用于该卫星的相应自定义参数。
 - 大多数 VHF/UHF 设备都使用 1200 波段
@@ -1049,7 +1099,7 @@ APRS 信标模式（请参阅 [APRS选项（APRS Options）](#APRS选项aprs_opt
 
 #### VFO 双守（VFO Dual Watch）
 
-在频率界面快捷菜单中，选择“**Dual Watch**”
+在频率界面快捷菜单中，选择 [**Dual Watch**](#双守模式)
 
 在此模式下，电台将扫描 VFO A 和 VFO B 频率。此时不会显示单个 VFO 的接收和发射频率，而是显示 VFO A 和 VFO B 的接收频率。
 
@@ -1071,8 +1121,6 @@ VFO A 和 VFO B 不需要都为 FM 或 DMR 模式。可以是 FM、窄带 FM 或
 
 切换当前 VFO 的另一种方法是长按 **红色** 按键。
 
-<div style="page-break-after: always; break-after: page;"></div>
-
 ## 监听模式（Monitor mode）
 
 监听模式使您能够不受 DMR 模式下**通话组**、**时隙**或**色码**过滤器以及 FM 模式下**模拟哑音/数字哑音**过滤器或**静噪**的设置限制，收听信号。
@@ -1087,8 +1135,6 @@ VFO A 和 VFO B 不需要都为 FM 或 DMR 模式。可以是 FM、窄带 FM 或
 - 在 **DMR 模式**：**通话组**、**时隙**和**色码**过滤器被禁用，如果**在 250 毫秒内没有检测到 DMR 信号**，电台将切换到 FM 模式并禁用哑音和静噪。
 
 松开 **蓝色**（**SK2**） 按键会使电台返回到之前的模式和过滤器配置。
-
-<div style="page-break-after: always; break-after: page;"></div>
 
 ## 发射（Transmitting）
 
@@ -1328,7 +1374,6 @@ VFO A 和 VFO B 不需要都为 FM 或 DMR 模式。可以是 FM、窄带 FM 或
 
 时间精度因电台而异，一般每天大约差 ±5 秒。
 
-使用选项菜单中的时间校准设置可以部分纠正时间准确性问题。
 
 - 按压 **下** 方向键显示下一页。
 
@@ -1350,9 +1395,7 @@ VFO A 和 VFO B 不需要都为 FM 或 DMR 模式。可以是 FM、窄带 FM 或
 
 显示并允许输入经纬度位置。
 
-此界面当前仅用于卫星功能。
-
-但将来可能会用于发送 APRS 数据。
+此屏幕用于卫星功能及发送 APRS 数据。
 
 以 DD.DDD DDD.DDD 格式输入完整的纬度/经度 \*
 
@@ -1386,6 +1429,12 @@ VFO A 和 VFO B 不需要都为 FM 或 DMR 模式。可以是 FM、窄带 FM 或
 #### DMR 联系人（DMR Contacts）
 
 允许选择、编辑或删除 DMR 联系人。
+
+*操作说明*：  
+- 按**井号键**(**#**)可在以下列表间切换：  
+  组呼列表(Group Call)  
+  个呼列表(Private Call)  
+  全呼列表(All Call)  
 
 #### FM DTMF 联系人（FM DTMF Contacts）
 
@@ -1485,13 +1534,6 @@ VFO A 和 VFO B 不需要都为 FM 或 DMR 模式。可以是 FM、窄带 FM 或
 
 更改此校准将影响电压和百分比显示。
 
-#### 时间校准（Time Cal）<!-- linebreak -->
-
-此设置允许对启动电台时运行的时钟进行校准。
-
-范围是 ±7，单位是 x/10000，因此值 1 会导致 10,000 秒内变化 1 秒。
-
-时钟目前是一项实验性功能，不能保证准确。
 
 #### 省电等级（Eco Level）<!-- linebreak -->
 
@@ -1562,15 +1604,13 @@ VFO A 和 VFO B 不需要都为 FM 或 DMR 模式。可以是 FM、窄带 FM 或
 
 #### 自动关机（Auto Power Off）<!-- linebreak -->
 
-此设置可以让电台在未使用一段时间后自动关机。
+该设置可使收发信机在选定时间内未被使用时自动关机（包括PTT在内的所有按键均未按下）。
 
-如果在选定的时间内（30、60、90、120 和 180 分钟）没有任何按键被按下（包括 **PTT** ），机器将会自动关机。
-
-电台关闭前一分钟，会显示“**Auto Pwr-Off**”消息并播放通知哔哔声。
+关机前一分钟将显示 **APO** 信息并播放提示音。
 
 *请注意：*
 
-- **自动关机** 功能在以下情况不起作用：
+- **自动关机** 功能在以下情况不工作：
   - 电台正在扫描
   - 设置了卫星闹钟
   - 工作在热点模式
@@ -1604,6 +1644,13 @@ VFO A 和 VFO B 不需要都为 FM 或 DMR 模式。可以是 FM、窄带 FM 或
 
 **警告：将 GPS 设置为输出 NMEA 数据将阻止 CPS 与电台通信，并且在使用 CPS 时，应将 GPS 设置设置为“关闭”或“打开”。**
 
+##### 锁定<!-- linebreak -->
+
+此设置用于保护信道配置，防止对非易失性存储器中的参数进行永久性修改（参见[信道详情](#信道详细设置channel-details)和[将 VFO 信息写入当前信道](#将-vfo-信息写入当前信道vfo----channelread-the-vfo-into-the-current-channel)章节）。
+
+*注意事项：*  
+- 该锁定功能不影响VFO、联系人列表等其他设置
+
 <div style="page-break-after: always; break-after: page;"></div>
 
 ### 无线电选项（Radio Options）
@@ -1636,6 +1683,21 @@ CPS 频段限制**不影响**整体硬件频段限制，因此**不可能**通�
 这些限制是因为 *AT1846S RF* 芯片在此范围之外**将无法可靠运行**，而此范围实际上超出了 AT1846S 公布的频率范围 134MHz - 174MHz、200MHz - 260MHz、400MHz - 520MHz。
 
 还应注意，电台**没有** 200MHz 频段的功放或接收部分，**在此范围内工作会产生较高杂散发射，通常在一次谐波/基波上出现**。
+
+##### 发射禁止（TX Inhibit）<!-- linebreak -->
+
+此功能可禁止无线电发射，防止未经授权使用或避免携带时的误触发。
+
+**可选设置：**
+- ***OFF***：启用发射功能
+- ***ON***：禁用发射功能
+
+*注意事项：*
+- 当发射被禁用时，以下功能也将停用：
+  - APRS信标
+  - VOX声控触发
+  - 卫星通信发射
+
 
 #### 过滤器保持时间（Filter time）<!-- linebreak -->
 
@@ -1739,6 +1801,15 @@ CPS 频段限制**不影响**整体硬件频段限制，因此**不可能**通�
 
 ### 显示设置（Display Options）
 
+##### 文字大小<!-- linebreak -->
+
+**此功能仅适用于彩色屏幕设备。**
+
+当选择尺寸为**1**（默认值）时，字体显示为标准高度。
+
+当选择尺寸为**2**时，部分字体将以双倍高度显示。
+
+
 #### 背光亮度（Brightness）<!-- linebreak -->
 
 本固件允许用户控制背光亮度，设置范围可以从 0%\~100%，其中 10%\~100%以 10%步进调整，0%\~10%以 1%步进调整。
@@ -1824,6 +1895,15 @@ CPS 频段限制**不影响**整体硬件频段限制，因此**不可能**通�
 
 默认设置为**1 Line**
 
+##### 时间显示（位于顶部状态栏）<!-- linebreak -->
+
+**此功能仅适用于彩色屏幕设备和 MD-9600**  
+启用该设置后，时间将以*时:分*格式显示在顶部状态栏右侧，替代电量显示。  
+用户仍可通过按下 **SK1** 临时查看电量信息。  
+
+*注意事项：*  
+- 当电量降至临界值时，将强制显示电量信息（不受此设置影响）
+
 #### 电量（单位）<!-- linebreak -->
 
 控制电量显示为百分比或电压。
@@ -1863,12 +1943,19 @@ CPS 频段限制**不影响**整体硬件频段限制，因此**不可能**通�
 
 如果您的时区不是以 1 小时为基准，请按压 **蓝色**（**SK2**） 按键 + **左** 或 **右** 方向键以 15 分钟为增量调整时区。
 
-#### 时间显示格式（Time (display format)）<!-- linebreak -->
+#### 时间显示格式（UTC）<!-- linebreak -->
 
-此设置控制输入和显示的日期时间是*UTC*还是*本地时*。  
-若设置为*本地时*，将使用电台时区设置中的值来计算时钟日期和卫星通过的时间。  
-若设置为*UTC*，则显示的所有日期和时间后面都会有 “UTC” 标识，以表明正在使用 UTC 时间。  
-如果选择*本地时*，则日期和时间后面不显示任何文本以指示正在使用本地时间。  
+**此设置控制时间和日期的输入及显示采用何种格式：**  
+- `UTC`（协调世界时）  
+- `本地时间`（根据时区自动转换）
+
+当选择 **No** 时：
+- 使用"电台信息时区"设置中的值来计算时钟日期和卫星经过时间
+- 显示的日期和时间不会附加任何文字标识（表示使用本地时间）
+
+当选择 **Yes** 时：
+- 所有显示的日期和时间都会在值后添加 "UTC" 字样
+- 表示当前使用 UTC 时间
 
 <div style="page-break-after: always; break-after: page;"></div>
 
@@ -1877,6 +1964,14 @@ CPS 频段限制**不影响**整体硬件频段限制，因此**不可能**通�
 此设置允许在频道屏幕中显示区域名称右侧到中继器的距离（以公里为单位）。  
 要使其正常工作，必须设置电台的位置（使用 CPS），并且电台位置必须有效 (Radio Info's [Location screen](#location-screen) or GPS).  
 如果两个位置均未设置或无效，则会显示 *"--- km"*。
+
+##### 最后通话（Last Talker）<!-- linebreak -->
+
+此选项允许在数字模式下交替显示：
+- 当前信道预设联系人
+- 最后接收到的电台信息
+
+**显示时长可调范围**：1至30秒
 
 ### 声音设置（Sound Options）
 
@@ -2143,6 +2238,14 @@ CPS 频段限制**不影响**整体硬件频段限制，因此**不可能**通�
 
 *请注意：* 在频道或 VFO 屏幕中，可以使用 **SK1** + **1** 来切换信标 **开启** 或 **关闭**。
 
+#### 信标信道功率<!-- linebreak -->
+
+控制分配给APRS信标的自定义功率。
+
+另请参阅关于[控制发射功率](#控制发射功率controlling-tx-power)的章节。
+
+**默认情况下**，APRS信标将使用**主**功率设置，此选项允许改为设置**自定义**功率。
+
 
 ##### 信标来源（Beaconing Location）<!-- linebreak -->
 
@@ -2284,6 +2387,40 @@ SmartBeaconing&trade; 是由 Tony Arnerich KD7TA 和 Steve Bragg KA9MVA 发明�
 #### 模式（Mode）<!-- linebreak -->
 
 选择 FM（模拟）或 DMR（数字）。
+
+#### 位置设置<!-- linebreak -->
+
+启用或禁用[漫游功能](#漫游功能)中信道坐标的使用。
+长按**8**键可显示至该中继台的方位和距离信息。
+需通过[纬度设置](#纬度设置)和[经度设置](#经度设置)设置定义坐标。
+
+#### 纬度设置<!-- linebreak -->
+
+设置信道的纬度坐标。
+
+**操作方法：**
+- 按**下/上**键切换南/北半球
+- 输入数值（度，DD.DDDD格式）
+- 按**左**键删除最后输入的数字
+
+*注意事项：*
+- 必须在输入最后一位前选择南/北半球
+- 可随时按**绿色**键，剩余位数将补'0'
+- GPS定位后，**NOT**坐标输入状态下长按**星号**键，可将信道位置更新为当前位置
+
+#### 经度设置<!-- linebreak -->
+
+设置信道的经度坐标。
+
+**操作方法：**
+- 按**下/上**键切换西/东半球
+- 输入数值（度，DDD.DDDD格式）
+- 按**左**键删除最后输入的数字
+
+*注意事项：*
+- 必须在输入最后一位前选择西/东半球
+- 可随时按**绿色**键，剩余位数将补'0'
+- GPS定位后，**非**坐标输入状态下长按**星号**键，可将信道位置更新为当前位置
 
 #### DMR ID<!-- linebreak -->
 
@@ -2842,7 +2979,7 @@ MD-UV380 和 MD-9600 版本在 GPS 界面中也有一个页面，显示任何检
 
 ## 开机组合键（Boot key combinations）
 
-下面列出了收发器开机时按住组合键时可用的功能
+下面列出了电台开机时按住组合键时可用的功能
 
 |   **Function**                                    |      **GD77S**         |    **Other MK22 <br>based HTs**    |    **STM32 <br>based HTs**    |         **MD-9600**           |
 | :---                                              |        :---:           |             :---:              |           :---:           |            :---:              |
@@ -2871,7 +3008,7 @@ MD730 除了没有屏幕与键盘区以外，其侧边按键与 MD760 一样，�
 
 本固件对于 MD730 的使用提出了“控制模式”概念。在不同“控制模式”中黑色与蓝色按键各自拥有不同的功能，通过按压机顶 **橙色** 按键可以在不同模式之间切换。
 
-### MD730 信道/通话组模式（GD77S Channel / TG mode）
+### MD730 信道/通话组模式（GD77S Channel/TG mode）
 
 本模式的语音提示是 "Channel mode".
 在本模式中，黑色与蓝色按键用于浏览当前信道以及其指定通话组。
