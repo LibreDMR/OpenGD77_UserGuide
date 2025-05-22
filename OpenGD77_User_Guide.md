@@ -1941,7 +1941,7 @@ Options are:
 
 ##### Info<!-- linebreak -->
 
-This setting controls whether the radio displays additional information on the VFO of Channel screen, by making the DMR Timeslot, or the Power level text bold, or both bold.
+This setting controls whether the radio displays additional information on the VFO or Channel screen, by making the DMR Timeslot, or the Power level text bold, or both bold.
 
 If TS or Both setting is selected, the TS value will be shown in bold if an override is applied to the TS, from a Contact TS override.
 If Pwr or Both setting is selected the power value will be shown in bold if a channel specific power override is being applied to the normal power setting.
