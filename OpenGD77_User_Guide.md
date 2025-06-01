@@ -1653,10 +1653,42 @@ Options are:
   - **Off**: turn off GPS module power (except on the TYT MD-9600 | Retevis RT-90 for technical reasons),
   - **On**: turn on GPS module power,
   - **NMEA**: the GPS module sends all NMEA data to the USB serial port of the radio.
+  - **Log**: logs the NMEA data to the external memory flash (see below).
+
 
 *Note*:
 
 - if the displayed value is '**None**', it means that the firmware could not detect a GPS module (as on radios that do not integrate this hardware option).
+
+
+**GPS Logging**:
+
+The log uses some spaces of the Flash memory, as a cyclic buffer.
+
+Every time logging is started, a marker is saved to the flash memory, and then the G\***RMC** lines are logged every second, and once per minute **all** NMEA lines are logged for one second.
+
+It doesn't log all NMEA lines all the time, because it consumes too much memory and normally it's not important to record the other NMEA lines (*e.g.* the satellite RSSI data).
+
+The storage size depends of the Flash memory type:
+
+| **Flash Size** | **NMEA Storage** |
+| --- | --- |
+| 16Mb | 2Mb |
+| 2Mb *and* 8Mb | 1Mb |
+| 1Mb | 288kb *or* 832kb<sup>1</sup> |
+
+When the CPS reads the NMEA data from the radio it reads the whole storage space and searches for the **Start** and **End** markers for each individual log entries, and saves each log as a separate file.
+
+The exported files can be used on various softwares like:
+
+  - <https://www.opengd77.com/downloads/mapviewer/>
+  - <https://www.gpsvisualizer.com/>
+
+
+<sup>1</sup>: For the GPS logging storage space, on the 1Mb devices (like the GD-77), part or the totality of the DMR Id database space is used for the logging storage.
+If the Voice Prompts are installed, only 288kb are used, otherwise all the 832kb are dedicated for this.
+**Enabling GPS Logging on such device deletes the DMR Id data**, hence if the operator wants that feature back, the DMR Id database needs to be **re-uploaded from the CPS** (and the GPS Log option has to be **turned off**).
+
 
 **WARNING: Setting the GPS to output NMEA data will prevent the CPS communicating with the radio, and the GPS setting should be set to "Off" or "On", when using the CPS.**
 
