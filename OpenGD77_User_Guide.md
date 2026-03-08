@@ -2188,7 +2188,7 @@ If you noticed a problem with a language translation, please post to the https:/
 
 #### Calibration screen<!-- linebreak -->
 
-**This screen currently only applies to the TYT MD-UV380 | Retevis RT-3S | Baofeng DM-1701 | Retevis RT-84.**
+In the calibration screen, press **SK2** + **Down** / **Up** to go to the next / previous calibration section. 
 
 ##### Cal Freq<!-- linebreak -->
 
