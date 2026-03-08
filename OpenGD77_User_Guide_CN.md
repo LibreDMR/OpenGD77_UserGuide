@@ -324,7 +324,7 @@ MD-9600 | RT-90 在生产过程中使用了多种不同的 PLL 和 IF 芯片。
 
 - **OpenGD77 客户编程软件（CPS 即写频软件）:**  
   
-  <https://www.opengd77.com/viewtopic.php?f=12&t=3877>
+  <https://www.opengd77.com/downloads/PC_CPS/Latest/>
   
 - **已发布的固件的最新源代码：**  
   <https://www.opengd77.com/downloads/releases>
