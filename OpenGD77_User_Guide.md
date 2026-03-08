@@ -332,7 +332,7 @@ So basically if your radio does not receive or transmit, try a different firmwar
 - Versions with JA in the name are localised for Japanese users and only support Japanese and English languages
 
 - **OpenGD77 CPS**
-<https://www.opengd77.com/viewtopic.php?f=12&t=3877>
+<https://www.opengd77.com/downloads/PC_CPS/Latest/>
 
 
 - **Latest Source code for fully released firmware:**
