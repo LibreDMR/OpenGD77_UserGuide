@@ -1462,8 +1462,8 @@ VFO A 和 VFO B 不需要都为 FM 或 DMR 模式。可以是 FM、窄带 FM 或
 
 显示固件编译的时间与日期，方括号内是 GitHub 的 commit code。
 
-~~要查看 GitHub 上的详细信息，请将代码附加到 <https://github.com/rogerclarkmelbourne/OpenGD77/commit/>~~ \*  
-~~例如 <https://github.com/rogerclarkmelbourne/OpenGD77/commit/a0ebbc7>~~
+要查看 GitHub 上的详细信息，请将代码附加到 <https://github.com/rogerclarkmelbourne/OpenGD77/commit/> \*  
+例如 <https://github.com/rogerclarkmelbourne/OpenGD77/commit/a0ebbc7>
 
 > \*译者注：已失效
 

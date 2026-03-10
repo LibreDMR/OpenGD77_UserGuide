@@ -13,7 +13,7 @@ pandoc \
     -V fontsize="12pt" \
     --columns=16 \
     -V pagestyle=empty \
-    --self-contained \
+    --embed-resources --standalone \
     --pdf-engine=xelatex \
     -t latex -i OpenGD77_User_Guide_CN-workingcopy.md -o OpenGD77_User_Guide_CN.pdf
 rm -f OpenGD77_User_Guide_CN-workingcopy.md
