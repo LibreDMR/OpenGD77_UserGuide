@@ -2190,6 +2190,8 @@ If you noticed a problem with a language translation, please post to the https:/
 
 In the calibration screen, press **SK2** + **Down** / **Up** to go to the next / previous calibration section. 
 
+In the calibration screen, press **SK2** + **Down** to go to the next page. 
+
 ##### Cal Freq<!-- linebreak -->
 
 This selects the current calibration point. This is the frequency that the radio will transmit on and the Power Adjust setting will change.  There are 5 calibration points for VHF and 8 calibration points for UHF. The firmware interpolates between these points to calculate the calibration required for other frequencies.
